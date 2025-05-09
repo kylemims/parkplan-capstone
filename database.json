@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Kyle Mims",
+      "email": "kyle@example.com",
+      "password": "test123"
+    }
+  ],
+
+  "parks": [
+    {
+      "id": 4,
+      "name": "Zion National Park",
+      "location": "Utah",
+      "description": "A red rock wonderland known for its steep canyons, hikes, and the Virgin River."
+    },
+    {
+      "id": 5,
+      "name": "Grand Canyon National Park",
+      "location": "Arizona",
+      "description": "World-famous for its immense canyon carved by the Colorado River."
+    },
+    {
+      "id": 6,
+      "name": "Rocky Mountain National Park",
+      "location": "Colorado",
+      "description": "Snow-capped peaks, alpine lakes, and wildlife in the heart of the Rockies."
+    },
+    {
+      "id": 7,
+      "name": "Acadia National Park",
+      "location": "Maine",
+      "description": "Coastal mountains, rocky shorelines, and scenic hiking on the Atlantic coast."
+    },
+    {
+      "id": 8,
+      "name": "Glacier National Park",
+      "location": "Montana",
+      "description": "Known for glacier-carved peaks, alpine meadows, and Going-to-the-Sun Road."
+    },
+    {
+      "id": 9,
+      "name": "Arches National Park",
+      "location": "Utah",
+      "description": "Features over 2,000 natural stone arch formations in a stunning desert setting."
+    },
+    {
+      "id": 10,
+      "name": "Olympic National Park",
+      "location": "Washington",
+      "description": "A diverse park with mountains, rainforests, and Pacific coastline in one place."
+    },
+    {
+      "id": 11,
+      "name": "Joshua Tree National Park",
+      "location": "California",
+      "description": "Desert park where the Mojave and Colorado ecosystems meet among surreal rock formations."
+    },
+    {
+      "id": 12,
+      "name": "Everglades National Park",
+      "location": "Florida",
+      "description": "Subtropical wetlands home to alligators, mangroves, and rare wildlife."
+    },
+    {
+      "id": 13,
+      "name": "Mount Rainier National Park",
+      "location": "Washington",
+      "description": "Dominated by the glacier-capped Mount Rainier, with wildflower meadows and vast trails."
+    }
+  ],
+
+  "trips": []
+}

@@ -1,0 +1,37 @@
+Table users {
+  id int [pk, increment]
+  name varchar
+  email varchar
+  password varchar
+}
+
+Table parks {
+  id int [pk, increment]
+  name varchar
+  location varchar
+  description text
+}
+
+Table attractions {
+  id int [pk, increment]
+  park_id int [ref: > parks.id]
+  name varchar
+  description text
+  estimated_time_minutes int
+}
+
+Table trips {
+  id int [pk, increment]
+  user_id int [ref: > users.id]
+  park_id int [ref: > parks.id]
+  name varchar
+  created_at datetime
+}
+
+Table trip_attractions {
+  id int [pk, increment]
+  trip_id int [ref: > trips.id]
+  attraction_id int [ref: > attractions.id]
+  notes text
+  date_planned date
+}
