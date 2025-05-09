@@ -1,6 +1,8 @@
 import { createTrip, getAllParks } from "../../services/tripService.js";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FormInput } from "../forms/FormInput.jsx";
+import "./TripForm.css";
 
 // BUILD A FORM W/ trip name + form w/ park dropdown
 
@@ -39,14 +41,15 @@ export const TripForm = () => {
   };
 
   return (
-    <form onSubmit={handlesubmit}>
+    <form className="trip-form" onSubmit={handlesubmit}>
       <h2>New Trip</h2>
 
       <fieldset>
-        <input
+        <FormInput
+          label="Trip Name"
           type="text"
           id="name"
-          placeholder="Trip Name"
+          placeholder="Enter your trip name"
           value={trip.name}
           onChange={(e) => setTrip({ ...trip, name: e.target.value })}
         />

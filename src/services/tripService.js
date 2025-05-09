@@ -17,8 +17,7 @@ export const getTripsByUserId = (userId) => {
   );
 };
 
-//? Will need these later for CRUD ops
-// export const createTrip = (tripObj) => { ... }
+//? setup POST request to create a new trip
 export const createTrip = (tripObj) => {
   return fetch("http://localhost:8088/trips", {
     method: "POST",
@@ -29,5 +28,11 @@ export const createTrip = (tripObj) => {
   }).then((res) => res.json());
 };
 
-// export const delteTrip = (tripId) => { ...}
+//? setup DELETE request to remove a trip
+export const deleteTrip = (tripId) => {
+  return fetch(`http://localhost:8088/trips/${tripId}`, {
+    method: "DELETE",
+  });
+};
+
 //export const updateTrip = (tripId, updateObj) => { ... }
