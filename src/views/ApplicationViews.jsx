@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { TripList } from "../components/trips/TripList";
+import { TripDashboard } from "../components/trips/TripDashboard.jsx";
 import { Login } from "../components/auth/Login";
 import { Register } from "../components/auth/Register";
 import { Authorized } from "./Authorized";
@@ -12,15 +12,6 @@ export const ApplicationViews = () => {
       <Route path="/register" element={<Register />} />
 
       <Route
-        path="/trips"
-        element={
-          <Authorized>
-            <TripList />
-          </Authorized>
-        }
-      />
-
-      <Route
         path="/"
         element={
           <Authorized>
@@ -28,15 +19,14 @@ export const ApplicationViews = () => {
           </Authorized>
         }
       />
-
-      {/* <Route
-        path="/trips/create"
+      <Route
+        path="/trips"
         element={
           <Authorized>
-            <TripForm />
+            <TripDashboard />
           </Authorized>
         }
-      /> */}
+      />
     </Routes>
   );
 };

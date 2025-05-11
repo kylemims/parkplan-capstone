@@ -39,6 +39,8 @@ export const ParkSelector = () => {
 
   return (
     <section className="park-selector">
+      <h1>Welcome to Pick A Park 🌲</h1>
+      <p>Readay to plan your next adventure?</p>
       <h2>Select a National Park</h2>
       {/*// controlled input: dropdown is synced w/ state */}
       <select value={selectedParkId} onChange={handleSelect}>
