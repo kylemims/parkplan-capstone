@@ -1,0 +1,20 @@
+.park-selector {
+  padding: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.park-preview {
+  margin-top: 2rem;
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #f1f1f1;
+}
+
+.park-preview img {
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 8px;
+}

@@ -4,6 +4,7 @@ import { TripForm } from "../components/trips/TripForm";
 import { Login } from "../components/auth/Login";
 import { Register } from "../components/auth/Register";
 import { Authorized } from "./Authorized";
+import { ParkSelector } from "../components/parks/ParkSelector.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -12,10 +13,19 @@ export const ApplicationViews = () => {
       <Route path="/register" element={<Register />} />
 
       <Route
-        path="/"
+        path="/trips"
         element={
           <Authorized>
             <TripList />
+          </Authorized>
+        }
+      />
+
+      <Route
+        path="/"
+        element={
+          <Authorized>
+            <ParkSelector />
           </Authorized>
         }
       />

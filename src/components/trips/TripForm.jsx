@@ -1,4 +1,5 @@
-import { createTrip, getAllParks } from "../../services/tripService.js";
+import { createTrip } from "../../services/tripService.js";
+import { getAllParks } from "../../services/parkService.js";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormInput } from "../forms/FormInput.jsx";
@@ -12,7 +13,6 @@ const userObject = JSON.parse(localUser);
 
 //? Create a new trip w/ logged in user
 export const TripForm = () => {
-  const [parks, setParks] = useState([]);
   const [trip, setTrip] = useState({
     name: "",
     park_id: 0,

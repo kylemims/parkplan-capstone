@@ -7,7 +7,6 @@
       "password": "test123"
     }
   ],
-
   "parks": [
     {
       "id": 4,
@@ -70,6 +69,20 @@
       "description": "Dominated by the glacier-capped Mount Rainier, with wildflower meadows and vast trails."
     }
   ],
-
-  "trips": []
+  "trips": [
+    {
+      "name": "My new trip",
+      "park_id": 6,
+      "user_id": 1,
+      "created_at": "2025-05-11T07:31:38.716Z",
+      "id": 1
+    },
+    {
+      "name": "I want to party in Utah",
+      "park_id": 9,
+      "user_id": 1,
+      "created_at": "2025-05-11T07:53:08.177Z",
+      "id": 2
+    }
+  ]
 }
