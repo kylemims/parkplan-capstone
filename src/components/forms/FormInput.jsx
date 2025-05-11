@@ -1,5 +1,3 @@
-//? build out component for the 10,000 forms that will be created.
-
 export const FormInput = ({ label, type, name, id, value, onChange, placeholder }) => {
   return (
     <div className="form-group">

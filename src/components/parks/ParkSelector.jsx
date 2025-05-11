@@ -1,8 +1,8 @@
 import { getAllParks } from "../../services/parkService.js";
 import { useState, useEffect } from "react";
-import { FormInput } from "../forms/FormInput.jsx";
 import { createTrip } from "../../services/tripService.js";
 import { useNavigate } from "react-router-dom";
+import { CreateNewTripForm } from "../forms/CreateNewTripForm.jsx";
 import "./ParkSelector.css";
 
 export const ParkSelector = () => {
@@ -40,7 +40,7 @@ export const ParkSelector = () => {
   return (
     <section className="park-selector">
       <h2>Select a National Park</h2>
-      {/*//? controlled input: dropdown is synced w/ state */}
+      {/*// controlled input: dropdown is synced w/ state */}
       <select value={selectedParkId} onChange={handleSelect}>
         <option value="0">Select a park...</option>
         {parks?.map((park) => (
@@ -49,7 +49,7 @@ export const ParkSelector = () => {
           </option>
         ))}
       </select>
-      {/* //? Only show this div IF (&&) */}
+      {/* // Only show this div IF (&&) */}
       {selectedPark && (
         <div className="park-preview">
           <h3>{selectedPark.name}</h3>
@@ -59,20 +59,12 @@ export const ParkSelector = () => {
           </p>
           <p>{selectedPark.description}</p>
           {selectedPark.image_url && <img src={selectedPark.image_url} alt={selectedPark.name} />}
-          //! Add park highlights here - stretch goals (attractions) //!
-          <FormInput
-            className="trip-form"
-            label="Trip Name"
-            type="text"
-            name="tripName"
-            id="tripName"
-            value={tripName}
-            onChange={(e) => setTripName(e.target.value)}
-            placeholder="e.g. Yosemite Summer Adventure"
+          {/* Add park highlights here - stretch goals (attractions) */}
+          <CreateNewTripForm
+            tripName={tripName}
+            setTripName={setTripName}
+            handleAddTrip={handleAddTrip}
           />
-          <button onClick={handleAddTrip} disabled={tripName.trim() === ""}>
-            Add Trip
-          </button>
         </div>
       )}
     </section>
