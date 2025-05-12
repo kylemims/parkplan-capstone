@@ -107,3 +107,11 @@
 .trip-card__actions button:hover {
   background-color: #777;
 }
+
+.add-new-dash {
+  padding: 30px;
+}
+
+.add-new-dash button:hover {
+  background-color: #77a098;
+}

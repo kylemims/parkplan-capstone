@@ -1,38 +1,54 @@
-export const getAllParks = () => {
-  // GET request to JSON server
-  return (
-    fetch("http://localhost:8088/parks")
-      // when we return each park object, expand the related trip data instead of just the trip_id
-      .then((res) => res.json())
-  );
-};
-
+//?-------------FETCH Trips by user (POST promise)----------------------
 export const getTripsByUserId = (userId) => {
-  // GET request to JSON server that includes "query parameters"
   return (
     fetch(`http://localhost:8088/trips?user_id=${userId}&expand=park`)
-      // when we reutrn each trip object, expand the related park data instead of just the park_id
       // {userId} is interpolated to ensure users only see their own data
       .then((res) => res.json())
   );
 };
 
-// setup POST request to create a new trip
+//?--------------POST New Trip------------------------
 export const createTrip = (tripObj) => {
+  console.log("Posting trip:", tripObj);
   return fetch("http://localhost:8088/trips", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(tripObj),
-  }).then((res) => res.json());
+  }).then((res) => {
+    if (!res.ok) {
+      throw new Error("Failed to create trip");
+    }
+    return res.json();
+  });
 };
 
-// setup DELETE request to remove a trip
+//?----------------DELETE Trip------------------------------
 export const deleteTrip = (tripId) => {
   return fetch(`http://localhost:8088/trips/${tripId}`, {
     method: "DELETE",
   });
 };
 
-//export const updateTrip = (tripId, updateObj) => { ... }
+//?-----------UPDATE trip (PUT)---------------------------
+export const getTripById = (tripId) => {
+  return (
+    fetch(`http://localhost:8088/trips/${tripId}?_expand=park`)
+      // adding ?_expand=park to show the park name while editing, if needed
+      .then((res) => res.json())
+  );
+};
+
+export const updateTrip = (tripId, updatedTripObj) => {
+  return fetch(
+    `http://localhost8088/trips/${tripId}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedTripObj),
+    }.then((res) => res.json())
+  );
+};

@@ -43,9 +43,11 @@ export const TripDashboard = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => navigate("/")} className="trip-list__create-button">
-        + Add New Trip
-      </button>
+      <div className="add-new-dash">
+        <button onClick={() => navigate("/")} className="trip-list__create-button">
+          + Add New Trip
+        </button>
+      </div>
     </section>
   );
 };
