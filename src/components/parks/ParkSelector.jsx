@@ -27,9 +27,9 @@ export const ParkSelector = () => {
 
     const newTrip = {
       name: tripName,
-      park_id: selectedParkId,
-      user_id: userObj.id,
-      created_at: new Date().toISOString(),
+      parkId: selectedParkId,
+      userId: userObj.id,
+      createdAt: new Date().toISOString(),
     };
 
     createTrip(newTrip).then(() => {
@@ -60,7 +60,7 @@ export const ParkSelector = () => {
             {selectedPark.location}
           </p>
           <p>{selectedPark.description}</p>
-          {selectedPark.image_url && <img src={selectedPark.image_url} alt={selectedPark.name} />}
+          {selectedPark.imageUrl && <img src={selectedPark.imageUrl} alt={selectedPark.name} />}
           {/* Add park highlights here - stretch goals (attractions) */}
           <CreateNewTripForm
             tripName={tripName}

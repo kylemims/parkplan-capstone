@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react";
 import { FormInput } from "./FormInput.jsx";
 import { getTripById, updateTrip } from "../../services/tripService.js";
 import { getAllParks } from "../../services/parkService.js";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export const TripEditForm = () => {
   const [trip, setTrip] = useState(null);
@@ -25,7 +26,7 @@ export const TripEditForm = () => {
     e.preventDefault();
     updateTrip(trip.id, {
       ...trip,
-      park_id: parseInt(trip.park.id),
+      parkId: parseInt(trip.parkId),
     }).then(() => navigate("/trips"));
   };
 
@@ -46,9 +47,9 @@ export const TripEditForm = () => {
       />
 
       <label htmlFor="park">Select Park</label>
-      <select id="park" name="park_id" value={trip.park_id} onChange={handleChange}>
+      <select id="park" name="parkId" value={trip.parkId} onChange={handleChange}>
         <option value="0">-- Select a Park --</option>
-        {parks?.map((p) => (
+        {parks.map((p) => (
           <option key={p.id} value={p.id}>
             {p.name}
           </option>

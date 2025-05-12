@@ -5,9 +5,32 @@
       "name": "Kyle Mims",
       "email": "kyle@example.com",
       "password": "test123"
+    },
+    {
+      "email": "stonecold@example.com",
+      "name": "Steve Austin",
+      "id": 2
     }
   ],
   "parks": [
+    {
+      "id": 1,
+      "name": "Yosemite National Park",
+      "location": "California",
+      "description": "Famous for its granite cliffs, waterfalls, and giant sequoias."
+    },
+    {
+      "id": 2,
+      "name": "Great Smoky Mountains",
+      "location": "Tennessee/North Carolina",
+      "description": "Known for its misty mountains, wildlife, and scenic drives."
+    },
+    {
+      "id": 3,
+      "name": "Yellowstone National Park",
+      "location": "Wyoming/Montana/Idaho",
+      "description": "Home to geysers, hot springs, and abundant wildlife."
+    },
     {
       "id": 4,
       "name": "Zion National Park",
@@ -71,32 +94,30 @@
   ],
   "trips": [
     {
-      "name": "My new trip",
-      "park_id": 6,
-      "user_id": 1,
-      "created_at": "2025-05-11T07:31:38.716Z",
-      "id": 1
+      "name": "pretty ok trip",
+      "parkId": 1,
+      "userId": 2,
+      "createdAt": "2025-05-12T18:51:16.364Z",
+      "id": 1,
+      "park": {
+        "id": 1,
+        "name": "Yosemite National Park",
+        "location": "California",
+        "description": "Famous for its granite cliffs, waterfalls, and giant sequoias."
+      }
     },
     {
-      "name": "I want to party in Utah",
-      "park_id": 9,
-      "user_id": 1,
-      "created_at": "2025-05-11T07:53:08.177Z",
-      "id": 2
-    },
-    {
-      "name": "Kyle's Zion Adventure",
-      "park_id": 4,
-      "user_id": 1,
-      "created_at": "2025-05-11T13:44:00.869Z",
-      "id": 3
-    },
-    {
-      "name": "Let's get weird trip",
-      "park_id": 10,
-      "user_id": 1,
-      "created_at": "2025-05-11T13:47:24.497Z",
-      "id": 4
+      "name": "what the fudge trip",
+      "parkId": 4,
+      "userId": 2,
+      "createdAt": "2025-05-12T20:17:19.647Z",
+      "id": 2,
+      "park": {
+        "id": 7,
+        "name": "Acadia National Park",
+        "location": "Maine",
+        "description": "Coastal mountains, rocky shorelines, and scenic hiking on the Atlantic coast."
+      }
     }
   ]
 }

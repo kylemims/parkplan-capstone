@@ -33,7 +33,7 @@ export const TripDashboard = () => {
               <strong>Park:</strong> {trip.park?.name}
             </p>
             <p>
-              <strong>Created:</strong> {new Date(trip.created_at).toLocaleDateString()}
+              <strong>Created:</strong> {new Date(trip.createdAt).toLocaleDateString()}
             </p>
 
             <div className="trip-card__actions">
@@ -44,7 +44,7 @@ export const TripDashboard = () => {
         ))}
       </div>
       <div className="add-new-dash">
-        <button onClick={() => navigate("/")} className="trip-list__create-button">
+        <button className="trip-list__create-button" onClick={() => navigate("/")}>
           + Add New Trip
         </button>
       </div>

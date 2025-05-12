@@ -1,13 +1,13 @@
-//?-------------FETCH Trips by user (POST promise)----------------------
+//-------------FETCH Trips by user (POST promise)----------------------
 export const getTripsByUserId = (userId) => {
   return (
-    fetch(`http://localhost:8088/trips?user_id=${userId}&expand=park`)
+    fetch(`http://localhost:8088/trips?userId=${userId}&_expand=park`)
       // {userId} is interpolated to ensure users only see their own data
       .then((res) => res.json())
   );
 };
 
-//?--------------POST New Trip------------------------
+//--------------POST New Trip------------------------
 export const createTrip = (tripObj) => {
   console.log("Posting trip:", tripObj);
   return fetch("http://localhost:8088/trips", {
@@ -24,31 +24,24 @@ export const createTrip = (tripObj) => {
   });
 };
 
-//?----------------DELETE Trip------------------------------
+//----------------DELETE Trip------------------------------
 export const deleteTrip = (tripId) => {
   return fetch(`http://localhost:8088/trips/${tripId}`, {
     method: "DELETE",
   });
 };
 
-//?-----------UPDATE trip (PUT)---------------------------
+//-----------UPDATE trip (PUT)---------------------------
 export const getTripById = (tripId) => {
-  return (
-    fetch(`http://localhost:8088/trips/${tripId}?_expand=park`)
-      // adding ?_expand=park to show the park name while editing, if needed
-      .then((res) => res.json())
-  );
+  return fetch(`http://localhost:8088/trips/${tripId}?_expand=park`).then((res) => res.json());
 };
 
 export const updateTrip = (tripId, updatedTripObj) => {
-  return fetch(
-    `http://localhost8088/trips/${tripId}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedTripObj),
-    }.then((res) => res.json())
-  );
+  return fetch(`http://localhost:8088/trips/${tripId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedTripObj),
+  }).then((res) => res.json());
 };
