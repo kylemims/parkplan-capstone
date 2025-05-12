@@ -1,0 +1,25 @@
+.navbar {
+  display: flex; /* 👈 Arrange items in a row */
+  flex-wrap: nowrap;
+  background-color: var(--dark); /* 👈 Background color */
+  margin: 0;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.navbar-item {
+  flex-basis: 20%; /* 👈 Each item takes up 20% width */
+  list-style-type: none; /* 👈 No bullet points */
+  text-align: center;
+  color: var(--offWhite);
+}
+
+.navbar-link {
+  text-decoration: none; /* 👈 Remove underline */
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 1px;
+}
+
+.navbar-link:hover {
+  color: var(--primary); /* 👈 Hover color effect */
+}
