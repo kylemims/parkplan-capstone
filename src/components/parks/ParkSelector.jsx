@@ -4,6 +4,7 @@ import { createTrip } from "../../services/tripService.js";
 import { useNavigate } from "react-router-dom";
 import { CreateNewTripForm } from "../forms/CreateNewTripForm.jsx";
 import "./ParkSelector.css";
+// import { imageUrl } from "./src/assets/yosemite_bg.jpg";
 
 export const ParkSelector = () => {
   const [parks, setParks] = useState([]);
@@ -41,6 +42,7 @@ export const ParkSelector = () => {
     <section className="park-selector">
       <h1>Welcome to Pick A Park 🌲</h1>
       <p>Readay to plan your next adventure?</p>
+
       <h2>Select a National Park</h2>
       {/*// controlled input: dropdown is synced w/ state */}
       <select value={selectedParkId} onChange={handleSelect}>

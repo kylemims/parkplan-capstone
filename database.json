@@ -17,81 +17,134 @@
       "id": 1,
       "name": "Yosemite National Park",
       "location": "California",
-      "description": "Famous for its granite cliffs, waterfalls, and giant sequoias."
+      "description": "Famous for its granite cliffs, waterfalls, and giant sequoias.",
+      "bestTimeToVisit": "May through September",
+      "notableWildlife": "Black bears, mule deer, peregrine falcons",
+      "parkHighlights": "Half Dome, Yosemite Falls, El Capitan",
+      "imageUrl": "/images/yosemite-4.png"
     },
     {
       "id": 2,
-      "name": "Great Smoky Mountains",
-      "location": "Tennessee/North Carolina",
-      "description": "Known for its misty mountains, wildlife, and scenic drives."
+      "name": "Yellowstone National Park",
+      "location": "Wyoming, Montana, Idaho",
+      "description": "Home to geysers, hot springs, and diverse wildlife.",
+      "bestTimeToVisit": "April to October",
+      "notableWildlife": "Bison, wolves, grizzly bears",
+      "parkHighlights": "Old Faithful, Grand Prismatic Spring, Yellowstone Lake",
+      "imageUrl": "/images/yellowstone-4.png"
     },
     {
       "id": 3,
-      "name": "Yellowstone National Park",
-      "location": "Wyoming/Montana/Idaho",
-      "description": "Home to geysers, hot springs, and abundant wildlife."
+      "name": "Zion National Park",
+      "location": "Utah",
+      "description": "Known for steep red cliffs and scenic canyon hikes.",
+      "bestTimeToVisit": "March through May and September through November",
+      "notableWildlife": "Desert bighorn sheep, mule deer",
+      "parkHighlights": "Angels Landing, The Narrows, Emerald Pools",
+      "imageUrl": "/images/zion-4.png"
     },
     {
       "id": 4,
-      "name": "Zion National Park",
-      "location": "Utah",
-      "description": "A red rock wonderland known for its steep canyons, hikes, and the Virgin River."
+      "name": "Grand Canyon National Park",
+      "location": "Arizona",
+      "description": "Iconic views of a mile-deep canyon carved by the Colorado River.",
+      "bestTimeToVisit": "March through May and September through November",
+      "notableWildlife": "California condor, elk",
+      "parkHighlights": "South Rim, Bright Angel Trail, Desert View Watchtower",
+      "imageUrl": "/images/grandcanyon.jpg"
     },
     {
       "id": 5,
-      "name": "Grand Canyon National Park",
-      "location": "Arizona",
-      "description": "World-famous for its immense canyon carved by the Colorado River."
+      "name": "Rocky Mountain National Park",
+      "location": "Colorado",
+      "description": "High-altitude trails, alpine lakes, and snowy peaks.",
+      "bestTimeToVisit": "June through September",
+      "notableWildlife": "Elk, moose, black bears",
+      "parkHighlights": "Trail Ridge Road, Bear Lake, Longs Peak",
+      "imageUrl": "/images/rockymountain.jpg"
     },
     {
       "id": 6,
-      "name": "Rocky Mountain National Park",
-      "location": "Colorado",
-      "description": "Snow-capped peaks, alpine lakes, and wildlife in the heart of the Rockies."
+      "name": "Great Smoky Mountains National Park",
+      "location": "Tennessee, North Carolina",
+      "description": "Lush forests and mist-covered mountain ranges.",
+      "bestTimeToVisit": "Late spring to early fall",
+      "notableWildlife": "Black bears, salamanders, white-tailed deer",
+      "parkHighlights": "Clingmans Dome, Cades Cove, Roaring Fork",
+      "imageUrl": "/images/smokymountains.jpg"
     },
     {
       "id": 7,
-      "name": "Acadia National Park",
-      "location": "Maine",
-      "description": "Coastal mountains, rocky shorelines, and scenic hiking on the Atlantic coast."
+      "name": "Arches National Park",
+      "location": "Utah",
+      "description": "Over 2,000 natural stone arch formations.",
+      "bestTimeToVisit": "March through May and September through October",
+      "notableWildlife": "Red foxes, kangaroo rats",
+      "parkHighlights": "Delicate Arch, Landscape Arch, The Windows",
+      "imageUrl": "/images/arches.jpg"
     },
     {
       "id": 8,
-      "name": "Glacier National Park",
-      "location": "Montana",
-      "description": "Known for glacier-carved peaks, alpine meadows, and Going-to-the-Sun Road."
+      "name": "Acadia National Park",
+      "location": "Maine",
+      "description": "Rocky beaches, woodlands, and Cadillac Mountain views.",
+      "bestTimeToVisit": "Mid-September through early October",
+      "notableWildlife": "Bald eagles, seals, porcupines",
+      "parkHighlights": "Cadillac Mountain, Jordan Pond, Thunder Hole",
+      "imageUrl": "/images/acadia.jpg"
     },
     {
       "id": 9,
-      "name": "Arches National Park",
-      "location": "Utah",
-      "description": "Features over 2,000 natural stone arch formations in a stunning desert setting."
+      "name": "Olympic National Park",
+      "location": "Washington",
+      "description": "Diverse ecosystems from glacial peaks to temperate rainforests.",
+      "bestTimeToVisit": "May through September",
+      "notableWildlife": "Roosevelt elk, mountain goats",
+      "parkHighlights": "Hoh Rain Forest, Hurricane Ridge, Rialto Beach",
+      "imageUrl": "/images/olympic.jpg"
     },
     {
       "id": 10,
-      "name": "Olympic National Park",
-      "location": "Washington",
-      "description": "A diverse park with mountains, rainforests, and Pacific coastline in one place."
+      "name": "Joshua Tree National Park",
+      "location": "California",
+      "description": "Desert landscapes where the Mojave and Colorado deserts meet.",
+      "bestTimeToVisit": "March to May and October to November",
+      "notableWildlife": "Jackrabbits, coyotes, desert tortoises",
+      "parkHighlights": "Hidden Valley, Cholla Cactus Garden, Skull Rock",
+      "imageUrl": "/images/joshuatree.jpg"
     },
     {
       "id": 11,
-      "name": "Joshua Tree National Park",
-      "location": "California",
-      "description": "Desert park where the Mojave and Colorado ecosystems meet among surreal rock formations."
+      "name": "Glacier National Park",
+      "location": "Montana",
+      "description": "Known for its rugged mountains and scenic drives.",
+      "bestTimeToVisit": "July to September",
+      "notableWildlife": "Mountain goats, grizzly bears, marmots",
+      "parkHighlights": "Going-to-the-Sun Road, Grinnell Glacier, Lake McDonald",
+      "imageUrl": "/images/glacier.jpg"
     },
     {
       "id": 12,
-      "name": "Everglades National Park",
-      "location": "Florida",
-      "description": "Subtropical wetlands home to alligators, mangroves, and rare wildlife."
+      "name": "Bryce Canyon National Park",
+      "location": "Utah",
+      "description": "Famous for crimson-colored hoodoos and starry skies.",
+      "bestTimeToVisit": "May through September",
+      "notableWildlife": "Prairie dogs, mule deer, golden eagles",
+      "parkHighlights": "Bryce Amphitheater, Navajo Loop, Sunrise Point",
+      "imageUrl": "/images/bryce.jpg"
     },
     {
       "id": 13,
-      "name": "Mount Rainier National Park",
-      "location": "Washington",
-      "description": "Dominated by the glacier-capped Mount Rainier, with wildflower meadows and vast trails."
+      "name": "Sequoia National Park",
+      "location": "California",
+      "description": "Home to giant sequoia trees, including General Sherman Tree.",
+      "bestTimeToVisit": "June through August",
+      "notableWildlife": "Black bears, bobcats, Steller\u2019s jays",
+      "parkHighlights": "General Sherman Tree, Moro Rock, Crystal Cave",
+      "imageUrl": "/images/sequoia.jpg"
     }
   ],
+
   "trips": [
     {
       "name": "pretty ok trip",

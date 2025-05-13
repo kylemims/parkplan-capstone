@@ -6,9 +6,9 @@
 }
 
 .trip-list h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: "Staatliches", sans-serif;
+  color: #f2f4f3;
 }
 
 .trip-list p {
@@ -57,10 +57,11 @@
   margin: 0.3rem 0;
 }
 
+/* inactive?? */
 .trip-item button {
   margin-top: 1rem;
   margin-right: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   background-color: #555;
   color: white;
   border: none;

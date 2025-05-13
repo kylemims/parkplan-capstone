@@ -17,6 +17,7 @@ export const Login = () => {
           "parkplan_user",
           JSON.stringify({
             id: user.id,
+            name: user.name,
           })
         );
         navigate("/");

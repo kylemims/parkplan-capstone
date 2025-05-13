@@ -1,3 +1,8 @@
+/* body {
+  background-image: url("./src/assets/yosemite_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
 .park-selector {
   padding: 2rem;
   text-align: center;
@@ -14,7 +19,11 @@
 }
 
 .park-preview img {
-  max-width: 100%;
+  max-width: 70%;
   margin-top: 1rem;
   border-radius: 8px;
+}
+
+h1 {
+  font-family: "Staatliches", sans-serif;
 }

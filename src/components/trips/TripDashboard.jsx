@@ -16,9 +16,10 @@ export const TripDashboard = () => {
   }, [userObj.id]);
 
   const handleDelete = (tripId) => {
-    deleteTrip(tripId).then(() => {
-      getTripsByUserId(userObj.id).then(setTrips);
-    });
+    if (window.confirm("Are you sure you want to remove this trip?"))
+      deleteTrip(tripId).then(() => {
+        getTripsByUserId(userObj.id).then(setTrips);
+      });
   };
 
   return (
