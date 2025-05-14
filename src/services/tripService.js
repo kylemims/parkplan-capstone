@@ -1,15 +1,8 @@
-//-------------FETCH Trips by user (POST promise)----------------------
 export const getTripsByUserId = (userId) => {
-  return (
-    fetch(`http://localhost:8088/trips?userId=${userId}&_expand=park`)
-      // {userId} is interpolated to ensure users only see their own data
-      .then((res) => res.json())
-  );
+  return fetch(`http://localhost:8088/trips?userId=${userId}`).then((res) => res.json());
 };
 
-//--------------POST New Trip------------------------
 export const createTrip = (tripObj) => {
-  console.log("Posting trip:", tripObj);
   return fetch("http://localhost:8088/trips", {
     method: "POST",
     headers: {
@@ -24,16 +17,14 @@ export const createTrip = (tripObj) => {
   });
 };
 
-//----------------DELETE Trip------------------------------
-export const deleteTrip = (tripId) => {
-  return fetch(`http://localhost:8088/trips/${tripId}`, {
+export const deleteTrip = (id) => {
+  return fetch(`http://localhost:8088/trips/${id}`, {
     method: "DELETE",
   });
 };
 
-//-----------UPDATE trip (PUT)---------------------------
 export const getTripById = (tripId) => {
-  return fetch(`http://localhost:8088/trips/${tripId}?_expand=park`).then((res) => res.json());
+  return fetch(`http://localhost:8088/trips/${tripId}`).then((res) => res.json());
 };
 
 export const updateTrip = (tripId, updatedTripObj) => {

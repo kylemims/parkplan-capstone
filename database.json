@@ -10,6 +10,21 @@
       "email": "stonecold@example.com",
       "name": "Steve Austin",
       "id": 2
+    },
+    {
+      "email": "scarylarry@example.com",
+      "name": "Larry Bird",
+      "id": 3
+    },
+    {
+      "email": "brandon@example.com",
+      "name": "Brandon Hickman",
+      "id": 4
+    },
+    {
+      "email": "bulls@aol.com",
+      "name": "Scottie Pippen",
+      "id": 5
     }
   ],
   "parks": [
@@ -139,38 +154,102 @@
       "location": "California",
       "description": "Home to giant sequoia trees, including General Sherman Tree.",
       "bestTimeToVisit": "June through August",
-      "notableWildlife": "Black bears, bobcats, Steller\u2019s jays",
+      "notableWildlife": "Black bears, bobcats, Steller’s jays",
       "parkHighlights": "General Sherman Tree, Moro Rock, Crystal Cave",
       "imageUrl": "/images/sequoia.jpg"
     }
   ],
-
   "trips": [
     {
-      "name": "pretty ok trip",
-      "parkId": 1,
-      "userId": 2,
-      "createdAt": "2025-05-12T18:51:16.364Z",
-      "id": 1,
-      "park": {
-        "id": 1,
-        "name": "Yosemite National Park",
-        "location": "California",
-        "description": "Famous for its granite cliffs, waterfalls, and giant sequoias."
-      }
+      "name": "New fun trip time",
+      "parkId": 2,
+      "userId": 3,
+      "createdAt": "2025-05-13T19:22:40.571Z",
+      "id": 3
     },
     {
-      "name": "what the fudge trip",
+      "name": "partier in zion",
+      "parkId": 3,
+      "userId": 3,
+      "createdAt": "2025-05-13T19:23:08.544Z",
+      "id": 4
+    },
+    {
+      "name": "This is not my death",
+      "parkId": 1,
+      "userId": 3,
+      "createdAt": "2025-05-13T20:13:45.283Z",
+      "id": 5
+    },
+    {
+      "name": "holy shit did brandon fix it?",
+      "parkId": 9,
+      "userId": 3,
+      "createdAt": "2025-05-13T20:48:11.856Z",
+      "id": 6
+    },
+    {
+      "name": "lets get weird",
+      "parkId": 5,
+      "userId": 4,
+      "createdAt": "2025-05-13T20:49:24.696Z",
+      "id": 7
+    },
+    {
+      "name": "woo hoo",
+      "parkId": 7,
+      "userId": 4,
+      "createdAt": "2025-05-13T20:50:06.668Z",
+      "id": 8
+    },
+    {
+      "name": "suuuuup",
+      "parkId": 9,
+      "userId": 4,
+      "createdAt": "2025-05-13T20:53:36.582Z",
+      "id": 10
+    },
+    {
+      "name": "yah mon",
+      "parkId": 10,
+      "userId": 1,
+      "createdAt": "2025-05-13T20:54:54.550Z",
+      "id": 11
+    },
+    {
+      "name": "I want to see the other realm",
+      "parkId": 10,
+      "userId": 1,
+      "createdAt": "2025-05-13T20:57:07.800Z",
+      "id": 13
+    },
+    {
+      "name": "Get smokied",
+      "parkId": 6,
+      "userId": 2,
+      "createdAt": "2025-05-14T08:39:25.623Z",
+      "id": 15
+    },
+    {
+      "name": "let us eat dirt",
       "parkId": 4,
       "userId": 2,
-      "createdAt": "2025-05-12T20:17:19.647Z",
-      "id": 2,
-      "park": {
-        "id": 7,
-        "name": "Acadia National Park",
-        "location": "Maine",
-        "description": "Coastal mountains, rocky shorelines, and scenic hiking on the Atlantic coast."
-      }
+      "createdAt": "2025-05-14T08:41:47.920Z",
+      "id": 16
+    },
+    {
+      "name": "Wear a bear",
+      "parkId": 2,
+      "userId": 5,
+      "createdAt": "2025-05-14T08:46:03.625Z",
+      "id": 17
+    },
+    {
+      "name": "Let me live in 1991",
+      "parkId": 13,
+      "userId": 5,
+      "createdAt": "2025-05-14T08:47:11.972Z",
+      "id": 18
     }
   ]
 }

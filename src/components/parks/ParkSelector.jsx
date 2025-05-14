@@ -41,10 +41,9 @@ export const ParkSelector = () => {
   return (
     <section className="park-selector">
       <h1>Welcome to Pick A Park 🌲</h1>
-      <p>Readay to plan your next adventure?</p>
+      <p>Ready to plan your next adventure?</p>
 
       <h2>Select a National Park</h2>
-      {/*// controlled input: dropdown is synced w/ state */}
       <select value={selectedParkId} onChange={handleSelect}>
         <option value="0">Select a park...</option>
         {parks?.map((park) => (
@@ -53,23 +52,31 @@ export const ParkSelector = () => {
           </option>
         ))}
       </select>
-      {/* // Only show this div IF (&&) */}
+
       {selectedPark && (
-        <div className="park-preview">
-          <h3>{selectedPark.name}</h3>
-          <p>
-            <strong>Location:</strong>
-            {selectedPark.location}
-          </p>
-          <p>{selectedPark.description}</p>
-          {selectedPark.imageUrl && <img src={selectedPark.imageUrl} alt={selectedPark.name} />}
-          {/* Add park highlights here - stretch goals (attractions) */}
-          <CreateNewTripForm
-            tripName={tripName}
-            setTripName={setTripName}
-            handleAddTrip={handleAddTrip}
-          />
-        </div>
+        <>
+          <section className="park-preview">
+            <div className="info-block">
+              <h3>{selectedPark.name}</h3>
+              <p>
+                <strong>Location:</strong> {selectedPark.location}
+              </p>
+              <p>{selectedPark.description}</p>
+            </div>
+
+            <div className="image-block">
+              {selectedPark.imageUrl && <img src={selectedPark.imageUrl} alt={selectedPark.name} />}
+            </div>
+          </section>
+
+          <section className="trip-form-section">
+            <CreateNewTripForm
+              tripName={tripName}
+              setTripName={setTripName}
+              handleAddTrip={handleAddTrip}
+            />
+          </section>
+        </>
       )}
     </section>
   );
