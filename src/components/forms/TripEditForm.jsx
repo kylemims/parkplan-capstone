@@ -11,6 +11,8 @@ export const TripEditForm = () => {
   const navigate = useNavigate();
   const { tripId } = useParams();
 
+  // Fetch the trip deets by Id -> update the trip state
+  // Fetch list of parks -> update the parks state
   useEffect(() => {
     getTripById(tripId).then(setTrip);
     getAllParks().then(setParks);
@@ -22,8 +24,10 @@ export const TripEditForm = () => {
     setTrip(copy);
   };
 
+  // updateTrip function to handle the form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    // ...trip, -> copy and retain all properties while updating only parkId
     updateTrip(trip.id, {
       ...trip,
       parkId: parseInt(trip.parkId),

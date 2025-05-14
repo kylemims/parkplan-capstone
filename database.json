@@ -211,17 +211,10 @@
     },
     {
       "name": "yah mon",
-      "parkId": 10,
+      "parkId": 13,
       "userId": 1,
       "createdAt": "2025-05-13T20:54:54.550Z",
       "id": 11
-    },
-    {
-      "name": "I want to see the other realm",
-      "parkId": 10,
-      "userId": 1,
-      "createdAt": "2025-05-13T20:57:07.800Z",
-      "id": 13
     },
     {
       "name": "Get smokied",
@@ -245,11 +238,25 @@
       "id": 17
     },
     {
-      "name": "Let me live in 1991",
-      "parkId": 13,
+      "name": "Take me to Zion! sike...take me to Bryce",
+      "parkId": 2,
       "userId": 5,
-      "createdAt": "2025-05-14T08:47:11.972Z",
-      "id": 18
+      "createdAt": "2025-05-14T15:46:26.662Z",
+      "id": 19
+    },
+    {
+      "name": "Jon's not so big trip",
+      "parkId": 4,
+      "userId": 5,
+      "createdAt": "2025-05-14T16:29:30.913Z",
+      "id": 20
+    },
+    {
+      "name": "one more test",
+      "parkId": 7,
+      "userId": 5,
+      "createdAt": "2025-05-14T16:51:24.387Z",
+      "id": 21
     }
   ]
 }

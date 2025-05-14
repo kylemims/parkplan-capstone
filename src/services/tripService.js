@@ -2,6 +2,7 @@ export const getTripsByUserId = (userId) => {
   return fetch(`http://localhost:8088/trips?userId=${userId}`).then((res) => res.json());
 };
 
+// POST request to create a new trip -> tripObj = { name, parkId, userId, createdAt })
 export const createTrip = (tripObj) => {
   return fetch("http://localhost:8088/trips", {
     method: "POST",
@@ -17,6 +18,7 @@ export const createTrip = (tripObj) => {
   });
 };
 
+// DELETE request to delete a trip by id
 export const deleteTrip = (id) => {
   return fetch(`http://localhost:8088/trips/${id}`, {
     method: "DELETE",
@@ -27,6 +29,7 @@ export const getTripById = (tripId) => {
   return fetch(`http://localhost:8088/trips/${tripId}`).then((res) => res.json());
 };
 
+// PUT request to update a trip -> (tripObj)
 export const updateTrip = (tripId, updatedTripObj) => {
   return fetch(`http://localhost:8088/trips/${tripId}`, {
     method: "PUT",

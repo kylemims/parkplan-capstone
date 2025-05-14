@@ -4,6 +4,7 @@ import { getTripsByUserId } from "../../services/tripService";
 import { deleteTrip } from "../../services/tripService";
 import "./TripList.css";
 
+// Component to display the list of trips for the logged-in user
 export const TripDashboard = () => {
   const [trips, setTrips] = useState([]);
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ export const TripDashboard = () => {
               <strong>Created:</strong> {new Date(trip.createdAt).toLocaleDateString()}
             </p>
 
+            {/* Navigate to the edit form of selected trip */}
             <div className="trip-card__actions">
               <button onClick={() => navigate(`/trips/${trip.id}/edit`)}>Edit</button>
               <button onClick={() => handleDelete(trip.id)}>Delete</button>
