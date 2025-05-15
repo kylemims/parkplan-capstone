@@ -38,7 +38,6 @@ export const TripDashboard = () => {
               <strong>Created:</strong> {new Date(trip.createdAt).toLocaleDateString()}
             </p>
 
-            {/* Navigate to the edit form of selected trip */}
             <div className="trip-card__actions">
               <button onClick={() => navigate(`/trips/${trip.id}/edit`)}>Edit</button>
               <button onClick={() => handleDelete(trip.id)}>Delete</button>

@@ -1,25 +1,82 @@
+/* Main navbar wrapper */
 .navbar {
-  display: flex; /* 👈 Arrange items in a row */
-  flex-wrap: nowrap;
-  background-color: #343d3f; /* 👈 Background color */
-  margin: 0;
   width: 100%;
-  padding: 0.5rem;
+  background-color: #2f3835;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.navbar-item {
-  flex-basis: 20%; /* 👈 Each item takes up 20% width */
-  list-style-type: none; /* 👈 No bullet points */
-  text-align: center;
-  color: var(--offWhite);
+/* Flex container for logo + hamburger */
+.nav-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.navbar-link {
-  text-decoration: none; /* 👈 Remove underline */
-  font-family: "Quicksand", sans-serif;
-  letter-spacing: 1px;
+/* Hamburger image styling */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.navbar-link:hover {
-  color: var(--primary); /* 👈 Hover color effect */
+.hamburger-icon {
+  width: 32px;
+  height: 32px;
+  filter: invert(100%);
+}
+
+/* Menu list */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.nav-menu li button {
+  background: none;
+  border: none;
+  color: #fff9e6;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.nav-menu li button:hover {
+  background-color: #444;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -2rem;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }

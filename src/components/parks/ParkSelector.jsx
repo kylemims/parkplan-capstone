@@ -41,7 +41,8 @@ export const ParkSelector = () => {
 
   return (
     <section className="park-selector">
-      <h1>Welcome to Pick A Park 🌲</h1>
+      <h1>Welcome to Pick A Park</h1>
+      <img className="park-logo" src={`public/images/PickLogo.png`} alt="Park" />
       <p>Ready to plan your next adventure?</p>
       <h2>Select a National Park</h2>
 

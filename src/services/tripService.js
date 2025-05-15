@@ -1,5 +1,7 @@
 export const getTripsByUserId = (userId) => {
-  return fetch(`http://localhost:8088/trips?userId=${userId}`).then((res) => res.json());
+  return fetch(`http://localhost:8088/trips?userId=${userId}&_expand=park`).then((res) =>
+    res.json()
+  );
 };
 
 // POST request to create a new trip -> tripObj = { name, parkId, userId, createdAt })
