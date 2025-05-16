@@ -1,0 +1,108 @@
+/* ParkDetails.css */
+
+.park-details-container {
+  max-width: 700px;
+  margin: 1rem auto;
+  padding: 0.75rem 1rem;
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.park-details-container h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.park-details-container .park-location {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.park-details-container .park-tagline {
+  font-style: italic;
+  margin: 0.25rem 0;
+  color: #c0c0c0;
+  font-size: 0.9rem;
+}
+
+.park-details-container .park-info-block {
+  margin-top: 0.75rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.park-details-container .park-info-block p {
+  margin: 0.4rem 0;
+}
+
+.park-details-container .carousel-container {
+  position: relative;
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.park-details-container .carousel-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.park-details-container .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 6px;
+}
+
+.park-details-container .carousel-btn:first-of-type {
+  left: 10px;
+}
+
+.park-details-container .carousel-btn:last-of-type {
+  right: 10px;
+}
+
+.park-details-container .trip-form-section {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #333;
+  font-size: 0.95rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.park-details-container .trip-form-section form {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .park-details-container .carousel-image {
+    max-height: 160px;
+  }
+
+  .park-details-container .carousel-btn {
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .park-details-container {
+    padding: 0.5rem 0.75rem;
+  }
+}

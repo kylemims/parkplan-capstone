@@ -3,9 +3,10 @@ import { NavBar } from "../components/nav/NavBar.jsx";
 import { Login } from "../components/auth/Login.jsx";
 import { Register } from "../components/auth/Register.jsx";
 import { Authorized } from "./Authorized";
-import { ParkSelector } from "../components/parks/ParkSelector.jsx";
+import { HomePage } from "../components/parks/HomePage.jsx";
 import { TripDashboard } from "../components/trips/TripDashboard.jsx";
 import { TripEditForm } from "../components/forms/TripEditForm.jsx";
+import { ParkDetails } from "../components/parks/ParkDetails";
 
 export const ApplicationViews = () => {
   return (
@@ -25,10 +26,11 @@ export const ApplicationViews = () => {
             index
             element={
               <Authorized>
-                <ParkSelector />
+                <HomePage />
               </Authorized>
             }
           />
+          <Route path="/parks/:parkId" element={<ParkDetails />} />
           <Route
             path="/trips"
             element={

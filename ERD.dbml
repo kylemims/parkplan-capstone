@@ -12,6 +12,12 @@ Table parks {
   description text
 }
 
+Table images {
+  id int [pk, increment]
+  park_id int [ref: > parks.id]
+  url varchar
+}
+
 Table attractions {
   id int [pk, increment]
   park_id int [ref: > parks.id]

@@ -33,130 +33,379 @@
       "name": "Yosemite National Park",
       "location": "California",
       "description": "Famous for its granite cliffs, waterfalls, and giant sequoias.",
-      "bestTimeToVisit": "May through September",
-      "notableWildlife": "Black bears, mule deer, peregrine falcons",
-      "parkHighlights": "Half Dome, Yosemite Falls, El Capitan",
-      "imageUrl": "/images/yosemite-4.png"
+      "bestTime": "May through September",
+      "wildlife": "Black bears, mule deer, peregrine falcons",
+      "highlights": "Half Dome, Yosemite Falls, El Capitan"
     },
     {
       "id": 2,
       "name": "Yellowstone National Park",
       "location": "Wyoming, Montana, Idaho",
       "description": "Home to geysers, hot springs, and diverse wildlife.",
-      "bestTimeToVisit": "April to October",
-      "notableWildlife": "Bison, wolves, grizzly bears",
-      "parkHighlights": "Old Faithful, Grand Prismatic Spring, Yellowstone Lake",
-      "imageUrl": "/images/yellowstone-4.png"
+      "bestTime": "April to October",
+      "wildlife": "Bison, wolves, grizzly bears",
+      "highlights": "Old Faithful, Grand Prismatic Spring, Yellowstone Lake"
     },
     {
       "id": 3,
       "name": "Zion National Park",
       "location": "Utah",
       "description": "Known for steep red cliffs and scenic canyon hikes.",
-      "bestTimeToVisit": "March through May and September through November",
-      "notableWildlife": "Desert bighorn sheep, mule deer",
-      "parkHighlights": "Angels Landing, The Narrows, Emerald Pools",
-      "imageUrl": "/images/zion-4.png"
+      "bestTime": "March through May and September through November",
+      "wildlife": "Desert bighorn sheep, mule deer",
+      "highlights": "Angels Landing, The Narrows, Emerald Pools"
     },
     {
       "id": 4,
       "name": "Grand Canyon National Park",
       "location": "Arizona",
       "description": "Iconic views of a mile-deep canyon carved by the Colorado River.",
-      "bestTimeToVisit": "March through May and September through November",
-      "notableWildlife": "California condor, elk",
-      "parkHighlights": "South Rim, Bright Angel Trail, Desert View Watchtower",
-      "imageUrl": "/images/grandcanyon.jpg"
+      "bestTime": "March through May and September through November",
+      "wildlife": "California condor, elk",
+      "highlights": "South Rim, Bright Angel Trail, Desert View Watchtower"
     },
     {
       "id": 5,
       "name": "Rocky Mountain National Park",
       "location": "Colorado",
       "description": "High-altitude trails, alpine lakes, and snowy peaks.",
-      "bestTimeToVisit": "June through September",
-      "notableWildlife": "Elk, moose, black bears",
-      "parkHighlights": "Trail Ridge Road, Bear Lake, Longs Peak",
-      "imageUrl": "/images/rockymountain.jpg"
+      "bestTime": "June through September",
+      "wildlife": "Elk, moose, black bears",
+      "highlights": "Trail Ridge Road, Bear Lake, Longs Peak"
     },
     {
       "id": 6,
       "name": "Great Smoky Mountains National Park",
       "location": "Tennessee, North Carolina",
       "description": "Lush forests and mist-covered mountain ranges.",
-      "bestTimeToVisit": "Late spring to early fall",
-      "notableWildlife": "Black bears, salamanders, white-tailed deer",
-      "parkHighlights": "Clingmans Dome, Cades Cove, Roaring Fork",
-      "imageUrl": "/images/smokymountains.jpg"
+      "bestTime": "Late spring to early fall",
+      "wildlife": "Black bears, salamanders, white-tailed deer",
+      "highlights": "Clingmans Dome, Cades Cove, Roaring Fork"
     },
     {
       "id": 7,
       "name": "Arches National Park",
       "location": "Utah",
       "description": "Over 2,000 natural stone arch formations.",
-      "bestTimeToVisit": "March through May and September through October",
-      "notableWildlife": "Red foxes, kangaroo rats",
-      "parkHighlights": "Delicate Arch, Landscape Arch, The Windows",
-      "imageUrl": "/images/arches.jpg"
+      "bestTime": "March through May and September through October",
+      "wildlife": "Red foxes, kangaroo rats",
+      "highlights": "Delicate Arch, Landscape Arch, The Windows"
     },
     {
       "id": 8,
       "name": "Acadia National Park",
       "location": "Maine",
       "description": "Rocky beaches, woodlands, and Cadillac Mountain views.",
-      "bestTimeToVisit": "Mid-September through early October",
-      "notableWildlife": "Bald eagles, seals, porcupines",
-      "parkHighlights": "Cadillac Mountain, Jordan Pond, Thunder Hole",
-      "imageUrl": "/images/acadia.jpg"
+      "bestTime": "Mid-September through early October",
+      "wildlife": "Bald eagles, seals, porcupines",
+      "highlights": "Cadillac Mountain, Jordan Pond, Thunder Hole"
     },
     {
       "id": 9,
       "name": "Olympic National Park",
       "location": "Washington",
       "description": "Diverse ecosystems from glacial peaks to temperate rainforests.",
-      "bestTimeToVisit": "May through September",
-      "notableWildlife": "Roosevelt elk, mountain goats",
-      "parkHighlights": "Hoh Rain Forest, Hurricane Ridge, Rialto Beach",
-      "imageUrl": "/images/olympic.jpg"
+      "bestTime": "May through September",
+      "wildlife": "Roosevelt elk, mountain goats",
+      "highlights": "Hoh Rain Forest, Hurricane Ridge, Rialto Beach"
     },
     {
       "id": 10,
       "name": "Joshua Tree National Park",
       "location": "California",
       "description": "Desert landscapes where the Mojave and Colorado deserts meet.",
-      "bestTimeToVisit": "March to May and October to November",
-      "notableWildlife": "Jackrabbits, coyotes, desert tortoises",
-      "parkHighlights": "Hidden Valley, Cholla Cactus Garden, Skull Rock",
-      "imageUrl": "/images/joshuatree.jpg"
+      "bestTime": "March to May and October to November",
+      "wildlife": "Jackrabbits, coyotes, desert tortoises",
+      "highlights": "Hidden Valley, Cholla Cactus Garden, Skull Rock"
     },
     {
       "id": 11,
       "name": "Glacier National Park",
       "location": "Montana",
       "description": "Known for its rugged mountains and scenic drives.",
-      "bestTimeToVisit": "July to September",
-      "notableWildlife": "Mountain goats, grizzly bears, marmots",
-      "parkHighlights": "Going-to-the-Sun Road, Grinnell Glacier, Lake McDonald",
-      "imageUrl": "/images/glacier.jpg"
+      "bestTime": "July to September",
+      "wildlife": "Mountain goats, grizzly bears, marmots",
+      "highlights": "Going-to-the-Sun Road, Grinnell Glacier, Lake McDonald"
     },
     {
       "id": 12,
       "name": "Bryce Canyon National Park",
       "location": "Utah",
       "description": "Famous for crimson-colored hoodoos and starry skies.",
-      "bestTimeToVisit": "May through September",
-      "notableWildlife": "Prairie dogs, mule deer, golden eagles",
-      "parkHighlights": "Bryce Amphitheater, Navajo Loop, Sunrise Point",
-      "imageUrl": "/images/bryce.jpg"
+      "bestTime": "May through September",
+      "wildlife": "Prairie dogs, mule deer, golden eagles",
+      "highlights": "Bryce Amphitheater, Navajo Loop, Sunrise Point"
     },
     {
       "id": 13,
       "name": "Sequoia National Park",
       "location": "California",
       "description": "Home to giant sequoia trees, including General Sherman Tree.",
-      "bestTimeToVisit": "June through August",
-      "notableWildlife": "Black bears, bobcats, Steller’s jays",
-      "parkHighlights": "General Sherman Tree, Moro Rock, Crystal Cave",
-      "imageUrl": "/images/sequoia.jpg"
+      "bestTime": "June through August",
+      "wildlife": "Black bears, bobcats, Steller’s jays",
+      "highlights": "General Sherman Tree, Moro Rock, Crystal Cave"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "parkId": 1,
+      "url": "/images/yosemite-1.jpg"
+    },
+    {
+      "id": 2,
+      "parkId": 1,
+      "url": "/images/yosemite-2.jpg"
+    },
+    {
+      "id": 3,
+      "parkId": 1,
+      "url": "/images/yosemite-3.jpg"
+    },
+    {
+      "id": 4,
+      "parkId": 1,
+      "url": "/images/yosemite-4.jpg"
+    },
+    {
+      "id": 5,
+      "parkId": 2,
+      "url": "/images/yellowstone-1.jpg"
+    },
+    {
+      "id": 6,
+      "parkId": 2,
+      "url": "/images/yellowstone-2.jpg"
+    },
+    {
+      "id": 7,
+      "parkId": 2,
+      "url": "/images/yellowstone-3.jpg"
+    },
+    {
+      "id": 8,
+      "parkId": 2,
+      "url": "/images/yellowstone-4.jpg"
+    },
+    {
+      "id": 9,
+      "parkId": 3,
+      "url": "/images/zion-1.jpg"
+    },
+    {
+      "id": 10,
+      "parkId": 3,
+      "url": "/images/zion-2.jpg"
+    },
+    {
+      "id": 11,
+      "parkId": 3,
+      "url": "/images/zion-3.jpg"
+    },
+    {
+      "id": 12,
+      "parkId": 3,
+      "url": "/images/zion-4.jpg"
+    },
+    {
+      "id": 13,
+      "parkId": 4,
+      "url": "/images/grandcanyon-1.jpg"
+    },
+    {
+      "id": 14,
+      "parkId": 4,
+      "url": "/images/grandcanyon-2.jpg"
+    },
+    {
+      "id": 15,
+      "parkId": 4,
+      "url": "/images/grandcanyon-3.jpg"
+    },
+    {
+      "id": 16,
+      "parkId": 4,
+      "url": "/images/grandcanyon-4.jpg"
+    },
+    {
+      "id": 17,
+      "parkId": 5,
+      "url": "/images/rockymtn-1.jpg"
+    },
+    {
+      "id": 18,
+      "parkId": 5,
+      "url": "/images/rockymtn-2.jpg"
+    },
+    {
+      "id": 19,
+      "parkId": 5,
+      "url": "/images/rockymtn-3.jpg"
+    },
+    {
+      "id": 20,
+      "parkId": 5,
+      "url": "/images/rockymtn-4.jpg"
+    },
+    {
+      "id": 21,
+      "parkId": 6,
+      "url": "/images/smokey-1.jpg"
+    },
+    {
+      "id": 22,
+      "parkId": 6,
+      "url": "/images/smokey-2.jpg"
+    },
+    {
+      "id": 23,
+      "parkId": 6,
+      "url": "/images/smokey-3.jpg"
+    },
+    {
+      "id": 24,
+      "parkId": 6,
+      "url": "/images/smokey-4.jpg"
+    },
+    {
+      "id": 25,
+      "parkId": 7,
+      "url": "/images/arches-1.jpg"
+    },
+    {
+      "id": 26,
+      "parkId": 7,
+      "url": "/images/arches-2.jpg"
+    },
+    {
+      "id": 27,
+      "parkId": 7,
+      "url": "/images/arches-3.jpg"
+    },
+    {
+      "id": 28,
+      "parkId": 7,
+      "url": "/images/arches-4.jpg"
+    },
+    {
+      "id": 29,
+      "parkId": 8,
+      "url": "/images/acadia-1.jpg"
+    },
+    {
+      "id": 30,
+      "parkId": 8,
+      "url": "/images/acadia-2.jpg"
+    },
+    {
+      "id": 31,
+      "parkId": 8,
+      "url": "/images/acadia-3.jpg"
+    },
+    {
+      "id": 32,
+      "parkId": 8,
+      "url": "/images/acadia-4.jpg"
+    },
+    {
+      "id": 33,
+      "parkId": 9,
+      "url": "/images/olympic-1.jpg"
+    },
+    {
+      "id": 34,
+      "parkId": 9,
+      "url": "/images/olympic-2.jpg"
+    },
+    {
+      "id": 35,
+      "parkId": 9,
+      "url": "/images/olympic-3.jpg"
+    },
+    {
+      "id": 36,
+      "parkId": 9,
+      "url": "/images/olympic-4.jpg"
+    },
+    {
+      "id": 37,
+      "parkId": 10,
+      "url": "/images/joshua-1.jpg"
+    },
+    {
+      "id": 38,
+      "parkId": 10,
+      "url": "/images/joshua-2.jpg"
+    },
+    {
+      "id": 39,
+      "parkId": 10,
+      "url": "/images/joshua-3.jpg"
+    },
+    {
+      "id": 40,
+      "parkId": 10,
+      "url": "/images/joshua-4.jpg"
+    },
+    {
+      "id": 41,
+      "parkId": 11,
+      "url": "/images/glacier-1.jpg"
+    },
+    {
+      "id": 42,
+      "parkId": 11,
+      "url": "/images/glacier-2.jpg"
+    },
+    {
+      "id": 43,
+      "parkId": 11,
+      "url": "/images/glacier-3.jpg"
+    },
+    {
+      "id": 44,
+      "parkId": 11,
+      "url": "/images/glacier-4.jpg"
+    },
+    {
+      "id": 45,
+      "parkId": 12,
+      "url": "/images/bryce-1.jpg"
+    },
+    {
+      "id": 46,
+      "parkId": 12,
+      "url": "/images/bryce-2.jpg"
+    },
+    {
+      "id": 47,
+      "parkId": 12,
+      "url": "/images/bryce-3.jpg"
+    },
+    {
+      "id": 48,
+      "parkId": 12,
+      "url": "/images/bryce-4.jpg"
+    },
+    {
+      "id": 49,
+      "parkId": 13,
+      "url": "/images/sequoia-1.jpg"
+    },
+    {
+      "id": 50,
+      "parkId": 13,
+      "url": "/images/sequoia-2.jpg"
+    },
+    {
+      "id": 51,
+      "parkId": 13,
+      "url": "/images/sequoia-3.jpg"
+    },
+    {
+      "id": 52,
+      "parkId": 13,
+      "url": "/images/sequoia-4.jpg"
     }
   ],
   "trips": [
@@ -210,7 +459,7 @@
       "id": 10
     },
     {
-      "name": "yah mon",
+      "name": "nah mon",
       "parkId": 10,
       "userId": 1,
       "createdAt": "2025-05-13T20:54:54.550Z",
@@ -264,6 +513,13 @@
       "userId": 1,
       "createdAt": "2025-05-15T16:15:26.567Z",
       "id": 22
+    },
+    {
+      "name": "The great Dom's trip",
+      "park_id": 1,
+      "user_id": 1,
+      "created_at": "2025-05-16T20:50:14.012Z",
+      "id": 23
     }
   ]
 }
