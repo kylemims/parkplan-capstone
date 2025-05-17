@@ -1,13 +1,12 @@
 /* ParkDetails.css */
 
 .park-details-container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 1rem auto;
   padding: 0.75rem 1rem;
-  background-color: #1f1f1f;
   color: #f0f0f0;
   border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.25); */
   font-family: "Helvetica Neue", sans-serif;
 }
 
@@ -31,13 +30,52 @@
 }
 
 .park-details-container .park-info-block {
-  margin-top: 0.75rem;
-  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 1.5rem;
+  line-height: 0.85rem;
   font-size: 0.95rem;
 }
 
 .park-details-container .park-info-block p {
   margin: 0.4rem 0;
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.weather-paragraph {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.weather-icon {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+.wildlife-header {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+.wildlife-paragraph {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+.wildlife-icon {
+  width: 17px;
+  margin-right: 0.5rem;
 }
 
 .park-details-container .carousel-container {
@@ -53,6 +91,7 @@
   max-height: 200px;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(63, 62, 62, 0.4);
 }
 
 .park-details-container .carousel-btn {
@@ -78,14 +117,14 @@
 }
 
 .park-details-container .trip-form-section {
-  margin-top: 0.75rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid #333;
+  /* margin-top: 0.75rem; */
+  /* padding-top: 0.5rem; */
+  /* border-top: 1px solid #333; */
   font-size: 0.95rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  /* align-items: stretch; */
 }
 
 .park-details-container .trip-form-section form {

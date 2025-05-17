@@ -4,6 +4,7 @@ import { getImagesByParkId, getParkById } from "../../services/parkService";
 import { createTrip } from "../../services/tripService";
 import { CreateNewTripForm } from "../forms/CreateNewTripForm";
 import "./ParkDetails.css";
+import "../forms/Form.css";
 
 export const ParkDetails = () => {
   const { parkId } = useParams();
@@ -43,7 +44,7 @@ export const ParkDetails = () => {
   if (!park) return <p>Loading park details...</p>;
 
   return (
-    <div className="park-details-container">
+    <section className="park-details-container">
       <h1>{park.name}</h1>
       <p className="park-location">{park.location}</p>
 
@@ -63,17 +64,24 @@ export const ParkDetails = () => {
         </div>
       )}
 
-      <p className="park-tagline">{park.tagline}</p>
+      <p className="park-tagline">{park.description}</p>
 
-      <div className="park-info-block">
-        <p>
-          <strong>Best time to visit:</strong> {park.bestTime}
-        </p>
-        <p>
-          <strong>Wildlife:</strong> {park.wildlife}
-        </p>
-        <p>{park.description}</p>
-      </div>
+      <section className="park-info-block">
+        <div className="weather-header">
+          <img src="/images/weather-icon.svg" alt="Weather Icon" className="weather-icon" />
+          <p>Best time to visit:</p>
+        </div>
+        <div className="weather-paragraph">
+          <p>{park.bestTime}</p>
+        </div>
+        <div className="wildlife-header">
+          <img src="/images/wildlife-icon.svg" alt="Wildlife Icon" className="wildlife-icon" />
+          <p>Wildlife:</p>
+        </div>
+        <div className="wildlife-paragraph">
+          <p>{park.wildlife}</p>
+        </div>
+      </section>
 
       <div className="trip-form-section">
         <CreateNewTripForm
@@ -82,6 +90,6 @@ export const ParkDetails = () => {
           handleAddTrip={handleAddTrip}
         />
       </div>
-    </div>
+    </section>
   );
 };

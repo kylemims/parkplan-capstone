@@ -31,7 +31,7 @@ export const HomePage = () => {
       <h2>Select a National Park</h2>
 
       {/* Renders dropdown - handleSelect updates selectedParkId */}
-      <select value={selectedParkId} onChange={handleSelect}>
+      <select className="dropdown" value={selectedParkId} onChange={handleSelect}>
         <option value="0">Select a park...</option>
         {parks?.map((park) => (
           <option key={park.id} value={park.id}>
