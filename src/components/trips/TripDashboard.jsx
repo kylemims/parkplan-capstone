@@ -3,12 +3,16 @@ import { useNavigate } from "react-router-dom";
 import { getTripsByUserId } from "../../services/tripService";
 import { deleteTrip } from "../../services/tripService";
 import "./TripList.css";
+import { NewTripModal } from "../forms/NewTripModal.jsx";
+import { CreateNewTripForm } from "../forms/CreateNewTripForm.jsx";
+import "../forms/NewTripModal.css";
+import "../forms/Form.css";
 
 // Component to display the list of trips for the logged-in user
 export const TripDashboard = () => {
   const [trips, setTrips] = useState([]);
   const navigate = useNavigate();
-
+  const [openModal, setOpenModal] = useState(false);
   const localUser = localStorage.getItem("parkplan_user");
   const userObj = JSON.parse(localUser);
 
@@ -21,6 +25,14 @@ export const TripDashboard = () => {
       deleteTrip(tripId).then(() => {
         getTripsByUserId(userObj.id).then(setTrips);
       });
+  };
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
   };
 
   return (
@@ -46,10 +58,12 @@ export const TripDashboard = () => {
         ))}
       </div>
       <div className="add-new-dash">
-        <button className="trip-list__create-button" onClick={() => navigate("/")}>
+        <button className="trip-list__create-button" onClick={handleOpenModal}>
           + Add New Trip
         </button>
+        <NewTripModal open={openModal} onClose={handleCloseModal} />
       </div>
     </section>
   );
 };
+// navigate("/")

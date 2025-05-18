@@ -10,7 +10,7 @@ export const CreateNewTripForm = ({ tripName, setTripName, handleAddTrip }) => {
         handleAddTrip();
       }}>
       <FormInput
-        label="Trip Name"
+        // label=""
         type="text"
         name="tripName"
         id="tripName"
@@ -19,9 +19,8 @@ export const CreateNewTripForm = ({ tripName, setTripName, handleAddTrip }) => {
         placeholder="e.g. Yellowstone Adventure"
       />
 
-      <button type="submit" disabled={tripName.trim() === ""}>
-        Add Trip
-      </button>
+      <button type="submit">Add Trip</button>
     </form>
   );
 };
+//  disabled={tripName.trim() === ""}
