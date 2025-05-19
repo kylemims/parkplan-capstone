@@ -1,6 +1,7 @@
 import { getAllParks } from "../../services/parkService.js";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { DropDown } from "./DropDown.jsx";
 import "./HomePage.css";
 
 // component for dropdown list of parks for user to select from and create a trip
@@ -29,16 +30,9 @@ export const HomePage = () => {
       <img className="park-logo" src="/images/PickLogo.png" alt="Park" />
       <p>Ready to plan your next adventure?</p>
       <h2>Select a National Park</h2>
-
-      {/* Renders dropdown - handleSelect updates selectedParkId */}
-      <select className="dropdown" value={selectedParkId} onChange={handleSelect}>
-        <option value="0">Select a park...</option>
-        {parks?.map((park) => (
-          <option key={park.id} value={park.id}>
-            {park.name}
-          </option>
-        ))}
-      </select>
+      <div className="dropdown-container">
+        <DropDown options={parks} selectedValue={selectedParkId} onChange={handleSelect} />
+      </div>
     </section>
   );
 };
