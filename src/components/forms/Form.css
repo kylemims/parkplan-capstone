@@ -1,6 +1,8 @@
 .trip-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
   max-width: 600px;
   width: 60%;
   margin: 0rem;
@@ -39,7 +41,7 @@
 }
 
 .trip-form button:hover {
-  background-color: #9c5940;
+  background-color: #563529;
 }
 
 .trip-form label {

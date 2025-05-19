@@ -14,9 +14,6 @@ export const NewTripModal = ({ open, onClose }) => {
         <div className="modal-header">
           <h2>Create a New Trip</h2>
         </div>
-        <div className="modal-subheader">
-          <h4>Plan your next adventure!</h4>
-        </div>
 
         <p className="modal-label">
           Fill out the form below to create a new trip. Don't forget to give it a name!
