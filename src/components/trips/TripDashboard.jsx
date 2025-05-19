@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 import { getTripsByUserId } from "../../services/tripService";
 import { deleteTrip } from "../../services/tripService";
 import "./TripList.css";
@@ -7,12 +8,14 @@ import { NewTripModal } from "../forms/NewTripModal.jsx";
 import { CreateNewTripForm } from "../forms/CreateNewTripForm.jsx";
 import "../forms/NewTripModal.css";
 import "../forms/Form.css";
+import { TripCard } from "./TripCard.jsx";
 
 // Component to display the list of trips for the logged-in user
 export const TripDashboard = () => {
   const [trips, setTrips] = useState([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
+
   const localUser = localStorage.getItem("parkplan_user");
   const userObj = JSON.parse(localUser);
 
@@ -30,7 +33,6 @@ export const TripDashboard = () => {
   const handleOpenModal = () => {
     setOpenModal(true);
   };
-
   const handleCloseModal = () => {
     setOpenModal(false);
   };
@@ -38,25 +40,12 @@ export const TripDashboard = () => {
   return (
     <section className="trip-list">
       <h1>My Planned Trips</h1>
-
       <div className="trip-list__cards">
         {trips?.map((trip) => (
-          <div key={trip.id} className="trip-card">
-            <h3>{trip.name}</h3>
-            <p>
-              <strong>Park:</strong> {trip.park?.name}
-            </p>
-            <p>
-              <strong>Created:</strong> {new Date(trip.createdAt).toLocaleDateString()}
-            </p>
-
-            <div className="trip-card__actions">
-              <button onClick={() => navigate(`/trips/${trip.id}/edit`)}>Edit</button>
-              <button onClick={() => handleDelete(trip.id)}>Delete</button>
-            </div>
-          </div>
+          <TripCard key={trip.id} trip={trip} onDelete={handleDelete} />
         ))}
       </div>
+
       <div className="add-new-dash">
         <button className="trip-list__create-button" onClick={handleOpenModal}>
           + Add New Trip
@@ -66,4 +55,3 @@ export const TripDashboard = () => {
     </section>
   );
 };
-// navigate("/")

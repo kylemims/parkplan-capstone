@@ -7,6 +7,7 @@ import { HomePage } from "../components/parks/HomePage.jsx";
 import { TripDashboard } from "../components/trips/TripDashboard.jsx";
 import { TripEditForm } from "../components/forms/TripEditForm.jsx";
 import { ParkDetails } from "../components/parks/ParkDetails";
+import { TripCard } from "../components/trips/TripCard.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -47,6 +48,14 @@ export const ApplicationViews = () => {
               </Authorized>
             }
           />
+          {/* <Route
+            path="/tripcard"
+            element={
+              <Authorized>
+                <TripCard />
+              </Authorized>
+            }
+          /> */}
         </Route>
       </Routes>
     </>
