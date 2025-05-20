@@ -7,7 +7,7 @@ export const DropDown = ({
   valueKey = "id",
 }) => {
   return (
-    <select vlue={selectedValue} onChange={onChange} className="dropdown">
+    <select value={selectedValue} onChange={onChange} className="dropdown">
       <option value="">Select an option...</option>
       {options.map((option) => (
         <option key={option[valueKey]} value={option[valueKey]}>
