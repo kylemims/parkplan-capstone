@@ -81,14 +81,14 @@
 .modal-container button {
   width: 100%;
   max-width: 800px;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   margin-bottom: 1rem;
   padding: 0rem;
 }
 
 .modal-container form {
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* or whatever you prefer */
   margin-top: -2rem;
   display: flex;
   flex-direction: column;
