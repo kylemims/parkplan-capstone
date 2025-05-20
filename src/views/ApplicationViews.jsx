@@ -8,6 +8,7 @@ import { TripDashboard } from "../components/trips/TripDashboard.jsx";
 import { TripEditForm } from "../components/forms/TripEditForm.jsx";
 import { ParkDetails } from "../components/parks/ParkDetails";
 import { TripCard } from "../components/trips/TripCard.jsx";
+import { GridLayout } from "./grid.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -56,6 +57,7 @@ export const ApplicationViews = () => {
               </Authorized>
             }
           /> */}
+          <Route path="/grid" element={<GridLayout />} />
         </Route>
       </Routes>
     </>

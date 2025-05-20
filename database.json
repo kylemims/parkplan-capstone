@@ -35,7 +35,7 @@
       "description": "Famous for its granite cliffs, waterfalls, and giant sequoias.",
       "bestTime": "May through September",
       "wildlife": "Black bears, mule deer, peregrine falcons",
-      "highlights": "Half Dome, Yosemite Falls, El Capitan"
+      "highlights": "Half Dome, El Capitan"
     },
     {
       "id": 2,
@@ -44,7 +44,7 @@
       "description": "Home to geysers, hot springs, and diverse wildlife.",
       "bestTime": "April to October",
       "wildlife": "Bison, wolves, grizzly bears",
-      "highlights": "Old Faithful, Grand Prismatic Spring, Yellowstone Lake"
+      "highlights": "Old Faithful, Yellowstone Lake"
     },
     {
       "id": 3,
@@ -53,7 +53,7 @@
       "description": "Known for steep red cliffs and scenic canyon hikes.",
       "bestTime": "March through May and September through November",
       "wildlife": "Desert bighorn sheep, mule deer",
-      "highlights": "Angels Landing, The Narrows, Emerald Pools"
+      "highlights": "Angels Landing, Emerald Pools"
     },
     {
       "id": 4,
@@ -62,7 +62,7 @@
       "description": "Iconic views of a mile-deep canyon carved by the Colorado River.",
       "bestTime": "March through May and September through November",
       "wildlife": "California condor, elk",
-      "highlights": "South Rim, Bright Angel Trail, Desert View Watchtower"
+      "highlights": "South Rim, Desert View Watchtower"
     },
     {
       "id": 5,
@@ -71,7 +71,7 @@
       "description": "High-altitude trails, alpine lakes, and snowy peaks.",
       "bestTime": "June through September",
       "wildlife": "Elk, moose, black bears",
-      "highlights": "Trail Ridge Road, Bear Lake, Longs Peak"
+      "highlights": "Bear Lake, Longs Peak"
     },
     {
       "id": 6,
@@ -80,7 +80,7 @@
       "description": "Lush forests and mist-covered mountain ranges.",
       "bestTime": "Late spring to early fall",
       "wildlife": "Black bears, salamanders, white-tailed deer",
-      "highlights": "Clingmans Dome, Cades Cove, Roaring Fork"
+      "highlights": "Clingmans Dome, Cades Cove"
     },
     {
       "id": 7,
@@ -89,7 +89,7 @@
       "description": "Over 2,000 natural stone arch formations.",
       "bestTime": "March through May and September through October",
       "wildlife": "Red foxes, kangaroo rats",
-      "highlights": "Delicate Arch, Landscape Arch, The Windows"
+      "highlights": "Landscape Arch, The Windows"
     },
     {
       "id": 8,
@@ -98,7 +98,7 @@
       "description": "Rocky beaches, woodlands, and Cadillac Mountain views.",
       "bestTime": "Mid-September through early October",
       "wildlife": "Bald eagles, seals, porcupines",
-      "highlights": "Cadillac Mountain, Jordan Pond, Thunder Hole"
+      "highlights": "Jordan Pond, Thunder Hole"
     },
     {
       "id": 9,
@@ -107,7 +107,7 @@
       "description": "Diverse ecosystems from glacial peaks to temperate rainforests.",
       "bestTime": "May through September",
       "wildlife": "Roosevelt elk, mountain goats",
-      "highlights": "Hoh Rain Forest, Hurricane Ridge, Rialto Beach"
+      "highlights": "Hurricane Ridge, Rialto Beach"
     },
     {
       "id": 10,
@@ -116,7 +116,7 @@
       "description": "Desert landscapes where the Mojave and Colorado deserts meet.",
       "bestTime": "March to May and October to November",
       "wildlife": "Jackrabbits, coyotes, desert tortoises",
-      "highlights": "Hidden Valley, Cholla Cactus Garden, Skull Rock"
+      "highlights": "Hidden Valley, Skull Rock"
     },
     {
       "id": 11,
@@ -125,7 +125,7 @@
       "description": "Known for its rugged mountains and scenic drives.",
       "bestTime": "July to September",
       "wildlife": "Mountain goats, grizzly bears, marmots",
-      "highlights": "Going-to-the-Sun Road, Grinnell Glacier, Lake McDonald"
+      "highlights": "Grinnell Glacier, Lake McDonald"
     },
     {
       "id": 12,
@@ -134,7 +134,7 @@
       "description": "Famous for crimson-colored hoodoos and starry skies.",
       "bestTime": "May through September",
       "wildlife": "Prairie dogs, mule deer, golden eagles",
-      "highlights": "Bryce Amphitheater, Navajo Loop, Sunrise Point"
+      "highlights": "Navajo Loop, Sunrise Point"
     },
     {
       "id": 13,
@@ -143,7 +143,7 @@
       "description": "Home to giant sequoia trees, including General Sherman Tree.",
       "bestTime": "June through August",
       "wildlife": "Black bears, bobcats, Steller’s jays",
-      "highlights": "General Sherman Tree, Moro Rock, Crystal Cave"
+      "highlights": "Moro Rock, Crystal Cave"
     }
   ],
   "images": [

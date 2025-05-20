@@ -11,6 +11,7 @@
   left: 0;
   background-color: #2f3835;
   opacity: 95%;
+  z-index: 1000;
   /* justify-content: center; */
   /* align-items: center; */
 }
@@ -20,12 +21,12 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
+  max-width: 400px;
   width: 90vw;
   max-height: 450px;
   background-color: #000;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(59, 58, 58, 0.4);
+  box-shadow: 0 0 10px rgba(59, 58, 58, 0.6);
 
   /* Center children vertically and horizontally */
   display: flex;
@@ -33,6 +34,7 @@
   align-items: center; /* horizontal centering */
   justify-content: center; /* vertical centering */
   padding: 2rem 1rem;
+  z-index: 1100;
 }
 
 /* .modal-container {
@@ -60,7 +62,7 @@
 } */
 .modal-header h2 {
   color: #f1f1f1;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "staatliches", sans-serif;
   margin: 0rem;
   padding: 0rem;
@@ -70,25 +72,28 @@
 .close-button {
   position: absolute;
   top: 0.5rem;
-  right: 1rem;
+  right: -8.5rem;
   background: none;
   border: none;
   color: #f1f1f1;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
 }
-.modal-container input,
+.modal-container input {
+  margin-left: -0.15rem;
+}
+
 .modal-container button {
   width: 100%;
   max-width: 800px;
   box-sizing: border-box;
-  margin-bottom: 1rem;
-  padding: 0rem;
+  margin-bottom: 0rem;
+  padding: 0.5rem;
 }
 
 .modal-container form {
   width: 100%;
-  max-width: 400px; /* or whatever you prefer */
+  max-width: 300px; /* or whatever you prefer */
   margin-top: -2rem;
   display: flex;
   flex-direction: column;
@@ -96,10 +101,11 @@
 }
 
 .modal-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #f1f1f1;
-  margin-top: 1rem;
-  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   padding: 0rem;
-  width: 80%;
+  width: 85%;
+  text-align: left;
 }

@@ -1,33 +1,28 @@
-// import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { getTripsByUserId } from "../../services/tripService";
-// import { deleteTrip } from "../../services/tripService";
+import { useEffect, useState } from "react";
+import { getImagesByParkId } from "../../services/parkService.js";
 import "./TripList.css";
 import "../forms/Form.css";
 
 export const TripCard = ({ trip, onDelete }) => {
-  // const [trips, setTrips] = useState([]);
   const navigate = useNavigate();
-  // const localUser = localStorage.getItem("parkplan_user");
-  // const userObj = JSON.parse(localUser);
+  const [imageUrl, setImageUrl] = useState("");
 
-  //  useEffect(() => {
-  //   getTripsByUserId(userObj.id).then(setTrips);
-  // }, [userObj.id]);
-
-  // const handleDelete = (tripId) => {
-  //   if (window.confirm("Are you sure you want to remove this trip?"))
-  //     deleteTrip(tripId).then(() => {
-  //       getTripsByUserId(userObj.id).then(setTrips);
-  //     });
-  // };
+  useEffect(() => {
+    if (trip.park?.id) {
+      getImagesByParkId(trip.park.id).then((images) => {
+        if (images && images.length > 0) {
+          setImageUrl(images[0].url);
+        }
+      });
+    }
+  }, [trip.park?.id]);
 
   return (
     <div
-      key={trip.id}
       className="trip-card"
       style={{
-        backgroundImage: `url(${trip.parkImageUrl})`,
+        backgroundImage: `url(${imageUrl})`,
       }}>
       <div className="trip-card__overlay">
         <div className="trip-card__header">
@@ -48,25 +43,3 @@ export const TripCard = ({ trip, onDelete }) => {
     </div>
   );
 };
-//     <div
-//       key={trip.id}
-//       className="trip-card"
-//       style={{
-//         backgroundImage: `url(${trip.parkImageUrl || "/images/fallback.jpg"})`,
-//       }}>
-//       <div className="trip-card__overlay">
-//         <div className="trip-card__header">
-//           <h3>{trip.name}</h3>
-//         </div>
-
-//         <div className="trip-card__content">
-//           <p>{trip.park?.name}</p>
-//           <p>Created: {new Date(trip.createdAt).toLocaleDateString()}</p>
-//         </div>
-
-//         <div className="trip-card__actions">
-//           <button onClick={() => navigate(`/trips/${trip.id}/edit`)}>Edit</button>
-//           <button onClick={() => onDelete(trip.id)}>Delete</button>
-//         </div>
-//       </div>
-//     </div>

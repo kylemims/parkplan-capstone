@@ -11,6 +11,7 @@
   left: 0;
   background-color: #2f3835;
   opacity: 95%;
+  z-index: 1000;
   /* justify-content: center; */
   /* align-items: center; */
 }
@@ -33,6 +34,8 @@
   align-items: center; /* horizontal centering */
   justify-content: center; /* vertical centering */
   padding: 2rem 1rem;
+  z-index: 1100;
+  text-align: center;
 }
 
 /* .modal-container {
@@ -97,6 +100,7 @@
 
 .modal-label {
   font-size: 1rem;
+  text-align: center;
   color: #f1f1f1;
   margin-top: 1rem;
   margin-bottom: 0rem;

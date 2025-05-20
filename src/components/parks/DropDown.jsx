@@ -17,16 +17,3 @@ export const DropDown = ({
     </select>
   );
 };
-
-// export const ParkSelectDropdown = ({ parks, selectedParkId, handleSelect }) => {
-//   return (
-//     <select className="dropdown" value={selectedParkId} onChange={handleSelect}>
-//       <option value="0">Select a park...</option>
-//       {parks?.map((park) => (
-//         <option key={park.id} value={park.id}>
-//           {park.name}
-//         </option>
-//       ))}
-//     </select>
-//   );
-// };

@@ -11,15 +11,15 @@
 }
 
 .park-details-container h1 {
-  margin-bottom: 0.5rem;
-  font-size: 1.6rem;
+  margin-bottom: 0rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .park-details-container .park-location {
   font-size: 0.95rem;
   color: #a0a0a0;
-  margin: 0.25rem 0 0.5rem;
+  margin: 0rem 0 0.5rem;
 }
 
 .park-details-container .park-tagline {
@@ -33,8 +33,8 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  margin-top: 1.5rem;
-  line-height: 0.85rem;
+  margin-top: 1rem;
+  line-height: 0.5rem;
   font-size: 0.95rem;
 }
 
@@ -50,15 +50,17 @@
   color: #f0f0f0;
 }
 
-.weather-paragraph {
-  font-size: 0.95rem;
+.best-time {
+  font-size: 0.8rem;
   color: #f0f0f0;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+  font-weight: 350;
+  text-wrap: wrap;
 }
 
 .weather-icon {
-  width: 20px;
-  margin-right: 0.5rem;
+  width: 21px;
+  margin-right: 0.65rem;
 }
 
 .wildlife-header {
@@ -67,6 +69,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: #f0f0f0;
+  margin-left: 0.4rem;
 }
 .wildlife-paragraph {
   font-size: 0.95rem;
@@ -74,8 +77,34 @@
   margin-bottom: 1rem;
 }
 .wildlife-icon {
-  width: 17px;
-  margin-right: 0.5rem;
+  width: 18px;
+  margin-right: 0.7rem;
+  margin-left: -0.2rem;
+}
+
+.highlight-header {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+.highlight-icon {
+  width: 19px;
+  margin-right: 0.55rem;
+  margin-left: 0.25rem;
+}
+
+.highlights-paragraph {
+  display: block;
+  margin-left: 2.1rem; /* aligns with the start of the heading, adjust as needed */
+  margin-top: 0.1rem;
+  margin-bottom: 0.7rem;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  white-space: pre-line;
+  word-break: break-word;
+  text-align: left;
 }
 
 .park-details-container .carousel-container {
@@ -127,6 +156,23 @@
   /* align-items: stretch; */
 }
 
+.trip-form-section {
+  padding-top: 2rem;
+}
+
+.add-trip-button {
+  background-color: #b56a4c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-trip-button:hover {
+  background-color: #844f39;
+}
 .park-details-container .trip-form-section form {
   width: 100%;
 }
