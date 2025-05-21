@@ -32,11 +32,15 @@ h1 {
 .dropdown {
   color: #f1f1f1;
   border: none;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border-radius: 4px;
   font-size: 1rem;
   margin-top: 0.5rem;
-  width: 85%;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  width: 100%;
 }
 
 p {

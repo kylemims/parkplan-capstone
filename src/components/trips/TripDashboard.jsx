@@ -34,6 +34,9 @@ export const TripDashboard = () => {
     setEditModalOpen(false);
     setSelectedTripId(null);
   };
+  const refreshTrips = () => {
+    getTripsByUserId(userObj.id).then(setTrips);
+  };
 
   return (
     <section className="trip-list">
@@ -55,14 +58,14 @@ export const TripDashboard = () => {
         <NewTripModal
           open={openModal}
           onClose={() => setOpenModal(false)}
-          onTripCreated={setTrips}
+          onTripCreated={refreshTrips}
         />
       </div>
       <EditTripModal
         open={editModalOpen}
         onClose={handleEditModalClose}
         tripId={selectedTripId}
-        onTripUpdated={setTrips}
+        onTripUpdated={refreshTrips}
       />
     </section>
   );

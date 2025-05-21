@@ -1,0 +1,50 @@
+.edit-trip-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #b56a4c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  /* margin-top: -1rem; */
+}
+.edit-trip-form button:hover {
+  background-color: #563529;
+}
+.edit-trip-form label {
+  font-size: 1rem;
+  color: #f1f1f1;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.edit-trip-form input {
+  width: 100%;
+  padding: 0.75rem;
+  /* background-color: #ad7b7b; */
+  color: white;
+  border: 1px solid #e5a2a2;
+  border-radius: 4px;
+  margin-bottom: 0rem;
+}
+
+.edit-dropdown select {
+  width: 100%;
+  padding: 0.75rem;
+  /* background-color: #000; */
+  color: white;
+  /* border: 1px solid #000; */
+  /* border-color: #e5a2a2; */
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+.modal-label {
+  font-size: 1rem;
+  color: #f1f1f1;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0rem;
+  width: 100%;
+  text-align: center;
+}

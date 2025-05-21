@@ -1,11 +1,19 @@
 /* ParkDetails.css */
-
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
 .park-details-container {
-  max-width: 800px;
-  margin: 1rem auto;
-  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
   color: #f0f0f0;
   border-radius: 12px;
+  border-width: 1px;
+  border-style: groove;
+  border-color: rgb(43, 43, 43);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   font-family: "Helvetica Neue", sans-serif;
 }
@@ -29,16 +37,18 @@
   font-size: 0.9rem;
 }
 
-.park-details-container .park-info-block {
+.unparked-section {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  justify-content: center;
+  align-items: start;
   margin-top: 1rem;
-  line-height: 0.5rem;
+  line-height: 2rem;
   font-size: 0.95rem;
+  /* gap: 2rem; */
 }
 
-.park-details-container .park-info-block p {
+.park-info-block p {
   margin: 0.4rem 0;
 }
 
@@ -51,11 +61,12 @@
 }
 
 .best-time {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #f0f0f0;
-  margin-bottom: 0rem;
+  /* margin-bottom: 0rem; */
   font-weight: 350;
   text-wrap: wrap;
+  /* line-height: 0px; */
 }
 
 .weather-icon {
@@ -66,15 +77,16 @@
 .wildlife-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 1rem;
   font-weight: 600;
   color: #f0f0f0;
   margin-left: 0.4rem;
 }
 .wildlife-paragraph {
-  font-size: 0.95rem;
+  /* font-size: 0.95rem; */
   color: #f0f0f0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 .wildlife-icon {
   width: 18px;
@@ -96,15 +108,15 @@
 }
 
 .highlights-paragraph {
-  display: block;
-  margin-left: 2.1rem; /* aligns with the start of the heading, adjust as needed */
-  margin-top: 0.1rem;
-  margin-bottom: 0.7rem;
+  /* display: block; */
+  margin-left: 2.1rem;
+  margin-top: 1rem;
+  /* margin-bottom: 0.7rem; */
   color: #f0f0f0;
   font-size: 0.95rem;
   white-space: pre-line;
-  word-break: break-word;
-  text-align: left;
+  /* word-break: break-word; */
+  /* text-align: left; */
 }
 
 .park-details-container .carousel-container {

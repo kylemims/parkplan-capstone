@@ -4,7 +4,7 @@
   justify-content: center;
 
   max-width: 600px;
-  width: 60%;
+  width: 100%;
   margin: 0rem;
   padding: 0rem;
   /* background-color: #d19d9d; */
@@ -19,13 +19,13 @@
 } */
 
 .trip-form input {
-  width: 100%;
+  max-width: 100%;
   padding: 0.75rem;
   background-color: #000;
   color: white;
   border: 1px solid #444;
   border-radius: 4px;
-  margin: 0.25rem;
+  margin-top: 1rem;
 }
 
 .trip-form button {
@@ -49,4 +49,5 @@
   color: #f1f1f1;
   margin-bottom: 2rem;
   text-align: center;
+  max-width: 100%;
 }

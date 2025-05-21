@@ -26,7 +26,7 @@ export const ParkDetails = () => {
       <ImageCarousel images={images} parkName={park.name} />
       <p className="park-tagline">{park.description}</p>
 
-      <section className="park-info-block">
+      <section className="unparked-section">
         <div className="weather-header">
           <img src="/images/weather-icon.svg" alt="Weather Icon" className="weather-icon" />
           <h5>Best weather:</h5>

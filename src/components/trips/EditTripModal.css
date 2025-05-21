@@ -1,0 +1,31 @@
+.edit-trip-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 8px;
+  padding: 1rem;
+}
+description {
+  align-items: center;
+  text-align: center;
+}
+p {
+  font-size: 1rem;
+  color: #f1f1f1;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.edit-trip-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 60%;
+  margin: 0rem;
+  padding: 0rem;
+  background-color: #000000;
+  border-radius: 8px;
+}

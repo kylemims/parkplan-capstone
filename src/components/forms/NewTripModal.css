@@ -21,9 +21,8 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
-  width: 90vw;
-  max-height: 450px;
+  /* max-width: 600px; */
+  min-height: 450px;
   background-color: #000;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(59, 58, 58, 0.4);
