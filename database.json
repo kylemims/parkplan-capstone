@@ -34,7 +34,7 @@
       "location": "California",
       "description": "Famous for its granite cliffs, waterfalls, and giant sequoias.",
       "bestTime": "May through September",
-      "wildlife": "Black bears, mule deer, peregrine falcons",
+      "wildlife": "Black bears, peregrine falcons",
       "highlights": "Half Dome, El Capitan"
     },
     {
@@ -51,7 +51,7 @@
       "name": "Zion National Park",
       "location": "Utah",
       "description": "Known for steep red cliffs and scenic canyon hikes.",
-      "bestTime": "March through May and September through November",
+      "bestTime": "March-May and Sep-Nov",
       "wildlife": "Desert bighorn sheep, mule deer",
       "highlights": "Angels Landing, Emerald Pools"
     },
@@ -60,7 +60,7 @@
       "name": "Grand Canyon National Park",
       "location": "Arizona",
       "description": "Iconic views of a mile-deep canyon carved by the Colorado River.",
-      "bestTime": "March through May and September through November",
+      "bestTime": "March-May and Sep-Nov",
       "wildlife": "California condor, elk",
       "highlights": "South Rim, Desert View Watchtower"
     },
@@ -79,7 +79,7 @@
       "location": "Tennessee, North Carolina",
       "description": "Lush forests and mist-covered mountain ranges.",
       "bestTime": "Late spring to early fall",
-      "wildlife": "Black bears, salamanders, white-tailed deer",
+      "wildlife": "Black bears, white-tailed deer",
       "highlights": "Clingmans Dome, Cades Cove"
     },
     {
@@ -87,7 +87,7 @@
       "name": "Arches National Park",
       "location": "Utah",
       "description": "Over 2,000 natural stone arch formations.",
-      "bestTime": "March through May and September through October",
+      "bestTime": "March-May and Sep-Oct",
       "wildlife": "Red foxes, kangaroo rats",
       "highlights": "Landscape Arch, The Windows"
     },
@@ -96,7 +96,7 @@
       "name": "Acadia National Park",
       "location": "Maine",
       "description": "Rocky beaches, woodlands, and Cadillac Mountain views.",
-      "bestTime": "Mid-September through early October",
+      "bestTime": "September through October",
       "wildlife": "Bald eagles, seals, porcupines",
       "highlights": "Jordan Pond, Thunder Hole"
     },
@@ -114,8 +114,8 @@
       "name": "Joshua Tree National Park",
       "location": "California",
       "description": "Desert landscapes where the Mojave and Colorado deserts meet.",
-      "bestTime": "March to May and October to November",
-      "wildlife": "Jackrabbits, coyotes, desert tortoises",
+      "bestTime": "March-May and Oct-Nov",
+      "wildlife": "Jackrabbits, desert tortoises",
       "highlights": "Hidden Valley, Skull Rock"
     },
     {
@@ -124,7 +124,7 @@
       "location": "Montana",
       "description": "Known for its rugged mountains and scenic drives.",
       "bestTime": "July to September",
-      "wildlife": "Mountain goats, grizzly bears, marmots",
+      "wildlife": "Mountain goats, marmots",
       "highlights": "Grinnell Glacier, Lake McDonald"
     },
     {
@@ -133,7 +133,7 @@
       "location": "Utah",
       "description": "Famous for crimson-colored hoodoos and starry skies.",
       "bestTime": "May through September",
-      "wildlife": "Prairie dogs, mule deer, golden eagles",
+      "wildlife": "Prairie dogs, golden eagles",
       "highlights": "Navajo Loop, Sunrise Point"
     },
     {
@@ -142,7 +142,7 @@
       "location": "California",
       "description": "Home to giant sequoia trees, including General Sherman Tree.",
       "bestTime": "June through August",
-      "wildlife": "Black bears, bobcats, Steller’s jays",
+      "wildlife": "Black bears, Steller’s jays",
       "highlights": "Moro Rock, Crystal Cave"
     }
   ],

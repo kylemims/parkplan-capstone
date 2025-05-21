@@ -1,7 +1,7 @@
 /* Main navbar wrapper */
 .navbar {
   min-width: 100%;
-  background-color: #2f3835;
+  background-color: #b56a4c;
   padding: 0.5rem 0.5rem;
   position: sticky;
   top: 0;
@@ -25,7 +25,7 @@
 .hamburger-icon {
   width: 32px;
   height: 32px;
-  filter: invert(15%);
+  filter: invert(85%);
 }
 
 /* Menu list */
