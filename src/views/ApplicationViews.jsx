@@ -8,7 +8,7 @@ import { TripDashboard } from "../components/trips/TripDashboard.jsx";
 import { TripEditForm } from "../components/forms/TripEditForm.jsx";
 import { ParkDetails } from "../components/parks/ParkDetails";
 // import { TripCard } from "../components/trips/TripCard.jsx";
-import { ParkActivities } from "../components/parks/ParkActivities.jsx";
+import { CampgroundSelector } from "../components/parks/CampgroundSelector.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -57,7 +57,7 @@ export const ApplicationViews = () => {
               </Authorized>
             }
           /> */}
-          <Route path="/activities" element={<ParkActivities />} />
+          <Route path="/campgrounds" element={<CampgroundSelector />} />
         </Route>
       </Routes>
     </>

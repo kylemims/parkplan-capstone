@@ -13,11 +13,30 @@ export const getParkById = (parkId) => {
 };
 
 // For Vite or similar build tools, use import.meta.env; otherwise, provide a fallback or set the key directly.
-const NPS_API_KEY = import.meta.env.VITE_NPS_API_KEY || "";
+const VITE_NPS_API_KEY = import.meta.env.VITE_NPS_API_KEY || "";
 
-export const getParkActivities = (YOSE) => {
+export const getParkCampgrounds = (parkCode) => {
   return fetch(
-    "https://developer.nps.gov/api/v1/activities/parks?parkCode=YOSE&api_key=8HSLm5kpVVDb9Aw8dFhIDfB4uT2hsd0u2yffMmer"
-  ).then((res) => res.json(YOSE));
+    `https://developer.nps.gov/api/v1/campgrounds?parkCode=${parkCode}&api_key=${VITE_NPS_API_KEY}`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((response) => console.log(response));
 };
-console.log(getParkActivities("YOSE"));
+// console.log(getParkCampgrounds("yose"));
+
+// response?.data?.map((campground) => ({
+// data?.map((campground) => ({
+//   id: campground.id,
+//   name: campground.name,
+// })))}
+// )
+// .catch((error) => {
+//   console.error("NPS API Error:", error.message);
+//   return [];
+// });
+// }
