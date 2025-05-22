@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getImagesByParkId } from "../../services/parkService.js";
 import "./TripList.css";
 import "../forms/Form.css";
+import { useNavigate } from "react-router-dom";
 
 export const TripCard = ({ trip, onDelete, onEdit }) => {
   const [imageUrl, setImageUrl] = useState("");
@@ -16,6 +17,8 @@ export const TripCard = ({ trip, onDelete, onEdit }) => {
     }
   }, [trip.park?.id]);
 
+  const navigate = useNavigate();
+
   return (
     <div className="trip-card" style={{ backgroundImage: `url(${imageUrl})` }}>
       <div className="trip-card__overlay">
@@ -29,6 +32,9 @@ export const TripCard = ({ trip, onDelete, onEdit }) => {
         <div className="trip-card__actions">
           <button onClick={() => onEdit(trip.id)}>Edit</button>
           <button onClick={() => onDelete(trip.id)}>Delete</button>
+          <button onClick={() => navigate(`/trips/${trip.id}/details/${trip.park?.code}`)}>
+            Itinerary
+          </button>
         </div>
       </div>
     </div>

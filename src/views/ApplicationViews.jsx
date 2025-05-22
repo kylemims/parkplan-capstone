@@ -7,6 +7,7 @@ import { HomePage } from "../components/parks/HomePage.jsx";
 import { TripDashboard } from "../components/trips/TripDashboard.jsx";
 import { TripEditForm } from "../components/forms/TripEditForm.jsx";
 import { ParkDetails } from "../components/parks/ParkDetails";
+import { TripDetails } from "../components/trips/TripDetails.jsx";
 // import { TripCard } from "../components/trips/TripCard.jsx";
 import { CampgroundSelector } from "../components/parks/CampgroundSelector.jsx";
 
@@ -38,6 +39,14 @@ export const ApplicationViews = () => {
             element={
               <Authorized>
                 <TripDashboard />
+              </Authorized>
+            }
+          />
+          <Route
+            path="/trips/:tripId/details/:parkCode"
+            element={
+              <Authorized>
+                <TripDetails />
               </Authorized>
             }
           />
