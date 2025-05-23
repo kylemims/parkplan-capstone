@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getThingsToDoByParkCode } from "../../services/npsService.js";
+// import { Lightbox } from "./Lightbox.jsx";
+// import "./Lightbox.css";
 import "./TripDetails.css";
 
 export const TripDetails = () => {
-  const { tripId, parkCode } = useParams();
+  const { parkCode } = useParams();
   const [thingsToDo, setThingsToDo] = useState([]);
   const [itinerary, setItinerary] = useState([]);
+  // const [openLightbox, setOpenLightbox] = useState(false);
 
   const addToItinerary = (item) => {
     // Avoid adding duplicates
@@ -48,6 +51,12 @@ export const TripDetails = () => {
             <button onClick={() => addToItinerary(item)} className="add-to-itinerary-btn">
               Add to Trip
             </button>
+            {/* <button className="image-button" onClick={() => setOpenLightbox(true)}>
+              View Image
+            </button>
+            <Lightbox onClose={() => setOpenLightbox(false)} open={openLightbox}>
+              <img className="lightbox-image" src={item.images.url[0]} alt={item.images.altText} />
+            </Lightbox> */}
           </li>
         ))}
       </ul>

@@ -1,5 +1,7 @@
 .things-to-do-section {
   margin-top: 2rem;
+  margin-left: 2rem;
+
   color: #f0f0f0;
   font-family: "Helvetica Neue", sans-serif;
 }
@@ -15,6 +17,7 @@
 
 .todo-card {
   background-color: #2e2e2e;
+  max-width: 600px;
   border-left: 4px solid #ffe28a;
   border-radius: 8px;
   padding: 1rem;
@@ -87,4 +90,9 @@
   font-size: 1rem;
   color: #ccc;
   font-weight: 500;
+}
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
 }

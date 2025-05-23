@@ -554,6 +554,13 @@
       "createdAt": "2025-05-22T19:16:45.630Z",
       "parkId": 9,
       "id": 33
+    },
+    {
+      "name": "Last trip before break",
+      "userId": 1,
+      "createdAt": "2025-05-23T14:25:57.117Z",
+      "parkId": 9,
+      "id": 34
     }
   ]
 }
