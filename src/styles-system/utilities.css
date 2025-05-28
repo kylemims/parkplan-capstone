@@ -1,0 +1,62 @@
+/* Layout */
+.full-width {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+
+/* Spacing */
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.pt-1 {
+  padding-top: 1rem;
+}
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: var(--color-muted);
+}
+.text-error {
+  color: var(--color-error);
+}
+
+/* Hide visually but keep accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

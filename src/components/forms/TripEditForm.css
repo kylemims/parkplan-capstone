@@ -7,7 +7,6 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
-  /* margin-top: -1rem; */
 }
 .edit-trip-form button:hover {
   background-color: #563529;
@@ -30,14 +29,14 @@
 }
 
 .edit-dropdown select {
-  width: 100%;
+  width: 400px;
   padding: 0.75rem;
   /* background-color: #000; */
   color: white;
   /* border: 1px solid #000; */
   /* border-color: #e5a2a2; */
   border-radius: 4px;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
 }
 .modal-label {
   font-size: 1rem;

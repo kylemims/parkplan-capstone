@@ -28,8 +28,9 @@ export const Login = () => {
   };
 
   return (
-    <main className="container-login">
-      <section>
+    // <main className="container-login">
+    <div>
+      <div className="login-background">
         <form className="form-login" onSubmit={handleLogin}>
           <h1>Pick A Park</h1>
           <h2>Please sign in</h2>
@@ -54,11 +55,47 @@ export const Login = () => {
             </div>
           </fieldset>
         </form>
-      </section>
-      <section className="register-link">
+      </div>
+      <div className="register-link">
         <p>New to Pick A Park?</p>
         <Link to="/register">Get Registered Here</Link>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 };
+
+// return (
+//     <main className="container-login">
+//       <section>
+//         <form className="form-login" onSubmit={handleLogin}>
+//           <h1>Pick A Park</h1>
+//           <h2>Please sign in</h2>
+//           <fieldset>
+//             <div className="form-group">
+//               <input
+//                 type="email"
+//                 value={email}
+//                 onChange={(evt) => setEmail(evt.target.value)}
+//                 className="form-control"
+//                 placeholder="Email address"
+//                 required
+//                 autoFocus
+//               />
+//             </div>
+//           </fieldset>
+//           <fieldset>
+//             <div className="form-group">
+//               <button className="login-btn btn-info" type="submit">
+//                 Sign in
+//               </button>
+//             </div>
+//           </fieldset>
+//         </form>
+//       </section>
+//       <section className="register-link">
+//         <p>New to Pick A Park?</p>
+//         <Link to="/register">Get Registered Here</Link>
+//       </section>
+//     </main>
+//   );
+// };

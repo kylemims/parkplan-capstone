@@ -18,6 +18,12 @@ export const NavBar = () => {
 
   return (
     <nav className="navbar">
+      <div className="social-icon-group">
+        <img src="/images/IG-icon.svg" alt="Instagram" className="social-icon" />
+        <img src="/images/FB-icon.svg" alt="Facebook" className="social-icon" />
+        <img src="/images/YT-icon.svg" alt="YouTube" className="social-icon" />
+        <img src="/images/TT-icon.svg" alt="TikTok" className="social-icon" />
+      </div>
       <div className="nav-header">
         <button className="hamburger" onClick={() => setMenuOpen((prev) => !prev)}>
           <img src="/images/hamburgerIcon.svg" alt="Menu" className="hamburger-icon" />

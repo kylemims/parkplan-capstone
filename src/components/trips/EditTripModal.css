@@ -1,9 +1,9 @@
-.edit-trip-modal {
+/* .edit-trip-modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #dc9e9e;
   border-radius: 8px;
   padding: 1rem;
 }
@@ -23,9 +23,9 @@ p {
   justify-content: center;
   align-items: center;
   max-width: 600px;
-  width: 60%;
+  width: 100%;
   margin: 0rem;
   padding: 0rem;
-  background-color: #000000;
+  background-color: #ae3f3f;
   border-radius: 8px;
-}
+} */

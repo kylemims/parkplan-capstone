@@ -11,7 +11,7 @@ export const Modal = ({ open, onClose, title, description, children }) => {
         </button>
         {title && (
           <div className="modal-header">
-            <h2>{title}</h2>
+            <h1>{title}</h1>
           </div>
         )}
         {description && <p className="modal-label">{description}</p>}

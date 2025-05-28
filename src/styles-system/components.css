@@ -1,0 +1,86 @@
+/* components.css */
+/* 
+  Styles for common components: buttons, forms, cards, modals, etc.
+  Import as needed in your component files.
+*/
+
+/* Primary Button */
+.btn,
+.primary-btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--input-padding);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+  margin-bottom: 1rem;
+}
+.btn:hover,
+.primary-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Form Container */
+.form-container {
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: var(--color-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Input & Select */
+.input,
+select,
+.form-control {
+  width: 100%;
+  padding: var(--input-padding);
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Card */
+.card {
+  background: #222;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Modal */
+.modal-overlay {
+  background: rgba(47, 56, 53, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+.modal-container {
+  background: #000;
+  border-radius: var(--border-radius);
+  max-width: 600px;
+  width: 90vw;
+  margin: 5vh auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(59, 58, 58, 0.4);
+  position: relative;
+}

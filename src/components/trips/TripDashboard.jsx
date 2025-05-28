@@ -39,34 +39,36 @@ export const TripDashboard = () => {
   };
 
   return (
-    <section className="trip-list">
-      <h1>My Planned Trips</h1>
-      <div className="trip-list__cards">
-        {trips?.map((trip) => (
-          <TripCard
-            key={trip.id}
-            trip={trip}
-            onDelete={handleDelete}
-            onEdit={handleEdit} // <-- pass the handler
+    <section className="trip-dashboard-container">
+      <div className="trip-list">
+        <h1>My Planned Trips</h1>
+        <div className="trip-list__cards">
+          {trips?.map((trip) => (
+            <TripCard
+              key={trip.id}
+              trip={trip}
+              onDelete={handleDelete}
+              onEdit={handleEdit} // <-- pass the handler
+            />
+          ))}
+        </div>
+        <div className="add-new-dash">
+          <button className="trip-list__create-button" onClick={() => setOpenModal(true)}>
+            + Add New Trip
+          </button>
+          <NewTripModal
+            open={openModal}
+            onClose={() => setOpenModal(false)}
+            onTripCreated={refreshTrips}
           />
-        ))}
-      </div>
-      <div className="add-new-dash">
-        <button className="trip-list__create-button" onClick={() => setOpenModal(true)}>
-          + Add New Trip
-        </button>
-        <NewTripModal
-          open={openModal}
-          onClose={() => setOpenModal(false)}
-          onTripCreated={refreshTrips}
+        </div>
+        <EditTripModal
+          open={editModalOpen}
+          onClose={handleEditModalClose}
+          tripId={selectedTripId}
+          onTripUpdated={refreshTrips}
         />
       </div>
-      <EditTripModal
-        open={editModalOpen}
-        onClose={handleEditModalClose}
-        tripId={selectedTripId}
-        onTripUpdated={refreshTrips}
-      />
     </section>
   );
 };

@@ -65,7 +65,7 @@
       "description": "Iconic views of a mile-deep canyon carved by the Colorado River.",
       "bestTime": "March-May and Sep-Nov",
       "wildlife": "California condor, elk",
-      "highlights": "South Rim, Desert View Watchtower",
+      "highlights": "South Rim, Cape Royal",
       "code": "grca"
     },
     {
@@ -561,6 +561,13 @@
       "createdAt": "2025-05-23T14:25:57.117Z",
       "parkId": 9,
       "id": 34
+    },
+    {
+      "name": "izon your forehead",
+      "userId": 1,
+      "createdAt": "2025-05-24T08:50:58.561Z",
+      "parkId": 3,
+      "id": 35
     }
   ]
 }

@@ -1,123 +1,42 @@
-/* ParkDetails.css */
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 .park-details-container {
   width: 100%;
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem 1rem;
+  max-width: 500px;
+  /* min-width: 400px; */
+  margin: 0rem auto;
+  margin-top: 2rem;
   color: #f0f0f0;
   border-radius: 12px;
   border-width: 1px;
   border-style: groove;
   border-color: rgb(43, 43, 43);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   font-family: "Helvetica Neue", sans-serif;
+  padding: 2rem;
 }
 
-.park-details-container h1 {
-  margin-bottom: 0rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+.park-deets-header {
+  /* margin-left: 5px; */
+  margin-bottom: 10px;
 }
 
 .park-details-container .park-location {
   font-size: 0.95rem;
   color: #a0a0a0;
-  margin: 0rem 0 0.5rem;
+  padding: 0px;
+  /* margin-left: 5px; */
 }
 
 .park-details-container .park-tagline {
   font-style: italic;
-  margin: 0.25rem 0;
   color: #c0c0c0;
-  font-size: 0.9rem;
-}
-
-.unparked-section {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: start;
-  margin-top: 1rem;
-  line-height: 2rem;
-  font-size: 0.9rem;
-  /* gap: 2rem; */
-}
-
-.park-info-block p {
-  margin: 0.4rem 0;
-}
-
-.weather-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #f0f0f0;
-}
-
-.best-time {
-  font-size: 0.9rem;
-  color: #f0f0f0;
-  /* margin-bottom: 0rem; */
-  font-weight: 350;
-  text-wrap: wrap;
-  /* line-height: 0px; */
-}
-
-.weather-icon {
-  width: 21px;
-  margin-right: 0.65rem;
-}
-
-.wildlife-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #f0f0f0;
-  margin-left: 0.4rem;
-}
-.wildlife-paragraph {
-  /* font-size: 0.95rem; */
-  color: #f0f0f0;
-  /* margin-bottom: 1rem; */
-}
-.wildlife-icon {
-  width: 18px;
-  margin-right: 0.7rem;
-  margin-left: -0.2rem;
-}
-
-.highlight-header {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #f0f0f0;
-}
-.highlight-icon {
-  width: 19px;
-  margin-right: 0.55rem;
-  margin-left: 0.25rem;
-}
-
-.highlights-paragraph {
-  /* display: block; */
-  margin-left: 2.1rem;
-  margin-top: 1rem;
-  /* margin-bottom: 0.7rem; */
-  color: #f0f0f0;
-  font-size: 0.95rem;
-  white-space: pre-line;
-  /* word-break: break-word; */
-  /* text-align: left; */
+  padding-left: 0px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .park-details-container .carousel-container {
@@ -140,7 +59,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
   font-size: 1.2rem;
@@ -148,49 +67,97 @@
   cursor: pointer;
   z-index: 10;
   border-radius: 6px;
+  width: 2rem;
 }
 
 .park-details-container .carousel-btn:first-of-type {
-  left: 10px;
+  left: 0px;
 }
 
 .park-details-container .carousel-btn:last-of-type {
-  right: 10px;
+  right: 0px;
 }
 
-.park-details-container .trip-form-section {
-  /* margin-top: 0.75rem; */
-  /* padding-top: 0.5rem; */
-  /* border-top: 1px solid #333; */
-  font-size: 0.95rem;
+.unparked-section {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: left;
+  /* align-items: ; */
+  gap: 0px;
+  /* margin-left: 5px; */
+  flex-wrap: wrap;
+}
+
+.special-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  margin-right: 0px;
+}
+
+.icon-block {
+  margin: 0px;
+  display: flex;
+}
+
+.park-icon {
+  width: 21px;
+}
+
+.bold-block h5 {
+  font-size: 0.9rem;
+  margin: 0px;
+}
+
+.best-time {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+  font-weight: 350;
+  text-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+}
+
+.add-trip-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.form-group {
   width: 100%;
+  margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
-  /* align-items: stretch; */
+  align-items: center;
+  justify-content: center;
 }
 
-.trip-form-section {
-  padding-top: 2rem;
+.modal-label,
+h1 {
+  text-align: center;
 }
 
-.add-trip-button {
-  background-color: #b56a4c;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.add-trip-button:hover {
-  background-color: #844f39;
-}
-.park-details-container .trip-form-section form {
+.park-details-container .park-deets-btn {
   width: 100%;
+  cursor: pointer;
 }
 
+.park-details-container .park-deets-btn:hover {
+  background-color: #97573d;
+  color: white;
+}
 @media (max-width: 600px) {
+  .park-details-container {
+    padding: 10px;
+    border: none;
+  }
+
   .park-details-container .carousel-image {
     max-height: 160px;
   }
@@ -198,9 +165,5 @@
   .park-details-container .carousel-btn {
     font-size: 1rem;
     padding: 0.2rem 0.4rem;
-  }
-
-  .park-details-container {
-    padding: 0.5rem 0.75rem;
   }
 }

@@ -53,7 +53,7 @@ export const TripEditForm = ({ tripId: propTripId, onSuccess }) => {
   if (loading || !trip) return <p>Loading trip...</p>;
 
   return (
-    <form className="edit-trip-form" onSubmit={handleSubmit}>
+    <form className="trip-form" onSubmit={handleSubmit}>
       <FormInput
         label="Trip Name"
         type="text"
