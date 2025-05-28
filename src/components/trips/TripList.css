@@ -8,18 +8,18 @@
   display: flex;
   min-height: 100vh;
   background-color: #212222;
-  margin: 0rem auto;
-  padding: 1rem;
+  /* margin: 0rem auto; */
+  padding: 0rem;
   margin-top: 2rem;
 }
 
 .trip-list {
   display: flex;
   flex-direction: column;
-  min-width: 400px;
+  min-width: 350px;
   width: 100%;
   align-items: center;
-  /* padding: 1rem; */
+  padding: 1rem;
   max-width: 600px;
   text-align: center;
   margin: 0 auto;
@@ -29,8 +29,8 @@
 .trip-list__cards {
   display: flex;
   flex-direction: column;
-  /* gap: 1rem; */
   width: 100%;
+  min-width: 350px;
 }
 
 .trip-card {
@@ -40,8 +40,9 @@
   overflow: hidden;
   background-size: cover;
   margin-bottom: 2rem;
-  /* transition: transform 0.2s ease-in-out; */
+  transition: transform 0.2s ease-in-out;
   opacity: 100%;
+  min-width: 350px;
 }
 
 .trip-card:hover {
@@ -60,92 +61,64 @@
   );
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
+  align-items: flex-start;
   justify-content: space-between;
-  border-radius: 0px;
+  border-radius: 8px;
 }
 
 .trip-card__header {
-  padding: 0.5rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
   color: #dca8a2;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "Permanent Marker";
   text-align: left;
+  max-width: 70%;
+  text-wrap: wrap;
 }
 
 .trip-park {
   padding: 0.5rem;
-  color: #f1f1f1;
-  font-size: 0.9rem;
-  font-family: "Helvetica Neue", sans-serif;
+  color: #eee7e7;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "nunito", sans-serif;
   text-align: left;
 }
-
-.trip-card__actions {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
-  /* margin-top: 0rem; */
+.trip-date {
+  padding-bottom: 1rem;
+  color: #a0a0a0;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "nunito", sans-serif;
+  text-align: left;
+  font-style: italic;
 }
-
-.trip-card__actions button {
-  width: 20%;
-  padding: 0.5rem;
-  font-size: 0.7rem;
-  border-radius: 4px;
-  background-color: #a7adb6;
-  color: rgb(14, 13, 13);
-  cursor: pointer;
-  margin: 0.25rem;
-  opacity: 40%;
-  /* transition: background 0.2s; */
-}
-
-.trip-card__actions button:hover {
-  background-color: #777;
-}
-
-/* .side-btns *{
-  button {
-    background-color: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-  } */
-/* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0px;
-  background-color: none;
-  margin: 0px;
-  width: 100%;
-} */
 
 .trip-card__side-tab {
   position: absolute;
-  top: 25px; /* space from top edge */
-  right: 0px; /* pull it out from the card edge, adjust as needed */
+  right: 0px;
+  top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 0px;
   background: #111;
-  opacity: 70%;
-  border-radius: 16px 0 0 16px;
-  padding: 12px 8px;
+  opacity: 80%;
+  border-radius: 15px 0 0 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 90%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 2;
   align-items: center;
-  /* Optional: border for brutalist accent */
-  /* border: 2px solid #c58e18; */
   border-right: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .trip-card__side-tab .icon-button {
   background: none;
   border: none;
-  padding: 0;
   margin: 0;
   cursor: pointer;
   filter: invert(68%) sepia(290%) saturate(600%) brightness(150%) contrast(30%);
@@ -156,10 +129,10 @@
   filter: invert (100%);
 }
 .trip-card__side-tab .hiker-icon:hover {
-  filter: drop-shadow(0 0 6px #ffe28a) invert(100%);
+  filter: drop-shadow(0 0 6px #c3a367) invert(10%);
   transform: scale(1.15);
   transition: transform 0.2s;
-  /* transform: rotate(-10deg); */
+  transform: rotate(-10deg);
 }
 
 .add-new-dash button:hover {
@@ -170,20 +143,6 @@
   .trip-list {
     margin: 0 auto;
     padding: 1rem;
+    min-width: 350px;
   }
-
-  .trip-card {
-    width: 100%;
-    max-width: none;
-  }
-
-  .trip-card__actions {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  /* .trip-card__actions button {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  } */
 }

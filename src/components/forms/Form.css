@@ -7,16 +7,8 @@
   width: 100%;
   margin: 0rem;
   padding: 0rem;
-  /* background-color: #d19d9d; */
   border-radius: 8px;
 }
-
-/* .trip-form fieldset {
-  margin-bottom: 1.5rem;
-  border: none;
-  padding: 0;
-  width: 10%;
-} */
 
 .trip-form input {
   max-width: 100%;
@@ -28,33 +20,18 @@
   margin-top: 1rem;
 }
 
-/* /* .trip-form button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #b56a4c;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 0.25rem;
-} */
-
 .trip-form button:hover {
   background-color: #563529;
 }
-*/ .trip-form label {
+.trip-form label {
   font-size: 1rem;
   color: #f1f1f1;
-  margin-bottom: 2rem;
   text-align: center;
   max-width: 100%;
 }
 
 .trip-form select {
-  /* width: 100%; */
   padding: 0.75rem;
-  /* background-color: #000; */
   color: white;
   border: 1px solid #444;
   border-radius: 4px;

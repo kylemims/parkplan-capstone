@@ -34,14 +34,12 @@
   filter: invert(30%);
 }
 
-/* Flex container for logo + hamburger */
 .nav-header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-/* Hamburger image styling */
 .hamburger button {
   background-color: none;
   border: none;
@@ -61,7 +59,6 @@
   filter: invert(85%);
 }
 
-/* Menu list */
 .nav-menu {
   display: flex;
   gap: 1rem;
