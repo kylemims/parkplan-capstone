@@ -31,18 +31,6 @@ body {
   background-color: #212222;
 }
 
-/* body {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* #root {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-} */
-
 h1 {
   font-family: "Staatliches", sans-serif;
   font-size: 2em;
@@ -58,12 +46,32 @@ button {
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  /* transition: background-color 0.3s ease; */
 }
 
 button:hover {
   background-color: #7d491f;
 }
+
+/* .icon-button {
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.icon-button:hover .hiker-icon {
+  filter: drop-shadow(0 0 6px #ffe28a);
+  transform: scale(1.15);
+  transition: transform 0.2s; 
+  transform: rotate(-10deg);
+  transition: transform 0.2s;
+  padding: 0px;
+} */
 
 button:focus,
 button:focus-visible {

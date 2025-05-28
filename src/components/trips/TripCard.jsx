@@ -29,14 +29,34 @@ export const TripCard = ({ trip, onDelete, onEdit }) => {
           <p className="trip-park">{trip.park?.name}</p>
           <p className="trip-date">Created: {new Date(trip.createdAt).toLocaleDateString()}</p>
         </div>
-        <div className="trip-card__actions">
-          <button onClick={() => onEdit(trip.id)}>Edit</button>
-          <button onClick={() => onDelete(trip.id)}>Delete</button>
-          <button onClick={() => navigate(`/trips/${trip.id}/details/${trip.park?.code}`)}>
-            Itinerary
+        <div className="trip-card__side-tab">
+          <button
+            onClick={() => navigate(`/trips/${trip.id}/details/${trip.park?.code}`)}
+            className="icon-button">
+            <img src="/images/add-icon.svg" alt="Hiker" className="hiker-icon" />
+          </button>
+          <button onClick={() => onEdit(trip.id)} className="icon-button">
+            <img src="/images/edit-icon.svg" alt="Edit" className="hiker-icon" />
+          </button>
+          <button onClick={() => onDelete(trip.id)} className="icon-button">
+            <img src="/images/delete-icon.svg" alt="Delete" className="hiker-icon" />
           </button>
         </div>
       </div>
     </div>
   );
 };
+
+{
+  /* <div className="trip-card__actions">
+          <button onClick={() => onEdit(trip.id)}>Edit</button>
+          <button onClick={() => onDelete(trip.id)}>Delete</button>
+          <button onClick={() => navigate(`/trips/${trip.id}/details/${trip.park?.code}`)}>
+            Itinerary
+          </button>
+        </div> */
+}
+
+{
+  /*  */
+}
