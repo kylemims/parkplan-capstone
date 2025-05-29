@@ -46,9 +46,8 @@ export const CreateNewTripForm = ({ parkId, onSuccess }) => {
         setError("");
         if (onSuccess) {
           onSuccess(); // This will refresh trips and close modal in TripDashboard
-        } else {
-          navigate("/trips"); // Only navigate if no onSuccess (e.g., from ParkDetails)
         }
+        navigate("/trips"); // Only navigate if no onSuccess (e.g., from ParkDetails)
       })
       .catch(() => setError("Failed to create trip."));
   };

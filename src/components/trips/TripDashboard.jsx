@@ -4,6 +4,7 @@ import { NewTripModal } from "../forms/NewTripModal.jsx";
 import { TripCard } from "./TripCard.jsx";
 import { EditTripModal } from "./EditTripModal.jsx"; // <-- import your modal
 import "./TripList.css";
+import { useNavigate } from "react-router-dom";
 
 export const TripDashboard = () => {
   const [trips, setTrips] = useState([]);
@@ -15,15 +16,11 @@ export const TripDashboard = () => {
 
   const localUser = localStorage.getItem("parkplan_user");
   const userObj = JSON.parse(localUser);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getTripsByUserId(userObj.id).then(setTrips);
   }, [userObj.id]);
-
-  const handleDelete = (tripId) => {
-    if (window.confirm("Are you sure you want to remove this trip?"))
-      deleteTrip(tripId).then(setTrips);
-  };
 
   const handleEdit = (tripId) => {
     setSelectedTripId(tripId);
@@ -36,6 +33,14 @@ export const TripDashboard = () => {
   };
   const refreshTrips = () => {
     getTripsByUserId(userObj.id).then(setTrips);
+  };
+  const handleDelete = (tripId) => {
+    if (window.confirm("Are you sure you want to remove this trip?")) {
+      deleteTrip(tripId).then(() => {
+        getTripsByUserId(userObj.id).then(setTrips);
+        navigate("/trips"); // Redirect to dashboard after delete
+      });
+    }
   };
 
   return (
