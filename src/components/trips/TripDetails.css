@@ -51,6 +51,64 @@
   margin-bottom: 0.8rem;
 }
 
+/* Icon button base style */
+.icon-button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: inherit;
+}
+
+.icon-button:focus {
+  outline: 2px solid #ffe28a;
+  outline-offset: 2px;
+}
+
+/* Icon image style */
+.hiker-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.icon-button:hover .hiker-icon {
+  filter: drop-shadow(0 0 6px #ffe28a);
+  transform: scale(1.15) rotate(-10deg);
+}
+
+/* Hover popup style */
+.hover-reveal__content {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, -100%);
+  min-width: 220px;
+  max-width: 320px;
+  background: #000;
+  color: #ffe28a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(59, 58, 58, 0.6);
+  padding: 1rem;
+  z-index: 100;
+  font-size: 0.95rem;
+  text-align: left;
+  pointer-events: none;
+}
+
+.hover-title {
+  color: #ffe28a;
+  margin: 0 0 0.5rem 0;
+}
+
 .add-to-itinerary-btn {
   padding: 0.45rem 0.75rem;
   background-color: #77a098;

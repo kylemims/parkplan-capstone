@@ -1,0 +1,17 @@
+.hover-reveal__content {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, -100%);
+  min-width: 220px;
+  max-width: 320px;
+  background: #000;
+  color: #ffe28a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(59, 58, 58, 0.6);
+  padding: 1rem;
+  z-index: 100;
+  font-size: 0.95rem;
+  text-align: left;
+  pointer-events: none; /* Prevents accidental hover flicker */
+}
