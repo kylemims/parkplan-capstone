@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { GetNPSCampgrounds } from "../../services/parkService.js";
 import "./CampgroundSelector.css";
+import { IconTooltipButton } from "../templates/IconTooltipButton.jsx";
 
 export const CampgroundSelector = () => {
   const [campgrounds, setCampgrounds] = useState([]);
@@ -12,11 +13,27 @@ export const CampgroundSelector = () => {
   return (
     <section className="campground-selector">
       <h2>Select Campgrounds for {}</h2>
-      <div className="dropdown-container">
+      <div className="camp-container">
         <ul className="campground-list">
           {campgrounds.data?.map((campground) => (
             <li key={campground.id} className="campground-item">
-              <p>{campground.name}</p>
+              <div className="campground-row">
+                <IconTooltipButton
+                  onClick={() => console.log(`Selected campground: ${campground.name}`)}
+                  iconSrc="/images/time-icon.svg"
+                  tooltipContent={
+                    <div className="tooltip-content">
+                      <p>{campground.description}</p>
+                      <p>
+                        <strong>Location:</strong> {campground.location}
+                      </p>
+                      <p>
+                        <strong>Open Year-Round:</strong> {campground.openYearRound ? "Yes" : "No"}
+                      </p>
+                    </div>
+                  }></IconTooltipButton>
+                <p>{campground.name}</p>
+              </div>
             </li>
           ))}
         </ul>

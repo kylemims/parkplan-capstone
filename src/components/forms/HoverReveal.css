@@ -1,10 +1,11 @@
 .hover-reveal__content {
   position: absolute;
   left: 50%;
-  top: -10px;
-  transform: translate(-50%, -100%);
+  top: 110%;
+  transform: translateX(-50%);
   min-width: 220px;
   max-width: 320px;
+  max-height: 250px;
   background: #000;
   color: #ffe28a;
   border-radius: 8px;

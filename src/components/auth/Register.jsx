@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import { createUser, getUserByEmail } from "../../services/userService";
+import { FormInput } from "../forms/FormInput.jsx";
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -46,57 +47,43 @@ export const Register = () => {
   };
 
   return (
-    <main className="container-login">
-      <section>
-        <form className="form-login" onSubmit={handleRegister}>
+    <div className="container-login">
+      <div className="login-background">
+        <form className="trip-form" onSubmit={handleRegister}>
           <h1>Pick A Park</h1>
-          <h2>Please Register</h2>
+          <h3>Please Register</h3>
 
-          <fieldset>
-            <div className="form-group">
-              <input
-                onChange={updateUser}
-                type="text"
-                id="name"
-                className="form-control"
-                placeholder="Enter your name"
-                required
-                autoFocus
-              />
-            </div>
-          </fieldset>
+          <FormInput onChange={updateUser} type="text" id="name" placeholder="Enter your name" />
 
-          <fieldset>
+          <fieldset className="signin-fieldset">
             <div className="form-group">
-              <input
+              <FormInput
                 onChange={updateUser}
                 type="email"
                 id="email"
-                className="form-control"
                 placeholder="Email address"
-                required
               />
             </div>
           </fieldset>
 
           <fieldset>
             <div className="form-group">
-              <button className="login-btn btn-info" type="submit">
+              <button className="home-btn" type="submit">
                 Register
               </button>
             </div>
           </fieldset>
         </form>
-      </section>
+      </div>
 
       <section>
-        <p style={{ textAlign: "center", marginTop: "1rem" }}>
+        <p>
           Already have an account?{" "}
-          <Link to="/login" style={{ color: "#a9b49c", textDecoration: "underline" }}>
-            Sign in
+          <Link to="/login">
+            <strong>Sign in</strong>
           </Link>
         </p>
       </section>
-    </main>
+    </div>
   );
 };

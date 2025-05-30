@@ -58,7 +58,7 @@ export const TripDashboard = () => {
           ))}
         </div>
         <div className="add-new-dash">
-          <button className="trip-list__create-button" onClick={() => setOpenModal(true)}>
+          <button className="trip-btn" onClick={() => setOpenModal(true)}>
             + Add New Trip
           </button>
           <NewTripModal

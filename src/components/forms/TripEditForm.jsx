@@ -55,7 +55,7 @@ export const TripEditForm = ({ tripId: propTripId, onSuccess }) => {
   return (
     <form className="trip-form" onSubmit={handleSubmit}>
       <FormInput
-        label="Trip Name"
+        label="Trip Name:"
         type="text"
         name="name"
         id="tripName"

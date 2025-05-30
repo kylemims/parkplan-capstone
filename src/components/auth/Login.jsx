@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { getUserByEmail } from "../../services/userService";
+import { FormInput } from "../forms/FormInput.jsx";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,28 +29,21 @@ export const Login = () => {
   };
 
   return (
-    // <main className="container-login">
-    <div>
+    <div className="container-login">
       <div className="login-background">
-        <form className="form-login" onSubmit={handleLogin}>
+        <form className="trip-form" onSubmit={handleLogin}>
           <h1>Pick A Park</h1>
-          <h2>Please sign in</h2>
-          <fieldset>
+          <h3>Please sign in</h3>
+          <FormInput
+            type="email"
+            id="tripName"
+            value={email}
+            onChange={(evt) => setEmail(evt.target.value)}
+            placeholder="Email address"
+          />
+          <fieldset className="signin-fieldset">
             <div className="form-group">
-              <input
-                type="email"
-                value={email}
-                onChange={(evt) => setEmail(evt.target.value)}
-                className="form-control"
-                placeholder="Email address"
-                required
-                autoFocus
-              />
-            </div>
-          </fieldset>
-          <fieldset>
-            <div className="form-group">
-              <button className="login-btn btn-info" type="submit">
+              <button className="home-btn" type="submit">
                 Sign in
               </button>
             </div>
@@ -64,38 +58,40 @@ export const Login = () => {
   );
 };
 
-// return (
-//     <main className="container-login">
-//       <section>
-//         <form className="form-login" onSubmit={handleLogin}>
-//           <h1>Pick A Park</h1>
-//           <h2>Please sign in</h2>
-//           <fieldset>
-//             <div className="form-group">
-//               <input
-//                 type="email"
-//                 value={email}
-//                 onChange={(evt) => setEmail(evt.target.value)}
-//                 className="form-control"
-//                 placeholder="Email address"
-//                 required
-//                 autoFocus
-//               />
-//             </div>
-//           </fieldset>
-//           <fieldset>
-//             <div className="form-group">
-//               <button className="login-btn btn-info" type="submit">
-//                 Sign in
-//               </button>
-//             </div>
-//           </fieldset>
-//         </form>
-//       </section>
-//       <section className="register-link">
-//         <p>New to Pick A Park?</p>
-//         <Link to="/register">Get Registered Here</Link>
-//       </section>
-//     </main>
-//   );
-// };
+{
+  /* return (
+    <div className="container-login">
+      <div className="login-background">
+        <form className="form-login" onSubmit={handleLogin}>
+          <h1>Pick A Park</h1>
+          <h3>Please sign in</h3>
+          <fieldset className="login-fieldset">
+            <div className="form-group">
+              <input
+                type="email"
+                value={email}
+                onChange={(evt) => setEmail(evt.target.value)}
+                className="form-control"
+                placeholder="Email address"
+                required
+                autoFocus
+              />
+            </div>
+          </fieldset>
+          <fieldset className="signin-fieldset">
+            <div className="form-group">
+              <button className="home-btn" type="submit">
+                Sign in
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div className="register-link">
+        <p>New to Pick A Park?</p>
+        <Link to="/register">Get Registered Here</Link>
+      </div>
+    </div>
+  );
+}; */
+}

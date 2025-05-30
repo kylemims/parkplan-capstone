@@ -1,11 +1,15 @@
 .things-to-do-section {
   margin-top: 2rem;
   margin-left: 2rem;
-
   color: #f0f0f0;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "helvetica", sans-serif;
 }
-
+.things-to-do-section h2 {
+  font-size: 2rem;
+  color: #ffffffde;
+  font-family: "staatliches", sans-serif;
+  margin-bottom: 1rem;
+}
 .todo-list {
   list-style: none;
   padding: 0;
@@ -16,15 +20,16 @@
 }
 
 .todo-card {
-  background-color: #2e2e2e;
+  background: linear-gradient(to top, rgba(4, 4, 4, 0.7), rgba(16, 16, 16, 0.7), rgb(6, 6, 6));
   max-width: 600px;
-  border-left: 4px solid #ffe28a;
+  border-left: 4px solid #dca8a2;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 .todo-title {
+  font-family: "Permanent Marker", cursive;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
@@ -74,8 +79,8 @@
 
 /* Icon image style */
 .hiker-icon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   display: block;
   transition: filter 0.2s, transform 0.2s;
 }
@@ -89,12 +94,16 @@
 .hover-reveal__content {
   position: absolute;
   left: 50%;
-  top: -10px;
-  transform: translate(-50%, -100%);
-  min-width: 220px;
-  max-width: 320px;
-  background: #000;
-  color: #ffe28a;
+  top: -70%; /* Show below the icon */
+  transform: translateX(-50%);
+  /* min-width: 220px; */
+  min-width: 300px;
+  max-width: 400px;
+  /* width: 100%; */
+  /* max-height: 250px; */
+  background: #182220;
+  opacity: 97%;
+  color: #f2eeee;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(59, 58, 58, 0.6);
   padding: 1rem;
@@ -102,11 +111,25 @@
   font-size: 0.95rem;
   text-align: left;
   pointer-events: none;
+  line-height: 1.35;
+  font-family: "nunito", sans-serif;
+  outline: #ac8b7d outset 2px;
 }
 
 .hover-title {
   color: #ffe28a;
-  margin: 0 0 0.5rem 0;
+  /* margin-bottom: 5px; */
+  /* font-family: "staatliches", sans-serif; */
+  /* font-size: 0.9rem;
+  font-weight: 600; */
+}
+
+.hover-reveal__content p > :first-child {
+  color: #b56a4c;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  /* font-size: 1rem; */
 }
 
 .add-to-itinerary-btn {

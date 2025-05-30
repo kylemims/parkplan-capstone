@@ -60,7 +60,7 @@ export const TripDetails = () => {
                   </div>
                 }>
                 <button className="icon-button">
-                  <img src="/images/time-icon.svg" alt="Time" className="hiker-icon" />
+                  <img src="/images/timer-icon.svg" alt="Time" className="hiker-icon" />
                 </button>
               </HoverReveal>
             </div>

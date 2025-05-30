@@ -32,3 +32,47 @@
   color: white;
   border-color: #388e3c;
 }
+
+.icon-button {
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: start;
+  width: 30px;
+  height: 30px;
+  /* border-radius: 8%; */
+  /* background-color: #a86115; */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.icon-button:hover {
+  background-color: #ccc;
+}
+.icon-button.selected {
+  background-color: #4caf50;
+  color: white;
+}
+.icon-button.selected:hover {
+  background-color: #388e3c;
+}
+.camp-container {
+  max-width: 600px;
+  margin: 0px auto;
+  margin-left: 5px;
+  padding: 10px;
+  /* font-family: Arial, sans-serif; */
+}
+.camp-container li {
+  list-style: none;
+  padding: 0;
+}
+
+.campground-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+
+  border-bottom: 1px solid #1b1b1b;
+  /* background-color: rgb(160, 160, 156); */
+}
