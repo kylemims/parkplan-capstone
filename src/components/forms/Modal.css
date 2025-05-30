@@ -36,12 +36,6 @@
   border-radius: 6px;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  /* padding: 0.75rem; */
-}
-
-.modal-container input {
-  width: 100%;
-  border-radius: 6px;
 }
 
 .close-button {
