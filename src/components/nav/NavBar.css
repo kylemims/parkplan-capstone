@@ -1,118 +1,176 @@
+/* BASE STYLES */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 100%;
-  background-color: #b56a4c;
-  padding: 1rem 1rem;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin: 0;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
 }
 
-.social-icon-group {
+.navbar.transparent-nav {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* HEADER CONTAINER */
+
+.nav-header {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: transparent;
+  padding: 0px;
   margin: 0px;
+}
+
+/* HAMBURGER MENU ICON */
+
+.hamburger {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger:hover {
+  filter: invert(70%) sepia(80%) saturate(150%) brightness(100%) contrast(101%);
+}
+
+.hamburger-icon {
+  width: 21px;
+  background: none;
+  /* filter: invert(100%) */
+}
+
+/* SIDE DRAWER MENU (MOBILE) */
+
+.nav-menu-drawer {
+  position: fixed;
+  top: 0;
+  left: -75%;
+  width: 75%;
+  height: 100%;
+  background: var(--color-bg);
+  opacity: 95%;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  gap: 1.5rem;
+  list-style: none;
+  transition: left 0.75s ease;
+  z-index: 1100;
+}
+
+.nav-menu-drawer.open {
+  left: 0;
+}
+
+.nav-menu-drawer li button {
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0px;
+  /* padding-right: 5px; */
+}
+
+.nav-menu-drawer li button:hover {
+  color: #444;
+  background-color: transparent;
+}
+
+/* BACKDROP FOR OVERLAY */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1050;
+}
+
+/* SOCIAL ICONS - RE-ENABLE IF NEEDED */
+
+.nav-menu-drawer .social-icon-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* margin-top: 2rem; */
+  padding-left: 0.25rem;
+  align-items: center;
 }
 
 .social-icon {
   width: 24px;
   height: 24px;
-  filter: invert(70%) sepia(80%) saturate(150%) brightness(100%) contrast(101%);
+  filter: invert(100%);
+  transition: transform 0.2s ease;
 }
 
 .social-icon:hover {
-  filter: invert(30%);
+  transform: scale(1.2);
+  filter: invert(80%) sepia(10%) saturate(200%) hue-rotate(10deg);
 }
 
-.nav-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+/* DESKTOP NAV MENU STYLES */
 
-.hamburger button {
-  background-color: none;
-  border: none;
-  cursor: pointer;
-  padding: 0px;
-  transition: background-color none;
-}
-.hamburger {
-  padding: 0px;
-}
-
-.hamburger :hover {
-  filter: invert(70%) sepia(80%) saturate(150%) brightness(100%) contrast(101%);
-}
-.hamburger-icon {
-  width: 21px;
-  filter: invert(85%);
-}
-
-.nav-menu {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 0.5rem;
-  justify-content: center;
-}
-
-.nav-menu li button {
-  background: none;
-  border: none;
-  color: #fff9e6;
-  font-size: 0.9rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 8px;
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav-menu li button:hover {
-  color: #444;
-  background-color: none;
-}
-
-/* MOBILE STYLES */
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: -2rem;
-  }
-
-  .nav-menu.open {
-    display: flex;
-    gap: 0rem;
-    margin-top: 1rem;
-    margin-left: -7rem;
-  }
-
-  .nav-menu li {
-    margin-bottom: 0.5rem;
-  }
-}
 @media screen and (min-width: 768px) {
   .hamburger {
     display: none;
   }
 
-  .nav-menu {
-    display: flex !important;
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-header {
+    margin-left: auto;
+  }
+
+  .nav-menu-drawer {
+    position: static;
     flex-direction: row;
-    justify-content: flex-end;
+    height: auto;
+    width: auto;
+    background: none;
+    padding: 0;
+    gap: 1rem;
+    transition: none;
+  }
+
+  .nav-menu-drawer.open {
+    left: auto;
+  }
+
+  .backdrop {
+    display: none;
   }
 }

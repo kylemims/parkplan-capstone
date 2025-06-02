@@ -23,27 +23,3 @@ export const InfoIconHover = ({ title, duration, durationDescription }) => (
     </button>
   </HoverReveal>
 );
-
-// import { HoverReveal } from "../forms/HoverReveal.jsx";
-// import { Lightbox } from "./Lightbox.jsx";
-// import "./TripList.css";
-
-// export const InfoIconHover = ({ title, duration, durationDescription }) => (
-//   <HoverReveal
-//     revealContent={
-//       <Lightbox open={true} onClose={() => {}} title={title} label="Activity Details">
-//         <div className="">
-//           {duration && (
-//             <p>
-//               <strong>Duration:</strong> {duration} hr(s)
-//             </p>
-//           )}
-//           {durationDescription && (
-//             <p>
-//               <strong>Duration Description:</strong> {durationDescription}
-//             </p>
-//           )}
-//         </div>
-//       </Lightbox>
-//     }></HoverReveal>
-// );

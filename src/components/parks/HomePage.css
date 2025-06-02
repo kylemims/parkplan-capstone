@@ -1,5 +1,5 @@
 .park-selector {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   max-width: 800px;
   margin: 1rem auto;
@@ -7,17 +7,12 @@
 
 .small-title {
   font-size: 1rem;
-  color: #f1f1f1;
+  color: var(--color-text);
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   font-family: "Staatliches", sans-serif;
   text-decoration: underline #b56a4c;
   text-underline-offset: 0.5rem;
-}
-
-h1 {
-  font-family: "Staatliches", sans-serif;
-  font-size: 3rem;
 }
 
 .park-logo {
@@ -26,6 +21,11 @@ h1 {
   padding: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.plan-adventure-block p {
+  padding-bottom: 1rem;
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {
@@ -43,18 +43,6 @@ h1 {
   margin-bottom: 1rem;
   max-width: 300px;
   width: 100%;
-}
-
-p {
-  font-size: 90%;
-  padding: 0.5rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  color: #f1f1f1;
-  padding: 0.5rem;
-  font-family: "helvetia", sans-serif;
 }
 
 .dropdown:focus {

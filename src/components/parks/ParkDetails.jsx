@@ -71,24 +71,3 @@ export const ParkDetails = () => {
     </section>
   );
 };
-
-{
-  /* <section className="unparked-section">
-        <div className="weather-header">
-          <img src="/images/weather-icon.svg" alt="Weather Icon" className="weather-icon" />
-          <h5>Best weather:</h5>
-          <p className="best-time">{park.bestTime}</p>
-        </div>
-
-        <div className="wildlife-header">
-          <img src="/images/wildlife-icon.svg" alt="Wildlife Icon" className="wildlife-icon" />
-          <h5>Wildlife:</h5>
-          <p className="best-time">{park.wildlife}</p>
-        </div>
-        <div className="highlight-header">
-          <img src="/images/highlight-icon.svg" alt="Highlight Icon" className="highlight-icon" />
-          <h5>Highlights</h5>
-          <p className="best-time">{park.highlights}</p>
-        </div>
-      </section> */
-}

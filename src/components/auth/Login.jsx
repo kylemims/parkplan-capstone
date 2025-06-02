@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { getUserByEmail } from "../../services/userService";
-import { FormInput } from "../forms/FormInput.jsx";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,69 +28,40 @@ export const Login = () => {
   };
 
   return (
-    <div className="container-login">
-      <div className="login-background">
-        <form className="trip-form" onSubmit={handleLogin}>
-          <h1>Pick A Park</h1>
-          <h3>Please sign in</h3>
-          <FormInput
-            type="email"
-            id="tripName"
-            value={email}
-            onChange={(evt) => setEmail(evt.target.value)}
-            placeholder="Email address"
-          />
-          <fieldset className="signin-fieldset">
-            <div className="form-group">
-              <button className="home-btn" type="submit">
-                Sign in
-              </button>
-            </div>
+    <div className="auth-background">
+      <video autoPlay muted loop playsInline className="background-video">
+        <source src="/videos/bg-video-2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="overlay">
+        <form className="auth-container" onSubmit={handleLogin}>
+          <p className="login-small-title">WELCOME TO</p>
+          <h1 className="login-header">Pick-A-Park</h1>
+          <img src="/images/pick-logo-5.svg" alt="Pick A Park logo" className="login-logo" />
+          <h2 className="subtitle">Please sign in</h2>
+
+          <fieldset>
+            {/* <label htmlFor="inputEmail"> Email address </label> */}
+            <input
+              type="email"
+              value={email}
+              onChange={(evt) => setEmail(evt.target.value)}
+              className="form-input"
+              placeholder="Email"
+              required
+              autoFocus
+            />
           </fieldset>
+          <div className="auth-link">
+            <button type="submit">Sign in</button>
+            <span>
+              Not a member? <a href="/register">Register</a>
+            </span>
+          </div>
         </form>
-      </div>
-      <div className="register-link">
-        <p>New to Pick A Park?</p>
-        <Link to="/register">Get Registered Here</Link>
       </div>
     </div>
   );
 };
 
-{
-  /* return (
-    <div className="container-login">
-      <div className="login-background">
-        <form className="form-login" onSubmit={handleLogin}>
-          <h1>Pick A Park</h1>
-          <h3>Please sign in</h3>
-          <fieldset className="login-fieldset">
-            <div className="form-group">
-              <input
-                type="email"
-                value={email}
-                onChange={(evt) => setEmail(evt.target.value)}
-                className="form-control"
-                placeholder="Email address"
-                required
-                autoFocus
-              />
-            </div>
-          </fieldset>
-          <fieldset className="signin-fieldset">
-            <div className="form-group">
-              <button className="home-btn" type="submit">
-                Sign in
-              </button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <div className="register-link">
-        <p>New to Pick A Park?</p>
-        <Link to="/register">Get Registered Here</Link>
-      </div>
-    </div>
-  );
-}; */
-}
+//

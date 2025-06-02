@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ParkDetails.css"; // or create a separate CSS file if you prefer
+import "./ParkDetails.css";
 
 export const ImageCarousel = ({ images, parkName }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

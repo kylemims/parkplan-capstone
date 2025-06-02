@@ -2,7 +2,6 @@ const API_KEY = import.meta.env.VITE_NPS_API_KEY;
 const API_BASE = import.meta.env.VITE_NPS_API_BASE;
 
 export const getAllParks = () => {
-  // GET request to JSON server
   return fetch("http://localhost:8088/parks").then((res) => res.json());
 };
 export const getParksById = (id) => {
@@ -11,6 +10,11 @@ export const getParksById = (id) => {
 export const getImagesByParkId = (parkId) => {
   return fetch(`http://localhost:8088/images?parkId=${parkId}`).then((res) => res.json());
 };
+
+export const getAllImages = () => {
+  return fetch("http://localhost:8088/images").then((res) => res.json());
+};
+
 export const getParkById = (parkId) => {
   return fetch(`http://localhost:8088/parks/${parkId}`).then((res) => res.json());
 };

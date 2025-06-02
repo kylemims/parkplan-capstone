@@ -4,18 +4,33 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #212222;
+
+  --color-bg: #212122;
+  --color-bg-light: #f2efef;
+  --color-primary: #b56a4c;
+  --color-primary-hover: #7a4a35;
+  --color-accent: #ffe28a;
+  --color-text: #fff9e6;
+  --color-muted: #a0a0a0;
+  --color-error: #e57373;
+  --color-secondary: rgb(62, 81, 76);
+
+  --font-family-base: "Helvetica Neue", Arial, sans-serif;
+  --font-family-heading: "Staatliches", sans-serif;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  #root {
+    height: 100%;
+  }
 }
 
 a {
   font-weight: 500;
-  color: #ffffff;
+  color: #fff9e6;
   text-decoration: inherit;
 }
 a:hover {
@@ -24,17 +39,25 @@ a:hover {
 
 html,
 body {
-  margin: 0px;
-  padding: 0;
-  min-height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  background-color: #212222;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  height: 100%;
+  overflow: hidden;
 }
 
 h1 {
   font-family: "Staatliches", sans-serif;
   font-size: 2em;
   line-height: 1.2;
+  color: #fff9e6;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff9e6;
 }
 
 button {
@@ -52,26 +75,6 @@ button {
 button:hover {
   background-color: #7d491f;
 }
-
-/* .icon-button {
-  background: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  outline: none;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-}
-
-.icon-button:hover .hiker-icon {
-  filter: drop-shadow(0 0 6px #ffe28a);
-  transform: scale(1.15);
-  transition: transform 0.2s; 
-  transform: rotate(-10deg);
-  transition: transform 0.2s;
-  padding: 0px;
-} */
 
 button:focus,
 button:focus-visible {

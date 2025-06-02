@@ -4,13 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { DropDown } from "./DropDown.jsx";
 import "./HomePage.css";
 
-// component for dropdown list of parks for user to select from and create a trip
 export const HomePage = () => {
   const [parks, setParks] = useState([]);
   const [selectedParkId, setSelectedParkId] = useState(0);
   const navigate = useNavigate();
 
-  // fetch all parks from API when component mounts
   useEffect(() => {
     getAllParks().then(setParks);
   }, []);
@@ -25,11 +23,17 @@ export const HomePage = () => {
 
   return (
     <section className="park-selector">
-      <p className="small-title">WELCOME TO</p>
-      <h1>Pick A Park</h1>
+      {/* <img className="park-logo" src="/images/PickLogo.png" alt="Park" /> */}
+
+      <div className="welcome-container">
+        <p className="small-title">WELCOME TO</p>
+        <h1>Pick A Park</h1>
+      </div>
       <img className="park-logo" src="/images/PickLogo.png" alt="Park" />
-      <p>Ready to plan your next adventure?</p>
-      <h2>Select a National Park</h2>
+      <div className="plan-adventure-block">
+        <p>Ready to plan your next adventure?</p>
+        <h2>Select a National Park</h2>
+      </div>
       <div className="dropdown-container">
         <DropDown options={parks} selectedValue={selectedParkId} onChange={handleSelect} />
       </div>

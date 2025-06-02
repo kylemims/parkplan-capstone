@@ -25,6 +25,11 @@
       "email": "bulls@aol.com",
       "name": "Scottie Pippen",
       "id": 5
+    },
+    {
+      "email": "dougfunny@example.com",
+      "name": "",
+      "id": 6
     }
   ],
   "parks": [
@@ -515,13 +520,6 @@
     },
     {
       "name": "another one",
-      "userId": 1,
-      "createdAt": "2025-05-21T09:10:22.416Z",
-      "parkId": 13,
-      "id": 29
-    },
-    {
-      "name": "another one",
       "userId": 5,
       "createdAt": "2025-05-21T11:30:02.792Z",
       "parkId": 10,
@@ -549,7 +547,7 @@
       "id": 33
     },
     {
-      "name": "Last trip before break",
+      "name": "Booooooooom",
       "userId": 1,
       "createdAt": "2025-05-23T14:25:57.117Z",
       "parkId": 9,
@@ -563,18 +561,18 @@
       "id": 35
     },
     {
-      "name": "this is kindaaaa",
-      "userId": 1,
-      "createdAt": "2025-05-29T18:06:53.768Z",
-      "parkId": 7,
-      "id": 37
-    },
-    {
       "name": "you can't handle me",
       "userId": 1,
       "createdAt": "2025-05-29T18:28:48.816Z",
       "parkId": 13,
       "id": 38
+    },
+    {
+      "name": "Demo time adventure",
+      "userId": 1,
+      "createdAt": "2025-06-02T14:41:15.954Z",
+      "parkId": 1,
+      "id": 39
     }
   ]
 }
