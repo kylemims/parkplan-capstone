@@ -1,4 +1,199 @@
+.auth-background {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6) saturate(0.4);
+  opacity: 0.4;
+}
+
+
 .park-selector {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  max-width: 1200px;
+  min-width: 80%;
+  margin: 0rem auto;
+  background-color: rgb(28, 29, 29);
+  opacity: .8;
+  max-height: 1000px;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 20px;
+}
+
+.welcome-container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex;
+  /* align-content: space-around; */
+  font-size: 6rem;
+  text-align: center;
+  /* flex-wrap: wrap; */
+  margin-top: 0px;
+  /* margin-left: 1rem; */
+  /* margin: auto; */
+  padding-bottom: 0px;
+}
+
+.welcome-container h1 :nth-child() {
+  color: yellow;
+}
+
+
+.second-word {
+  font-size: 4.5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  margin-top: 0px;
+  text-decoration: underline; 
+  margin-bottom: 10px;
+  /* width: 100%; */
+}
+
+
+.small-title  {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  margin-right: 10px;
+  color: var(--color-text);
+  padding-top: 1rem;
+  font-family: "Staatliches", sans-serif;
+  text-decoration: underline #b56a4c;
+  text-underline-offset: 0.5rem;
+}
+
+.park-logo {
+
+  width: 100%;
+  max-width: 160px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-adventure-block p {
+  padding-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.dropdown {
+    color: #f1f1f1;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .dropdown:focus {
+    outline: none;
+    border: 1px solid #b56a4c;
+  }
+
+@media (max-width: 768px) {
+  
+  
+  
+  .dropdown {
+    color: #f1f1f1;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .dropdown:focus {
+    outline: none;
+    border: 1px solid #b56a4c;
+  }
+  
+  .park-selector {
+    display: flex;
+    justify-content: center;
+  }
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+text-align: center;;
+align-items: center;
+justify-content: center;
+margin-top: 0rem auto;
+padding: 0px;
+min-height: auto;
+}
+
+  .welcome-container h1 {
+  display: flex; 
+  justify-content: center;
+  align-content: center;
+  font-size: 4rem;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.small-title {
+  margin-top: 0px auto;
+  padding: 0px;
+}
+  
+.second-word {
+
+  font-size: 3rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  /* margin-top: -.5rem; */
+  text-decoration: underline;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* .park-selector {
   padding: 1rem;
   text-align: center;
   max-width: 800px;
@@ -48,4 +243,4 @@
 .dropdown:focus {
   outline: none;
   border: 1px solid #b56a4c;
-}
+} */

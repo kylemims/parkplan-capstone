@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUser, getUserByEmail } from "../../services/userService";
 import { FormInput } from "../forms/FormInput.jsx";
@@ -8,25 +8,27 @@ export const Register = () => {
   const [user, setUser] = useState({ email: "", name: "" });
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.body.classList.add("glass-layout");
-    return () => document.body.classList.remove("glass-layout");
-  }, []);
+  const registerNewUser = () => {
+    createUser(user).then((createdUser) => {
+      if (Object.prototype.hasOwnProperty.call(createdUser, "id")) {
+        localStorage.setItem(
+          "parkplan_user",
+          JSON.stringify({
+            id: createdUser.id,
+          })
+        );
 
+        navigate("/");
+      }
+    });
+  };
+  
   const updateUser = (evt) => {
     const copy = { ...user };
     copy[evt.target.id] = evt.target.value;
     setUser(copy);
   };
 
-  const registerNewUser = () => {
-    createUser(user).then((createdUser) => {
-      if (createdUser.id) {
-        localStorage.setItem("parkplan_user", JSON.stringify({ id: createdUser.id }));
-        navigate("/");
-      }
-    });
-  };
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -54,9 +56,11 @@ export const Register = () => {
             <input
               className="form-input"
               onChange={updateUser}
-              type="name"
+              type="text"
               id="name"
               placeholder="Name"
+              required
+              autoFocus
             />
             <br></br>
             <input
@@ -65,6 +69,7 @@ export const Register = () => {
               type="email"
               id="email"
               placeholder="Email address"
+              required
             />
           </fieldset>
 

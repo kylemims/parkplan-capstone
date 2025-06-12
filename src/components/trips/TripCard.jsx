@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getImagesByParkId } from "../../services/parkService.js";
+import { getImagesByParkId, getParkById } from "../../services/parkService.js";
 import { IconTooltipButton } from "../templates/IconTooltipButton.jsx";
 import "./TripList.css";
 import "../forms/Form.css";
@@ -7,18 +7,25 @@ import { useNavigate } from "react-router-dom";
 
 export const TripCard = ({ trip, onDelete, onEdit }) => {
   const [imageUrl, setImageUrl] = useState("");
+  const [park, setPark] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (trip.park?.id) {
-      getImagesByParkId(trip.park.id).then((images) => {
+    const parkId = trip.park?.id || trip.parkId;
+    if (parkId) {
+      getImagesByParkId(parkId).then((images) => {
         if (images && images.length > 0) {
           setImageUrl(images[0].url);
         }
       });
+      if (!trip.park) {
+        getParkById(parkId).then(setPark);
+      }
     }
-  }, [trip.park?.id]);
+  }, [trip.park?.id, trip.parkId, trip.park]);
 
-  const navigate = useNavigate();
+  const parkObj = trip.park || park;
+
 
   return (
     <div className="trip-card" style={{ backgroundImage: `url(${imageUrl})` }}>
@@ -34,7 +41,7 @@ export const TripCard = ({ trip, onDelete, onEdit }) => {
           <IconTooltipButton
             iconSrc="/images/add-icon.svg"
             tooltipContent={"Add Activities"}
-            onClick={() => navigate(`/trips/${trip.id}/details/${trip.park?.code}`)}
+            onClick={() => navigate(`/trips/${trip.id}/details/${parkObj?.code}`)}
           />
           <IconTooltipButton
             iconSrc="/images/edit-icon.svg"

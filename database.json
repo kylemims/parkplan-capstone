@@ -25,11 +25,6 @@
       "email": "bulls@aol.com",
       "name": "Scottie Pippen",
       "id": 5
-    },
-    {
-      "email": "dougfunny@example.com",
-      "name": "",
-      "id": 6
     }
   ],
   "parks": [
@@ -498,24 +493,17 @@
       "id": 20
     },
     {
-      "name": "beam me up scottie",
-      "parkId": 7,
-      "userId": 5,
-      "createdAt": "2025-05-14T16:51:24.387Z",
-      "id": 21
-    },
-    {
       "name": "The great Dom's trip",
-      "park_id": 1,
-      "user_id": 1,
-      "created_at": "2025-05-16T20:50:14.012Z",
+      "parkId": 1,
+      "userId": 1,
+      "createdAt": "2025-05-16T20:50:14.012Z",
       "id": 23
     },
     {
       "name": "Kyle's test trip",
-      "park_id": 1,
-      "user_id": 1,
-      "created_at": "2025-05-19T18:19:01.336Z",
+      "parkId": 1,
+      "userId": 1,
+      "createdAt": "2025-05-19T18:19:01.336Z",
       "id": 27
     },
     {

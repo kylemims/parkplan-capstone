@@ -1,10 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./NavBar.css";
+import { NewTripModal } from "../forms/NewTripModal.jsx";
 
 export const NavBar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  
 
   const handleLinkClick = (to) => {
     setMenuOpen(false);
@@ -16,6 +18,7 @@ export const NavBar = () => {
     }
   };
 
+  
   return (
     <nav className="navbar transparent-nav">
       <div className="nav-header">

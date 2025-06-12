@@ -8,8 +8,8 @@ import { TripDashboard } from "../components/trips/TripDashboard.jsx";
 import { TripEditForm } from "../components/forms/TripEditForm.jsx";
 import { ParkDetails } from "../components/parks/ParkDetails";
 import { TripDetails } from "../components/trips/TripDetails.jsx";
-// import { TripCard } from "../components/trips/TripCard.jsx";
 import { CampgroundSelector } from "../components/parks/CampgroundSelector.jsx";
+import { HomeTest } from "../components/parks/HomeTest.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -58,14 +58,14 @@ export const ApplicationViews = () => {
               </Authorized>
             }
           />
-          {/* <Route
-            path="/tripcard"
+          <Route
+            path="/hometest"
             element={
-              <Authorized>
-                <TripCard />
-              </Authorized>
+              
+                <HomeTest />
+             
             }
-          /> */}
+          />
           <Route path="/campgrounds" element={<CampgroundSelector />} />
         </Route>
       </Routes>

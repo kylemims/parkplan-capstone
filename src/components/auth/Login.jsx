@@ -45,6 +45,7 @@ export const Login = () => {
             <input
               type="email"
               value={email}
+              id="tripName"
               onChange={(evt) => setEmail(evt.target.value)}
               className="form-input"
               placeholder="Email"

@@ -28,7 +28,7 @@ export const TripDetails = () => {
     <section className="things-to-do-section">
       <h2>Things To Do</h2>
       <ul className="todo-list">
-        {thingsToDo.map((item) => (
+        {thingsToDo?.map((item) => (
           <li key={item.id} className="todo-card">
             <h3 className="todo-title">{item.title}</h3>
             <div

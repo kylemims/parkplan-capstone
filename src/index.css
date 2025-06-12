@@ -23,9 +23,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  #root {
-    height: 100%;
-  }
+  /* #root {
+    height: 100vh;
+  } */
 }
 
 a {
@@ -41,8 +41,9 @@ html,
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  height: 100%;
-  overflow: hidden;
+  /* min-height: 100vh; */
+  min-height: 100%;
+  /* overflow: hidden; */
 }
 
 h1 {
