@@ -11,6 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 90vh;
 }
 
 .background-video {
@@ -24,13 +25,13 @@ body {
   filter: brightness(0.7);
 }
 
-.overlay {
+/* .overlay {
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
+  height: 90vh;
+} */
 
 .auth-container {
   width: 100%;
@@ -93,6 +94,14 @@ body {
   margin-top: 0rem;
   margin-bottom: 1rem;
 }
+
+.welcome-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: fit-content;
+    }
+
 
 .subtitle {
   text-align: center;
@@ -163,10 +172,11 @@ label {
 .home-btn:hover {
   background-color: #9c5940;
 }
-
+/* @media only screen and (-webkit-min-device-pixel-ratio: 3) { */
 @media screen and (max-width: 600px) {
   .auth-container {
     padding: 1rem;
+    padding-bottom: 0px;
     width: 100%;
     /* min-width: unset; */
     
@@ -180,7 +190,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  height: 80vh;
+  height: 100%;
 }
 
   /* .login-header h1 {
@@ -196,7 +206,7 @@ label {
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: fit-content;
+      /* max-width: fit-content; */
     }
 
     .overlay {

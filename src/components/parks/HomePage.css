@@ -1,4 +1,13 @@
-.auth-background {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: transparent;
+}
+
+/* .auth-background {
   padding: 10px;
   margin: 0 auto;
 }
@@ -39,22 +48,18 @@
   align-items: center;
   align-content: center;
   padding-top: 20px;
-}
+} */
 
-.welcome-container h1 {
+/* .welcome-container h1 {
   display: flex;
   align-items: center;
   justify-content: center;
   align-items: flex;
-  /* align-content: space-around; */
   font-size: 6rem;
   text-align: center;
-  /* flex-wrap: wrap; */
   margin-top: 0px;
-  /* margin-left: 1rem; */
-  /* margin: auto; */
   padding-bottom: 0px;
-}
+} */
 
 .welcome-container h1 :nth-child() {
   color: yellow;
@@ -68,7 +73,6 @@
   margin-top: 0px;
   text-decoration: underline; 
   margin-bottom: 10px;
-  /* width: 100%; */
 }
 
 
@@ -85,18 +89,26 @@
   text-underline-offset: 0.5rem;
 }
 
-.park-logo {
 
-  width: 100%;
-  max-width: 160px;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.plan-adventure-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .plan-adventure-block p {
   padding-bottom: 1rem;
   color: var(--color-accent);
+}
+
+.dropdown-container {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dropdown {

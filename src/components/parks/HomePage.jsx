@@ -2,6 +2,7 @@ import { getAllParks } from "../../services/parkService.js";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DropDown } from "./DropDown.jsx";
+import { HomeHero } from "./HomeHero.jsx";
 import "./HomePage.css";
 
 export const HomePage = () => {
@@ -22,15 +23,17 @@ export const HomePage = () => {
   };
 
   return (
-    <div className="auth-background">
-      <img className="background-image" src="/images/zion-2.jpg" alt="yosemite" />
-    <section className="park-selector">
+    // <div className="auth-background">
+    //   <img className="background-image" src="/images/zion-2.jpg" alt="yosemite" />
+    // <section className="auth-container">
 
-      <div className="welcome-container">
-        <div className="small-title">WELCOME TO</div>
-        <h1>Pick <span className="second-word">A</span>Park</h1>
-      </div>
-      <img className="park-logo" src="/images/PickLogo.png" alt="Park" />
+    //   <div className="welcome-container">
+    //     <div className="small-title">WELCOME TO</div>
+    //     <h1>Pick <span className="second-word">A</span>Park</h1>
+    //   </div>
+    //   <img className="park-logo" src="/images/PickLogo.png" alt="Park" />
+    <>
+    <HomeHero/>
       <div className="plan-adventure-block">
         <p>Ready to plan your next adventure?</p>
         <h2>Select a National Park</h2>
@@ -38,8 +41,9 @@ export const HomePage = () => {
       <div className="dropdown-container">
         <DropDown options={parks} selectedValue={selectedParkId} onChange={handleSelect} />
       </div>
-    </section>
-    </div>
+    {/* </section> */}
+    </>
+    // </div>
   );
 };
 

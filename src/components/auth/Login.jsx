@@ -35,9 +35,9 @@ export const Login = () => {
       </video>
       <div className="overlay">
         <form className="auth-container" onSubmit={handleLogin}>
-          <section className="welcome-section">
-          <p className="login-small-title">WELCOME TO</p>
-          <h1 className="login-header">Pick-A-Park</h1>
+          <section className="welcome-container">
+          <p className="small-title">WELCOME TO</p>
+        <h1>Pick <span className="second-word">A</span>Park</h1>
           <img src="/images/pick-logo-5.svg" alt="Pick A Park logo" className="login-logo" />
           <h2 className="subtitle">Please sign in</h2>
 </section>
