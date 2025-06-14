@@ -88,7 +88,17 @@ body {
   text-decoration: underline #b56a4c;
   text-underline-offset: 0.5rem;
 }
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+}
 
 .plan-adventure-block {
   display: flex;
@@ -98,10 +108,17 @@ body {
   padding: 0px;
 }
 
+
+.plan-adventure-block {
+  animation: slide-in .8s ease-in;
+}
+
 .plan-adventure-block p {
   padding-bottom: 1rem;
   color: var(--color-accent);
 }
+
+
 
 .dropdown-container {
   margin: 0px;

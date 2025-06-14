@@ -8,7 +8,7 @@ return(
         Your browser does not support the video tag.
       </video>
       <div className="">
-<div className="auth-container">
+<div className="">
   <section className="welcome-container">
           <p className="small-title">WELCOME TO</p>
         <h1>Pick <span className="second-word">A</span>Park</h1>

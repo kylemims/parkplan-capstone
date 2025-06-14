@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .background-video {
@@ -41,14 +41,23 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  transform: translateY(-5vh);
+  /* transform: translateY(-5vh); */
 }
 
-.auth-container {
+.fade-in-block {
   animation: fadeIn 1s ease-out;
 }
 
-
+.login-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: 0px auto;
+  /* animation: fadeOut 1s ease-in-out; */
+}
 
 .login-small-title {
   font-size: 1rem;
@@ -78,11 +87,20 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(10vh);
   }
   to {
     opacity: 1;
-    transform: translateY(-5vh);
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -115,9 +133,10 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding-top: 1rem;
+  /* min-width: 100%; */
+  /* padding-top: 1rem; */
   min-width: 300px;
+  /* width: 100%; */
 }
 
 label {
@@ -136,6 +155,10 @@ label {
   background-color: #322d2daa;
   color: white;
   width: 100%;
+}
+
+.email-input {
+  width: 100%
 }
 
 .auth-link {
@@ -178,6 +201,8 @@ label {
     padding: 1rem;
     padding-bottom: 0px;
     width: 100%;
+  /* transform: translateY(-5vh); */
+
     /* min-width: unset; */
     
   }
@@ -209,7 +234,7 @@ label {
       /* max-width: fit-content; */
     }
 
-    .overlay {
+    /* .overlay {
       display:flex;
-    }
+    } */
   }
