@@ -66,28 +66,10 @@ body {
 }
 
 
-.second-word {
-  font-size: 4.5rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  margin-top: 0px;
-  text-decoration: underline; 
-  margin-bottom: 10px;
-}
 
 
-.small-title  {
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-size: 1rem;
-  margin-right: 10px;
-  color: var(--color-text);
-  padding-top: 1rem;
-  font-family: "Staatliches", sans-serif;
-  text-decoration: underline #b56a4c;
-  text-underline-offset: 0.5rem;
-}
+
+
 @keyframes slide-in {
   from {
     opacity: 0;
@@ -175,41 +157,7 @@ body {
     justify-content: center;
   }
 
-.welcome-container {
-  display: flex;
-  flex-direction: column;
-text-align: center;;
-align-items: center;
-justify-content: center;
-margin-top: 0rem auto;
-padding: 0px;
-min-height: auto;
-}
 
-  .welcome-container h1 {
-  display: flex; 
-  justify-content: center;
-  align-content: center;
-  font-size: 4rem;
-  text-align: center;
-  flex-wrap: wrap;
-  align-items: center;
-
-}
-
-.small-title {
-  margin-top: 0px auto;
-  padding: 0px;
-}
-  
-.second-word {
-
-  font-size: 3rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  /* margin-top: -.5rem; */
-  text-decoration: underline;
-}
 
 
 

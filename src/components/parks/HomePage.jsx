@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DropDown } from "./DropDown.jsx";
 import { HomeHero } from "./HomeHero.jsx";
+import { WelcomeLogoHero } from "./WelcomeLogoHero.jsx";
 import "./HomePage.css";
 
 export const HomePage = () => {
@@ -24,28 +25,21 @@ export const HomePage = () => {
 
   return (
     <>
-    <HomeHero/>
+      <HomeHero />
+      <WelcomeLogoHero />
+
       <div className="plan-adventure-block">
         <p>Ready to plan your next adventure?</p>
         <h2>Select a National Park</h2>
-      <div className="dropdown-container">
-        <DropDown options={parks} selectedValue={selectedParkId} onChange={handleSelect} />
+        <div className="dropdown-container">
+          <DropDown options={parks} selectedValue={selectedParkId} onChange={handleSelect} />
+        </div>
       </div>
-      </div>
-    {/* </section> */}
+      {/* </section> */}
     </>
     // </div>
   );
 };
-
-
-
-
-
-
-
-
-
 
 // import { getAllParks } from "../../services/parkService.js";
 // import { useState, useEffect } from "react";
