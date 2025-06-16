@@ -110,12 +110,12 @@
 }
 
 .bold-block h5 {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin: 0px;
 }
 
 .best-time {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-text);
   font-weight: 350;
   text-wrap: wrap;
@@ -153,9 +153,9 @@ h1 {
   background-color: #97573d;
   color: white;
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .park-details-container {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     padding-top: 0.5rem;
     border: none;
   }
@@ -170,11 +170,38 @@ h1 {
   }
 
   .park-details-container .unparked-section {
-    margin: 10px;
-    margin-left: 0px;
+    margin: 0 auto;
+    /* margin-left: 0px; */
   }
   .park-details-container .carousel-btn {
     font-size: 1rem;
     padding: 0.2rem 0.4rem;
+  }
+
+  .best-time {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .bold-block h5 {
+    font-size: 0.85rem;
+    margin: 0 auto;
+  }
+  .unparked-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0px;
+    justify-content: baseline;
+    align-content: baseline;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .special-block p {
+    display: flex;
+    margin-bottom: 0 auto;
   }
 }

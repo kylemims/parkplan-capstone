@@ -13,6 +13,7 @@ export const CampgroundSelector = () => {
   return (
     <section className="campground-selector">
       <h2>Select Campgrounds for {}</h2>
+      <img className="tree-logo" src="/images/tree-park-logo@4x.png"></img>
       <div className="camp-container">
         <ul className="campground-list">
           {campgrounds.data?.map((campground) => (

@@ -56,6 +56,7 @@ body {
   align-content: center;
   width: 100%;
   margin: 0px auto;
+  padding: 2rem;
   /* animation: fadeOut 1s ease-in-out; */
 }
 
@@ -77,12 +78,6 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
-
-.login-logo {
-  max-width: 150px;
-}
-
-
 
 @keyframes fadeIn {
   from {
@@ -114,18 +109,17 @@ body {
 }
 
 .welcome-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: fit-content;
-    }
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: fit-content;
+}
 
 .subtitle {
   text-align: center;
   color: var(--color-text);
   font-size: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 fieldset {
@@ -152,13 +146,13 @@ label {
   padding: 0.75rem;
   border-radius: 6px;
   border: 1px solid var(--color-primary);
-  background-color: #322d2daa;
-  color: white;
+  background-color: #141212aa;
+  color: rgb(255, 255, 255);
   width: 100%;
 }
 
 .email-input {
-  width: 100%
+  width: 100%;
 }
 
 .auth-link {
@@ -167,7 +161,7 @@ label {
   color: var(--color-muted);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 0.5rem;
   width: 100%;
 }
@@ -201,40 +195,39 @@ label {
     padding: 1rem;
     padding-bottom: 0px;
     width: 100%;
-  /* transform: translateY(-5vh); */
+    /* transform: translateY(-5vh); */
 
     /* min-width: unset; */
-    
   }
 
-.login-logo {
-  width: 150px;
-}
+  .login-logo {
+    width: 150px;
+  }
 
-.auth-background {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  height: 100%;
-}
+  .auth-background {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+  }
 
   /* .login-header h1 {
     font-size: 3.5rem; */
-    .login-small-title {
-      font-size: 0.8rem;
-    }
-    .auth-container h1 {
-      font-size: 3.5rem;
-    }
-    
-    .welcome-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* max-width: fit-content; */
-    }
+  .login-small-title {
+    font-size: 0.8rem;
+  }
+  .auth-container h1 {
+    font-size: 3.5rem;
+  }
 
-    /* .overlay {
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: fit-content; */
+  }
+
+  /* .overlay {
       display:flex;
     } */
-  }
+}

@@ -7,69 +7,6 @@ body {
   background-color: transparent;
 }
 
-/* .auth-background {
-  padding: 10px;
-  margin: 0 auto;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(0.6) saturate(0.4);
-  opacity: 0.4;
-}
-
-
-.park-selector {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  max-width: 1200px;
-  min-width: 80%;
-  margin: 0rem auto;
-  background-color: rgb(28, 29, 29);
-  opacity: .8;
-  max-height: 1000px;
-}
-
-.welcome-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding-top: 20px;
-} */
-
-/* .welcome-container h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: flex;
-  font-size: 6rem;
-  text-align: center;
-  margin-top: 0px;
-  padding-bottom: 0px;
-} */
-
-.welcome-container h1 :nth-child() {
-  color: yellow;
-}
-
-
-
-
-
-
 @keyframes slide-in {
   from {
     opacity: 0;
@@ -86,121 +23,48 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px;
-  padding: 0px;
+  margin-top: 4rem;
+  padding: 0rem;
+  z-index: 100;
 }
 
-
 .plan-adventure-block {
-  animation: slide-in .8s ease-in;
+  animation: slide-in 0.8s ease-in;
 }
 
 .plan-adventure-block p {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   color: var(--color-accent);
+  font-size: larger;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  z-index: 100;
 }
 
+.select-park-line {
+  z-index: 100;
+  padding-top: 2rem;
+}
+.plan-adventure-block h3 {
+  font-family: "staatliches";
+  color: white;
+  margin-bottom: 1rem;
+  z-index: 99;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
 
-
+.decoration-line {
+  width: 200px;
+}
 .dropdown-container {
-  margin: 0px;
-  padding: 0px;
+  margin-bottom: 0px;
+  /* padding: 30px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.dropdown {
-    color: #f1f1f1;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-bottom: 1rem;
-    max-width: 300px;
-    width: 100%;
-  }
-  
-  .dropdown:focus {
-    outline: none;
-    border: 1px solid #b56a4c;
-  }
-
-@media (max-width: 768px) {
-  
-  
-  
-  .dropdown {
-    color: #f1f1f1;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-bottom: 1rem;
-    max-width: 300px;
-    width: 100%;
-  }
-  
-  .dropdown:focus {
-    outline: none;
-    border: 1px solid #b56a4c;
-  }
-  
-  .park-selector {
-    display: flex;
-    justify-content: center;
-  }
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-/* .park-selector {
-  padding: 1rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 1rem auto;
-}
-
-.small-title {
-  font-size: 1rem;
-  color: var(--color-text);
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: "Staatliches", sans-serif;
-  text-decoration: underline #b56a4c;
-  text-underline-offset: 0.5rem;
-}
-
-.park-logo {
-  width: 100%;
-  max-width: 160px;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.plan-adventure-block p {
-  padding-bottom: 1rem;
-  color: var(--color-accent);
-}
-
-@media (max-width: 768px) {
+  /* min-height: 200px; */
 }
 
 .dropdown {
@@ -220,4 +84,174 @@ body {
 .dropdown:focus {
   outline: none;
   border: 1px solid #b56a4c;
-} */
+}
+
+@media (max-width: 768px) {
+  .plan-adventure-block {
+    z-index: 4;
+  }
+
+  .dropdown {
+    color: #f1f1f1;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .dropdown:focus {
+    outline: none;
+    border: 1px solid #b56a4c;
+  }
+
+  .dropdown-container {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .bg-tab {
+    padding: 0px;
+    height: 250px;
+    background-color: rgb(9, 9, 9);
+    opacity: 80%;
+    z-index: 1;
+    max-width: 700px;
+    min-width: 100%;
+    position: fixed;
+    /* border-top-left-radius: 20%;
+    border-top-right-radius: 20%; */
+    bottom: 0;
+    mask: conic-gradient(from 140deg at top, #0000, #000 0deg 80deg, #0000 80deg) 0%/50px 100%;
+  }
+
+  .plan-adventure-block h3 {
+    font-family: "staatliches";
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+    z-index: 99;
+  }
+}
+
+@media (max-width: 500px) {
+  .plan-adventure-block {
+    z-index: 4;
+  }
+
+  .dropdown {
+    color: #f1f1f1;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .dropdown:focus {
+    outline: none;
+    border: 1px solid #b56a4c;
+  }
+
+  .dropdown-container {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .bg-tab {
+    padding: 0px;
+    height: 200px;
+    background-color: rgb(9, 9, 9);
+    opacity: 80%;
+    z-index: 1;
+    max-width: 700px;
+    min-width: 100%;
+    position: fixed;
+    /* border-top-left-radius: 20%;
+    border-top-right-radius: 20%; */
+    bottom: 0;
+    mask: conic-gradient(from 140deg at top, #0000, #000 0deg 80deg, #0000 80deg) 0%/50px 100%;
+  }
+
+  .plan-adventure-block h3 {
+    font-family: "staatliches";
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+    z-index: 99;
+  }
+}
+
+@media (max-width: 500px) {
+  .plan-adventure-block {
+    z-index: 4;
+  }
+
+  .dropdown {
+    color: #f1f1f1;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .dropdown:focus {
+    outline: none;
+    border: 1px solid #b56a4c;
+  }
+
+  .dropdown-container {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    margin-top: 1rem;
+  }
+
+  .bg-tab {
+    padding: 0px;
+    height: 300px;
+    background-color: var(--color-primary);
+    opacity: 70%;
+    z-index: 1;
+    max-width: 700px;
+    min-width: 100%;
+    position: fixed;
+    /* border-top-left-radius: 20%;
+    border-top-right-radius: 20%; */
+    bottom: 0;
+    mask: conic-gradient(from 140deg at top, #0000, #000 0deg 80deg, #0000 80deg) 0%/50px 100%;
+  }
+
+  .plan-adventure-block h3 {
+    font-family: "staatliches";
+    color: white;
+    margin-bottom: 0rem;
+    padding-top: 2rem;
+    margin-top: 2.5rem;
+    z-index: 99;
+  }
+}
