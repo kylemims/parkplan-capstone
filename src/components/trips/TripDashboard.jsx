@@ -44,8 +44,8 @@ export const TripDashboard = () => {
 
   return (
     <section className="trip-dashboard-container">
+      <h1>My Planned Trips</h1>
       <div className="trip-list">
-        <h1>My Planned Trips</h1>
         <div className="trip-list__cards">
           {trips?.map((trip) => (
             <TripCard
@@ -56,22 +56,23 @@ export const TripDashboard = () => {
             />
           ))}
         </div>
-        <div className="add-new-dash">
-          <button className="trip-btn" onClick={() => setOpenModal(true)}>
-            + Add New Trip
-          </button>
-          <NewTripModal
-            open={openModal}
-            onClose={() => setOpenModal(false)}
-            onTripCreated={refreshTrips}
-          />
-        </div>
+      </div>
+      <div className="add-new-dash">
+        <NewTripModal
+          open={openModal}
+          onClose={() => setOpenModal(false)}
+          onTripCreated={refreshTrips}
+        />
+
         <EditTripModal
           open={editModalOpen}
           onClose={handleEditModalClose}
           tripId={selectedTripId}
           onTripUpdated={refreshTrips}
         />
+        <button className="trip-btn" onClick={() => setOpenModal(true)}>
+          + Add New Trip
+        </button>
       </div>
     </section>
   );

@@ -25,7 +25,6 @@ body {
   align-items: center;
   margin-top: 4rem;
   padding: 0rem;
-  z-index: 100;
 }
 
 .plan-adventure-block {
@@ -39,7 +38,6 @@ body {
   font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
     sans-serif;
-  z-index: 100;
 }
 
 .select-park-line {
@@ -87,10 +85,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .plan-adventure-block {
-    z-index: 4;
-  }
-
   .dropdown {
     color: #f1f1f1;
     border: none;
@@ -101,7 +95,7 @@ body {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
     margin-bottom: 1rem;
-    max-width: 300px;
+    min-width: 300px;
     width: 100%;
   }
 
@@ -115,22 +109,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 5;
-  }
-
-  .bg-tab {
-    padding: 0px;
-    height: 250px;
-    background-color: rgb(9, 9, 9);
-    opacity: 80%;
-    z-index: 1;
-    max-width: 700px;
-    min-width: 100%;
-    position: fixed;
-    /* border-top-left-radius: 20%;
-    border-top-right-radius: 20%; */
-    bottom: 0;
-    mask: conic-gradient(from 140deg at top, #0000, #000 0deg 80deg, #0000 80deg) 0%/50px 100%;
   }
 
   .plan-adventure-block h3 {
@@ -138,14 +116,50 @@ body {
     color: white;
     margin-bottom: 1rem;
     margin-top: 30px;
-    z-index: 99;
   }
 }
 
 @media (max-width: 500px) {
-  .plan-adventure-block {
-    z-index: 4;
-  }
+  /* .plan-adventure-block {
+    z-index: 4; */
+}
+
+.dropdown {
+  color: #f1f1f1;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  margin-bottom: 1rem;
+  max-width: 300px;
+  width: 100%;
+}
+
+.dropdown:focus {
+  outline: none;
+  border: 1px solid #b56a4c;
+}
+
+.dropdown-container {
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-adventure-block h3 {
+  font-family: "staatliches";
+  color: white;
+  margin-bottom: 1rem;
+  margin-top: 30px;
+}
+
+@media (max-width: 350px) {
+  /* .plan-adventure-block {
+    z-index: 4; */
 
   .dropdown {
     color: #f1f1f1;
@@ -172,86 +186,15 @@ body {
     flex-direction: column;
     align-items: center;
     z-index: 5;
-  }
-
-  .bg-tab {
-    padding: 0px;
-    height: 200px;
-    background-color: rgb(9, 9, 9);
-    opacity: 80%;
-    z-index: 1;
-    max-width: 700px;
-    min-width: 100%;
-    position: fixed;
-    /* border-top-left-radius: 20%;
-    border-top-right-radius: 20%; */
-    bottom: 0;
-    mask: conic-gradient(from 140deg at top, #0000, #000 0deg 80deg, #0000 80deg) 0%/50px 100%;
-  }
-
-  .plan-adventure-block h3 {
-    font-family: "staatliches";
-    color: white;
-    margin-bottom: 1rem;
-    margin-top: 30px;
-    z-index: 99;
-  }
-}
-
-@media (max-width: 500px) {
-  .plan-adventure-block {
-    z-index: 4;
-  }
-
-  .dropdown {
-    color: #f1f1f1;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
     margin-top: 1rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-bottom: 1rem;
-    max-width: 300px;
-    width: 100%;
-  }
-
-  .dropdown:focus {
-    outline: none;
-    border: 1px solid #b56a4c;
-  }
-
-  .dropdown-container {
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 5;
-    margin-top: 1rem;
-  }
-
-  .bg-tab {
-    padding: 0px;
-    height: 300px;
-    background-color: var(--color-primary);
-    opacity: 70%;
-    z-index: 1;
-    max-width: 700px;
-    min-width: 100%;
-    position: fixed;
-    /* border-top-left-radius: 20%;
-    border-top-right-radius: 20%; */
-    bottom: 0;
-    mask: conic-gradient(from 140deg at top, #0000, #000 0deg 80deg, #0000 80deg) 0%/50px 100%;
   }
 
   .plan-adventure-block h3 {
     font-family: "staatliches";
     color: white;
     margin-bottom: 0rem;
-    padding-top: 2rem;
-    margin-top: 2.5rem;
-    z-index: 99;
+    /* padding-top: 2rem; */
+    /* margin-top: 2.5rem; */
+    /* z-index: 99; */
   }
 }

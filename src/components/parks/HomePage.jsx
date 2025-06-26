@@ -36,7 +36,6 @@ export const HomePage = () => {
         <div className="dropdown-container">
           <DropDown options={parks} selectedValue={selectedParkId} onChange={handleSelect} />
         </div>
-        <div className="bg-tab"></div>
       </div>
       {/* </section> */}
     </>
