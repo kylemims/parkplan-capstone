@@ -1,48 +1,48 @@
 .preferences-form {
   max-width: 600px;
   margin: 4rem auto;
-  padding: 2.5rem;
-  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  padding: 2rem;
+  background-color: var(--color-bg-light);
   border-radius: 1rem;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   font-family: var(--body-font, "Inter", sans-serif);
   color: var(--text-color, #222);
 }
 
 .preferences-form h1 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   color: var(--primary-color, #1b5e20);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .preferences-form form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   margin: auto;
   gap: 1.5rem;
 }
 
 .preferences-form label {
-  font-size: 1rem;
-  font-weight: 600;
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  gap: 0.75rem;
 }
 
 .preferences-form select {
   width: 100%;
   margin-top: 0.5rem;
-  padding: 0.6rem;
-  border-radius: 8px;
+  padding: 0.5rem;
+  border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  color: #000;
   background-color: #fff;
+  color: #000;
 }
 
 .preferences-form fieldset {
@@ -52,55 +52,63 @@
 
 .preferences-form legend {
   font-size: 1.1rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #333;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  text-align: center;
 }
 
-.checkbox-option {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #000;
-  position: relative;
-  padding-left: 1.5rem;
+/* 💡 INTEREST ICON GRID STYLING */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.checkbox-option input[type="checkbox"] {
-  appearance: none;
-  width: 1.1rem;
-  height: 1.1rem;
-  border: 2px solid #555;
-  border-radius: 4px;
+.interest-card {
+  background-color: var(--color-accent);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.checkbox-option input[type="checkbox"]:checked {
-  background-color: var(--accent-color, #00695c);
-  border-color: var(--accent-color, #00695c);
-  background-image: url("/images/checkmark.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 0.7rem;
+.interest-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.interest-card.selected {
+  border-color: var(--color-secondary);
+  background-color: #fff2c2;
+}
+
+.interest-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.interest-card span {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* 🟩 SUBMIT BUTTON */
 .preferences-form .home-btn {
-  padding: 0.9rem 1.2rem;
+  padding: 0.75rem 1rem;
   background-color: var(--accent-color, #00695c);
   color: white;
   border: none;
-  border-radius: 0.75rem;
-  font-weight: 700;
+  border-radius: 0.5rem;
+  font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -108,10 +116,7 @@
   background-color: var(--accent-color-hover, #004d40);
 }
 
-.preferences-form option {
-  color: #000;
-}
-
+/* 📱 MOBILE RESPONSIVE */
 @media (max-width: 480px) {
   .preferences-form {
     margin: 2rem 1rem;
@@ -120,6 +125,11 @@
 
   .preferences-form h1 {
     font-size: 1.5rem;
+  }
+
+  .interest-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
 
   .preferences-form .home-btn {
