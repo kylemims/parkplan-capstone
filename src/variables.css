@@ -1,3 +1,6 @@
+/*! This 'variables.css' file lives in the 'src' */
+/*! There is another 'variables.css' file in the 'styles-system' folder */
+
 :root {
   --color-bg: #212222;
   --color-primary: #b56a4c;

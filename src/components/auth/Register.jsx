@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUser, getUserByEmail } from "../../services/userService";
 import { FormInput } from "../forms/FormInput.jsx";
+import { HomeHero } from "../parks/HomeHero.jsx";
+import { WelcomeLogoHero } from "../parks/WelcomeLogoHero.jsx";
 import "./Login.css";
 
 export const Register = () => {
@@ -22,13 +24,12 @@ export const Register = () => {
       }
     });
   };
-  
+
   const updateUser = (evt) => {
     const copy = { ...user };
     copy[evt.target.id] = evt.target.value;
     setUser(copy);
   };
-
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -42,49 +43,44 @@ export const Register = () => {
   };
 
   return (
-    <div className="auth-background">
-      <video autoPlay muted loop playsInline className="background-video">
-        <source src="/videos/bg-video-2.mp4" type="video/mp4" />
-      </video>
-
-      <div className="overlay">
-        <form className="auth-container" onSubmit={handleRegister}>
-          <h1 className="login-header">Pick-A-Park</h1>
-          <img src="/images/pick-logo-5.svg" alt="Pick A Park logo" className="login-logo" />
+    <>
+      <HomeHero />
+      <div className="fade-in-block">
+        <WelcomeLogoHero />
+        <section className="login-block">
           <h2 className="subtitle">Create your account</h2>
           <fieldset>
-            <input
-              className="form-input"
-              onChange={updateUser}
-              type="text"
-              id="name"
-              placeholder="Name"
-              required
-              autoFocus
-            />
+            <form className="email-input" onSubmit={handleRegister}>
+              <input
+                className="form-input"
+                onChange={updateUser}
+                type="text"
+                id="name"
+                placeholder="Name"
+                required
+                autoFocus
+              />
+              <br></br>
+              <br></br>
+              <input
+                className="form-input"
+                onChange={updateUser}
+                type="email"
+                id="email"
+                placeholder="Email address"
+                required
+              />
+            </form>
             <br></br>
-            <input
-              className="form-input"
-              onChange={updateUser}
-              type="email"
-              id="email"
-              placeholder="Email address"
-              required
-            />
+            <div className="auth-link">
+              <button type="submit">Register</button>
+              <span>
+                Not a member? <a href="/login">Sign in</a>
+              </span>
+            </div>
           </fieldset>
-
-          <button className="home-btn" type="submit">
-            Register
-          </button>
-
-          <div className="auth-link">
-            <p>Already have an account?</p>
-            <Link to="/login">
-              <strong>Sign in</strong>
-            </Link>
-          </div>
-        </form>
+        </section>
       </div>
-    </div>
+    </>
   );
 };

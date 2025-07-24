@@ -11,6 +11,8 @@ import { TripDetails } from "../components/trips/TripDetails.jsx";
 import { CampgroundSelector } from "../components/parks/CampgroundSelector.jsx";
 import { HomeTest } from "../components/parks/HomeTest.jsx";
 import { TripSummary } from "../components/trips/TripSummary.jsx";
+import { PreferencesForm } from "../components/onboarding/PreferencesForm.jsx";
+import { ParkResults } from "../components/parks/ParkResults.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -34,6 +36,8 @@ export const ApplicationViews = () => {
               </Authorized>
             }
           />
+          <Route path="/preferences" element={<PreferencesForm />} />
+          <Route path="/parks/results" element={<ParkResults />} />
           <Route path="/parks/:parkId" element={<ParkDetails />} />
           <Route
             path="/trips"

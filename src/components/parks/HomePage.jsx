@@ -28,6 +28,12 @@ export const HomePage = () => {
       <HomeHero />
       <WelcomeLogoHero />
       <div className="plan-adventure-block">
+        <div className="home-hero">
+          <h1>Plan your perfect park trip</h1>
+          <button className="home-btn" onClick={() => navigate("/preferences")}>
+            Find My Park
+          </button>
+        </div>
         <p>Ready to plan your next adventure?</p>
         {/* <img className="decoration-line" src="/images/deco-line.svg"></img> */}
         <span className="select-park-line">

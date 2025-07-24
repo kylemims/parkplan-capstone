@@ -1,0 +1,128 @@
+.preferences-form {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  font-family: var(--body-font, "Inter", sans-serif);
+  color: var(--text-color, #222);
+}
+
+.preferences-form h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-color, #1b5e20);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.preferences-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+  gap: 1.5rem;
+}
+
+.preferences-form label {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.preferences-form select {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+}
+
+.preferences-form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.preferences-form legend {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.checkbox-option input[type="checkbox"] {
+  appearance: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+}
+
+.checkbox-option input[type="checkbox"]:checked {
+  background-color: var(--accent-color, #00695c);
+  border-color: var(--accent-color, #00695c);
+  background-image: url("/images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.7rem;
+}
+
+.preferences-form .home-btn {
+  padding: 0.9rem 1.2rem;
+  background-color: var(--accent-color, #00695c);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.preferences-form .home-btn:hover {
+  background-color: var(--accent-color-hover, #004d40);
+}
+
+.preferences-form option {
+  color: #000;
+}
+
+@media (max-width: 480px) {
+  .preferences-form {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .preferences-form h1 {
+    font-size: 1.5rem;
+  }
+
+  .preferences-form .home-btn {
+    width: 100%;
+  }
+}

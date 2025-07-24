@@ -1,12 +1,27 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./NavBar.css";
 import { NewTripModal } from "../forms/NewTripModal.jsx";
 
 export const NavBar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-  
+  const [navBackground, setNavBackground] = useState("transparent-nav");
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setNavBackground("solid-nav");
+    } else {
+      setNavBackground("transparent-nav");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleLinkClick = (to) => {
     setMenuOpen(false);
@@ -18,7 +33,6 @@ export const NavBar = () => {
     }
   };
 
-  
   return (
     <nav className="navbar transparent-nav">
       <div className="nav-header">
@@ -53,9 +67,7 @@ export const NavBar = () => {
         <img src="/images/TT-icon.svg" alt="TikTok" className="social-icon" />
       </div> */}
 
-      {menuOpen && (
-        <div className="backdrop" onClick={() => setMenuOpen(false)} aria-label="Close menu" />
-      )}
+      {menuOpen && <div className="backdrop" onClick={() => setMenuOpen(false)} aria-label="Close menu" />}
     </nav>
   );
 };

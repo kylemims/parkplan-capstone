@@ -49,6 +49,7 @@ export const Login = () => {
                 autoFocus
               />
             </form>
+            <br></br>
             <div className="auth-link">
               <button type="submit">Sign in</button>
               <span>
