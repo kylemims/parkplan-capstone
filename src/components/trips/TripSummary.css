@@ -1,0 +1,133 @@
+.trip-summary {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "nunito", sans-serif;
+  color: var(--color-text, #f0f0f0);
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
+
+.trip-summary h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  color: #ffe28a;
+  font-family: "Permanent Marker", cursive;
+}
+
+.trip-summary h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.summary-date {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.summary-hero {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.trip-summary h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: #dca8a2;
+}
+
+.trip-summary ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.trip-summary li {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.trip-summary a {
+  color: #77a098;
+  text-decoration: underline;
+}
+
+.trip-summary a:hover {
+  color: #5c8374;
+}
+
+.summary-controls {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.summary-btn {
+  background-color: #5a786f;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.summary-btn:hover {
+  background-color: #42665c;
+}
+
+.weather-preview {
+  margin-top: 2rem;
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #ffe28a;
+  font-family: "nunito", sans-serif;
+}
+.weather-preview {
+  background-color: #1f1f1f;
+  border-left: 4px solid #f9d342;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  color: #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.weather-preview h3 {
+  margin-top: 0;
+  color: #f9d342;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-preview p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: #ccc;
+}
+
+.weather-preview ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.weather-preview li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  background-color: #2b2b2b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+}

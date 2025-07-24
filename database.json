@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Kyle Mims",
       "email": "kyle@example.com",
       "password": "test123"
@@ -9,414 +9,440 @@
     {
       "email": "stonecold@example.com",
       "name": "Steve Austin",
-      "id": 2
+      "id": "2"
     },
     {
       "email": "scarylarry@example.com",
       "name": "Larry Bird",
-      "id": 3
+      "id": "3"
     },
     {
       "email": "brandon@example.com",
       "name": "Brandon Hickman",
-      "id": 4
+      "id": "4"
     },
     {
       "email": "bulls@aol.com",
       "name": "Scottie Pippen",
-      "id": 5
+      "id": "5"
     }
   ],
   "parks": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Yosemite National Park",
       "location": "California",
       "description": "Famous for its granite cliffs, waterfalls, and giant sequoias.",
       "bestTime": "May through September",
       "wildlife": "Black bears, peregrine falcons",
       "highlights": "Half Dome, El Capitan",
-      "code": "yose"
+      "code": "yose",
+      "latitude": 37.8651,
+      "longitude": -119.5383
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Yellowstone National Park",
       "location": "Wyoming, Montana, Idaho",
       "description": "Home to geysers, hot springs, and diverse wildlife.",
       "bestTime": "April to October",
       "wildlife": "Bison, wolves, grizzly bears",
       "highlights": "Old Faithful, Yellowstone Lake",
-      "code": "yell"
+      "code": "yell",
+      "latitude": 44.428,
+      "longitude": -110.5885
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Zion National Park",
       "location": "Utah",
       "description": "Known for steep red cliffs and scenic canyon hikes.",
       "bestTime": "March-May and Sep-Nov",
       "wildlife": "Desert bighorn sheep, mule deer",
       "highlights": "Angels Landing, Emerald Pools",
-      "code": "zion"
+      "code": "zion",
+      "latitude": 37.2982,
+      "longitude": -113.0263
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Grand Canyon National Park",
       "location": "Arizona",
       "description": "Iconic views of a mile-deep canyon carved by the Colorado River.",
       "bestTime": "March-May and Sep-Nov",
       "wildlife": "California condor, elk",
       "highlights": "South Rim, Cape Royal",
-      "code": "grca"
+      "code": "grca",
+      "latitude": 36.1069,
+      "longitude": -112.1129
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Rocky Mountain National Park",
       "location": "Colorado",
       "description": "High-altitude trails, alpine lakes, and snowy peaks.",
       "bestTime": "June through September",
       "wildlife": "Elk, moose, black bears",
       "highlights": "Bear Lake, Longs Peak",
-      "code": "romo"
+      "code": "romo",
+      "latitude": 40.3428,
+      "longitude": -105.6836
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Great Smoky Mountains National Park",
       "location": "Tennessee, North Carolina",
       "description": "Lush forests and mist-covered mountain ranges.",
       "bestTime": "Late spring to early fall",
       "wildlife": "Black bears, white-tailed deer",
       "highlights": "Clingmans Dome, Cades Cove",
-      "code": "grsm"
+      "code": "grsm",
+      "latitude": 35.655,
+      "longitude": -83.507
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Arches National Park",
       "location": "Utah",
       "description": "Over 2,000 natural stone arch formations.",
       "bestTime": "March-May and Sep-Oct",
       "wildlife": "Red foxes, kangaroo rats",
       "highlights": "Landscape Arch, The Windows",
-      "code": "arch"
+      "code": "arch",
+      "latitude": 38.7331,
+      "longitude": -109.5925
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Acadia National Park",
       "location": "Maine",
       "description": "Rocky beaches, woodlands, and Cadillac Mountain views.",
       "bestTime": "September through October",
       "wildlife": "Bald eagles, seals, porcupines",
       "highlights": "Jordan Pond, Thunder Hole",
-      "code": "acad"
+      "code": "acad",
+      "latitude": 44.3386,
+      "longitude": -68.2733
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Olympic National Park",
       "location": "Washington",
       "description": "Diverse ecosystems from glacial peaks to temperate rainforests.",
       "bestTime": "May through September",
       "wildlife": "Roosevelt elk, mountain goats",
       "highlights": "Hurricane Ridge, Rialto Beach",
-      "code": "olym"
+      "code": "olym",
+      "latitude": 47.8021,
+      "longitude": -123.6044
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Joshua Tree National Park",
       "location": "California",
       "description": "Desert landscapes where the Mojave and Colorado deserts meet.",
       "bestTime": "March-May and Oct-Nov",
       "wildlife": "Jackrabbits, desert tortoises",
       "highlights": "Hidden Valley, Skull Rock",
-      "code": "jotr"
+      "code": "jotr",
+      "latitude": 33.8734,
+      "longitude": -115.901
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Glacier National Park",
       "location": "Montana",
       "description": "Known for its rugged mountains and scenic drives.",
       "bestTime": "July to September",
       "wildlife": "Mountain goats, marmots",
       "highlights": "Grinnell Glacier, Lake McDonald",
-      "code": "glac"
+      "code": "glac",
+      "latitude": 48.7596,
+      "longitude": -113.787
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Bryce Canyon National Park",
       "location": "Utah",
       "description": "Famous for crimson-colored hoodoos and starry skies.",
       "bestTime": "May through September",
       "wildlife": "Prairie dogs, golden eagles",
       "highlights": "Navajo Loop, Sunrise Point",
-      "code": "brca"
+      "code": "brca",
+      "latitude": 37.593,
+      "longitude": -112.1871
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Sequoia National Park",
       "location": "California",
       "description": "Home to giant sequoia trees, including General Sherman Tree.",
       "bestTime": "June through August",
       "wildlife": "Black bears, Steller’s jays",
       "highlights": "Moro Rock, Crystal Cave",
-      "code": "seki"
+      "code": "seki",
+      "latitude": 36.4864,
+      "longitude": -118.5658
     }
   ],
   "images": [
     {
-      "id": 1,
+      "id": "1",
       "parkId": 1,
       "url": "/images/yosemite-1.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "parkId": 1,
       "url": "/images/yosemite-2.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "parkId": 1,
       "url": "/images/yosemite-3.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "parkId": 1,
       "url": "/images/yosemite-4.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "parkId": 2,
       "url": "/images/yellowstone-1.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "parkId": 2,
       "url": "/images/yellowstone-2.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "parkId": 2,
       "url": "/images/yellowstone-3.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "parkId": 2,
       "url": "/images/yellowstone-4.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "parkId": 3,
       "url": "/images/zion-1.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "parkId": 3,
       "url": "/images/zion-2.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "parkId": 3,
       "url": "/images/zion-3.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "parkId": 3,
       "url": "/images/zion-4.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "parkId": 4,
       "url": "/images/grandcanyon-1.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "parkId": 4,
       "url": "/images/grandcanyon-2.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "parkId": 4,
       "url": "/images/grandcanyon-3.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "parkId": 4,
       "url": "/images/grandcanyon-4.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "parkId": 5,
       "url": "/images/rockymtn-1.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "parkId": 5,
       "url": "/images/rockymtn-2.jpg"
     },
     {
-      "id": 19,
+      "id": "19",
       "parkId": 5,
       "url": "/images/rockymtn-3.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "parkId": 5,
       "url": "/images/rockymtn-4.jpg"
     },
     {
-      "id": 21,
+      "id": "21",
       "parkId": 6,
       "url": "/images/smokey-1.jpg"
     },
     {
-      "id": 22,
+      "id": "22",
       "parkId": 6,
       "url": "/images/smokey-2.jpg"
     },
     {
-      "id": 23,
+      "id": "23",
       "parkId": 6,
       "url": "/images/smokey-3.jpg"
     },
     {
-      "id": 24,
+      "id": "24",
       "parkId": 6,
       "url": "/images/smokey-4.jpg"
     },
     {
-      "id": 25,
+      "id": "25",
       "parkId": 7,
       "url": "/images/arches-1.jpg"
     },
     {
-      "id": 26,
+      "id": "26",
       "parkId": 7,
       "url": "/images/arches-2.jpg"
     },
     {
-      "id": 27,
+      "id": "27",
       "parkId": 7,
       "url": "/images/arches-3.jpg"
     },
     {
-      "id": 28,
+      "id": "28",
       "parkId": 7,
       "url": "/images/arches-4.jpg"
     },
     {
-      "id": 29,
+      "id": "29",
       "parkId": 8,
       "url": "/images/acadia-1.jpg"
     },
     {
-      "id": 30,
+      "id": "30",
       "parkId": 8,
       "url": "/images/acadia-2.jpg"
     },
     {
-      "id": 31,
+      "id": "31",
       "parkId": 8,
       "url": "/images/acadia-3.jpg"
     },
     {
-      "id": 32,
+      "id": "32",
       "parkId": 8,
       "url": "/images/acadia-4.jpg"
     },
     {
-      "id": 33,
+      "id": "33",
       "parkId": 9,
       "url": "/images/olympic-1.jpg"
     },
     {
-      "id": 34,
+      "id": "34",
       "parkId": 9,
       "url": "/images/olympic-2.jpg"
     },
     {
-      "id": 35,
+      "id": "35",
       "parkId": 9,
       "url": "/images/olympic-3.jpg"
     },
     {
-      "id": 36,
+      "id": "36",
       "parkId": 9,
       "url": "/images/olympic-4.jpg"
     },
     {
-      "id": 37,
+      "id": "37",
       "parkId": 10,
       "url": "/images/joshua-1.jpg"
     },
     {
-      "id": 38,
+      "id": "38",
       "parkId": 10,
       "url": "/images/joshua-2.jpg"
     },
     {
-      "id": 39,
+      "id": "39",
       "parkId": 10,
       "url": "/images/joshua-3.jpg"
     },
     {
-      "id": 40,
+      "id": "40",
       "parkId": 10,
       "url": "/images/joshua-4.jpg"
     },
     {
-      "id": 41,
+      "id": "41",
       "parkId": 11,
       "url": "/images/glacier-1.jpg"
     },
     {
-      "id": 42,
+      "id": "42",
       "parkId": 11,
       "url": "/images/glacier-2.jpg"
     },
     {
-      "id": 43,
+      "id": "43",
       "parkId": 11,
       "url": "/images/glacier-3.jpg"
     },
     {
-      "id": 44,
+      "id": "44",
       "parkId": 11,
       "url": "/images/glacier-4.jpg"
     },
     {
-      "id": 45,
+      "id": "45",
       "parkId": 12,
       "url": "/images/bryce-1.jpg"
     },
     {
-      "id": 46,
+      "id": "46",
       "parkId": 12,
       "url": "/images/bryce-2.jpg"
     },
     {
-      "id": 47,
+      "id": "47",
       "parkId": 12,
       "url": "/images/bryce-3.jpg"
     },
     {
-      "id": 48,
+      "id": "48",
       "parkId": 12,
       "url": "/images/bryce-4.jpg"
     },
     {
-      "id": 49,
+      "id": "49",
       "parkId": 13,
       "url": "/images/sequoia-1.jpg"
     },
     {
-      "id": 50,
+      "id": "50",
       "parkId": 13,
       "url": "/images/sequoia-2.jpg"
     },
     {
-      "id": 51,
+      "id": "51",
       "parkId": 13,
       "url": "/images/sequoia-3.jpg"
     },
     {
-      "id": 52,
+      "id": "52",
       "parkId": 13,
       "url": "/images/sequoia-4.jpg"
     }
@@ -427,140 +453,198 @@
       "parkId": 3,
       "userId": 3,
       "createdAt": "2025-05-13T19:23:08.544Z",
-      "id": 4
+      "id": "4"
     },
     {
       "name": "This is not my death",
       "parkId": 1,
       "userId": 3,
       "createdAt": "2025-05-13T20:13:45.283Z",
-      "id": 5
+      "id": "5"
     },
     {
       "name": "holy shit did brandon fix it?",
       "parkId": 9,
       "userId": 3,
       "createdAt": "2025-05-13T20:48:11.856Z",
-      "id": 6
+      "id": "6"
     },
     {
       "name": "lets get weird",
       "parkId": 5,
       "userId": 4,
       "createdAt": "2025-05-13T20:49:24.696Z",
-      "id": 7
+      "id": "7"
     },
     {
       "name": "woo hoo",
       "parkId": 7,
       "userId": 4,
       "createdAt": "2025-05-13T20:50:06.668Z",
-      "id": 8
+      "id": "8"
     },
     {
       "name": "suuuuup",
       "parkId": 9,
       "userId": 4,
       "createdAt": "2025-05-13T20:53:36.582Z",
-      "id": 10
+      "id": "10"
     },
     {
       "name": "Get smokied",
       "parkId": 6,
       "userId": 2,
       "createdAt": "2025-05-14T08:39:25.623Z",
-      "id": 15
+      "id": "15"
     },
     {
       "name": "let us eat dirt",
       "parkId": 4,
       "userId": 2,
       "createdAt": "2025-05-14T08:41:47.920Z",
-      "id": 16
+      "id": "16"
     },
     {
       "name": "Take me to Zion! sike...take me to Bryce",
       "parkId": 5,
       "userId": 5,
       "createdAt": "2025-05-14T15:46:26.662Z",
-      "id": 19
+      "id": "19"
     },
     {
       "name": "Jon's not so big trip",
       "parkId": 4,
       "userId": 5,
       "createdAt": "2025-05-14T16:29:30.913Z",
-      "id": 20
+      "id": "20"
     },
     {
       "name": "The great Dom's trip",
       "parkId": 1,
       "userId": 1,
       "createdAt": "2025-05-16T20:50:14.012Z",
-      "id": 23
+      "id": "23"
     },
     {
       "name": "Kyle's test trip",
       "parkId": 1,
       "userId": 1,
       "createdAt": "2025-05-19T18:19:01.336Z",
-      "id": 27
+      "id": "27"
     },
     {
       "name": "another one",
       "userId": 5,
       "createdAt": "2025-05-21T11:30:02.792Z",
       "parkId": 10,
-      "id": 30
+      "id": "30"
     },
     {
       "name": "not having fun right now",
       "userId": 5,
       "createdAt": "2025-05-21T11:39:56.069Z",
       "parkId": 12,
-      "id": 31
+      "id": "31"
     },
     {
       "name": "michael's birthday party",
       "userId": 5,
       "createdAt": "2025-05-21T13:49:02.311Z",
       "parkId": 12,
-      "id": 32
+      "id": "32"
     },
     {
       "name": "Britt's fun trip",
       "userId": 5,
       "createdAt": "2025-05-22T19:16:45.630Z",
       "parkId": 9,
-      "id": 33
+      "id": "33"
     },
     {
       "name": "Booooooooom",
       "userId": 1,
       "createdAt": "2025-05-23T14:25:57.117Z",
       "parkId": 9,
-      "id": 34
+      "id": "34"
     },
     {
       "name": "izon your forehead",
       "userId": 1,
       "createdAt": "2025-05-24T08:50:58.561Z",
       "parkId": 3,
-      "id": 35
+      "id": "35"
     },
     {
       "name": "you can't handle me",
       "userId": 1,
       "createdAt": "2025-05-29T18:28:48.816Z",
       "parkId": 13,
-      "id": 38
+      "id": "38"
     },
     {
       "name": "Demo time adventure",
       "userId": 1,
       "createdAt": "2025-06-02T14:41:15.954Z",
       "parkId": 1,
-      "id": 39
+      "id": "39"
+    }
+  ],
+  "tripItems": [
+    {
+      "id": "1",
+      "tripId": 23,
+      "type": "activity",
+      "title": "Ride a Bike in Yosemite Valley",
+      "description": "Cycling is a great way to explore the park...",
+      "duration": "1–6 Hours"
+    },
+    {
+      "id": "3dba",
+      "tripId": 23,
+      "type": "activity",
+      "title": "Go Skiing at Badger Pass",
+      "description": "The Badger Pass Ski Area is open from mid-December through March (weather and conditions permitting). You can downhill ski, cross-country ski, go tubing, or snowshoeing all from this historic winter resort.",
+      "duration": "Unspecified"
+    },
+    {
+      "id": "0e86",
+      "tripId": 23,
+      "type": "campground",
+      "title": "Lower Pines Campground",
+      "description": "Lower Pines is located along the Merced River in Yosemite Valley. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,219 m) elevation and can be accessed from all park roads. Lower Pines is within biking and walking distance of many services and trailheads in Yosemite Valley and is located on the free shuttle route. There are food and grocery services nearby at Curry Village and Yosemite Village.",
+      "duration": "Overnight"
+    },
+    {
+      "id": "9eb1",
+      "tripId": 23,
+      "type": "campground",
+      "title": "Hodgdon Meadow Campground",
+      "description": "Hodgdon Meadow Campground is conveniently located along the Big Oak Flat Road at the Big Oak Flat Entrance. At an elevation of 4,900 feet (1,219 m), the campground is located along the western edge of the park, 25 miles and approximately 45 minutes from Yosemite Valley. There is a gas station and minimal convenience items located nearby at Crane Flat. Trailheads for both the Merced Grove and Tuolumne Grove of Giant Sequoias are located within a short drive of the campground.",
+      "duration": "Overnight"
+    },
+    {
+      "id": "13ff",
+      "tripId": 23,
+      "type": "campground",
+      "title": "Bridalveil Creek Campground",
+      "description": "The Bridalveil Creek Campground is located along the Glacier Point Road near Bridalveil Creek and is surrounded by a beautiful forest of red fir and lodgepole pine. At an elevation of 7,200 feet (2,200m) the campground is located 7 miles west of Glacier Point, 9 miles east of the Wawona Road turnoff, and is approximately 45 minutes from Yosemite Valley. The spectacular views from Glacier Point are nearby, and numerous hiking trails are located along the Glacier Point Road. There are no services nearby.",
+      "duration": "Overnight"
+    },
+    {
+      "id": "ed81",
+      "tripId": 38,
+      "type": "activity",
+      "title": "Panther Winter Trail",
+      "description": "Taking its name from Panther Gap (8,600 feet), the Panther Trail is part of a difficult loop for experienced skiers. Steep grades and dense forests guard the great views from Panther Gap.",
+      "duration": "The duration will vary depending on fitness level, snow conditions, and length of time spent at trail features."
+    },
+    {
+      "id": "daf1",
+      "tripId": 38,
+      "type": "activity",
+      "title": "Old Lodgepole Road Winter Trail",
+      "description": "This old road connects the Lodgepole Visitor Center with the General Sherman Tree. The skiing is easy, except for a steep grade as the trail approaches the General Sherman Tree.",
+      "duration": "The duration will vary depending on fitness level, snow conditions, and length of time spent at trail features."
     }
   ]
 }

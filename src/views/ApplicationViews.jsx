@@ -10,6 +10,7 @@ import { ParkDetails } from "../components/parks/ParkDetails";
 import { TripDetails } from "../components/trips/TripDetails.jsx";
 import { CampgroundSelector } from "../components/parks/CampgroundSelector.jsx";
 import { HomeTest } from "../components/parks/HomeTest.jsx";
+import { TripSummary } from "../components/trips/TripSummary.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -59,14 +60,15 @@ export const ApplicationViews = () => {
             }
           />
           <Route
-            path="/hometest"
+            path="/trips/:tripId/summary"
             element={
-              
-                <HomeTest />
-             
+              <Authorized>
+                <TripSummary />
+              </Authorized>
             }
           />
-          <Route path="/campgrounds" element={<CampgroundSelector />} />
+          <Route path="/hometest" element={<HomeTest />} />
+          <Route path="/trips/:tripId/campgrounds" element={<CampgroundSelector />} />
         </Route>
       </Routes>
     </>

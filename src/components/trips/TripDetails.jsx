@@ -2,27 +2,44 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getThingsToDoByParkCode } from "../../services/npsService.js";
 import { HoverReveal } from "../forms/HoverReveal.jsx";
+import { getTripItemsByTripId, createTripItem } from "../../services/itineraryService.js";
 import "./TripDetails.css";
 
 export const TripDetails = () => {
-  const { parkCode } = useParams();
+  const { tripId, parkCode } = useParams();
   const [thingsToDo, setThingsToDo] = useState([]);
   const [itinerary, setItinerary] = useState([]);
 
   const addToItinerary = (item) => {
-    // Avoid adding duplicates
-    if (!itinerary.some((i) => i.id === item.id)) {
-      setItinerary([...itinerary, item]);
+    const tripItem = {
+      tripId: parseInt(tripId),
+      type: "activity",
+      title: item.title,
+      description: item.shortDescription || "",
+      duration: item.durationDescription || "Unspecified",
+    };
+
+    // Optional: check for duplicates client-side
+    if (!itinerary.some((i) => i.title === tripItem.title)) {
+      createTripItem(tripItem)
+        .then(() => loadItinerary())
+        .catch((err) => console.error("Failed to save trip item", err));
     }
+  };
+
+  const loadItinerary = () => {
+    getTripItemsByTripId(tripId)
+      .then((data) => setItinerary(data))
+      .catch((err) => console.error("Failed to load itinerary", err));
   };
 
   useEffect(() => {
     getThingsToDoByParkCode(parkCode)
-      .then((data) => {
-        setThingsToDo(data.data);
-      })
+      .then((data) => setThingsToDo(data.data))
       .catch((err) => console.error("Failed to load activities", err));
-  }, [parkCode]);
+
+    loadItinerary();
+  }, [parkCode, tripId]);
 
   return (
     <section className="things-to-do-section">
@@ -52,6 +69,11 @@ export const TripDetails = () => {
                         <strong>Description:</strong> {item.durationDescription}
                       </p>
                     )}
+                    {item.longitude && (
+                      <p>
+                        <strong>Longitude:</strong> {item.longitude}
+                      </p>
+                    )}
                   </div>
                 }>
                 <button className="icon-button">
@@ -72,7 +94,8 @@ export const TripDetails = () => {
             <ul>
               {itinerary.map((item) => (
                 <li key={item.id}>
-                  <strong>{item.title}</strong> – {item.duration || "N/A"} hr(s)
+                  <strong>{item.title}</strong>
+                  {item.type === "activity" && <>: {item.duration || "N/A"}</>}
                 </li>
               ))}
             </ul>
@@ -84,3 +107,15 @@ export const TripDetails = () => {
     </section>
   );
 };
+
+{
+  /* <h3>Activities</h3>
+<ul>
+  {itinerary.filter(i => i.type === "activity").map(...)}
+</ul>
+
+<h3>Campgrounds</h3>
+<ul>
+  {itinerary.filter(i => i.type === "campground").map(...)}
+</ul> */
+}

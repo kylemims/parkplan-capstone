@@ -56,23 +56,6 @@
   transform: translateY(-1px);
 }
 
-/* .trip-card__overlay {
-  width: 100%;
-  height: 100%; */
-/* background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    rgba(89, 63, 11, 0.6),
-    rgb(0, 0, 0, 0.7),
-    rgb(0, 0, 0, 1)
-  ); */
-/* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-radius: 8px;
-} */
-
 .trip-card__header {
   margin-left: 1rem;
   padding-top: 1rem;
@@ -153,7 +136,23 @@
   transition: transform 0.2s;
   transform: rotate(-10deg);
 }
+.view-camp-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #5a786f;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "nunito", sans-serif;
+  transition: background-color 0.2s ease-in-out;
+}
 
+.view-camp-btn:hover {
+  background-color: #3b5e56;
+}
 .trip-card__add-hover {
   position: absolute;
   top: 50px;
@@ -218,6 +217,27 @@
   color: #777;
 }
 
+.trip-preview {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.trip-preview-label {
+  font-weight: bold;
+  color: #ffe28a;
+  font-family: "nunito", sans-serif;
+}
+
+.trip-preview-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.trip-preview-list li {
+  color: #ccc;
+  font-family: "nunito", sans-serif;
+}
 @media (max-width: 768px) {
   /* .trip-list {
     margin: 0 auto;

@@ -21,8 +21,9 @@ export const getParkById = (parkId) => {
 
 export const GetNPSCampgrounds = () => {
   const parkCode = "yose"; // Yosemite
-  const url = `${API_BASE}/campgrounds?parkCode=${parkCode}&api_key=${API_KEY}`;
+  const url = `${API_BASE}/campgrounds?parkCode=${parkCode}&limit=5&api_key=${API_KEY}`;
   console.log("FETCHING FROM:", url); // Debug
 
   return fetch(url).then((res) => res.json());
 };
+// const url = `${API_BASE}/thingstodo?parkCode=${parkCode}&limit=10&api_key=${API_KEY}`;
