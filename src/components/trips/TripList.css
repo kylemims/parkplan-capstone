@@ -25,7 +25,7 @@
 }
 
 .trip-dashboard-container h1 {
-  font-family: "Permanent Marker", cursive;
+  /* font-family: "Permanent Marker", cursive; */
   font-size: 2.5rem;
   color: #ffe28a;
   text-align: center;
@@ -43,6 +43,57 @@
   background: linear-gradient(90deg, #dca8a2, #f9d342);
   margin: 1rem auto 0;
   border-radius: 2px;
+}
+.icon-legend {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 0.5rem;
+  background: rgba(16, 16, 16, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(220, 168, 162, 0.2);
+}
+
+.icon-legend h3 {
+  color: #dca8a2;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(34, 34, 34, 0.4);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.legend-item:hover {
+  background: rgba(34, 34, 34, 0.7);
+}
+
+.legend-item img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+
+.legend-item span {
+  color: #eee;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .trip-list {
@@ -129,12 +180,12 @@
   padding: 0.75rem;
   border-radius: 8px;
   margin: 0.5rem 0;
-  border-left: 3px solid #f9d342;
+  border-left: 3px solid #ffe28a;
 }
 
 .trip-preview-label {
   font-size: 0.8rem;
-  color: #f9d342;
+  color: #ffe28a;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -225,29 +276,32 @@
 
 /* FIX FOR DELETE ICON */
 .trip-card__side-tab .icon-button {
-  width: 32px;
-  height: 32px;
-  padding: 0.4rem;
+  width: 36px;
+  height: 36px;
+  padding: 0.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  /* border-radius: 6px; */
+  border-radius: 6px;
   transition: all 0.2s ease;
-  /* REMOVE the transparent color and fix the filter */
   filter: brightness(0) invert(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.trip-card__side-tab .icon-button:hover {
-  background: rgba(249, 211, 66, 0.2);
-  transform: scale(1, 1);
-  filter: brightness(0) invert(1) drop-shadow(0 0 6px #f9d342);
-}
-
-/* Style individual action icons */
 .trip-card__side-tab .icon-button img {
-  width: 100%;
-  height: 100%;
+  width: 20px; /* Fixed consistent size */
+  height: 20px; /* Fixed consistent size */
   object-fit: contain;
+  object-position: center;
+}
+
+/* Special handling for smaller icons */
+.trip-card__side-tab .icon-button img[src*="camper"],
+.trip-card__side-tab .icon-button img[src*="add-activity"] {
+  width: 22px; /* Slightly larger for these specific icons */
+  height: 22px;
 }
 
 /* Specific colors for different actions */
@@ -263,6 +317,10 @@
   filter: brightness(0) invert(1) drop-shadow(0 0 6px #ff6b6b); /* Red for delete */
 }
 
+.trip-card__actions .full-width {
+  flex: 1;
+  width: 100%;
+}
 .add-new-dash {
   max-width: 400px;
   margin: 3rem auto 0;
@@ -274,7 +332,7 @@
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #f9d342, #ffe28a);
+  background-color: #ffe28a;
   color: #222;
   border: none;
   border-radius: 12px;
@@ -282,7 +340,6 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 16px rgba(249, 211, 66, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -305,7 +362,6 @@
 .add-new-dash .trip-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(249, 211, 66, 0.5);
-  background: linear-gradient(135deg, #ffe28a, #f9d342);
 }
 
 @media (max-width: 768px) {
@@ -336,5 +392,23 @@
   .trip-card__side-tab .icon-button {
     width: 28px;
     height: 28px;
+  }
+
+  .icon-legend {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+
+  .legend-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .legend-item {
+    padding: 0.5rem;
+  }
+
+  .legend-item span {
+    font-size: 0.8rem;
   }
 }

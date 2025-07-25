@@ -1,0 +1,375 @@
+[
+  {
+    "name": "State",
+    "value": {
+      "total": "15",
+      "limit": "5",
+      "start": "0",
+      "data": [
+        {
+          "id": "58B9591C-4723-4049-B26C-D30C07A6FAD6",
+          "url": "https://www.nps.gov/yose/planyourvisit/bvcamp.htm",
+          "name": "Bridalveil Creek Campground",
+          "parkCode": "yose",
+          "description": "The Bridalveil Creek Campground is located along the Glacier Point Road near Bridalveil Creek and is surrounded by a beautiful forest of red fir and lodgepole pine. At an elevation of 7,200 feet (2,200m) the campground is located 7 miles west of Glacier Point, 9 miles east of the Wawona Road turnoff, and is approximately 45 minutes from Yosemite Valley. The spectacular views from Glacier Point are nearby, and numerous hiking trails are located along the Glacier Point Road. There are no services ...",
+          "latitude": "37.6636576344",
+          "longitude": "-119.624293366",
+          "latLong": "{lat:37.6636576344, lng:-119.624293366}",
+          "audioDescription": "",
+          "isPassportStampLocation": "0",
+          "passportStampLocationDescription": "",
+          "passportStampImages": "[]",
+          "geometryPoiId": "0C572B6A-D624-4AFC-B0CA-9467F80775AE",
+          "reservationInfo": "During the campground's open season (approximately mid-July through early September) reservations are required. Reservations are required for all sites, including the horse sites (3) and group sites (2). Campground reservations are released two weeks in advance on a rolling daily window (i.e., 14 days in advance of arrival date) at 7 am Pacific time. Be aware that nearly all campground reservations in Yosemite for the months of May through September and for some other weekends are filled the fir...",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232453",
+          "regulationsurl": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+          "regulationsOverview": "<b>Pets:</b> Permitted (except in group sites); must be on a leash at all times. <b>Fires:</b> Wood and charcoal fires are permitted. <b>People per site:</b> A maximum of six people (including children) are allowed per campsite, except for the group sites, which requires 13 to 30 people. <b>Vehicles per site:</b> A maximum of two motor vehicles are allowed per campsite. All vehicles must be parked on a parking pad. Trailers don't count against the vehicle limit as long as they fit on the parking...",
+          "amenities": {
+            "trashRecyclingCollection": "Yes - seasonal",
+            "toilets": [
+              "Flush Toilets - seasonal"
+            ],
+            "internetConnectivity": "No",
+            "showers": [
+              "None"
+            ],
+            "cellPhoneReception": "No",
+            "laundry": "No",
+            "amphitheater": "No",
+            "dumpStation": "No",
+            "campStore": "No",
+            "staffOrVolunteerHostOnsite": "Yes - seasonal",
+            "potableWater": [
+              "Yes - seasonal"
+            ],
+            "iceAvailableForSale": "No",
+            "firewoodForSale": "No",
+            "foodStorageLockers": "Yes - seasonal"
+          },
+          "contacts": {
+            "phoneNumbers": [
+              {
+                "phoneNumber": "209/375-9535",
+                "description": "",
+                "extension": "",
+                "type": "Voice"
+              }
+            ],
+            "emailAddresses": [
+              {
+                "description": "",
+                "emailAddress": "yose_web_manager@nps.gov"
+              }
+            ]
+          },
+          "fees": [
+            {
+              "cost": "36.00",
+              "description": "Bridalveil Creek Campground Reservation Fee - Non-Group Site/night",
+              "title": "Bridalveil Creek Campground Reservation Fee - Non-Group Site"
+            },
+            {
+              "cost": "75.00",
+              "description": "Bridalveil Creek Campground Group Site Fee - Group Site/night",
+              "title": "Bridalveil Creek Campground Group Site Fee - Group Site"
+            },
+            {
+              "cost": "50.00",
+              "description": "Bridalveil Creek Campground Stock Site Fee - Stock Site/night",
+              "title": "Bridalveil Creek Campground Stock Site Fee - Stock Site"
+            }
+          ],
+          "directionsOverview": "The Bridalveil Creek Campground is located along the Glacier Point Road. From Yosemite Valley, drive south 17 miles on the Wawona Road to the Glacier Point Road turnoff. Follow the Glacier Point Road for approximately 9 miles and the campground will be on your right. From the South Entrance follow the Wawona Road approximately 16 miles north along the Wawona Road to the Glacier Point Road turnoff. Follow the Glacier Point Road for approximately 9 miles and the campground will be on your right.",
+          "directionsUrl": "https://www.nps.gov/yose/planyourvisit/driving.htm",
+          "operatingHours": [
+            {
+              "exceptions": [
+                {
+                  "exceptionHours": {
+                    "wednesday": "Closed",
+                    "monday": "Closed",
+                    "thursday": "Closed",
+                    "sunday": "Closed",
+                    "tuesday": "Closed",
+                    "friday": "Closed",
+                    "saturday": "Closed"
+                  },
+                  "startDate": "2025-09-01",
+                  "name": "Bridalveil Creek Campground is closed from early September through mid-July",
+                  "endDate": "2026-07-15"
+                }
+              ],
+              "description": "The Bridalveil Creek Campground is typically open from mid-July through early September (exact dates vary) and reservations are required.",
+              "standardHours": {
+                "wednesday": "All Day",
+                "monday": "All Day",
+                "thursday": "All Day",
+                "sunday": "All Day",
+                "tuesday": "All Day",
+                "friday": "All Day",
+                "saturday": "All Day"
+              },
+              "name": "Bridalveil Creek Campground"
+            }
+          ],
+          "addresses": "[]",
+          "images": [
+            {
+              "credit": "NPS Photo",
+              "crops": "[]",
+              "title": "Bridalveil Campground",
+              "altText": "A wood sign at the entrance to a campground reads, Bridalveil Campground.",
+              "caption": "The entrance to Bridalveil Campground",
+              "url": "https://www.nps.gov/common/uploads/structured_data/F2FB2779-A1A5-985F-2488256AA422403C.jpg"
+            }
+          ],
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (The Valley can be rainy or snowy in any given winter storm.) Check the <a href=\"https://www.nps.gov/yose/planyourvisit/weathermap.htm\">weather f...",
+          "numberOfSitesReservable": "116",
+          "numberOfSitesFirstComeFirstServe": "0",
+          "campsites": {
+            "totalSites": "115",
+            "group": "2",
+            "horse": "3",
+            "tentOnly": "41",
+            "electricalHookups": "0",
+            "rvOnly": "0",
+            "walkBoatTo": "0",
+            "other": "69"
+          },
+          "accessibility": {
+            "wheelchairAccess": "There are no designated accessible campsites at this campground.",
+            "internetInfo": "",
+            "cellPhoneInfo": "",
+            "fireStovePolicy": "Wood and charcoal fires are permitted.",
+            "rvAllowed": "1",
+            "rvInfo": "Bridalveil Creek: 110 sites with space for tents, RVs up to 35 feet, and trailers up to 24 feet. Not every site can accommodate equipment of these lengths. Be sure to read the site details when making a reservation on recreation.gov to ensure your equipment will fit into the site you're reserving. When making online reservations, you can filter available sites by entering the length of your RV. When making online reservations, you can filter available sites by entering the length of your RV.",
+            "rvMaxLength": "35",
+            "additionalInfo": "Each campsite contains a <b>fire ring</b>, <b>picnic table</b>, and a <b>food locker</b> and is near a <b>bathroom with drinking water and flushing toilets</b>. In Bridalveil Creek Campground food lockers measure 33\"(D)x45\"(W)x18\"(H). The group site has five food lockers. <b>Groceries:</b> Yosemite Valley (Yosemite Village Store; Curry Village Store; Yosemite Valley Lodge Store) and small grocery store in Wawona <b>Showers:</b> Yosemite Valley (Curry Village) <b>Dump Station</b>: Available summe...",
+            "trailerMaxLength": "24",
+            "adaInfo": "There are no designated accessible campsites at this campground.",
+            "trailerAllowed": "1",
+            "accessRoads": [
+              "Paved Roads - All vehicles OK"
+            ],
+            "classifications": [
+              "Developed Campground"
+            ]
+          },
+          "multimedia": "[]",
+          "relevanceScore": 1,
+          "lastIndexedDate": ""
+        },
+        {
+          "id": "8F36DEB6-298E-4214-A677-064BD457996A",
+          "url": "https://www.nps.gov/yose/planyourvisit/camp4.htm",
+          "name": "Camp 4 Campground",
+          "parkCode": "yose",
+          "description": "Camp 4 is located in Yosemite Valley near the base of granite cliffs close to Yosemite Falls. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,200 m) elevation and can be accessed from all park roads. Camp 4 is within biking and walking distance of many services in Yosemite Valley and is located near the free shuttle route. There are food and grocery services nearby at Yosemite Valley Lodge and Yosemi...",
+          "latitude": "37.7420541116",
+          "longitude": "-119.602253055",
+          "latLong": "{lat:37.7420541116, lng:-119.602253055}",
+          "audioDescription": "",
+          "isPassportStampLocation": "0",
+          "passportStampLocationDescription": "",
+          "passportStampImages": "[]",
+          "geometryPoiId": "C605F814-66EB-49F4-B71E-9D49CC1D1A78",
+          "reservationInfo": "Camp 4 is open all year. Sites are shared, with up to 6 people per site. In 2025, from April 18 to November 15, reservations are required and available one week in advance of your arrival date. Up to six people can be registered for a site per each reservation transaction. For part of the year, the campground is open on a first-come, first-served basis and visitors self-register for a site upon arrival. A ranger may be onsite to help register campers. Space is available on a per-person basis and...",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10004152",
+          "regulationsurl": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+          "regulationsOverview": "<b>Pets:</b> Not permitted <b>Fires:</b> Wood fires are permitted all year, however, from May through September, campfires in Yosemite Valley are only allowed between 5 pm and 10 pm (campfires are allowed at any time from October through April). Charcoal fires are allowed at any time. Air quality may be unhealthy for sensitive individuals at night. <b>People per site:</b> A maximum of six people (including children) are allowed per campsite. <b>You are required to store food properly in order to...",
+          "amenities": "{amphitheater: \"No\", campStore: \"No\", cellPhoneRece…}",
+          "contacts": "{emailAddresses: Array(1), phoneNumbers: Array(1)}",
+          "fees": "[{…}]",
+          "directionsOverview": "From Hwy. 140/Arch Rock Entrance, continue driving west on the El Portal Road 8 miles to Yosemite Valley. From Hwy. 41/South Entrance drive 33 miles north (approximately 1 hour) on the Wawona Road to Yosemite Valley. From Hwy. 120 west/Big Oak Flat Entrance, drive 23 miles (approximately 45 minutes) on the Big Oak Flat Road to Yosemite Valley. From Hwy. 120 east/Tioga Pass, the Valley is approximately a two-hour drive. In the Valley follow Southside Drive and signs for Yosemite Valley Lodge and ...",
+          "directionsUrl": "https://www.nps.gov/yose/planyourvisit/driving.htm",
+          "operatingHours": "[{…}]",
+          "addresses": "[]",
+          "images": "[{…}, {…}, {…}, {…}]",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (The Valley can be rainy or snowy in any given winter storm.)",
+          "numberOfSitesReservable": "0",
+          "numberOfSitesFirstComeFirstServe": "25",
+          "campsites": "{electricalHookups: \"0\", group: \"0\", horse: \"0\", ot…}",
+          "accessibility": "{accessRoads: Array(1), adaInfo: \"Camp 4 has two ac…}",
+          "multimedia": "[]",
+          "relevanceScore": 1,
+          "lastIndexedDate": ""
+        },
+        {
+          "id": "B1396AAB-EA01-4A6C-B45E-A9BBA51A89A1",
+          "url": "https://www.nps.gov/yose/planyourvisit/cranecamp.htm",
+          "name": "Crane Flat Campground",
+          "parkCode": "yose",
+          "description": "The Crane Flat Campground is located along the Big Oak Flat Road, just west of Crane Flat, about 30 minutes northwest of Yosemite Valley, at 6,200 ft (1,900 m) elevation. There is a gas station and minimal convenience items located nearby at Crane Flat. Trailheads for both the Merced Grove and Tuolumne Grove of Giant Sequoias are located within a short drive of the campground.",
+          "latitude": "37.7497960827",
+          "longitude": "-119.800258983",
+          "latLong": "{lat:37.7497960827, lng:-119.800258983}",
+          "audioDescription": "",
+          "isPassportStampLocation": "0",
+          "passportStampLocationDescription": "",
+          "passportStampImages": "[]",
+          "geometryPoiId": "7ACA1AB5-9BED-4626-8156-B250395E1E0D",
+          "reservationInfo": "Reservations are required when Crane Flat is open (approximately July through mid-October). Campground reservations are released two weeks in advance on a rolling daily window (i.e., 14 days in advance of arrival date) at 7 am Pacific time. Be aware that nearly all campground reservations in Yosemite for the months of May through September and for some other weekends are filled the first day they become available, usually within seconds or minutes after 7 am Pacific time.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232452",
+          "regulationsurl": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+          "regulationsOverview": "<b>Pets:</b> Permitted (must be on a leash at all times). <b>Fires:</b> Wood and charcoal fires are permitted. <b>People per site:</b> A maximum of six people (including children) are allowed per campsite. In double sites, a maximum of 10-12 people are allowed (depends on site). <b>Vehicles per site:</b> A maximum of two motor vehicles are allowed per campsite. In double sites, three vehicles are allowed. All vehicles must be parked on a parking pad. Trailers don't count against the vehicle limi...",
+          "amenities": "{amphitheater: \"Yes - seasonal\", campStore: \"No\", c…}",
+          "contacts": "{emailAddresses: Array(1), phoneNumbers: Array(1)}",
+          "fees": "[{…}, {…}]",
+          "directionsOverview": "The Crane Flat Campground is located along the Big Oak Flat Road, just west of Crane Flat, about 16 miles (30 minutes) northwest of Yosemite Valley, at 6,200 ft (1,900 m) elevation. From Hwy. 120 west/Big Oak Flat Entrance, continue on the Big Oak Flat Road for 9 miles (15 minutes) where you’ll find the campground on your right south of the Big Oak Flat Road.",
+          "directionsUrl": "https://www.nps.gov/yose/planyourvisit/driving.htm",
+          "operatingHours": "[{…}]",
+          "addresses": "[]",
+          "images": "[{…}]",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (The Valley can be rainy or snowy in any given winter storm.)",
+          "numberOfSitesReservable": "151",
+          "numberOfSitesFirstComeFirstServe": "0",
+          "campsites": "{electricalHookups: \"0\", group: \"0\", horse: \"0\", ot…}",
+          "accessibility": "{accessRoads: Array(1), adaInfo: \"The following cam…}",
+          "multimedia": "[]",
+          "relevanceScore": 1,
+          "lastIndexedDate": ""
+        },
+        {
+          "id": "8D89A88A-5E90-449B-B4FA-78026CF14D70",
+          "url": "https://www.nps.gov/yose/planyourvisit/hodgdoncamp.htm",
+          "name": "Hodgdon Meadow Campground",
+          "parkCode": "yose",
+          "description": "Hodgdon Meadow Campground is conveniently located along the Big Oak Flat Road at the Big Oak Flat Entrance. At an elevation of 4,900 feet (1,219 m), the campground is located along the western edge of the park, 25 miles and approximately 45 minutes from Yosemite Valley. There is a gas station and minimal convenience items located nearby at Crane Flat. Trailheads for both the Merced Grove and Tuolumne Grove of Giant Sequoias are located within a short drive of the campground.",
+          "latitude": "37.7998824476",
+          "longitude": "-119.867033107",
+          "latLong": "{lat:37.7998824476, lng:-119.867033107}",
+          "audioDescription": "",
+          "isPassportStampLocation": "0",
+          "passportStampLocationDescription": "",
+          "passportStampImages": "[]",
+          "geometryPoiId": "A1D68A7F-38CF-40F2-BAF8-42A84A5C49D1",
+          "reservationInfo": "Reservations are required from April 15 through October 5, 2025. During the rest of the year, the entire campground (other than the group sites, which close) are available on a first-come, first-served basis. Campground reservations are available in blocks of one month at a time, up to five months in advance, on the 15th of each month at 7 am Pacific time. Be aware that nearly all campground reservations in Yosemite for the months of May through September and for some other weekends are filled t...",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232451",
+          "regulationsurl": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+          "regulationsOverview": "<b>Pets:</b> Permitted (must be on a leash at all times) <b>Fires:</b> Wood and charcoal fires are permitted all year. May–September, Wood fires are only allowed 5 pm–10 pm. Air quality may be unhealthy for sensitive individuals at night. <b>People per site:</b> A maximum of six people (including children) are allowed per campsite, except for the group sites, which requires 13 to 30. <b>Vehicles per site:</b> A maximum of two motor vehicles are allowed per campsite. All vehicles must be parked o...",
+          "amenities": "{amphitheater: \"No\", campStore: \"No\", cellPhoneRece…}",
+          "contacts": "{emailAddresses: Array(1), phoneNumbers: Array(1)}",
+          "fees": "[{…}, {…}, {…}]",
+          "directionsOverview": "The Hodgdon Meadow Campground is located along the Big Oak Flat Road. From Hwy. 120 west/Big Oak Flat Entrance, the Hodgdon Meadow Campground is located immediately on the left after entering the park. From Yosemite Valley take the Big Oak Flat Road to the park entrance/exit; approximately 26 miles (45 minutes). You’ll find the campground on your right just before the exit to the park.",
+          "directionsUrl": "https://www.nps.gov/yose/planyourvisit/driving.htm",
+          "operatingHours": "[{…}]",
+          "addresses": "[]",
+          "images": "[{…}, {…}, {…}]",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (The Valley can be rainy or snowy in any given winter storm.)",
+          "numberOfSitesReservable": "0",
+          "numberOfSitesFirstComeFirstServe": "101",
+          "campsites": "{electricalHookups: \"0\", group: \"4\", horse: \"0\", ot…}",
+          "accessibility": "{accessRoads: Array(1), adaInfo: \"There are no desi…}",
+          "multimedia": "[]",
+          "relevanceScore": 1,
+          "lastIndexedDate": ""
+        },
+        {
+          "id": "4C3C4954-FA9C-4C58-B6CF-E66054E1F0EF",
+          "url": "https://www.nps.gov/yose/planyourvisit/pinescampgrounds.htm",
+          "name": "Lower Pines Campground",
+          "parkCode": "yose",
+          "description": "Lower Pines is located along the Merced River in Yosemite Valley. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,219 m) elevation and can be accessed from all park roads. Lower Pines is within biking and walking distance of many services and trailheads in Yosemite Valley and is located on the free shuttle route. There are food and grocery services nearby at Curry Village and Yosemite Village.",
+          "latitude": "37.7394658913",
+          "longitude": "-119.566313766",
+          "latLong": "{lat:37.7394658913, lng:-119.566313766}",
+          "audioDescription": "",
+          "isPassportStampLocation": "0",
+          "passportStampLocationDescription": "",
+          "passportStampImages": "[]",
+          "geometryPoiId": "0D3377B6-FF0D-4733-AB42-F9D768427953",
+          "reservationInfo": "Reservations are required seasonally when Lower Pines is open (mid-April through late October). Campground reservations are available in blocks of one month at a time, up to five months in advance, on the 15th of each month at 7 am Pacific time. Be aware that nearly all campground reservations in Yosemite for the months of May through September and for some other weekends are filled the first day they become available, usually within seconds or minutes after 7 am Pacific time.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232450",
+          "regulationsurl": "https://www.nps.gov/yose/planyourvisit/campregs.htm",
+          "regulationsOverview": "<b>Pets:</b> Permitted (must be on a leash at all times). <b>Fires:</b> Wood and charcoal fires are permitted. From May through September, Wood fires are only allowed from 5 pm -10 pm. <b>People per site:</b> A maximum of six people (including children) are allowed per campsite. <b>Vehicles per site:</b> A maximum of two motor vehicles are allowed per campsite. All vehicles must be parked on a parking pad. Trailers don't count against the vehicle limit as long as they fit on the parking pad. Add...",
+          "amenities": "{amphitheater: \"Yes - seasonal\", campStore: \"No\", c…}",
+          "contacts": "{emailAddresses: Array(1), phoneNumbers: Array(1)}",
+          "fees": "[{…}, {…}]",
+          "directionsOverview": "From Hwy. 140/Arch Rock Entrance, continue driving west on the El Portal Road 8 miles to Yosemite Valley. From Hwy. 41/South Entrance drive 33 miles north (approximately 1 hour) on the Wawona Road to Yosemite Valley. From Hwy. 120 west/Big Oak Flat Entrance, drive 23 miles (approximately 45 minutes) on the Big Oak Flat Road to Yosemite Valley. From Hwy. 120 east/Tioga Pass, Yosemite Valley is approximately a two-hour drive. In Yosemite Valley follow Southside Drive and signs for Valley campgroun...",
+          "directionsUrl": "https://www.nps.gov/yose/planyourvisit/driving.htm",
+          "operatingHours": "[{…}]",
+          "addresses": "[{…}, {…}]",
+          "images": "[{…}, {…}, {…}]",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (The Valley can be rainy or snowy in any given winter storm.)",
+          "numberOfSitesReservable": "73",
+          "numberOfSitesFirstComeFirstServe": "0",
+          "campsites": "{electricalHookups: \"0\", group: \"0\", horse: \"0\", ot…}",
+          "accessibility": "{accessRoads: Array(1), adaInfo: \"The following cam…}",
+          "multimedia": "[]",
+          "relevanceScore": 1,
+          "lastIndexedDate": ""
+        }
+      ]
+    },
+    "subHooks": [],
+    "debugInfo": null,
+    "hookSource": {
+      "lineNumber": 25,
+      "functionName": "CampgroundSelector",
+      "fileName": "http://localhost:5173/src/components/parks/CampgroundSelector.jsx",
+      "columnNumber": 41
+    }
+  },
+  {
+    "name": "State",
+    "value": [
+      "{description: \"Enjoy a riverside stroll approximate…}",
+      {
+        "id": "98f7",
+        "tripId": 15,
+        "type": "campground",
+        "title": "Lower Pines Campground",
+        "description": "Lower Pines is located along the Merced River in Yosemite Valley. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,219 m) elevation and can be accessed from all park roads. Lower Pines is within biking and walking distance of many services and trailheads in Yosemite Valley and is located on the free shuttle route. There are food and grocery services nearby at Curry Village and Yosemite Village.",
+        "duration": "Overnight"
+      }
+    ],
+    "subHooks": [],
+    "debugInfo": null,
+    "hookSource": {
+      "lineNumber": 26,
+      "functionName": "CampgroundSelector",
+      "fileName": "http://localhost:5173/src/components/parks/CampgroundSelector.jsx",
+      "columnNumber": 37
+    }
+  },
+  {
+    "name": "Params",
+    "subHooks": [
+      {
+        "name": "Route",
+        "value": {
+          "outlet": null,
+          "matches": "[{…}, {…}]",
+          "isDataRoute": false
+        },
+        "subHooks": [],
+        "debugInfo": null,
+        "hookSource": {
+          "lineNumber": 5268,
+          "functionName": "useParams",
+          "fileName": "http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=e9bf95b1",
+          "columnNumber": 28
+        }
+      }
+    ],
+    "debugInfo": null,
+    "hookSource": {
+      "lineNumber": 27,
+      "columnNumber": 22,
+      "functionName": "CampgroundSelector",
+      "fileName": "http://localhost:5173/src/components/parks/CampgroundSelector.jsx"
+    }
+  },
+  {
+    "name": "Effect",
+    "value": "() => {}",
+    "subHooks": [],
+    "debugInfo": null,
+    "hookSource": {
+      "lineNumber": 45,
+      "functionName": "CampgroundSelector",
+      "fileName": "http://localhost:5173/src/components/parks/CampgroundSelector.jsx",
+      "columnNumber": 3
+    }
+  }
+]

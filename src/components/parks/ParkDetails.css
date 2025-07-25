@@ -236,23 +236,7 @@ h1 {
 .weather-icon {
   width: 16px;
   height: 16px;
-  filter: brightness(0) saturate(100%) invert(93%) sepia(6%) saturate(7%) hue-rotate(41deg) brightness(106%)
-    contrast(100%);
-  /* This filter makes the SVG light colored to match your theme */
 }
-
-/* Optional: Add different colors for different weather types */
-/* .weather-item:first-child .weather-icon { */
-/* filter: brightness(0) saturate(100%) invert(85%) sepia(61%) saturate(2298%) hue-rotate(343deg) */
-/* brightness(102%) contrast(96%); */
-/* This gives the temperature icon a warm orange tint */
-/* } */
-
-/* .weather-item:last-child .weather-icon {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(28%) saturate(2332%) hue-rotate(189deg)
-    brightness(95%) contrast(96%); */
-/* This gives the rain icon a cool blue tint */
-/* } */
 
 @media (max-width: 768px) {
   .park-details-container .carousel-btn {

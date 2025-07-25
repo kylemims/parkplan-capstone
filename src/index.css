@@ -94,3 +94,13 @@ button:focus-visible {
     background-color: #b56a4c;
   }
 }
+/* Add to your main CSS file */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 80px; /* Space for bottom nav */
+  }
+
+  .main-content {
+    padding-bottom: 80px; /* If you have a main wrapper */
+  }
+}

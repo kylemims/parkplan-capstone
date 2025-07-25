@@ -45,6 +45,27 @@ export const TripDashboard = () => {
   return (
     <section className="trip-dashboard-container">
       <h1>My Planned Trips</h1>
+      <div className="icon-legend">
+        <h3>Quick Actions</h3>
+        <div className="legend-items">
+          <div className="legend-item">
+            <img src="/icons/add-activity.svg" alt="Add Activities" />
+            <span>Add Activities</span>
+          </div>
+          <div className="legend-item">
+            <img src="/icons/camper-1.svg" alt="Camping" />
+            <span>Camping Options</span>
+          </div>
+          <div className="legend-item">
+            <img src="/icons/edit.svg" alt="Edit Trip" />
+            <span>Edit Trip Details</span>
+          </div>
+          <div className="legend-item">
+            <img src="/icons/trash.svg" alt="Delete Trip" />
+            <span>Delete Trip</span>
+          </div>
+        </div>
+      </div>
       <div className="trip-list">
         <div className="trip-list__cards">
           {trips?.map((trip) => (
@@ -58,11 +79,7 @@ export const TripDashboard = () => {
         </div>
       </div>
       <div className="add-new-dash">
-        <NewTripModal
-          open={openModal}
-          onClose={() => setOpenModal(false)}
-          onTripCreated={refreshTrips}
-        />
+        <NewTripModal open={openModal} onClose={() => setOpenModal(false)} onTripCreated={refreshTrips} />
 
         <EditTripModal
           open={editModalOpen}

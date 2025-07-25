@@ -66,11 +66,10 @@ export const TripCard = ({ trip, onDelete, onEdit }) => {
         </div>
 
         <div className="trip-card__actions">
-          <button className="trip-summary-btn" onClick={() => navigate(`/trips/${trip.id}/summary`)}>
-            View Summary
-          </button>
-          <button className="view-camp-btn" onClick={() => navigate(`/trips/${trip.id}/campgrounds`)}>
-            Campgrounds
+          <button
+            className="trip-summary-btn full-width"
+            onClick={() => navigate(`/trips/${trip.id}/summary`)}>
+            View Trip Summary
           </button>
         </div>
 
@@ -81,7 +80,7 @@ export const TripCard = ({ trip, onDelete, onEdit }) => {
             onClick={() => navigate(`/trips/${trip.id}/details/${parkObj?.code}`)}
           />
           <IconTooltipButton
-            iconSrc="/icons/camper.svg"
+            iconSrc="/icons/camper-1.svg"
             tooltipContent="Add Camping"
             onClick={() => navigate(`/trips/${trip.id}/campgrounds`)}
           />

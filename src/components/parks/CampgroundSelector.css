@@ -1,78 +1,502 @@
-/* src/components/ActivitySelector.css */
-.activity-selector {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.campground-selector {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #eee;
+  padding: 2rem 1rem;
+  padding-bottom: 100px; /* Space for mobile nav */
 }
 
-.activity-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
-}
-
-.activity-item {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.2s;
-}
-
-.activity-item:hover {
-  background-color: #f0f0f0;
-}
-
-.activity-item.selected {
-  background-color: #4caf50;
-  color: white;
-  border-color: #388e3c;
-}
-
-.icon-button {
-  /* display: flex; */
-  /* flex-direction: column; */
+.campground-loading {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: start;
-  width: 30px;
-  height: 30px;
-  /* border-radius: 8%; */
-  /* background-color: #a86115; */
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-.icon-button:hover {
-  background-color: #ccc;
-}
-.icon-button.selected {
-  background-color: #4caf50;
-  color: white;
-}
-.icon-button.selected:hover {
-  background-color: #388e3c;
-}
-.camp-container {
-  max-width: 600px;
-  margin: 0px auto;
-  margin-left: 5px;
-  padding: 10px;
-  /* font-family: Arial, sans-serif; */
-}
-.camp-container li {
-  list-style: none;
-  padding: 0;
+  justify-content: center;
+  min-height: 50vh;
+  color: #ffe28a;
 }
 
-.campground-row {
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 226, 138, 0.3);
+  border-top: 3px solid #ffe28a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header */
+.campground-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
   display: flex;
   align-items: center;
-  justify-content: start;
-  padding: 10px;
+  gap: 1rem;
+}
 
-  border-bottom: 1px solid #1b1b1b;
-  /* background-color: rgb(160, 160, 156); */
+.back-button {
+  background: rgba(34, 34, 34, 0.8);
+  border: 1px solid rgba(249, 211, 66, 0.3);
+  color: #ffe28a;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background: rgba(34, 34, 34, 1);
+  border-color: rgba(249, 211, 66, 0.6);
+  transform: translateX(-2px);
+}
+
+.header-info h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2.2rem;
+  color: #ffe28a;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-info p {
+  color: #dca8a2;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Main Content Layout */
+.campground-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+/* Campground Grid */
+.campground-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.campground-card {
+  background: linear-gradient(135deg, rgba(16, 16, 16, 0.9), rgba(34, 34, 34, 0.8));
+  border-radius: 16px;
+  border: 1px solid rgba(220, 168, 162, 0.2);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.campground-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #dca8a2, #f9d342);
+  transition: width 0.3s ease;
+}
+
+.campground-card:hover::before {
+  width: 6px;
+}
+
+.campground-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(220, 168, 162, 0.4);
+}
+
+/* Card Header */
+.campground-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.campground-card-header h3 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.3rem;
+  color: #ffe28a;
+  margin: 0;
+  line-height: 1.2;
+  max-width: 70%;
+}
+
+.campground-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.sites-count {
+  background: rgba(90, 120, 111, 0.3);
+  color: #eee;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.fee-info {
+  background: rgba(249, 211, 66, 0.2);
+  color: #f9d342;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Card Body */
+.campground-card-body {
+  margin-bottom: 1.5rem;
+}
+
+.campground-description {
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.amenities-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.amenity-tag {
+  background: rgba(34, 34, 34, 0.6);
+  color: #eee;
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(249, 211, 66, 0.2);
+}
+
+.reservation-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(16, 16, 16, 0.6);
+  border-radius: 8px;
+  border-left: 3px solid #f9d342;
+}
+
+.status-icon {
+  font-size: 1.1rem;
+}
+
+.status-text {
+  color: #f9d342;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Expanded Details */
+.campground-details {
+  background: rgba(16, 16, 16, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(249, 211, 66, 0.1);
+  animation: expandIn 0.3s ease-out;
+}
+
+@keyframes expandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-section h5 {
+  color: #dca8a2;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-section li {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.detail-section li::before {
+  content: "•";
+  color: #f9d342;
+  position: absolute;
+  left: 0;
+}
+
+.detail-section p {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
+
+.reservation-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5a786f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.reservation-link:hover {
+  color: #42665c;
+}
+
+/* Card Actions */
+.campground-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.details-btn {
+  background: transparent;
+  border: 1px solid rgba(220, 168, 162, 0.3);
+  color: #dca8a2;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.details-btn:hover {
+  background: rgba(220, 168, 162, 0.1);
+  border-color: rgba(220, 168, 162, 0.5);
+}
+
+.add-campground-btn {
+  background: linear-gradient(135deg, #5a786f, #42665c);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-campground-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 120, 111, 0.4);
+}
+
+.add-campground-btn:disabled {
+  background: rgba(90, 120, 111, 0.3);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Itinerary Sidebar */
+.itinerary-sidebar {
+  background: linear-gradient(135deg, rgba(16, 16, 16, 0.95), rgba(34, 34, 34, 0.9));
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(220, 168, 162, 0.2);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.itinerary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.itinerary-header h3 {
+  color: #ffe28a;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.count-badge {
+  background: linear-gradient(135deg, #dca8a2, #f9d342);
+  color: #222;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.empty-itinerary {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #aaa;
+}
+
+.empty-itinerary p {
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+
+.empty-icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.itinerary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.itinerary-item {
+  background: rgba(34, 34, 34, 0.5);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid #f9d342;
+}
+
+.itinerary-item strong {
+  color: #ffe28a;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.itinerary-item .duration {
+  color: #ccc;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.view-full-itinerary {
+  width: 100%;
+  background: linear-gradient(135deg, #dca8a2, #c89791);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.view-full-itinerary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 168, 162, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+  .campground-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .itinerary-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .campground-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .campground-selector {
+    padding: 1rem;
+    padding-bottom: 100px;
+  }
+
+  .campground-card {
+    padding: 1rem;
+  }
+
+  .campground-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .campground-card-header h3 {
+    max-width: 100%;
+  }
+
+  .campground-meta {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .campground-actions {
+    flex-direction: column;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }

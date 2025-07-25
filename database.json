@@ -27,8 +27,6 @@
       "id": "5"
     }
   ],
-
-  
   "parks": [
     {
       "id": "1",
@@ -36,24 +34,30 @@
       "location": "California",
       "description": "Famous for its granite cliffs, waterfalls, and giant sequoias.",
       "bestTime": "May through September",
-      "season": "summer",                       
-      "weather": "cool & dry",                   
-      "activities": ["Hiking", "Water Activities"], 
+      "season": "summer",
+      "weather": "cool & dry",
+      "activities": [
+        "Hiking",
+        "Water Activities"
+      ],
       "wildlife": "Black bears, peregrine falcons",
       "highlights": "Half Dome, El Capitan",
       "code": "yose",
       "latitude": 37.8651,
       "longitude": -119.5383
-},
+    },
     {
       "id": "2",
       "name": "Yellowstone National Park",
       "location": "Wyoming, Montana, Idaho",
       "description": "Home to geysers, hot springs, and diverse wildlife.",
       "bestTime": "April to October",
-      "season": "spring",                     
-      "weather": "mild",                  
-      "activities": ["Wildlife Watching", "Hiking"], 
+      "season": "spring",
+      "weather": "mild",
+      "activities": [
+        "Wildlife Watching",
+        "Hiking"
+      ],
       "wildlife": "Bison, wolves, grizzly bears",
       "highlights": "Old Faithful, Yellowstone Lake",
       "code": "yell",
@@ -66,9 +70,12 @@
       "location": "Utah",
       "description": "Known for steep red cliffs and scenic canyon hikes.",
       "bestTime": "March-May and Sep-Nov",
-      "season": "fall",                       
-      "weather": "mild",                  
-      "activities": ["Hiking", "Photography"], 
+      "season": "fall",
+      "weather": "mild",
+      "activities": [
+        "Hiking",
+        "Photography"
+      ],
       "wildlife": "Desert bighorn sheep, mule deer",
       "highlights": "Angels Landing, Emerald Pools",
       "code": "zion",
@@ -81,9 +88,12 @@
       "location": "Arizona",
       "description": "Iconic views of a mile-deep canyon carved by the Colorado River.",
       "bestTime": "March-May and Sep-Nov",
-      "season": "fall",                     
-      "weather": "warm & sunny",                  
-      "activities": ["Hiking", "Photography"], 
+      "season": "fall",
+      "weather": "warm & sunny",
+      "activities": [
+        "Hiking",
+        "Photography"
+      ],
       "wildlife": "California condor, elk",
       "highlights": "South Rim, Cape Royal",
       "code": "grca",
@@ -96,9 +106,12 @@
       "location": "Colorado",
       "description": "High-altitude trails, alpine lakes, and snowy peaks.",
       "bestTime": "June through September",
-      "season": "summer",                     
-      "weather": "cool & dry",                  
-      "activities": ["Water Activities", "Wildlife Watching"], 
+      "season": "summer",
+      "weather": "cool & dry",
+      "activities": [
+        "Water Activities",
+        "Wildlife Watching"
+      ],
       "wildlife": "Elk, moose, black bears",
       "highlights": "Bear Lake, Longs Peak",
       "code": "romo",
@@ -111,9 +124,12 @@
       "location": "Tennessee, North Carolina",
       "description": "Lush forests and mist-covered mountain ranges.",
       "bestTime": "Late spring to early fall",
-      "season": "summer",                     
-      "weather": "warm & sunny",                  
-      "activities": ["Hiking", "Wildlife Watching"], 
+      "season": "summer",
+      "weather": "warm & sunny",
+      "activities": [
+        "Hiking",
+        "Wildlife Watching"
+      ],
       "wildlife": "Black bears, white-tailed deer",
       "highlights": "Clingmans Dome, Cades Cove",
       "code": "grsm",
@@ -126,9 +142,12 @@
       "location": "Utah",
       "description": "Over 2,000 natural stone arch formations.",
       "bestTime": "March-May and Sep-Oct",
-      "season": "spring",                     
-      "weather": "warm & sunny",                  
-      "activities": ["Hiking", "Photography"], 
+      "season": "spring",
+      "weather": "warm & sunny",
+      "activities": [
+        "Hiking",
+        "Photography"
+      ],
       "wildlife": "Red foxes, kangaroo rats",
       "highlights": "Landscape Arch, The Windows",
       "code": "arch",
@@ -141,9 +160,12 @@
       "location": "Maine",
       "description": "Rocky beaches, woodlands, and Cadillac Mountain views.",
       "bestTime": "September through October",
-      "season": "fall",                       
-      "weather": "cool & dry",                  
-      "activities": ["Hiking", "Wildlife Watching"], 
+      "season": "fall",
+      "weather": "cool & dry",
+      "activities": [
+        "Hiking",
+        "Wildlife Watching"
+      ],
       "wildlife": "Bald eagles, seals, porcupines",
       "highlights": "Jordan Pond, Thunder Hole",
       "code": "acad",
@@ -156,9 +178,12 @@
       "location": "Washington",
       "description": "Diverse ecosystems from glacial peaks to temperate rainforests.",
       "bestTime": "May through September",
-      "season": "summer",                     
-      "weather": "mild",                  
-      "activities": ["Photography", "Wildlife Watching"], 
+      "season": "summer",
+      "weather": "mild",
+      "activities": [
+        "Photography",
+        "Wildlife Watching"
+      ],
       "wildlife": "Roosevelt elk, mountain goats",
       "highlights": "Hurricane Ridge, Rialto Beach",
       "code": "olym",
@@ -171,9 +196,12 @@
       "location": "California",
       "description": "Desert landscapes where the Mojave and Colorado deserts meet.",
       "bestTime": "March-May and Oct-Nov",
-      "season": "spring",                     
-      "weather": "warm & sunny",                  
-      "activities": ["Hiking", "Photography"], 
+      "season": "spring",
+      "weather": "warm & sunny",
+      "activities": [
+        "Hiking",
+        "Photography"
+      ],
       "wildlife": "Jackrabbits, desert tortoises",
       "highlights": "Hidden Valley, Skull Rock",
       "code": "jotr",
@@ -186,9 +214,12 @@
       "location": "Montana",
       "description": "Known for its rugged mountains and scenic drives.",
       "bestTime": "July to September",
-      "season": "summer",                     
-      "weather": "cool & dry",                  
-      "activities": ["Hiking", "Photography"], 
+      "season": "summer",
+      "weather": "cool & dry",
+      "activities": [
+        "Hiking",
+        "Photography"
+      ],
       "wildlife": "Mountain goats, marmots",
       "highlights": "Grinnell Glacier, Lake McDonald",
       "code": "glac",
@@ -201,9 +232,12 @@
       "location": "Utah",
       "description": "Famous for crimson-colored hoodoos and starry skies.",
       "bestTime": "May through September",
-      "season": "summer",                     
-      "weather": "cool & dry",                  
-      "activities": ["Hiking", "Photography"], 
+      "season": "summer",
+      "weather": "cool & dry",
+      "activities": [
+        "Hiking",
+        "Photography"
+      ],
       "wildlife": "Prairie dogs, golden eagles",
       "highlights": "Navajo Loop, Sunrise Point",
       "code": "brca",
@@ -216,9 +250,12 @@
       "location": "California",
       "description": "Home to giant sequoia trees, including General Sherman Tree.",
       "bestTime": "June through August",
-      "season": "summer",                     
-      "weather": "warm & sunny",                  
-      "activities": ["Wildlife Watching", "Photography"], 
+      "season": "summer",
+      "weather": "warm & sunny",
+      "activities": [
+        "Wildlife Watching",
+        "Photography"
+      ],
       "wildlife": "Black bears, Steller’s jays",
       "highlights": "Moro Rock, Crystal Cave",
       "code": "seki",
@@ -628,6 +665,13 @@
       "createdAt": "2025-06-02T14:41:15.954Z",
       "parkId": 1,
       "id": "39"
+    },
+    {
+      "id": "8867",
+      "name": "Greg's fun trip",
+      "userId": "2",
+      "createdAt": "2025-07-25T20:24:40.156Z",
+      "parkId": 10
     }
   ],
   "tripItems": [
@@ -686,6 +730,30 @@
       "title": "Old Lodgepole Road Winter Trail",
       "description": "This old road connects the Lodgepole Visitor Center with the General Sherman Tree. The skiing is easy, except for a steep grade as the trail approaches the General Sherman Tree.",
       "duration": "The duration will vary depending on fitness level, snow conditions, and length of time spent at trail features."
+    },
+    {
+      "id": "860f",
+      "tripId": 15,
+      "type": "activity",
+      "title": "Hike the Oconaluftee River Trail",
+      "description": "Enjoy a riverside stroll approximately 3 miles (4.8 km) roundtrip on one of the only pet- and bike-friendly trails in the park. This popular trail is relatively flat, wide, and graveled and follows the Oconaluftee River through elk habitat and hardwood forest.",
+      "duration": "Unspecified"
+    },
+    {
+      "id": "98f7",
+      "tripId": 15,
+      "type": "campground",
+      "title": "Lower Pines Campground",
+      "description": "Lower Pines is located along the Merced River in Yosemite Valley. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,219 m) elevation and can be accessed from all park roads. Lower Pines is within biking and walking distance of many services and trailheads in Yosemite Valley and is located on the free shuttle route. There are food and grocery services nearby at Curry Village and Yosemite Village.",
+      "duration": "Overnight"
+    },
+    {
+      "id": "ce66",
+      "tripId": 16,
+      "type": "activity",
+      "title": "Geology Talk (30 minutes) South Rim Village: 2:30 pm",
+      "description": "Geology Talk Ranger Program - 2:30 pm daily (during summer 2025). Gain insight into Grand Canyon’s unique geologic story. Meet in front of Yavapai Geology Museum. Program duration: 30 minutes. Learn how this immense canyon formed and the science behind the landscape. Knowing some of the stories encoded in the rock layers will enrich your understanding and enhance your experience at Grand Canyon.",
+      "duration": "<p>The Geology Talk program is presented Daily at 11 am - during spring 2025..</p>"
     }
   ]
 }

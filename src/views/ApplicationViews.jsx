@@ -13,6 +13,7 @@ import { HomeTest } from "../components/parks/HomeTest.jsx";
 import { TripSummary } from "../components/trips/TripSummary.jsx";
 import { PreferencesForm } from "../components/onboarding/PreferencesForm.jsx";
 import { ParkResults } from "../components/parks/ParkResults.jsx";
+import { BottomTabNav } from "../components/nav/BottomTabNav.jsx";
 
 export const ApplicationViews = () => {
   return (
@@ -75,6 +76,7 @@ export const ApplicationViews = () => {
           <Route path="/trips/:tripId/campgrounds" element={<CampgroundSelector />} />
         </Route>
       </Routes>
+      <BottomTabNav />
     </>
   );
 };

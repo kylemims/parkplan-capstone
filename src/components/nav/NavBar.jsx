@@ -8,6 +8,34 @@ export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navBackground, setNavBackground] = useState("transparent-nav");
 
+  // Your new professional links
+  const profileLinks = [
+    {
+      icon: "/icons/email.svg",
+      label: "Email",
+      href: "mailto:kylemims.dev@gmail.com",
+      ariaLabel: "Send email to Kyle Mims",
+    },
+    {
+      icon: "/icons/github.svg",
+      label: "GitHub",
+      href: "https://www.github.com/kylemims",
+      ariaLabel: "Visit Kyle's GitHub profile",
+    },
+    {
+      icon: "/icons/linked.svg",
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/kylemims-dev/",
+      ariaLabel: "Connect with Kyle on LinkedIn",
+    },
+    {
+      icon: "/icons/portfolio.svg",
+      label: "Portfolio",
+      href: "https://www.kylemims.com", // Update when deployed
+      ariaLabel: "View Kyle's portfolio website",
+    },
+  ];
+
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setNavBackground("solid-nav");
@@ -33,6 +61,15 @@ export const NavBar = () => {
     }
   };
 
+  const handleProfileLinkClick = (link) => {
+    if (link.href.startsWith("mailto:")) {
+      window.location.href = link.href;
+    } else {
+      window.open(link.href, "_blank", "noopener,noreferrer");
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar transparent-nav">
       <div className="nav-header">
@@ -51,21 +88,32 @@ export const NavBar = () => {
         <li>
           <button onClick={() => handleLinkClick("logout")}>LOGOUT</button>
         </li>
-        <li className="social-icon-group mobile-icons">
-          <img src="/images/IG-icon.svg" alt="Instagram" className="social-icon" />
-          <img src="/images/FB-icon.svg" alt="Facebook" className="social-icon" />
-          <img src="/images/YT-icon.svg" alt="YouTube" className="social-icon" />
-          <img src="/images/TT-icon.svg" alt="TikTok" className="social-icon" />
+
+        {/* Developer Section */}
+        <li className="developer-section">
+          <div className="developer-info">
+            <h4>Kyle Mims</h4>
+            <p>Full-Stack Developer</p>
+          </div>
+        </li>
+
+        {/* Professional Links */}
+        <li className="profile-links-section">
+          <div className="profile-links-grid">
+            {profileLinks.map((link, index) => (
+              <button
+                key={index}
+                className="profile-link-btn"
+                onClick={() => handleProfileLinkClick(link)}
+                aria-label={link.ariaLabel}
+                title={link.label}>
+                <img src={link.icon} alt={link.label} className="profile-icon" />
+                <span className="profile-label">{link.label}</span>
+              </button>
+            ))}
+          </div>
         </li>
       </ul>
-
-      {/* Desktop-only icons */}
-      {/* <div className="social-icon-group desktop-icons">
-        <img src="/images/IG-icon.svg" alt="Instagram" className="social-icon" />
-        <img src="/images/FB-icon.svg" alt="Facebook" className="social-icon" />
-        <img src="/images/YT-icon.svg" alt="YouTube" className="social-icon" />
-        <img src="/images/TT-icon.svg" alt="TikTok" className="social-icon" />
-      </div> */}
 
       {menuOpen && <div className="backdrop" onClick={() => setMenuOpen(false)} aria-label="Close menu" />}
     </nav>

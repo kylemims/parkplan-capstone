@@ -1,173 +1,566 @@
-.things-to-do-section {
-  margin-top: 2rem;
-  margin-left: 2rem;
-  color: var(--color-text);
-  font-family: "helvetica", sans-serif;
-  overflow-y: auto;
-  height: 100%;
+.trip-details {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #eee;
+  padding: 2rem 1rem;
+  padding-bottom: 100px; /* Space for mobile nav */
 }
-.things-to-do-section h2 {
-  font-size: 2rem;
-  color: var(--color-text);
-  font-family: "staatliches", sans-serif;
-  margin-bottom: 1rem;
-}
-.todo-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
+
+.activities-loading {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  overflow-y: auto;
-}
-
-.todo-card {
-  background: linear-gradient(to top, rgba(4, 4, 4, 0.7), rgba(16, 16, 16, 0.7), rgb(6, 6, 6));
-  max-width: 600px;
-  border-left: 4px solid #dca8a2;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
-
-.todo-title {
-  font-family: "Permanent Marker", cursive;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
   color: #ffe28a;
 }
 
-.todo-duration {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin: 0.3rem 0;
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 226, 138, 0.3);
+  border-top: 3px solid #ffe28a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
 }
 
-.todo-duration-desc {
-  font-style: italic;
-  font-size: 0.85rem;
-  color: #aaa;
-  margin-bottom: 0.6rem;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.todo-description {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: var(--color-text);
-  margin-bottom: 0.8rem;
+/* Header */
+.activities-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.icon-button {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 0;
+.back-button {
+  background: rgba(34, 34, 34, 0.8);
+  border: 1px solid rgba(249, 211, 66, 0.3);
+  color: #ffe28a;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background: rgba(34, 34, 34, 1);
+  border-color: rgba(249, 211, 66, 0.6);
+  transform: translateX(-2px);
+}
+
+.header-info h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2.2rem;
+  color: #ffe28a;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-info p {
+  color: #dca8a2;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Controls */
+.activities-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.activities-controls {
+  background: linear-gradient(135deg, rgba(16, 16, 16, 0.9), rgba(34, 34, 34, 0.8));
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(220, 168, 162, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.filter-group,
+.sort-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label,
+.sort-group label {
+  color: #dca8a2;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.control-select {
+  background: rgba(34, 34, 34, 0.8);
+  border: 1px solid rgba(249, 211, 66, 0.3);
+  color: #eee;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-select:hover,
+.control-select:focus {
+  border-color: rgba(249, 211, 66, 0.6);
+  outline: none;
+}
+
+.results-count {
+  color: #f9d342;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.6rem;
+  background: rgba(249, 211, 66, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(249, 211, 66, 0.2);
+}
+
+/* Main Layout */
+.activities-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+/* Activities Grid */
+.activities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.no-activities {
+  background: rgba(34, 34, 34, 0.6);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #aaa;
+}
+
+.no-activities h3 {
+  color: #ffe28a;
+  margin: 0 0 1rem 0;
+}
+
+.activity-card {
+  background: linear-gradient(135deg, rgba(16, 16, 16, 0.9), rgba(34, 34, 34, 0.8));
+  border-radius: 16px;
+  border: 1px solid rgba(220, 168, 162, 0.2);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #dca8a2, #f9d342);
+  transition: width 0.3s ease;
+}
+
+.activity-card:hover::before {
+  width: 6px;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(220, 168, 162, 0.4);
+}
+
+/* Card Header */
+.activity-card-header {
+  margin-bottom: 1rem;
+}
+
+.activity-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.activity-type {
+  background: rgba(90, 120, 111, 0.3);
+  color: #eee;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.activity-icon {
+  font-size: 1.2rem;
+}
+
+.activity-card-header h3 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.2rem;
+  color: #ffe28a;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.duration-badge {
+  background: rgba(249, 211, 66, 0.2);
+  color: #f9d342;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Card Body */
+.activity-card-body {
+  margin-bottom: 1.5rem;
+}
+
+.activity-description {
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.activity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.info-tag {
+  padding: 0.3rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-tag.location {
+  background: rgba(34, 34, 34, 0.6);
+  color: #eee;
+}
+
+.info-tag.free {
+  background: rgba(90, 120, 111, 0.3);
+  color: #5a786f;
+  border-color: rgba(90, 120, 111, 0.3);
+}
+
+.info-tag.fee {
+  background: rgba(220, 168, 162, 0.2);
+  color: #dca8a2;
+  border-color: rgba(220, 168, 162, 0.3);
+}
+
+.info-tag.reservation,
+.info-tag.pets {
+  background: rgba(249, 211, 66, 0.2);
+  color: #f9d342;
+  border-color: rgba(249, 211, 66, 0.3);
+}
+
+/* Expanded Details */
+.activity-details {
+  background: rgba(16, 16, 16, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(249, 211, 66, 0.1);
+  animation: expandIn 0.3s ease-out;
+}
+
+@keyframes expandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-section h5 {
+  color: #dca8a2;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-section p {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.season-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.season-tag {
+  background: rgba(34, 34, 34, 0.6);
+  color: #eee;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(249, 211, 66, 0.2);
+}
+
+.activity-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5a786f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.activity-link:hover {
+  color: #42665c;
+}
+
+/* Card Actions */
+.activity-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.details-btn {
+  background: transparent;
+  border: 1px solid rgba(220, 168, 162, 0.3);
+  color: #dca8a2;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.details-btn:hover {
+  background: rgba(220, 168, 162, 0.1);
+  border-color: rgba(220, 168, 162, 0.5);
+}
+
+.add-activity-btn {
+  background: linear-gradient(135deg, #5a786f, #42665c);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.add-activity-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 120, 111, 0.4);
+}
+
+.add-activity-btn:disabled {
+  background: rgba(90, 120, 111, 0.3);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Itinerary Sidebar */
+.itinerary-sidebar {
+  background: linear-gradient(135deg, rgba(16, 16, 16, 0.95), rgba(34, 34, 34, 0.9));
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(220, 168, 162, 0.2);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.itinerary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.itinerary-header h3 {
+  color: #ffe28a;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.count-badge {
+  background: linear-gradient(135deg, #dca8a2, #f9d342);
+  color: #222;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: inherit;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
-.icon-button:focus {
-  outline: 2px solid #ffe28a;
-  outline-offset: 2px;
+.empty-itinerary {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #aaa;
 }
 
-.hiker-icon {
-  width: 30px;
-  height: 30px;
-  display: block;
-  transition: filter 0.2s, transform 0.2s;
+.empty-itinerary p {
+  margin: 0 0 1rem 0;
+  font-style: italic;
 }
 
-.icon-button:hover .hiker-icon {
-  filter: drop-shadow(0 0 6px #ffe28a);
-  transform: scale(1.15) rotate(-10deg);
+.empty-icon {
+  font-size: 2rem;
+  opacity: 0.5;
 }
 
-.hover-reveal__content {
-  position: absolute;
-  left: 50%;
-  top: -70%;
-  transform: translateX(-50%);
-  min-width: 300px;
-  max-width: 400px;
-
-  background: #182220;
-  opacity: 97%;
-  color: var(--color-text);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(59, 58, 58, 0.6);
-  padding: 1rem;
-  z-index: 100;
-  font-size: 0.95rem;
-  text-align: left;
-  pointer-events: none;
-  line-height: 1.35;
-  font-family: "nunito", sans-serif;
-  outline: #ac8b7d outset 2px;
-}
-
-.hover-title {
-  color: #ffe28a;
-}
-
-.hover-reveal__content p > :first-child {
-  color: #b56a4c;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.add-to-itinerary-btn {
-  padding: 0.45rem 0.75rem;
-  background-color: #77a098;
-  color: #1c1c1c;
-  font-weight: 600;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.add-to-itinerary-btn:hover {
-  background-color: #609084;
-}
-.itinerary-review {
-  margin-top: 2rem;
-  background-color: #222;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #ffe28a;
-  height: 100%;
-}
-
-.itinerary-review ul {
+.itinerary-list {
   list-style: none;
-  padding-left: 0;
-  margin: 0.5rem 0 1rem;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
 }
 
-.itinerary-review li {
-  margin-bottom: 0.4rem;
-  color: var(--color-text);
-  font-size: 0.9rem;
-}
-
-.total-time {
-  font-size: 1rem;
-  color: #ccc;
-  font-weight: 500;
-}
-.lightbox-image {
-  max-width: 100%;
-  max-height: 100%;
+.itinerary-item {
+  background: rgba(34, 34, 34, 0.5);
+  padding: 0.75rem;
   border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid #f9d342;
+}
+
+.itinerary-item strong {
+  color: #ffe28a;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.itinerary-item .duration {
+  color: #ccc;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.view-full-itinerary {
+  width: 100%;
+  background: linear-gradient(135deg, #dca8a2, #c89791);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.view-full-itinerary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 168, 162, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+  .activities-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .itinerary-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .activities-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .activities-controls {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trip-details {
+    padding: 1rem;
+    padding-bottom: 100px;
+  }
+
+  .activity-card {
+    padding: 1rem;
+  }
+
+  .activity-actions {
+    flex-direction: column;
+  }
+
+  .activities-controls {
+    gap: 0.75rem;
+  }
+
+  .details-grid {
+    gap: 1rem;
+  }
 }

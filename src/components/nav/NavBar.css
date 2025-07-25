@@ -141,7 +141,144 @@ body {
   filter: invert(80%) sepia(10%) saturate(200%) hue-rotate(10deg);
 }
 
+.developer-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(249, 211, 66, 0.3);
+}
+/* Add subtle animations and polish */
+.developer-section {
+  animation: fadeInUp 0.5s ease 0.3s both;
+}
+
+.profile-links-section {
+  animation: fadeInUp 0.5s ease 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-link-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.profile-link-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.profile-link-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.profile-link-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Hover effect for the entire grid */
+.profile-links-grid:hover .profile-link-btn:not(:hover) {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+.developer-info {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.developer-info h4 {
+  color: #ffe28a;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: 0.5px;
+}
+
+.developer-info p {
+  color: #dca8a2;
+  font-size: 0.85rem;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Profile Links Grid */
+.profile-links-section {
+  margin-top: 1rem;
+}
+
+.profile-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.profile-link-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(34, 34, 34, 0.6);
+  border: 1px solid rgba(249, 211, 66, 0.2);
+  border-radius: 12px;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #eee;
+  text-decoration: none;
+}
+
+.profile-link-btn:hover {
+  background: rgba(34, 34, 34, 0.9);
+  border-color: rgba(249, 211, 66, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.profile-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: all 0.2s ease;
+}
+
+.profile-link-btn:hover .profile-icon {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px #f9d342);
+  transform: scale(1.1);
+}
+
+.profile-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: color 0.2s ease;
+}
+
+.profile-link-btn:hover .profile-label {
+  color: #ffe28a;
+}
+
+/* Remove old social icons styling */
+.social-icon-group.mobile-icons {
+  display: none; /* Hide the old social icons */
+}
+
 /* DESKTOP NAV MENU STYLES */
+
+/* Desktop responsiveness for new profile section */
+@media screen and (min-width: 768px) {
+  .developer-section,
+  .profile-links-section {
+    display: none; /* Hide on desktop since you have the bottom nav */
+  }
+}
 
 @media screen and (min-width: 768px) {
   .hamburger {
@@ -154,6 +291,49 @@ body {
 
   .nav-header {
     margin-left: auto;
+  }
+
+  /* Enhanced mobile drawer styling */
+  .nav-menu-drawer {
+    position: fixed;
+    top: 0;
+    left: -75%;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(16, 16, 16, 0.98), rgba(34, 34, 34, 0.95));
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 2rem 2rem; /* Added bottom padding */
+    gap: 1.5rem;
+    list-style: none;
+    transition: left 0.75s ease;
+    z-index: 1100;
+    border-right: 1px solid rgba(249, 211, 66, 0.3);
+    overflow-y: auto; /* Allow scrolling if content is too tall */
+  }
+
+  /* Enhanced menu button styling */
+  .nav-menu-drawer li button {
+    background: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0.5rem 0;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-menu-drawer li button:hover {
+    color: #ffe28a;
+    background-color: transparent;
+    transform: translateX(4px);
   }
 
   .nav-menu-drawer {
