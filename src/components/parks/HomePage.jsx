@@ -34,14 +34,14 @@ export const HomePage = () => {
             Find My Park
           </button>
         </div>
-        <p>Ready to plan your next adventure?</p>
+        {/* <p>Ready to plan your next adventure?</p> */}
         {/* <img className="decoration-line" src="/images/deco-line.svg"></img> */}
-        <span className="select-park-line">
+        {/* <span className="select-park-line">
           <h3>Select a National Park</h3>
-        </span>
-        <div className="dropdown-container">
+        </span> */}
+        {/* <div className="dropdown-container">
           <DropDown options={parks} selectedValue={selectedParkId} onChange={handleSelect} />
-        </div>
+        </div> */}
       </div>
       {/* </section> */}
     </>

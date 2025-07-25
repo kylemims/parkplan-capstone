@@ -1,260 +1,340 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Enhanced TripDashboard Styling */
+.trip-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 2rem 1rem;
+  position: relative;
 }
 
-.trip-dashboard-container {
-  /* display: flex;
-  flex-direction: column; */
-  min-height: 100vh;
-  height: 100%;
-  background-color: #212222;
-  margin: 0rem auto;
-  padding: 1rem;
-  margin-top: 2rem;
-  min-width: 350px;
-  overflow-y: auto;
+/* Add subtle background pattern */
+.trip-dashboard-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/subtle-texture.png") repeat;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.trip-dashboard-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.trip-dashboard-container h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2.5rem;
+  color: #ffe28a;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Add accent line under title */
+.trip-dashboard-container h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #dca8a2, #f9d342);
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
 
 .trip-list {
-  display: flex;
-  flex-direction: row;
-  min-width: 300px;
-  /* width: 90%; */
-  align-items: center;
-  /* padding: 1rem; */
-  /* max-width: 500px; */
-  text-align: center;
+  max-width: 1200px;
   margin: 0 auto;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  padding: 0;
 }
 
 .trip-list__cards {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   width: 100%;
-  min-width: 300px;
-  max-width: 500px;
-  flex-wrap: wrap;
+  max-width: none;
 }
 
 .trip-card {
   position: relative;
-  min-height: 180px;
-  border-radius: 8px;
+  min-height: 240px;
+  border-radius: 16px;
   overflow: hidden;
   background-size: cover;
-  margin-bottom: 1rem;
-  transition: transform 0.2s ease-in-out;
-  opacity: 100%;
-  min-width: 300px;
+  background-position: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(220, 168, 162, 0.1);
 }
 
 .trip-card:hover {
-  transform: translateY(-1px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
-.trip-card__header {
-  margin-left: 1rem;
-  padding-top: 1rem;
-  color: #dca8a2;
-  font-size: 1.3rem;
-  font-family: "Permanent Marker";
-  text-align: left;
-  max-width: 70%;
-  text-wrap: wrap;
-}
-
-.trip-park {
-  padding: 0.5rem;
-  color: var(--color-text);
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: "nunito", sans-serif;
-  text-align: left;
-}
-
-.trip-date {
-  padding-bottom: 1rem;
-  color: #a0a0a0;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: "nunito", sans-serif;
-  text-align: left;
-  font-style: italic;
-}
-
-.trip-card__side-tab {
+/* Dark overlay for better text readability */
+.trip-card::before {
+  content: "";
   position: absolute;
-  right: 0px;
-  top: 15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.trip-card__overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0px;
-  background: #111;
-  opacity: 80%;
-  border-radius: 15px 0 0 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 90%;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-  z-index: 2;
-  align-items: center;
-  border-right: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  min-width: 50px;
+  padding: 1.5rem;
 }
 
-.trip-card__side-tab .icon-button {
-  background: transparent;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  margin: 0;
-  cursor: pointer;
-  filter: invert(10%) sepia(20%) saturate(80%) brightness(80%) contrast(200%);
+.trip-card__header h3 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.4rem;
+  color: #ffe28a;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.2;
+  max-width: 75%;
 }
 
-.trip-card__side-tab .icon-button:hover {
-  background-color: transparent;
-  filter: drop-shadow(0 0 6px #c3a367) invert(10%);
-  transform: scale(1.15);
-  transition: transform 0.2s;
-  transform: rotate(-10deg);
-}
-
-.trip-card__side-tab .hiker-icon {
-  width: 45px;
-  filter: invert (100%);
-}
-.trip-card__side-tab .hiker-icon:hover {
-  filter: drop-shadow(0 0 6px #c3a367) invert(10%);
-  transform: scale(1.15);
-  transition: transform 0.2s;
-  transform: rotate(-10deg);
-}
-.view-camp-btn {
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
+.trip-park {
+  font-size: 1rem;
+  color: #dca8a2;
   font-weight: 600;
-  background-color: #5a786f;
-  color: #f5f5f5;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: "nunito", sans-serif;
-  transition: background-color 0.2s ease-in-out;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-.view-camp-btn:hover {
-  background-color: #3b5e56;
-}
-.trip-card__add-hover {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.trip-card:hover .trip-card__add-hover {
-  opacity: 1;
-}
-
-.icon-tooltip-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tooltip-content,
-.tool-tip-reveal {
-  position: absolute;
-  right: 110%;
-  top: 50%;
-  transform: translateY(-50%);
-  min-width: 140px;
-  max-width: 220px;
-  background: #182220;
-  opacity: 90%;
-  color: var(--color-text);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(59, 58, 58, 0.9);
-  z-index: 100;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-
-.add-new-dash {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0.75rem;
-}
-
-.add-new-dash button,
-.trip-btn {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0px;
-}
-
-.add-new-dash button:hover {
-  color: #777;
+.trip-date {
+  font-size: 0.85rem;
+  color: #ccc;
+  font-style: italic;
+  margin: 0.25rem 0 1rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .trip-preview {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
+  background: rgba(16, 16, 16, 0.8);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  border-left: 3px solid #f9d342;
 }
 
 .trip-preview-label {
-  font-weight: bold;
-  color: #ffe28a;
-  font-family: "nunito", sans-serif;
+  font-size: 0.8rem;
+  color: #f9d342;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem 0;
 }
 
 .trip-preview-list {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
   margin: 0;
 }
 
 .trip-preview-list li {
-  color: #ccc;
-  font-family: "nunito", sans-serif;
+  color: #eee;
+  font-size: 0.8rem;
+  margin: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-@media (max-width: 768px) {
-  /* .trip-list {
-    margin: 0 auto;
-    padding: 1rem;
-    min-width: 350px;
-  } */
 
-  .trip-list {
-    display: flex;
+/* Action Buttons */
+.trip-card__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.trip-summary-btn,
+.view-camp-btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.trip-summary-btn {
+  background: linear-gradient(135deg, #dca8a2, #c89791);
+  color: white;
+  box-shadow: 0 2px 8px rgba(220, 168, 162, 0.3);
+}
+
+.trip-summary-btn:hover {
+  background: linear-gradient(135deg, #c89791, #b88680);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 168, 162, 0.4);
+}
+
+.view-camp-btn {
+  background: linear-gradient(135deg, #5a786f, #42665c);
+  color: white;
+  box-shadow: 0 2px 8px rgba(90, 120, 111, 0.3);
+}
+
+.view-camp-btn:hover {
+  background: linear-gradient(135deg, #42665c, #335951);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 120, 111, 0.4);
+}
+
+.trip-card__side-tab {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(16, 16, 16, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 12px 0 0 12px;
+  padding: 0.75rem 0.5rem;
+  z-index: 3;
+  border-left: 2px solid rgba(249, 211, 66, 0.3);
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.4);
+}
+
+.trip-card__side-tab .icon-tooltip-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FIX FOR DELETE ICON */
+.trip-card__side-tab .icon-button {
+  width: 32px;
+  height: 32px;
+  padding: 0.4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  /* border-radius: 6px; */
+  transition: all 0.2s ease;
+  /* REMOVE the transparent color and fix the filter */
+  filter: brightness(0) invert(1);
+}
+
+.trip-card__side-tab .icon-button:hover {
+  background: rgba(249, 211, 66, 0.2);
+  transform: scale(1, 1);
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px #f9d342);
+}
+
+/* Style individual action icons */
+.trip-card__side-tab .icon-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Specific colors for different actions */
+.trip-card__side-tab .icon-tooltip-container:nth-child(1) .icon-button:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px #5a786f); /* Green for add */
+}
+
+.trip-card__side-tab .icon-tooltip-container:nth-child(2) .icon-button:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px #dca8a2); /* Pink for edit */
+}
+
+.trip-card__side-tab .icon-tooltip-container:nth-child(3) .icon-button:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px #ff6b6b); /* Red for delete */
+}
+
+.add-new-dash {
+  max-width: 400px;
+  margin: 3rem auto 0;
+  padding: 0;
+}
+
+.add-new-dash .trip-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f9d342, #ffe28a);
+  color: #222;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(249, 211, 66, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-new-dash .trip-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.add-new-dash .trip-btn:hover::before {
+  left: 100%;
+}
+
+.add-new-dash .trip-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(249, 211, 66, 0.5);
+  background: linear-gradient(135deg, #ffe28a, #f9d342);
+}
+
+@media (max-width: 768px) {
+  .trip-dashboard-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .trip-dashboard-container h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .trip-list__cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .trip-card__actions {
     flex-direction: column;
-    min-width: 350px;
-    width: 100%;
-    align-items: center;
-    /* padding: 1rem; */
-    max-width: 500px;
-    text-align: center;
-    margin: 0 auto;
     gap: 0.5rem;
+  }
+
+  .trip-card__side-tab {
+    top: 10px;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .trip-card__side-tab .icon-button {
+    width: 28px;
+    height: 28px;
   }
 }

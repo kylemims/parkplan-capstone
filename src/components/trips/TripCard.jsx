@@ -37,45 +37,62 @@ export const TripCard = ({ trip, onDelete, onEdit }) => {
   return (
     <div className="trip-card" style={{ backgroundImage: `url(${imageUrl})` }}>
       <div className="trip-card__overlay">
-        <div className="trip-card__header">
-          <h3>{trip.name}</h3>
-        </div>
         <div className="trip-card__content">
-          <p className="trip-park">{trip.park?.name}</p>
+          <div className="trip-card__header">
+            <h3>{trip.name}</h3>
+          </div>
+          <p className="trip-park">{parkObj?.name}</p>
           <p className="trip-date">Created: {new Date(trip.createdAt).toLocaleDateString()}</p>
+
           {tripItems.length > 0 && (
             <div className="trip-preview">
-              <p className="trip-preview-label">Itinerary:</p>
+              <p className="trip-preview-label">Itinerary Preview:</p>
               <ul className="trip-preview-list">
                 {tripItems.slice(0, 2).map((item) => (
                   <li key={item.id}>
-                    {item.type === "campground" ? "🏕️" : "🎯"} {item.title}
+                    <span>{item.type === "campground" ? "🏕️" : "🎯"}</span>
+                    <span>{item.title}</span>
                   </li>
                 ))}
+                {tripItems.length > 2 && (
+                  <li>
+                    <span>📝</span>
+                    <span>+{tripItems.length - 2} more items</span>
+                  </li>
+                )}
               </ul>
             </div>
           )}
         </div>
-        <button className="trip-summary-btn" onClick={() => navigate(`/trips/${trip.id}/summary`)}>
-          View Trip Summary
-        </button>
-        <button className="view-camp-btn" onClick={() => navigate(`/trips/${trip.id}/campgrounds`)}>
-          View Campgrounds
-        </button>
+
+        <div className="trip-card__actions">
+          <button className="trip-summary-btn" onClick={() => navigate(`/trips/${trip.id}/summary`)}>
+            View Summary
+          </button>
+          <button className="view-camp-btn" onClick={() => navigate(`/trips/${trip.id}/campgrounds`)}>
+            Campgrounds
+          </button>
+        </div>
+
         <div className="trip-card__side-tab">
           <IconTooltipButton
-            iconSrc="/images/add-icon.svg"
-            tooltipContent={"Add Activities"}
+            iconSrc="/icons/add-activity.svg"
+            tooltipContent="Add Activities"
             onClick={() => navigate(`/trips/${trip.id}/details/${parkObj?.code}`)}
           />
           <IconTooltipButton
-            iconSrc="/images/edit-icon.svg"
-            tooltipContent={"Edit this Trip"}
+            iconSrc="/icons/camper.svg"
+            tooltipContent="Add Camping"
+            onClick={() => navigate(`/trips/${trip.id}/campgrounds`)}
+          />
+          <IconTooltipButton
+            iconSrc="/icons/edit.svg"
+            tooltipContent="Edit Trip"
             onClick={() => onEdit(trip.id)}
           />
           <IconTooltipButton
-            iconSrc="/images/delete-icon.svg"
-            tooltipContent={"Delete this Trip"}
+            iconSrc="/icons/trash.svg"
+            tooltipContent="Delete Trip"
             onClick={() => onDelete(trip.id)}
           />
         </div>
