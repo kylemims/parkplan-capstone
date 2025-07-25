@@ -153,6 +153,46 @@ h1 {
   background-color: #97573d;
   color: white;
 }
+.park-weather-section {
+  margin-top: 2rem;
+  /* padding: 1.5rem; */
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+.weather-panel {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  /* background: var(--surface-color, #f0f4f3); */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.weather-panel h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  color: black;
+}
+
+.weather-month {
+  background: rgb(242, 242, 242);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 768px) {
   .park-details-container {
     /* padding: 0.5rem; */
