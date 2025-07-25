@@ -83,12 +83,19 @@ export const ParkDetails = () => {
             <h3>Average Monthly Weather</h3>
             <p>This is general climate data based on historical trends.</p>
             <ul className="weather-grid">
-              {weather.slice(0, 6).map((month, i) => (
+              {weather.slice(0, 12).map((month, i) => (
                 <li key={i} className="weather-month">
                   <strong>{month.month}</strong>
-                  <br />
-                  🌡️ {month.temp}°F
-                  <br />☔ {month.precip} in
+                  <div className="weather-data">
+                    <div className="weather-item">
+                      <img src="/icons/temp.svg" alt="Temperature" className="weather-icon" />
+                      <span>{month.temp}°F</span>
+                    </div>
+                    <div className="weather-item">
+                      <img src="/icons/rainy.svg" alt="Precipitation" className="weather-icon" />
+                      <span>{month.precip} in</span>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>

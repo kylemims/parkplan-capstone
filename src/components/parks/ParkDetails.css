@@ -1,126 +1,138 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 .park-details-container {
-  width: 100%;
-  max-width: 500px;
-  margin: 0rem auto;
-  margin-top: 2rem;
-  color: var(--color-text);
-  border-radius: 12px;
-  border-width: 1px;
-  border-style: groove;
-  border-color: rgb(43, 43, 43);
-  font-family: "Helvetica Neue", sans-serif;
-  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: "nunito", sans-serif;
+  color: var(--color-text, #f0f0f0);
+  background-color: #1a1a1a;
+  border-radius: 10px;
 }
 
 .park-deets-header {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   font-size: 2.5rem;
+  color: #ffe28a;
 }
 
 .park-details-container .park-location {
-  font-size: 0.95rem;
-  color: #a0a0a0;
-  padding-left: 5px;
+  font-size: 1rem;
+  color: #ccc; /* Match TripSummary h2 color */
+  padding-left: 0;
   text-align: left;
+  margin-bottom: 0.5rem;
 }
 
 .park-details-container .park-tagline {
   font-style: italic;
-  color: #c0c0c0;
-  padding-left: 5px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  color: #aaa; /* Slightly muted */
+  padding-left: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
   text-align: left;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
-.park-details-container .carousel-container {
+.carousel-container {
   position: relative;
-  margin: 0.75rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .park-details-container .carousel-image {
   width: 100%;
-  max-height: 200px;
+  min-height: 217px;
+  max-height: 300px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(63, 62, 62, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: block;
 }
 
 .park-details-container .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Changed from 35% to 50% for true center */
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6); /* Added background for better visibility */
   color: white;
   border: none;
-  font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   z-index: 10;
-  border-radius: 6px;
-  width: 2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.park-details-container .carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .park-details-container .carousel-btn:first-of-type {
-  left: 0px;
+  left: 1rem; /* More space from edge */
 }
 
 .park-details-container .carousel-btn:last-of-type {
-  right: 0px;
+  right: 1rem; /* More space from edge */
 }
 
 .unparked-section {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  padding-left: 0px;
-  justify-content: left;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, rgba(16, 16, 16, 0.8), rgba(4, 4, 4, 0.9));
+  border-radius: 10px;
+  border-left: 4px solid #dca8a2; /* Match your todo-card style */
 }
 
 .special-block {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: start;
-  gap: 10px;
-  margin-left: 0px auto;
-  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem;
+  background-color: rgba(34, 34, 34, 0.5);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 
-.icon-block {
-  margin: 0px;
-  display: flex;
+.special-block:hover {
+  background-color: rgba(34, 34, 34, 0.8);
 }
 
 .park-icon {
-  min-height: 21px;
-  min-width: 21px;
-  /* padding-left: 3px; */
+  min-height: 24px;
+  min-width: 24px;
+  filter: drop-shadow(0 0 3px rgba(255, 226, 138, 0.3));
 }
 
 .bold-block h5 {
-  font-size: 1.2rem;
-  margin: 0px;
+  font-size: 1.1rem;
+  margin: 0;
+  color: #dca8a2; /* Match your accent colors */
+  min-width: 100px; /* Consistent alignment */
 }
 
 .best-time {
   font-size: 1rem;
   color: var(--color-text);
-  font-weight: 350;
-  text-wrap: wrap;
-  padding: 0px;
-  margin: 0px;
+  font-weight: 00;
+  margin: 0;
 }
 
 .add-trip-btn-container {
@@ -145,176 +157,126 @@ h1 {
 }
 
 .park-details-container .park-deets-btn {
-  width: 100%;
+  background-color: #5a786f; /* Match TripSummary buttons */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .park-details-container .park-deets-btn:hover {
-  background-color: #97573d;
-  color: white;
+  background-color: #42665c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.park-weather-section {
+/* .park-weather-section {
   margin-top: 2rem;
-  /* padding: 1.5rem; */
   border-radius: 1rem;
-
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
+} */
+
 .weather-panel {
+  background: linear-gradient(to top, rgba(4, 4, 4, 0.7), rgba(16, 16, 16, 0.7));
+  border-left: 4px solid #ffe28a; /* Match TripSummary weather */
   margin-top: 2rem;
   padding: 1.5rem;
-  border-radius: 1rem;
-  /* background: var(--surface-color, #f0f4f3); */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .weather-panel h3 {
-  font-size: 1.5rem;
+  color: #ffe28a; /* Match TripSummary weather title */
+  margin-top: 0;
   margin-bottom: 0.5rem;
-  color: var(--color-text);
 }
 
 .weather-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1rem;
   list-style: none;
   padding: 0;
   margin-top: 1rem;
-  color: black;
 }
 
 .weather-month {
-  background: rgb(242, 242, 242);
-  border-radius: 0.75rem;
+  background: #2b2b2b;
+  border-radius: 0.5rem;
   padding: 0.75rem;
   text-align: center;
-  font-size: 0.95rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+  color: #eee;
+  border: 1px solid rgba(249, 211, 66, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.weather-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.weather-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(93%) sepia(6%) saturate(7%) hue-rotate(41deg) brightness(106%)
+    contrast(100%);
+  /* This filter makes the SVG light colored to match your theme */
+}
+
+/* Optional: Add different colors for different weather types */
+/* .weather-item:first-child .weather-icon { */
+/* filter: brightness(0) saturate(100%) invert(85%) sepia(61%) saturate(2298%) hue-rotate(343deg) */
+/* brightness(102%) contrast(96%); */
+/* This gives the temperature icon a warm orange tint */
+/* } */
+
+/* .weather-item:last-child .weather-icon {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(28%) saturate(2332%) hue-rotate(189deg)
+    brightness(95%) contrast(96%); */
+/* This gives the rain icon a cool blue tint */
+/* } */
 
 @media (max-width: 768px) {
-  .park-details-container {
-    /* padding: 0.5rem; */
-    padding-top: 0rem;
-    border: none;
-  }
-
-  .park-details-container h1 {
-    font-size: 2rem;
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
-  .park-details-container .carousel-image {
-    max-height: 170px;
-  }
-
-  .park-details-container .unparked-section {
-    margin: 0 auto;
-    /* margin-left: 0px; */
-  }
   .park-details-container .carousel-btn {
-    font-size: 1rem;
-    padding: 0.2rem 0.4rem;
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    padding: 0.3rem;
   }
 
-  .park-details-container .park-tagline {
-    font-style: italic;
-    color: #c0c0c0;
-    padding-left: 5px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    text-align: center;
+  .park-details-container .carousel-btn:first-of-type {
+    left: 0.5rem;
   }
 
-  .best-time {
-    font-size: 0.75rem;
-    display: flex;
-    align-items: center;
+  .park-details-container .carousel-btn:last-of-type {
+    right: 0.5rem;
+  }
+
+  .special-block {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .bold-block h5 {
-    font-size: 0.85rem;
-    margin: 0 auto;
-  }
-  .unparked-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0px;
-    justify-content: baseline;
-    align-content: baseline;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-
-  .special-block p {
-    display: flex;
-    margin-bottom: 0 auto;
-  }
-}
-@media only screen and (min-height: 800px) and (max-width: 600px) {
-  .park-details-container {
-    /* padding: 0.5rem; */
-    padding-top: 1.5rem;
-    border: none;
-  }
-
-  .park-details-container h1 {
-    font-size: 2rem;
-    margin-top: 0px;
-    margin-bottom: 30px;
-  }
-  .park-details-container .carousel-image {
-    max-height: 250px;
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .park-details-container .unparked-section {
-    margin: 0 auto;
-    /* margin-left: 0px; */
-  }
-  .park-details-container .carousel-btn {
-    font-size: 1rem;
-    padding: 0.2rem 0.4rem;
-  }
-
-  .park-details-container .park-tagline {
-    font-style: italic;
-    color: #c0c0c0;
-    padding-left: 5px;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    text-align: center;
-  }
-
-  .best-time {
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .bold-block h5 {
-    font-size: 0.85rem;
-    margin: 0 auto;
-  }
-  .unparked-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0px;
-    justify-content: baseline;
-    align-content: baseline;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-  }
-
-  .special-block p {
-    display: flex;
-    margin-bottom: 0 auto;
+    min-width: auto;
   }
 }

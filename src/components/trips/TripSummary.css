@@ -1,7 +1,7 @@
 .trip-summary {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   font-family: "nunito", sans-serif;
   color: var(--color-text, #f0f0f0);
   background-color: #1a1a1a;
@@ -97,7 +97,7 @@
 }
 .weather-preview {
   background-color: #1f1f1f;
-  border-left: 4px solid #f9d342;
+  border-left: 4px solid #ffe28a;
   padding: 1rem 1.5rem;
   margin-top: 2rem;
   border-radius: 0.5rem;
@@ -107,7 +107,7 @@
 
 .weather-preview h3 {
   margin-top: 0;
-  color: #f9d342;
+  color: #ffe28a;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
