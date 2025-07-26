@@ -1,14 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./NavBar.css";
-import { NewTripModal } from "../forms/NewTripModal.jsx";
 
 export const NavBar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [navBackground, setNavBackground] = useState("transparent-nav");
 
-  // Your new professional links
   const profileLinks = [
     {
       icon: "/icons/email.svg",
@@ -31,7 +29,7 @@ export const NavBar = () => {
     {
       icon: "/icons/portfolio.svg",
       label: "Portfolio",
-      href: "https://www.kylemims.com", // Update when deployed
+      href: "https://www.kylemims.com",
       ariaLabel: "View Kyle's portfolio website",
     },
   ];
@@ -70,23 +68,69 @@ export const NavBar = () => {
     setMenuOpen(false);
   };
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && !event.target.closest(".nav-menu-drawer") && !event.target.closest(".hamburger")) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuOpen]);
+
   return (
-    <nav className="navbar transparent-nav">
+    <nav className={`navbar ${navBackground}`}>
+      {/* LEFT SIDE: Hamburger */}
       <div className="nav-header">
-        <button className="hamburger" onClick={() => setMenuOpen((prev) => !prev)}>
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}>
           <img src="/images/hamburger-icon-white.svg" alt="Menu" className="hamburger-icon" />
         </button>
       </div>
 
+      {/* RIGHT SIDE: Desktop Nav Links */}
+      <ul className="desktop-nav-links">
+        <li>
+          <button onClick={() => handleLinkClick("/")}>Home</button>
+        </li>
+        <li>
+          <button onClick={() => handleLinkClick("/trips")}>Trips</button>
+        </li>
+        <li>
+          <button onClick={() => handleLinkClick("logout")}>Logout</button>
+        </li>
+      </ul>
+
+      {/* SLIDE-OUT DRAWER MENU */}
       <ul className={`nav-menu-drawer ${menuOpen ? "open" : ""}`}>
         <li>
-          <button onClick={() => handleLinkClick("/")}>HOME</button>
+          <button onClick={() => handleLinkClick("/")}>Home</button>
         </li>
         <li>
-          <button onClick={() => handleLinkClick("/trips")}>TRIPS</button>
+          <button onClick={() => handleLinkClick("/trips")}>Trips</button>
         </li>
         <li>
-          <button onClick={() => handleLinkClick("logout")}>LOGOUT</button>
+          <button onClick={() => handleLinkClick("logout")}>Logout</button>
         </li>
 
         {/* Developer Section */}

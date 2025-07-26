@@ -229,7 +229,7 @@
 }
 
 .trip-summary-btn {
-  background: linear-gradient(135deg, #dca8a2, #c89791);
+  background: #dca8a2;
   color: white;
   box-shadow: 0 2px 8px rgba(220, 168, 162, 0.3);
 }

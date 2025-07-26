@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUser, getUserByEmail } from "../../services/userService";
-import { FormInput } from "../forms/FormInput.jsx";
 import { HomeHero } from "../parks/HomeHero.jsx";
 import { WelcomeLogoHero } from "../parks/WelcomeLogoHero.jsx";
 import "./Login.css";
@@ -19,7 +18,6 @@ export const Register = () => {
             id: createdUser.id,
           })
         );
-
         navigate("/");
       }
     });
@@ -56,28 +54,25 @@ export const Register = () => {
                 onChange={updateUser}
                 type="text"
                 id="name"
-                placeholder="Name"
+                placeholder="Full Name"
                 required
                 autoFocus
               />
-              <br></br>
-              <br></br>
               <input
                 className="form-input"
                 onChange={updateUser}
                 type="email"
                 id="email"
-                placeholder="Email address"
+                placeholder="Email Address"
                 required
               />
+              <div className="auth-link">
+                <button type="submit">Create Account</button>
+                <span>
+                  Already have an account? <Link to="/login">Sign in</Link>
+                </span>
+              </div>
             </form>
-            <br></br>
-            <div className="auth-link">
-              <button type="submit">Register</button>
-              <span>
-                Not a member? <a href="/login">Sign in</a>
-              </span>
-            </div>
           </fieldset>
         </section>
       </div>

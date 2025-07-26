@@ -28,13 +28,15 @@ export const PreferencesForm = () => {
     navigate("/parks/results", { state: { preferences: prefs } });
   };
 
+  const isFormValid = season || weather || interests.length > 0;
+
   return (
     <section className="preferences-form fade-in-block">
       <h1>What does your dream trip look like?</h1>
 
       <form onSubmit={handleSubmit}>
         <label>
-          <select value={season} onChange={(e) => setSeason(e.target.value)}>
+          <select value={season} onChange={(e) => setSeason(e.target.value)} required>
             <option value="">What season do you prefer?</option>
             <option value="spring">Spring</option>
             <option value="summer">Summer</option>
@@ -44,7 +46,7 @@ export const PreferencesForm = () => {
         </label>
 
         <label>
-          <select value={weather} onChange={(e) => setWeather(e.target.value)}>
+          <select value={weather} onChange={(e) => setWeather(e.target.value)} required>
             <option value="">How about the weather?</option>
             <option value="cool & dry">Cool & Dry</option>
             <option value="warm & sunny">Warm & Sunny</option>
@@ -52,6 +54,7 @@ export const PreferencesForm = () => {
             <option value="mild">Mild</option>
           </select>
         </label>
+
         <fieldset>
           <legend>What are you into?</legend>
           <div className="interest-grid">
@@ -73,7 +76,7 @@ export const PreferencesForm = () => {
           </div>
         </fieldset>
 
-        <button type="submit" className="home-btn">
+        <button type="submit" className="home-btn" disabled={!isFormValid}>
           See Park Matches
         </button>
       </form>

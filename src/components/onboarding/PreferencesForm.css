@@ -1,198 +1,250 @@
-.preferences-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2.5rem;
-  background: linear-gradient(135deg, rgba(16, 16, 16, 0.95), rgba(34, 34, 34, 0.9));
-  border-radius: 1rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 226, 138, 0.1);
-  color: #eee;
-  position: relative;
-  overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.preferences-form > * {
-  position: relative;
-  z-index: 1;
+/* REMOVE min-height: 100vh - This causes the rubber band issue */
+.preferences-form {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 2rem 1rem 6rem; /* Extra bottom padding for button */
+  text-align: center;
+  width: 100%;
+  /* Remove any height restrictions */
+}
+
+.fade-in-block {
+  animation: fadeIn 1s ease-out;
+  width: 100%;
+  /* Remove height restrictions */
 }
 
 .preferences-form h1 {
-  font-family: "Staatliches"; /* Match your other headers */
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  text-align: center;
   color: var(--color-accent);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: 0.5px;
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* Add a subtle underline accent */
 .preferences-form h1::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #dca8a2, #ffe28a);
-  margin: 1rem auto 0;
+  background-color: var(--color-primary);
+  margin: 1rem auto 3rem;
   border-radius: 2px;
 }
 
-.preferences-form label {
+/* FORM STYLING */
+.preferences-form form {
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #dca8a2; /* Your accent pink */
-  gap: 0rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.9rem;
+  gap: 2rem;
+  padding-bottom: 4rem; /* Ensure space for button */
+}
+
+.preferences-form label {
+  display: block;
+  width: 100%;
 }
 
 .preferences-form select {
   width: 100%;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
+  background-color: rgba(33, 33, 34, 0.8);
+  border: 2px solid var(--color-tertiary);
   border-radius: 8px;
-  border: 2px solid rgba(220, 168, 162, 0.3);
+  color: var(--color-text);
   font-size: 1rem;
-  background: rgba(34, 34, 34, 0.8);
-  color: #eee;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .preferences-form select:focus {
   outline: none;
-  border-color: #dca8a2;
-  box-shadow: 0 0 0 3px rgba(220, 168, 162, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 226, 138, 0.2);
 }
 
-.preferences-form legend {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  text-align: center;
-  color: #dca8a2;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
+/* FIELDSET STYLING */
 .preferences-form fieldset {
   border: none;
   padding: 0;
-  margin-top: 1rem;
+  margin: 2rem 0;
 }
 
+.preferences-form legend {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* INTEREST GRID */
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .interest-card {
-  background: #ffe28a;
-  border-radius: 16px;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--color-neutral);
   border: 3px solid transparent;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-  line-height: 1.2;
-}
-
-.interest-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateX(-100%);
-  transition: transform 0.6s ease;
-}
-
-.interest-card:hover::before {
-  transform: translateX(100%);
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 120px;
 }
 
 .interest-card:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .interest-card.selected {
-  border-color: #5a786f;
-  background: linear-gradient(135deg, #5a786f, #42665c);
-  color: white;
+  background-color: var(--color-accent);
+  border-color: var(--color-primary);
+  color: var(--color-bg);
   transform: translateY(-2px);
-}
-
-.interest-card.selected .interest-icon {
-  filter: brightness(0) invert(1);
+  box-shadow: 0 8px 25px rgba(255, 226, 138, 0.3);
 }
 
 .interest-icon {
-  width: 44px;
-  height: 44px;
-  margin-bottom: 0.75rem;
-  transition: all 0.2s ease;
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease;
 }
 
-.interest-card:hover .interest-icon {
-  transform: scale(1.1);
+.interest-card.selected .interest-icon {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(9%) saturate(1077%) hue-rotate(314deg) brightness(97%)
+    contrast(95%);
 }
 
 .interest-card span {
-  display: block;
   font-weight: 700;
-  font-size: 0.95rem;
-  color: #222;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.interest-card.selected span {
-  color: white;
-}
-
-.preferences-form .home-btn {
-  padding: 1rem 2rem;
-  background-color: #dca8a2;
+/* SUBMIT BUTTON - FIXED POSITIONING ISSUE */
+.home-btn {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #a67c4a 100%);
   color: white;
   border: none;
+  padding: 1.2rem 3rem;
   border-radius: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
-  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 3rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 25px rgba(194, 144, 89, 0.4);
+  margin: 3rem auto 2rem; /* Add more margin */
+  display: block;
+  width: fit-content;
 }
 
-.preferences-form .home-btn::before {
+.home-btn::before {
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); */
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
-.preferences-form .home-btn:hover::before {
+.home-btn:hover::before {
   left: 100%;
 }
 
-.preferences-form .home-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(90, 120, 111, 0.4);
+.home-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(194, 144, 89, 0.6);
+  background: linear-gradient(135deg, #a67c4a 0%, var(--color-primary) 100%);
+}
+
+.home-btn:disabled {
+  background: var(--color-muted);
+  color: var(--color-tertiary);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .preferences-form {
+    padding: 1.5rem 1rem 8rem; /* More bottom padding on mobile */
+  }
+
+  .preferences-form h1 {
+    font-size: 2rem;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .interest-card {
+    padding: 1.5rem 1rem;
+    min-height: 100px;
+  }
+
+  .home-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin: 2rem auto 3rem; /* Extra margin on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .preferences-form {
+    padding: 1rem 0.5rem 10rem; /* Even more bottom padding */
+  }
+
+  .preferences-form h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-btn {
+    width: 90%;
+    max-width: 280px;
+    margin: 2rem auto 4rem; /* Maximum bottom margin */
+  }
 }

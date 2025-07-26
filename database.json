@@ -569,20 +569,6 @@
       "id": "10"
     },
     {
-      "name": "Get smokied",
-      "parkId": 6,
-      "userId": 2,
-      "createdAt": "2025-05-14T08:39:25.623Z",
-      "id": "15"
-    },
-    {
-      "name": "let us eat dirt",
-      "parkId": 4,
-      "userId": 2,
-      "createdAt": "2025-05-14T08:41:47.920Z",
-      "id": "16"
-    },
-    {
       "name": "Take me to Zion! sike...take me to Bryce",
       "parkId": 5,
       "userId": 5,
@@ -667,11 +653,11 @@
       "id": "39"
     },
     {
-      "id": "8867",
-      "name": "Greg's fun trip",
+      "id": "27c5",
+      "name": "Lookin' for all the trees!",
       "userId": "2",
-      "createdAt": "2025-07-25T20:24:40.156Z",
-      "parkId": 10
+      "createdAt": "2025-07-26T07:57:29.293Z",
+      "parkId": 13
     }
   ],
   "tripItems": [
@@ -754,6 +740,108 @@
       "title": "Geology Talk (30 minutes) South Rim Village: 2:30 pm",
       "description": "Geology Talk Ranger Program - 2:30 pm daily (during summer 2025). Gain insight into Grand Canyon’s unique geologic story. Meet in front of Yavapai Geology Museum. Program duration: 30 minutes. Learn how this immense canyon formed and the science behind the landscape. Knowing some of the stories encoded in the rock layers will enrich your understanding and enhance your experience at Grand Canyon.",
       "duration": "<p>The Geology Talk program is presented Daily at 11 am - during spring 2025..</p>"
+    },
+    {
+      "id": "bc88",
+      "tripId": 27,
+      "type": "activity",
+      "title": "Panther Winter Trail",
+      "description": "Taking its name from Panther Gap (8,600 feet), the Panther Trail is part of a difficult loop for experienced skiers. Steep grades and dense forests guard the great views from Panther Gap.",
+      "duration": "4-6 Hours",
+      "activityData": {
+        "location": "Wolverton Parking Area",
+        "fees": "Free",
+        "reservationRequired": false,
+        "petFriendly": false,
+        "accessibility": "Accessible",
+        "seasons": [],
+        "timeOfDay": []
+      }
+    },
+    {
+      "id": "5826",
+      "tripId": 27,
+      "type": "activity",
+      "title": "Crescent Winter Trail",
+      "description": "The trail connects the General Sherman Tree with the end of Crescent Meadow Road (see Crescent Meadow Road Trail). The trail passes through the heart of the Giant Forest. The skiing is mostly easy, but has several short grades that require turning through the thick forest.",
+      "duration": "4-6 Hours",
+      "activityData": {
+        "location": "McKinley Tree Junction (On the Congress Trail)",
+        "fees": "Free",
+        "reservationRequired": false,
+        "petFriendly": false,
+        "accessibility": "Accessible",
+        "seasons": [],
+        "timeOfDay": []
+      }
+    },
+    {
+      "id": "4123",
+      "tripId": 27,
+      "type": "activity",
+      "title": "Old Lodgepole Road Winter Trail",
+      "description": "This old road connects the Lodgepole Visitor Center with the General Sherman Tree. The skiing is easy, except for a steep grade as the trail approaches the General Sherman Tree.",
+      "duration": "3-4 Hours",
+      "activityData": {
+        "location": "Lodgepole Campground Area",
+        "fees": "Free",
+        "reservationRequired": false,
+        "petFriendly": false,
+        "accessibility": "Accessible",
+        "seasons": [],
+        "timeOfDay": []
+      }
+    },
+    {
+      "id": "da47",
+      "tripId": 27,
+      "type": "campground",
+      "title": "Hodgdon Meadow Campground",
+      "description": "Hodgdon Meadow Campground is conveniently located along the Big Oak Flat Road at the Big Oak Flat En...",
+      "duration": "Overnight",
+      "campgroundData": {
+        "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232451",
+        "fees": [
+          {
+            "cost": "36.00",
+            "description": "From mid-April through mid-October, campsites are available by reservation only.",
+            "title": "Hodgdon Meadow Campground Reservation Fee - Non-Group Site  (approx. mid-April through mid-October)"
+          },
+          {
+            "cost": "28.00",
+            "description": "From approximately mid-October through mid-April, campsites are available on a first-come, first-served basis.",
+            "title": "Hodgdon Meadow Campground First-Come, First-Served Fee - Non-Group Site (approx. mid-October through mid-April)"
+          },
+          {
+            "cost": "75.00",
+            "description": "The group campsites are open approximately mid-April through mid-October.",
+            "title": "Hodgdon Meadow Campground Group Site Fee - Group Site (open approx. mid-April through mid-October)"
+          }
+        ],
+        "amenities": {
+          "trashRecyclingCollection": "Yes - year round",
+          "toilets": [
+            "Flush Toilets - year round"
+          ],
+          "internetConnectivity": "No",
+          "showers": [
+            "None"
+          ],
+          "cellPhoneReception": "No",
+          "laundry": "No",
+          "amphitheater": "No",
+          "dumpStation": "No",
+          "campStore": "No",
+          "staffOrVolunteerHostOnsite": "Yes - seasonal",
+          "potableWater": [
+            "Yes - year round"
+          ],
+          "iceAvailableForSale": "No",
+          "firewoodForSale": "No",
+          "foodStorageLockers": "Yes - year round"
+        },
+        "totalSites": "105"
+      }
     }
   ]
 }

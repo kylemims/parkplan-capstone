@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import { useNavigate, Link } from "react-router-dom";
 import { getUserByEmail } from "../../services/userService";
 import { HomeHero } from "../parks/HomeHero.jsx";
 import { WelcomeLogoHero } from "../parks/WelcomeLogoHero.jsx";
+import "./Login.css";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -41,21 +41,19 @@ export const Login = () => {
               <input
                 type="email"
                 value={email}
-                id="tripName"
                 onChange={(evt) => setEmail(evt.target.value)}
                 className="form-input"
-                placeholder="Email"
+                placeholder="Email Address"
                 required
                 autoFocus
               />
+              <div className="auth-link">
+                <button type="submit">Sign In</button>
+                <span>
+                  Not a member? <Link to="/register">Create account</Link>
+                </span>
+              </div>
             </form>
-            <br></br>
-            <div className="auth-link">
-              <button type="submit">Sign in</button>
-              <span>
-                Not a member? <a href="/register">Register</a>
-              </span>
-            </div>
           </fieldset>
         </section>
       </div>

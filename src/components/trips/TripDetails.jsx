@@ -63,6 +63,7 @@ export const TripDetails = () => {
 
   const stripHtml = (html) => {
     if (!html) return "";
+    // regex pattern to remove HTML tags and return plain text '(<[^>]*>)'
     return html.replace(/<[^>]*>/g, "");
   };
 
