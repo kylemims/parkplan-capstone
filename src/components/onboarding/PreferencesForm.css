@@ -8,10 +8,14 @@
 .preferences-form {
   background-color: var(--color-bg);
   color: var(--color-text);
-  padding: 2rem 1rem 6rem; /* Extra bottom padding for button */
+  padding: 80px 1rem 6rem 1rem; /* NEW: Boost top padding for nav height – scoot content down (adjust px if nav measures different) */
   text-align: center;
   width: 100%;
   /* Remove any height restrictions */
+  display: flex; /* NEW: Flex column to stack and grow like rubber band */
+  flex-direction: column;
+  flex: 1; /* NEW: Grow to fill space between navs */
+  overflow-y: auto; /* NEW: Enable scrolling if content overflows – the slide! */
 }
 
 .fade-in-block {
@@ -47,8 +51,10 @@
   flex-direction: column;
   gap: 2rem;
   padding-bottom: 4rem; /* Ensure space for button */
+  flex: 1; /* NEW: Let form grow inside the container */
 }
 
+/* Rest is unchanged... */
 .preferences-form label {
   display: block;
   width: 100%;
@@ -209,7 +215,7 @@
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
   .preferences-form {
-    padding: 1.5rem 1rem 8rem; /* More bottom padding on mobile */
+    padding: 80px 1rem 8rem 1rem; /* NEW: Keep top padding consistent, more bottom for tab nav */
   }
 
   .preferences-form h1 {
@@ -217,12 +223,12 @@
   }
 
   .interest-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
 
   .interest-card {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.5rem; /* CHANGED: Slimmer padding to fit 2 wide without squish */
     min-height: 100px;
   }
 
@@ -235,13 +241,22 @@
 
 @media (max-width: 480px) {
   .preferences-form {
-    padding: 1rem 0.5rem 10rem; /* Even more bottom padding */
+    padding: 80px 0.5rem 10rem 0.5rem; /* NEW: Consistent top, max bottom */
   }
 
   .preferences-form h1 {
     font-size: 1.8rem;
   }
+  .interest-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0 0.5rem; /* Reduce padding for smaller screens */
+  }
 
+  .interest-card {
+    padding: 1.5rem 1rem;
+    min-height: 100px;
+  }
   .home-btn {
     width: 90%;
     max-width: 280px;

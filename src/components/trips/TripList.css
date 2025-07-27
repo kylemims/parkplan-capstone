@@ -366,7 +366,9 @@
 
 @media (max-width: 768px) {
   .trip-dashboard-container {
-    padding: 1.5rem 1rem;
+    /* padding: 1.5rem 1rem; */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .trip-dashboard-container h1 {

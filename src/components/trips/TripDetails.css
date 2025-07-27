@@ -545,7 +545,8 @@
 @media (max-width: 768px) {
   .trip-details {
     padding: 1rem;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
+    padding-top: 30px;
   }
 
   .activity-card {

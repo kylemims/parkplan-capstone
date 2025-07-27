@@ -6,11 +6,11 @@
   padding: 0;
 }
 
-html,
+/* html,
 body {
   height: 100%;
   overflow-x: hidden;
-}
+} */
 /*TODO .navbar {
   display: flex;
   align-items: center;
@@ -42,8 +42,14 @@ body {
   top: 0;
   z-index: 1000;
   margin: 0;
-  background: rgba(33, 33, 34, 0.95); /* Solid background, no blur */
-  border-bottom: 1px solid rgba(255, 226, 138, 0.1);
+  .navbar.transparent-nav {
+    background: rgba(33, 33, 34, 0.6); /* Lower alpha for more see-through – like thinner tint */
+    backdrop-filter: blur(
+      10px
+    ); /* Blur under content/video – frosted glass magic! Adjust px for blur strength */
+    -webkit-backdrop-filter: blur(10px); /* For Safari/older browsers */
+    border-bottom: 1px solid rgba(255, 226, 138, 0.1); /* Keep subtle border */
+  }
   padding: 0.75rem 1rem;
   transition: all 0.3s ease;
 }

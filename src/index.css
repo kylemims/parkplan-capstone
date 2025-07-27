@@ -37,10 +37,17 @@ a:hover {
 }
 
 html,
-body {
+body,
+#root {
   background-color: var(--color-bg);
   color: var(--color-text);
   min-height: 100%;
+  height: 100%; /* Ensure full height for flex */
+  margin: 0;
+  padding-top: 20px; /* Global space for navbar – adjust if needed */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent body scroll; let main handle */
 }
 
 h1 {
@@ -81,13 +88,24 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Add to your main CSS file */
+/* App wrapper – flex holder */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Grow to fill */
+  overflow: hidden; /* Contain inner scrolls */
+}
+
+/* Main content – scrollable grower */
+.main-content {
+  flex: 1; /* Grow between navs */
+  overflow-y: auto; /* Enable scrolling! */
+}
+
+/* Mobile tweaks */
 @media (max-width: 767px) {
   body {
+    padding-top: 0px; /* Smaller for mobile navbar if needed */
     padding-bottom: 80px; /* Space for bottom nav */
-  }
-
-  .main-content {
-    padding-bottom: 80px; /* If you have a main wrapper */
   }
 }

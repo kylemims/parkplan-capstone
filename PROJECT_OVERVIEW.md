@@ -30,32 +30,48 @@ parkplan-capstone/
 │   ├── index.css
 │   ├── main.jsx
 │   ├── App.jsx
-│   ├── App.css
-│   ├── variables.css
+│   ├── variables.css 
 │   ├── components/
 │   │   ├── auth/
 │   │   │   ├── Login.jsx
 │   │   │   └── Login.css
+│   │   │   └── LogoutButton.jsx ≈
+│   │   │   └── Register.jsx
 │   │   ├── forms/
 │   │   │   ├── CreateNewTripForm.jsx
+│   │   │   ├── FormInput.jsx
+│   │   │   ├── HoverReveal.jsx
+│   │   │   ├── NewTripButtonModal.jsx
 │   │   │   ├── TripEditForm.jsx
 │   │   │   ├── NewTripModal.jsx
 │   │   │   ├── Modal.jsx
 │   │   │   └── Form.css
+│   │   │   └── Modal.css
 │   │   ├── nav/
 │   │   │   ├── NavBar.jsx
+│   │   │   ├── BottomTabNav.jsx
+│   │   │   ├── BottomTabNav.css
 │   │   │   └── NavBar.css
+│   │   ├── onboarding/
+│   │   │   ├── PreferencesForm.jsx
+│   │   │   └── PreferencesForm.css
 │   │   ├── parks/
 │   │   │   ├── ParkDetails.jsx
 │   │   │   ├── ParkDetails.css
+│   │   │   ├── ImageCarousel.jsx
+│   │   │   ├── ParkResults.jsx
+│   │   │   ├── ParkResults.css
 │   │   │   ├── HomePage.jsx
 │   │   │   ├── HomePage.css
 │   │   │   ├── CampgroundSelector.jsx
+│   │   │   ├── CampgroundSelector.css
 │   │   │   └── (other park-related components)
 │   │   ├── trips/
 │   │   │   ├── TripDashboard.jsx
 │   │   │   ├── TripCard.jsx
 │   │   │   ├── TripDetails.jsx
+│   │   │   ├── TripSummary.jsx
+│   │   │   ├── TripSummary.css
 │   │   │   ├── TripList.css
 │   │   │   ├── InfoIconHover.jsx
 │   │   │   └── (other trip-related components)
@@ -68,9 +84,9 @@ parkplan-capstone/
 │   │   ├── tripService.js
 │   │   └── userService.js
 │   ├── styles-system/
-│   │   ├── variables.css
-│   │   ├── utilities.css
-│   │   └── components.css
+│   │   ├── variables.css ≈
+│   │   ├── utilities.css ≈
+│   │   └── components.css ≈
 │   └── views/
 │       └── ApplicationViews.jsx
 ├── .github/

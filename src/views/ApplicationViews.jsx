@@ -17,66 +17,72 @@ import { BottomTabNav } from "../components/nav/BottomTabNav.jsx";
 
 export const ApplicationViews = () => {
   return (
-    <>
-      <NavBar /> {/* NavBar is now outside Routes to appear on all views */}
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Outlet />
-            </>
-          }>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+    <div className="app-container">
+      {" "}
+      {/* NEW: Overall flex wrapper – like the plate holding your burger stack */}
+      <NavBar /> {/* Fixed top bun */}
+      <main className="main-content">
+        {" "}
+        {/* NEW: Scrollable middle – the stretchy patty that grows and slides */}
+        <Routes>
           <Route
-            index
+            path="/"
             element={
-              <Authorized>
-                <HomePage />
-              </Authorized>
-            }
-          />
-          <Route path="/preferences" element={<PreferencesForm />} />
-          <Route path="/parks/results" element={<ParkResults />} />
-          <Route path="/parks/:parkId" element={<ParkDetails />} />
-          <Route
-            path="/trips"
-            element={
-              <Authorized>
-                <TripDashboard />
-              </Authorized>
-            }
-          />
-          <Route
-            path="/trips/:tripId/details/:parkCode"
-            element={
-              <Authorized>
-                <TripDetails />
-              </Authorized>
-            }
-          />
-          <Route
-            path="/trips/:tripId/edit"
-            element={
-              <Authorized>
-                <TripEditForm />
-              </Authorized>
-            }
-          />
-          <Route
-            path="/trips/:tripId/summary"
-            element={
-              <Authorized>
-                <TripSummary />
-              </Authorized>
-            }
-          />
-          <Route path="/hometest" element={<HomeTest />} />
-          <Route path="/trips/:tripId/campgrounds" element={<CampgroundSelector />} />
-        </Route>
-      </Routes>
-      <BottomTabNav />
-    </>
+              <>
+                <Outlet />
+              </>
+            }>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route
+              index
+              element={
+                <Authorized>
+                  <HomePage />
+                </Authorized>
+              }
+            />
+            <Route path="/preferences" element={<PreferencesForm />} />
+            <Route path="/parks/results" element={<ParkResults />} />
+            <Route path="/parks/:parkId" element={<ParkDetails />} />
+            <Route
+              path="/trips"
+              element={
+                <Authorized>
+                  <TripDashboard />
+                </Authorized>
+              }
+            />
+            <Route
+              path="/trips/:tripId/details/:parkCode"
+              element={
+                <Authorized>
+                  <TripDetails />
+                </Authorized>
+              }
+            />
+            <Route
+              path="/trips/:tripId/edit"
+              element={
+                <Authorized>
+                  <TripEditForm />
+                </Authorized>
+              }
+            />
+            <Route
+              path="/trips/:tripId/summary"
+              element={
+                <Authorized>
+                  <TripSummary />
+                </Authorized>
+              }
+            />
+            <Route path="/hometest" element={<HomeTest />} />
+            <Route path="/trips/:tripId/campgrounds" element={<CampgroundSelector />} />
+          </Route>
+        </Routes>
+      </main>
+      <BottomTabNav /> {/* Fixed bottom bun */}
+    </div>
   );
 };
