@@ -49,11 +49,11 @@
 
 @media (max-width: 768px) {
   .welcome-container {
-    margin: 0 auto;
+    margin-top: 0 auto;
   }
 
   .dual-logo-block {
-    padding: 0.5rem;
+    padding: 0rem;
   }
 
   .login-logo {

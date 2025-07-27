@@ -5,7 +5,7 @@
 }
 
 .homepage {
-  position: relative;
+  /* position: relative; */
   min-height: 100vh;
   overflow: hidden;
 }
@@ -149,7 +149,7 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .homepage-overlay {
-    padding: 1.5rem 1rem;
+    padding: 0rem 0rem;
     height: 100vh;
   }
 
