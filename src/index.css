@@ -47,7 +47,6 @@ body,
   padding-top: 20px; /* Global space for navbar – adjust if needed */
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Prevent body scroll; let main handle */
 }
 
 h1 {

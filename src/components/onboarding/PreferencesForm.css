@@ -8,14 +8,14 @@
 .preferences-form {
   background-color: var(--color-bg);
   color: var(--color-text);
-  padding: 80px 1rem 6rem 1rem; /* NEW: Boost top padding for nav height – scoot content down (adjust px if nav measures different) */
+  padding: 80px 1rem 6rem 1rem; /* Boost top for nav, bottom for tab – scoot content down */
   text-align: center;
   width: 100%;
-  /* Remove any height restrictions */
-  display: flex; /* NEW: Flex column to stack and grow like rubber band */
+  display: flex; /* Flex column to stack and grow like rubber band */
   flex-direction: column;
-  flex: 1; /* NEW: Grow to fill space between navs */
-  overflow-y: auto; /* NEW: Enable scrolling if content overflows – the slide! */
+  flex: 1 1 auto; /* UPDATED: Grow/shrink as needed – the stretch! */
+  overflow-y: auto; /* Enable scrolling if content overflows – the slide! */
+  min-height: auto; /* Explicit: No forced height */
 }
 
 .fade-in-block {
@@ -223,8 +223,8 @@
   }
 
   .interest-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr); /* CHANGED: Keep 2 columns on mobile – your 2x2! */
+    gap: 0.75rem; /* NEW: Smaller gap for mobile fit (visual: tighter blocks) */
   }
 
   .interest-card {
@@ -247,16 +247,7 @@
   .preferences-form h1 {
     font-size: 1.8rem;
   }
-  .interest-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    padding: 0 0.5rem; /* Reduce padding for smaller screens */
-  }
 
-  .interest-card {
-    padding: 1.5rem 1rem;
-    min-height: 100px;
-  }
   .home-btn {
     width: 90%;
     max-width: 280px;
