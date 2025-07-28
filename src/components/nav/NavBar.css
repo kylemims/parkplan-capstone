@@ -266,7 +266,7 @@ body {
 }
 
 .developer-section {
-  margin-top: auto;
+  margin-top: 60px;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 226, 138, 0.2);
   width: 100%;
@@ -543,6 +543,10 @@ body {
     width: 350px;
     left: -350px;
     padding: 4rem 2.5rem 2rem;
+  }
+
+  .developer-section {
+    margin-top: 30px;
   }
 }
 

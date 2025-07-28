@@ -36,7 +36,7 @@ export const PreferencesForm = () => {
 
       <form onSubmit={handleSubmit}>
         <label>
-          <select value={season} onChange={(e) => setSeason(e.target.value)} required>
+          <select value={season} onChange={(e) => setSeason(e.target.value)}>
             <option value="">What season do you prefer?</option>
             <option value="spring">Spring</option>
             <option value="summer">Summer</option>
@@ -46,7 +46,7 @@ export const PreferencesForm = () => {
         </label>
 
         <label>
-          <select value={weather} onChange={(e) => setWeather(e.target.value)} required>
+          <select value={weather} onChange={(e) => setWeather(e.target.value)}>
             <option value="">How about the weather?</option>
             <option value="cool & dry">Cool & Dry</option>
             <option value="warm & sunny">Warm & Sunny</option>

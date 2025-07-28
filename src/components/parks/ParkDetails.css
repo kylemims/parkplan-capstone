@@ -8,6 +8,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
+  padding-top: 2rem;
   font-family: "nunito", sans-serif;
   color: var(--color-text, #f0f0f0);
   background-color: #1a1a1a;

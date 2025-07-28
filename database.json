@@ -527,28 +527,14 @@
   ],
   "trips": [
     {
-      "name": "check one two",
+      "name": "Take me to Utah!",
       "parkId": 3,
       "userId": 3,
       "createdAt": "2025-05-13T19:23:08.544Z",
       "id": "4"
     },
     {
-      "name": "This is not my death",
-      "parkId": 1,
-      "userId": 3,
-      "createdAt": "2025-05-13T20:13:45.283Z",
-      "id": "5"
-    },
-    {
-      "name": "holy shit did brandon fix it?",
-      "parkId": 9,
-      "userId": 3,
-      "createdAt": "2025-05-13T20:48:11.856Z",
-      "id": "6"
-    },
-    {
-      "name": "lets get weird",
+      "name": "lets get crazy!",
       "parkId": 5,
       "userId": 4,
       "createdAt": "2025-05-13T20:49:24.696Z",
@@ -562,14 +548,14 @@
       "id": "8"
     },
     {
-      "name": "suuuuup",
+      "name": "Christmas in the Smokies",
       "parkId": 9,
       "userId": 4,
       "createdAt": "2025-05-13T20:53:36.582Z",
       "id": "10"
     },
     {
-      "name": "Take me to Zion! sike...take me to Bryce",
+      "name": "A trip to the Grand Canyon",
       "parkId": 5,
       "userId": 5,
       "createdAt": "2025-05-14T15:46:26.662Z",
@@ -597,28 +583,28 @@
       "id": "27"
     },
     {
-      "name": "another one",
+      "name": "michael's birthday party",
       "userId": 5,
       "createdAt": "2025-05-21T11:30:02.792Z",
       "parkId": 10,
       "id": "30"
     },
     {
-      "name": "not having fun right now",
+      "name": "Britt's fun trip",
       "userId": 5,
       "createdAt": "2025-05-21T11:39:56.069Z",
       "parkId": 12,
       "id": "31"
     },
     {
-      "name": "michael's birthday party",
+      "name": "Larry's birthday party",
       "userId": 5,
       "createdAt": "2025-05-21T13:49:02.311Z",
       "parkId": 12,
       "id": "32"
     },
     {
-      "name": "Britt's fun trip",
+      "name": "Let's go everywhere!",
       "userId": 5,
       "createdAt": "2025-05-22T19:16:45.630Z",
       "parkId": 9,
@@ -632,21 +618,21 @@
       "id": "34"
     },
     {
-      "name": "izon your forehead",
+      "name": "Best friends trip",
       "userId": 1,
       "createdAt": "2025-05-24T08:50:58.561Z",
       "parkId": 3,
       "id": "35"
     },
     {
-      "name": "you can't handle me",
+      "name": "The Great Adventure",
       "userId": 1,
       "createdAt": "2025-05-29T18:28:48.816Z",
       "parkId": 13,
       "id": "38"
     },
     {
-      "name": "Demo time adventure",
+      "name": "A trip of a lifetime",
       "userId": 1,
       "createdAt": "2025-06-02T14:41:15.954Z",
       "parkId": 1,
@@ -841,6 +827,152 @@
           "foodStorageLockers": "Yes - year round"
         },
         "totalSites": "105"
+      }
+    },
+    {
+      "id": "7333",
+      "tripId": 4,
+      "type": "campground",
+      "title": "Crane Flat Campground",
+      "description": "The Crane Flat Campground is located along the Big Oak Flat Road, just west of Crane Flat, about 30 ...",
+      "duration": "Overnight",
+      "campgroundData": {
+        "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232452",
+        "fees": [
+          {
+            "cost": "36.00",
+            "description": "Crane Flat Campground Reservation Fee – Regular Sites",
+            "title": "Crane Flat Campground Reservation Fee – Regular Sites"
+          },
+          {
+            "cost": "60.00",
+            "description": "Crane Flat Campground Reservation Fee - Double Sites",
+            "title": "Crane Flat Campground Reservation Fee - Double Sites"
+          }
+        ],
+        "amenities": {
+          "trashRecyclingCollection": "Yes - seasonal",
+          "toilets": [
+            "Flush Toilets - year round"
+          ],
+          "internetConnectivity": "No",
+          "showers": [
+            "None"
+          ],
+          "cellPhoneReception": "No",
+          "laundry": "No",
+          "amphitheater": "Yes - seasonal",
+          "dumpStation": "No",
+          "campStore": "No",
+          "staffOrVolunteerHostOnsite": "Yes - seasonal",
+          "potableWater": [
+            "Yes - seasonal"
+          ],
+          "iceAvailableForSale": "No",
+          "firewoodForSale": "No",
+          "foodStorageLockers": "Yes - seasonal"
+        },
+        "totalSites": "151"
+      }
+    },
+    {
+      "id": "4887",
+      "tripId": null,
+      "type": "activity",
+      "title": "Watchman Trail",
+      "description": "The Watchman trail is out-and-back. From the relatively flat beginning section of trail by the river, this unpaved trail climbs to a magnificent viewpoint of the Watchman, Temples and Towers, lower Zion Canyon, and the Town of Springdale. The terrain is sandy, rocky, and uneven, with several moderate drop-offs.",
+      "duration": "1-2 Hours",
+      "activityData": {
+        "location": "Watchman Trailhead",
+        "fees": "Free",
+        "reservationRequired": false,
+        "petFriendly": false,
+        "accessibility": "Accessible",
+        "seasons": [
+          "Winter",
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "timeOfDay": [
+          "Day",
+          "Night",
+          "Dawn",
+          "Dusk"
+        ]
+      }
+    },
+    {
+      "id": "be8b",
+      "tripId": null,
+      "type": "activity",
+      "title": "Taylor Creek Trail",
+      "description": "Kolob Canyons hike. Follows the Middle Fork of Taylor Creek past two homestead cabins to Double Arch Alcove. Group size limit on Wilderness trails is 12 people.",
+      "duration": "3-4 Hours",
+      "activityData": {
+        "location": "Kolob Canyons - Taylor Creek Trailhead",
+        "fees": "Free",
+        "reservationRequired": false,
+        "petFriendly": false,
+        "accessibility": "Accessible",
+        "seasons": [
+          "Winter",
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "timeOfDay": [
+          "Day",
+          "Night",
+          "Dawn",
+          "Dusk"
+        ]
+      }
+    },
+    {
+      "id": "6c7d",
+      "tripId": null,
+      "type": "campground",
+      "title": "Crane Flat Campground",
+      "description": "The Crane Flat Campground is located along the Big Oak Flat Road, just west of Crane Flat, about 30 ...",
+      "duration": "Overnight",
+      "campgroundData": {
+        "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232452",
+        "fees": [
+          {
+            "cost": "36.00",
+            "description": "Crane Flat Campground Reservation Fee – Regular Sites",
+            "title": "Crane Flat Campground Reservation Fee – Regular Sites"
+          },
+          {
+            "cost": "60.00",
+            "description": "Crane Flat Campground Reservation Fee - Double Sites",
+            "title": "Crane Flat Campground Reservation Fee - Double Sites"
+          }
+        ],
+        "amenities": {
+          "trashRecyclingCollection": "Yes - seasonal",
+          "toilets": [
+            "Flush Toilets - year round"
+          ],
+          "internetConnectivity": "No",
+          "showers": [
+            "None"
+          ],
+          "cellPhoneReception": "No",
+          "laundry": "No",
+          "amphitheater": "Yes - seasonal",
+          "dumpStation": "No",
+          "campStore": "No",
+          "staffOrVolunteerHostOnsite": "Yes - seasonal",
+          "potableWater": [
+            "Yes - seasonal"
+          ],
+          "iceAvailableForSale": "No",
+          "firewoodForSale": "No",
+          "foodStorageLockers": "Yes - seasonal"
+        },
+        "totalSites": "151"
       }
     }
   ]

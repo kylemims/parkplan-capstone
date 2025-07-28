@@ -1,16 +1,18 @@
 .results-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: #eee;
   padding: 4rem 1rem;
-  padding-bottom: 120px; /* Space for mobile nav */
+  position: relative;
+  padding-bottom: 60px; /* Space for mobile nav */
 }
 
 .results-container h1 {
+  font-size: 2.5rem;
+  color: #ffe28a;
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  color: var(--color-text);
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
 }
 .results-header {
   display: flex;
@@ -28,18 +30,20 @@
 }
 
 .back-to-filters-btn {
-  background-color: var(--color-primary);
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  background: rgba(34, 34, 34, 0.8);
+  border: 1px solid rgba(249, 211, 66, 0.3);
+  color: #ffe28a;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
-  max-width: 150px;
+  transition: all 0.2s ease;
+  font-weight: 600;
 }
 
 .back-to-filters-btn:hover {
-  background-color: #5a6268;
+  background: rgba(34, 34, 34, 1);
+  border-color: rgba(249, 211, 66, 0.6);
+  transform: translateX(-2px);
 }
 
 .results-info h2 {
@@ -49,17 +53,17 @@
 
 .results-info p {
   margin: 0;
-  color: #666;
+  color: white;
   font-size: 0.9rem;
 }
 .result-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
 .park-card {
-  background: var(--color-bg-light);
+  background: var(--color-accent-dark);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
@@ -80,15 +84,17 @@
 
 .park-info {
   padding: 1rem;
-  color: #333;
+  color: whitesmoke;
 }
 .park-location-name {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 800;
+  font-style: bold;
+  text-decoration-line: underline;
 }
 .park-info h2 {
   margin-bottom: 0.5rem;
-  color: var(--accent-color, #00695c);
+  color: var(--color-text);
 }
 
 .park-card button {
@@ -96,8 +102,8 @@
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 8px;
-  background-color: var(--accent-color, #00695c);
-  color: #fff;
+  background-color: var(--color-accent);
+  color: black;
   font-weight: 600;
   cursor: pointer;
 }
@@ -138,4 +144,24 @@
 
 .no-results button:hover {
   background-color: #8e0000;
+}
+
+@media screen and (max-width: 768px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .park-card img {
+    height: 150px;
+  }
+
+  .park-info {
+    padding: 0.75rem;
+  }
+
+  .park-card button {
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
 }

@@ -8,6 +8,7 @@
   /* Updated Color System */
   --color-bg: #212122;
   --color-bg-light: #f2efef;
+  --color-accent-dark: #2a2a2d; /* Darker background for contrast */
   --color-accent: #ffe28a; /* Headers & accent pops */
   --color-primary: #c29059; /* Most buttons */
   --color-secondary: #696a35; /* Earthy primary option */
