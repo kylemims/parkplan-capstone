@@ -6,7 +6,7 @@
   left: 0;
   background-color: #2f3835;
   opacity: 95%;
-  z-index: 1000;
+  z-index: 9999;
   justify-content: center;
   align-items: center;
 }

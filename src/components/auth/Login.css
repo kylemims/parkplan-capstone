@@ -21,6 +21,14 @@
   filter: brightness(0.4) contrast(1.1);
 }
 
+.auth-landscape-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
 .fade-in-block {
   position: absolute;
   top: 0;
@@ -32,7 +40,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   animation: fadeIn 1s ease-out;
 }
 
@@ -44,7 +52,7 @@
   width: 100%;
   max-width: 400px;
   margin-top: 2rem;
-  padding: 2.5rem;
+  padding: 2rem;
   background: rgba(33, 33, 34, 0.8);
   backdrop-filter: blur(15px);
   border-radius: 16px;
@@ -55,11 +63,12 @@
 .subtitle {
   text-align: center;
   color: var(--color-neutral);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-top: 0rem;
 }
 
 fieldset {
@@ -73,11 +82,14 @@ fieldset {
 
 .email-input {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Increase from current implicit gap */
 }
 
 .form-input {
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 8px;
   border: 2px solid var(--color-tertiary);
   background-color: rgba(33, 33, 34, 0.9);
@@ -104,7 +116,7 @@ fieldset {
   color: var(--color-neutral);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -168,6 +180,10 @@ fieldset {
   }
 }
 
+.login-modal .modal-container {
+  margin-top: 100px;
+}
+
 @media (max-width: 768px) {
   .fade-in-block {
     padding: 1.5rem 1rem;
@@ -175,23 +191,102 @@ fieldset {
 
   .login-block {
     margin-top: 1rem;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .welcome-container {
+    padding: 100px;
+    margin: 0 auto;
+  }
+
+  .fade-in-block {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .auth-landscape-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  /* Logo takes left side */
+  .welcome-logo-hero {
+    flex: 1;
+    max-width: 300px;
+  }
+
+  /* Auth block takes right side */
+  .login-block {
+    flex: 1;
+    margin-top: 0;
     max-width: 350px;
+    padding: 2rem 1.5rem;
+  }
+  .form-input {
+    padding: 0.75rem; /* Smaller inputs */
+  }
+
+  .auth-link button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .auth-landscape-layout {
+    gap: 2rem;
+  }
+
+  .login-block {
+    padding: 1.5rem 1rem;
+  }
+
+  .welcome-logo-hero {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  /* Maybe hide some decorative elements */
+  .welcome-logo-hero .tagline {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
+  .welcome-logo-hero {
+    max-width: 350px;
+    width: 100%;
+  }
+
+  .fade-in-block {
+    padding-top: 50px;
+  }
   .login-block {
-    padding: 1.5rem 1rem;
-    max-width: 300px;
+    padding: 2rem 1rem;
+    padding-top: 1rem;
+    max-width: 350px;
   }
 
   .form-input {
-    padding: 0.875rem;
+    padding: 0.5rem;
   }
 
   .auth-link button {
-    padding: 0.875rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
   }
 }
