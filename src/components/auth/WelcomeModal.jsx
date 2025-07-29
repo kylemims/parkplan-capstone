@@ -1,3 +1,5 @@
+import "./WelcomeModal.css";
+
 export const WelcomeModal = ({ onClose }) => {
   return (
     <div className="welcome-modal-content">
@@ -12,7 +14,7 @@ export const WelcomeModal = ({ onClose }) => {
           <li>
             Make up <strong>any name</strong> (your choice!)
           </li>
-          <li>Start planning your dream park adventure! 🎒</li>
+          <li>Start planning your dream park adventure!</li>
         </ol>
 
         <div className="email-example">

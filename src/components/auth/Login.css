@@ -181,7 +181,14 @@ fieldset {
 }
 
 .login-modal .modal-container {
-  margin-top: 100px;
+  margin-top: 80px;
+  padding: 0px;
+  background-color: rgb(0, 0, 0, 1);
+}
+
+.login-modal .modal-overlay {
+  background: var(--color-bg-dark);
+  backdrop-filter: blur(8px);
 }
 
 @media (max-width: 768px) {
