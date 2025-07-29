@@ -1,9 +1,3 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
 .park-details-container {
   max-width: 800px;
   margin: 0 auto;
@@ -23,7 +17,7 @@
 
 .park-details-container .park-location {
   font-size: 1rem;
-  color: #ccc; /* Match TripSummary h2 color */
+  color: #ccc;
   padding-left: 0;
   text-align: left;
   margin-bottom: 0.5rem;
@@ -31,7 +25,7 @@
 
 .park-details-container .park-tagline {
   font-style: italic;
-  color: #aaa; /* Slightly muted */
+  color: #aaa;
   padding-left: 0;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
@@ -60,9 +54,9 @@
 
 .park-details-container .carousel-btn {
   position: absolute;
-  top: 50%; /* Changed from 35% to 50% for true center */
+  top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Added background for better visibility */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   font-size: 1.5rem;
@@ -84,11 +78,11 @@
 }
 
 .park-details-container .carousel-btn:first-of-type {
-  left: 1rem; /* More space from edge */
+  left: 1rem;
 }
 
 .park-details-container .carousel-btn:last-of-type {
-  right: 1rem; /* More space from edge */
+  right: 1rem;
 }
 
 .unparked-section {
@@ -99,7 +93,7 @@
   padding: 1.5rem;
   background: linear-gradient(to bottom, rgba(16, 16, 16, 0.8), rgba(4, 4, 4, 0.9));
   border-radius: 10px;
-  border-left: 4px solid #dca8a2; /* Match your todo-card style */
+  border-left: 4px solid #dca8a2;
 }
 
 .special-block {
@@ -125,8 +119,8 @@
 .bold-block h5 {
   font-size: 1.1rem;
   margin: 0;
-  color: #dca8a2; /* Match your accent colors */
-  min-width: 100px; /* Consistent alignment */
+  color: #dca8a2;
+  min-width: 100px;
 }
 
 .best-time {
@@ -158,7 +152,7 @@ h1 {
 }
 
 .park-details-container .park-deets-btn {
-  background-color: #5a786f; /* Match TripSummary buttons */
+  background-color: #5a786f;
   color: white;
   font-weight: 600;
   border: none;
@@ -176,15 +170,10 @@ h1 {
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-/* .park-weather-section {
-  margin-top: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-} */
 
 .weather-panel {
   background: linear-gradient(to top, rgba(4, 4, 4, 0.7), rgba(16, 16, 16, 0.7));
-  border-left: 4px solid #ffe28a; /* Match TripSummary weather */
+  border-left: 4px solid #ffe28a;
   margin-top: 2rem;
   padding: 1.5rem;
   border-radius: 10px;
@@ -192,7 +181,7 @@ h1 {
 }
 
 .weather-panel h3 {
-  color: #ffe28a; /* Match TripSummary weather title */
+  color: #ffe28a;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }

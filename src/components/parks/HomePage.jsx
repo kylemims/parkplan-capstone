@@ -11,31 +11,32 @@ export const HomePage = () => {
       <HomeHero />
       <div className="homepage-overlay">
         <WelcomeLogoHero />
+        <div className="mobile-landscape-layout">
+          <div className="hero-action-section">
+            <div className="hero-tagline">
+              <p>Plan your perfect park adventure</p>
+            </div>
 
-        <div className="hero-action-section">
-          <div className="hero-tagline">
-            <p>Plan your perfect park adventure</p>
+            <div className="primary-action">
+              <button className="find-park-btn" onClick={() => navigate("/preferences")}>
+                Find My Park
+              </button>
+            </div>
           </div>
 
-          <div className="primary-action">
-            <button className="find-park-btn" onClick={() => navigate("/preferences")}>
-              Find My Park
-            </button>
-          </div>
-        </div>
-
-        <div className="features-preview">
-          <div className="feature-item">
-            <div className="feature-icon">🗺️</div>
-            <span>Discover</span>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">📋</div>
-            <span>Plan</span>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">🎒</div>
-            <span>Adventure</span>
+          <div className="features-preview">
+            <div className="feature-item">
+              <div className="feature-icon">🗺️</div>
+              <span>Discover</span>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">📋</div>
+              <span>Plan</span>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">🎒</div>
+              <span>Adventure</span>
+            </div>
           </div>
         </div>
       </div>

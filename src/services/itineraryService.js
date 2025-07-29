@@ -1,5 +1,4 @@
 // itineraryService.js
-// Handles CRUD for trip itinerary items (activities and campgrounds)
 
 const BASE_URL = "http://localhost:8088";
 
@@ -25,14 +24,12 @@ export const createTripItem = (itemObj) => {
   });
 };
 
-// DELETE an itinerary item
 export const deleteTripItem = (id) => {
   return fetch(`${BASE_URL}/tripItems/${id}`, {
     method: "DELETE",
   });
 };
 
-// UPDATE an itinerary item
 export const updateTripItem = (id, updatedItem) => {
   return fetch(`${BASE_URL}/tripItems/${id}`, {
     method: "PUT",

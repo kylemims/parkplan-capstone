@@ -8,14 +8,11 @@ export const ParkResults = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const preferences = location.state?.preferences;
-  const [parks, setParks] = useState([]);
   const [parkImages, setParkImages] = useState({});
   const [filteredParks, setFilteredParks] = useState([]);
 
   useEffect(() => {
-    // Fetch all parks first
     getAllParks().then((allParks) => {
-      // Fetch images for all parks
       const imagePromises = allParks.map((park) =>
         getImagesByParkId(park.id).then((images) => ({
           parkId: park.id,
@@ -35,7 +32,6 @@ export const ParkResults = () => {
         const matches = allParks.filter((park) => {
           let matchCount = 0;
 
-          // Season matching - check both season field and bestTime
           if (preferences.season) {
             const seasonMatch =
               park.season?.toLowerCase() === preferences.season.toLowerCase() ||
@@ -43,7 +39,6 @@ export const ParkResults = () => {
             if (seasonMatch) matchCount++;
           }
 
-          // Weather matching - handle the format differences
           if (preferences.weather) {
             const weatherMap = {
               "cool-dry": "cool & dry",
@@ -56,7 +51,6 @@ export const ParkResults = () => {
             }
           }
 
-          // Activity matching - check if any selected interests match park activities
           if (preferences.interests?.length > 0) {
             const parkActivities = park.activities || [];
             const hasMatchingActivity = preferences.interests.some((interest) =>
@@ -69,11 +63,9 @@ export const ParkResults = () => {
             if (hasMatchingActivity) matchCount++;
           }
 
-          // Return parks with at least 1 match (flexible)
           return matchCount >= 1;
         });
 
-        // Sort by match count (highest first) for better UX
         matches.sort((a, b) => {
           // Calculate match scores for sorting
           const scoreA = calculateMatchScore(a, preferences);
@@ -86,7 +78,6 @@ export const ParkResults = () => {
     });
   }, [preferences]);
 
-  // Helper function to calculate match score for sorting
   const calculateMatchScore = (park, preferences) => {
     let score = 0;
 
@@ -129,10 +120,7 @@ export const ParkResults = () => {
     <section className="results-container fade-in-block">
       <h1>Your Park Matches</h1>
       <div className="results-header">
-        <button
-          className="back-to-filters-btn"
-          onClick={() => navigate("/preferences")} // or whatever your preferences route is
-        >
+        <button className="back-to-filters-btn" onClick={() => navigate("/preferences")}>
           ᗕ Back to Filters
         </button>
         <p>Found {filteredParks.length} parks matching your preferences</p>

@@ -12,6 +12,7 @@
   justify-content: center;
   margin: 0 auto;
   animation: fadeInUp 1s ease-out;
+  padding-top: 80px;
 }
 
 .dual-logo-block {
@@ -50,6 +51,7 @@
 @media (max-width: 768px) {
   .welcome-container {
     margin-top: 0 auto;
+    padding-top: 0px;
   }
 
   .dual-logo-block {
@@ -57,14 +59,14 @@
   }
 
   .login-logo {
-    max-width: 350px;
+    max-width: 260px;
     min-width: 250px;
   }
 }
 
 @media (max-width: 480px) {
   .login-logo {
-    max-width: 280px;
+    max-width: 270px;
     min-width: 220px;
   }
 }

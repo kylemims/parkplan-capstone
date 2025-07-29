@@ -569,20 +569,6 @@
       "id": "20"
     },
     {
-      "name": "The great Dom's trip",
-      "parkId": 1,
-      "userId": 1,
-      "createdAt": "2025-05-16T20:50:14.012Z",
-      "id": "23"
-    },
-    {
-      "name": "Kyle's test trip",
-      "parkId": 1,
-      "userId": 1,
-      "createdAt": "2025-05-19T18:19:01.336Z",
-      "id": "27"
-    },
-    {
       "name": "michael's birthday party",
       "userId": 5,
       "createdAt": "2025-05-21T11:30:02.792Z",
@@ -611,13 +597,6 @@
       "id": "33"
     },
     {
-      "name": "Booooooooom",
-      "userId": 1,
-      "createdAt": "2025-05-23T14:25:57.117Z",
-      "parkId": 9,
-      "id": "34"
-    },
-    {
       "name": "Best friends trip",
       "userId": 1,
       "createdAt": "2025-05-24T08:50:58.561Z",
@@ -632,18 +611,18 @@
       "id": "38"
     },
     {
-      "name": "A trip of a lifetime",
-      "userId": 1,
-      "createdAt": "2025-06-02T14:41:15.954Z",
-      "parkId": 1,
-      "id": "39"
-    },
-    {
       "id": "27c5",
       "name": "Lookin' for all the trees!",
       "userId": "2",
       "createdAt": "2025-07-26T07:57:29.293Z",
       "parkId": 13
+    },
+    {
+      "id": "a370",
+      "name": "I love you man!",
+      "userId": "1",
+      "createdAt": "2025-07-28T19:42:36.783Z",
+      "parkId": 9
     }
   ],
   "tripItems": [
@@ -973,6 +952,23 @@
           "foodStorageLockers": "Yes - seasonal"
         },
         "totalSites": "151"
+      }
+    },
+    {
+      "id": "b233",
+      "tripId": 38,
+      "type": "activity",
+      "title": "Clover Creek Winter Trail",
+      "description": "This one-way trail is currently marked to the Twin Lakes hiking trail junction. Return to Wuksachi on the same trail.",
+      "duration": "2-4 Hours",
+      "activityData": {
+        "location": "Wuksachi Village Center parking area",
+        "fees": "Free",
+        "reservationRequired": false,
+        "petFriendly": false,
+        "accessibility": "Accessible",
+        "seasons": [],
+        "timeOfDay": []
       }
     }
   ]

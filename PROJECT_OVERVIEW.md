@@ -14,7 +14,7 @@ A React + Vite application for national park trip planning, featuring modular, r
 - Prettier for JS/JSX/CSS/HTML formatting, Black for Python
 - No TypeScript
 
-##  Folder/File Tree
+## 3. Folder/File Tree
 ```
 parkplan-capstone/
 ├── README.md
@@ -35,7 +35,6 @@ parkplan-capstone/
 │   │   ├── auth/
 │   │   │   ├── Login.jsx
 │   │   │   └── Login.css
-│   │   │   └── LogoutButton.jsx ≈
 │   │   │   └── Register.jsx
 │   │   ├── forms/
 │   │   │   ├── CreateNewTripForm.jsx
@@ -94,72 +93,19 @@ parkplan-capstone/
 └── (other config/scripts as needed)
 ```
 
-## 3. Folder/File Structure
-```
-backup.css
-.database.json
-ERD.dbml
-eslint.config.js
-index.html
-my-templates/
-package.json
-plan-icon.ai
-README.md
-setup-auth.sh
-spring-weather-data.json
-vite.config.js
-public/
-  vite.svg
-  images/
-    ...park and icon images...
-  videos/
-    bg-video-2.mp4
-src/
-  App.css
-  App.jsx
-  index.css
-  main.jsx
-  variables.css
-  assets/
-    react.svg
-    yosemite_bg.jpg
-  components/
-    auth/
-    forms/
-    nav/
-    parks/
-    templates/
-    trips/
-  services/
-    npsService.js
-    parkService.js
-    tripService.js
-    userService.js
-  styles-system/
-    components.css
-    utilities.css
-    variables.css
-  views/
-    ApplicationViews.jsx
-    ...
-```
 
 ## 4. Project Conventions
 - All data access is abstracted in `src/services/`.
 - Components are organized by feature in `src/components/`.
 - Static assets (images, videos) are in `public/`.
 - Design system and utility CSS in `src/styles-system/`.
-- Formatting enforced with Prettier (JS/JSX/CSS/HTML) and Black (Python).
+- Formatting enforced with Prettier (JS/JSX/CSS/HTML)`.
 - No TypeScript; all code is JavaScript/JSX.
 
 ## 5. Unused or Irrelevant Files (as of July 2025)
 - `spring-weather-data.json`: Empty, can be removed if not needed.
-- `backup.css`: If not referenced, can be deleted.
-- `.ai` files: Archive or remove if not editing vector assets.
 - `my-templates/`: Ignored by git, likely personal/legacy.
 - `setup-auth.sh`: Remove if not used for auth setup.
-- `ERD.dbml`: For documentation only unless updating schema.
-- Unused images in `public/images/`: Remove if not referenced.
 - Unused service/component files: Remove if not imported anywhere.
 
 ## 6. Documentation & Onboarding

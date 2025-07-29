@@ -34,7 +34,6 @@
   }
 }
 
-/* Header */
 .activities-header {
   max-width: 1200px;
   margin: 0 auto 2rem;
@@ -75,7 +74,6 @@
   font-weight: 600;
 }
 
-/* Controls */
 .activities-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -144,7 +142,6 @@
   gap: 2rem;
 }
 
-/* Activities Grid */
 .activities-grid {
   display: flex;
   flex-direction: column;
@@ -195,7 +192,6 @@
   border-color: rgba(220, 168, 162, 0.4);
 }
 
-/* Card Header */
 .activity-card-header {
   margin-bottom: 1rem;
 }
@@ -240,7 +236,6 @@
   display: inline-block;
 }
 
-/* Card Body */
 .activity-card-body {
   margin-bottom: 1.5rem;
 }
@@ -290,7 +285,6 @@
   border-color: rgba(249, 211, 66, 0.3);
 }
 
-/* Expanded Details */
 .activity-details {
   background: rgba(16, 16, 16, 0.4);
   border-radius: 12px;
@@ -365,7 +359,6 @@
   color: #42665c;
 }
 
-/* Card Actions */
 .activity-actions {
   display: flex;
   gap: 1rem;
@@ -416,7 +409,6 @@
   box-shadow: none;
 }
 
-/* Itinerary Sidebar */
 .itinerary-sidebar {
   background: linear-gradient(135deg, rgba(16, 16, 16, 0.95), rgba(34, 34, 34, 0.9));
   border-radius: 16px;
@@ -514,7 +506,6 @@
   box-shadow: 0 4px 12px rgba(220, 168, 162, 0.4);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 968px) {
   .activities-layout {
     grid-template-columns: 1fr;

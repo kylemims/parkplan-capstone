@@ -171,7 +171,6 @@ export const TripDetails = () => {
 
   return (
     <section className="trip-details">
-      {/* Header */}
       <div className="activities-header">
         <button className="back-button" onClick={() => navigate(`/trips/${tripId}/summary`)}>
           ← Back to Trip

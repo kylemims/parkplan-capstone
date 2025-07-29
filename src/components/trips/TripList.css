@@ -1,4 +1,3 @@
-/* Enhanced TripDashboard Styling */
 .trip-dashboard-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -6,7 +5,6 @@
   position: relative;
 }
 
-/* Add subtle background pattern */
 .trip-dashboard-container::before {
   content: "";
   position: absolute;
@@ -25,7 +23,6 @@
 }
 
 .trip-dashboard-container h1 {
-  /* font-family: "Permanent Marker", cursive; */
   font-size: 2.5rem;
   color: #ffe28a;
   text-align: center;
@@ -34,7 +31,6 @@
   letter-spacing: 1px;
 }
 
-/* Add accent line under title */
 .trip-dashboard-container h1::after {
   content: "";
   display: block;
@@ -127,7 +123,6 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* Dark overlay for better text readability */
 .trip-card::before {
   content: "";
   position: absolute;
@@ -274,7 +269,6 @@
   justify-content: center;
 }
 
-/* FIX FOR DELETE ICON */
 .trip-card__side-tab .icon-button {
   width: 36px;
   height: 36px;
@@ -291,20 +285,18 @@
 }
 
 .trip-card__side-tab .icon-button img {
-  width: 20px; /* Fixed consistent size */
-  height: 20px; /* Fixed consistent size */
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   object-position: center;
 }
 
-/* Special handling for smaller icons */
 .trip-card__side-tab .icon-button img[src*="camper"],
 .trip-card__side-tab .icon-button img[src*="add-activity"] {
-  width: 22px; /* Slightly larger for these specific icons */
+  width: 22px;
   height: 22px;
 }
 
-/* Specific colors for different actions */
 .trip-card__side-tab .icon-tooltip-container:nth-child(1) .icon-button:hover {
   filter: brightness(0) invert(1) drop-shadow(0 0 6px #5a786f); /* Green for add */
 }
@@ -366,7 +358,6 @@
 
 @media (max-width: 768px) {
   .trip-dashboard-container {
-    /* padding: 1.5rem 1rem; */
     padding-top: 3rem;
     padding-bottom: 3rem;
   }

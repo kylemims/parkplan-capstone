@@ -3,7 +3,7 @@
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   padding: 4rem 1rem;
   position: relative;
-  padding-bottom: 60px; /* Space for mobile nav */
+  padding-bottom: 60px;
 }
 
 .results-container h1 {
@@ -21,7 +21,6 @@
   align-items: left;
   margin-bottom: 1.5rem;
   padding-top: 1rem;
-  /* background-color: var(--color-bg-light); */
   border-radius: 8px;
 }
 .results-header p {

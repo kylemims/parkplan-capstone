@@ -4,24 +4,22 @@
   box-sizing: border-box;
 }
 
-/* REMOVE min-height: 100vh - This causes the rubber band issue */
 .preferences-form {
   background-color: var(--color-bg);
   color: var(--color-text);
-  padding: 80px 1rem 6rem 1rem; /* Boost top for nav, bottom for tab – scoot content down */
+  padding: 80px 1rem 6rem 1rem;
   text-align: center;
   width: 100%;
-  display: flex; /* Flex column to stack and grow like rubber band */
+  display: flex;
   flex-direction: column;
-  flex: 1 1 auto; /* UPDATED: Grow/shrink as needed – the stretch! */
-  overflow-y: auto; /* Enable scrolling if content overflows – the slide! */
-  min-height: auto; /* Explicit: No forced height */
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: auto;
 }
 
 .fade-in-block {
   animation: fadeIn 1s ease-out;
   width: 100%;
-  /* Remove height restrictions */
 }
 
 .preferences-form h1 {
@@ -43,18 +41,16 @@
   border-radius: 2px;
 }
 
-/* FORM STYLING */
 .preferences-form form {
   max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-bottom: 4rem; /* Ensure space for button */
-  flex: 1; /* NEW: Let form grow inside the container */
+  padding-bottom: 4rem;
+  flex: 1;
 }
 
-/* Rest is unchanged... */
 .preferences-form label {
   display: block;
   width: 100%;
@@ -77,7 +73,6 @@
   box-shadow: 0 0 0 3px rgba(255, 226, 138, 0.2);
 }
 
-/* FIELDSET STYLING */
 .preferences-form fieldset {
   border: none;
   padding: 0;
@@ -95,7 +90,6 @@
   width: 100%;
 }
 
-/* INTEREST GRID */
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -150,7 +144,6 @@
   text-align: center;
 }
 
-/* SUBMIT BUTTON - FIXED POSITIONING ISSUE */
 .home-btn {
   background: linear-gradient(135deg, var(--color-primary) 0%, #a67c4a 100%);
   color: white;
@@ -166,7 +159,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(194, 144, 89, 0.4);
-  margin: 3rem auto 2rem; /* Add more margin */
+  margin: 3rem auto 2rem;
   display: block;
   width: fit-content;
 }
@@ -200,7 +193,6 @@
   box-shadow: none;
 }
 
-/* ANIMATIONS */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -212,45 +204,44 @@
   }
 }
 
-/* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
   .preferences-form {
-    padding: 80px 1rem 8rem 1rem; /* NEW: Keep top padding consistent, more bottom for tab nav */
+    padding: 80px 1rem 8rem 1rem;
+
+    .preferences-form h1 {
+      font-size: 2rem;
+    }
+
+    .interest-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .interest-card {
+      padding: 1rem 0.5rem;
+      min-height: 100px;
+    }
+
+    .home-btn {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      margin: 2rem auto 3rem;
+    }
   }
 
-  .preferences-form h1 {
-    font-size: 2rem;
-  }
+  @media (max-width: 480px) {
+    .preferences-form {
+      padding: 80px 0.5rem 10rem 0.5rem;
+    }
 
-  .interest-grid {
-    grid-template-columns: repeat(2, 1fr); /* CHANGED: Keep 2 columns on mobile – your 2x2! */
-    gap: 0.75rem; /* NEW: Smaller gap for mobile fit (visual: tighter blocks) */
-  }
+    .preferences-form h1 {
+      font-size: 1.8rem;
+    }
 
-  .interest-card {
-    padding: 1rem 0.5rem; /* CHANGED: Slimmer padding to fit 2 wide without squish */
-    min-height: 100px;
-  }
-
-  .home-btn {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    margin: 2rem auto 3rem; /* Extra margin on mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .preferences-form {
-    padding: 80px 0.5rem 10rem 0.5rem; /* NEW: Consistent top, max bottom */
-  }
-
-  .preferences-form h1 {
-    font-size: 1.8rem;
-  }
-
-  .home-btn {
-    width: 90%;
-    max-width: 280px;
-    margin: 2rem auto 4rem; /* Maximum bottom margin */
+    .home-btn {
+      width: 90%;
+      max-width: 280px;
+      margin: 2rem auto 4rem;
+    }
   }
 }

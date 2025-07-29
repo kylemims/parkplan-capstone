@@ -1,12 +1,6 @@
 import { useState } from "react";
 import "./IconTooltipButton.css";
-export const IconTooltipButton = ({
-  iconSrc,
-  // altText,
-  tooltipContent,
-  onClick,
-  className = "",
-}) => {
+export const IconTooltipButton = ({ iconSrc, tooltipContent, onClick, className = "" }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseEnter = () => {

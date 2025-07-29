@@ -1,37 +1,8 @@
-/* BASE STYLES */
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-/* html,
-body {
-  height: 100%;
-  overflow-x: hidden;
-} */
-/*TODO .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  margin: 0;
-  background-color: transparent;
-  padding: 0.5rem 1rem;
-} */
-
-/*TODO .navbar.transparent-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: transparent;
-  box-shadow: none;
-  padding: 30px;
-} */
 
 .navbar {
   display: flex;
@@ -43,41 +14,25 @@ body {
   z-index: 1000;
   margin: 0;
   .navbar.transparent-nav {
-    background: rgba(33, 33, 34, 0.6); /* Lower alpha for more see-through – like thinner tint */
-    backdrop-filter: blur(
-      10px
-    ); /* Blur under content/video – frosted glass magic! Adjust px for blur strength */
-    -webkit-backdrop-filter: blur(10px); /* For Safari/older browsers */
-    border-bottom: 1px solid rgba(255, 226, 138, 0.1); /* Keep subtle border */
+    background: rgba(33, 33, 34, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 226, 138, 0.1);
   }
   padding: 0.75rem 1rem;
   transition: all 0.3s ease;
 }
 
 .navbar.transparent-nav {
-  background: rgba(33, 33, 34, 0.8); /* Less transparent on scroll */
+  background: rgba(33, 33, 34, 0.8);
   border-bottom: 1px solid rgba(255, 226, 138, 0.05);
 }
 
-/* HEADER CONTAINER */
-
-/*TODO .nav-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: transparent;
-  padding: 0px;
-  margin: 0px;
-} */
-
-/* HAMBURGER ON LEFT, DESKTOP NAV ON RIGHT */
 .nav-header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-
-/*! HAMBURGER MENU ICON */
 
 .hamburger {
   padding: 0.5rem;
@@ -104,9 +59,8 @@ body {
   filter: brightness(0) invert(1) drop-shadow(0 0 8px #ffe28a);
 }
 
-/* DESKTOP HORIZONTAL NAV LINKS */
 .desktop-nav-links {
-  display: none; /* Hidden on mobile */
+  display: none;
   flex-direction: row;
   gap: 2rem;
   list-style: none;
@@ -155,7 +109,7 @@ body {
 .nav-menu-drawer {
   position: fixed;
   top: 0;
-  left: -320px; /* Fixed width for consistency */
+  left: -320px;
   width: 320px;
   height: 100vh;
   background: var(--color-bg);
@@ -176,33 +130,6 @@ body {
 .nav-menu-drawer.open {
   left: 0;
 }
-
-/*TODO .nav-menu-drawer li button {
-  background: none;
-  border: none;
-  color: whitesmoke;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 8px;
-  margin: 0px;
-  padding-right: 5px;
-} */
-
-/*TODO .nav-menu-drawer li button:hover {
-  color: var(--color-neutral);
-  background-color: transparent;
-  color: var(--color-neutral);
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  width: 100%;
-  text-align: center;
-} */
 
 /* DRAWER MENU BUTTONS */
 .nav-menu-drawer > li:not(.developer-section):not(.profile-links-section) button {
@@ -295,126 +222,6 @@ body {
   letter-spacing: 0.3px;
 }
 
-/*TODO .developer-section {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(249, 211, 66, 0.3);
-  animation: fadeInUp 0.5s ease 0.3s both;
-} */
-
-/*TODO .developer-info h4 {
-  color: #ffe28a;
-  font-family: "Permanent Marker", cursive;
-  font-size: 1.1rem;
-  margin: 0 0 0.25rem 0;
-  letter-spacing: 0.5px;
-} */
-
-/*TODO .developer-info p {
-  color: #dca8a2;
-  font-size: 0.85rem;
-  margin: 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-} */
-
-/*TODO .profile-links-section {
-  animation: fadeInUp 0.5s ease 0.5s both;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.profile-link-btn:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.profile-link-btn:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.profile-link-btn:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.profile-link-btn:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.profile-links-grid:hover .profile-link-btn:not(:hover) {
-  opacity: 0.7;
-  transform: scale(0.98);
-}
-.developer-info {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.profile-links-section {
-  margin-top: 1rem;
-}
-
-.profile-links-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-  padding: 0;
-}
-
-.profile-link-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(34, 34, 34, 0.6);
-  border: 1px solid rgba(249, 211, 66, 0.2);
-  border-radius: 12px;
-  padding: 0.75rem 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #eee;
-  text-decoration: none;
-}
-
-.profile-link-btn:hover {
-  background: rgba(34, 34, 34, 0.9);
-  border-color: rgba(249, 211, 66, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.profile-icon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
-  transition: all 0.2s ease;
-}
-
-.profile-link-btn:hover .profile-icon {
-  filter: brightness(0) invert(1) drop-shadow(0 0 8px #f9d342);
-  transform: scale(1.1);
-}
-
-.profile-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #ccc;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  transition: color 0.2s ease;
-}
-
-.profile-link-btn:hover .profile-label {
-  color: #ffe28a;
-} */
-
-/* PROFILE LINKS SECTION */
 .profile-links-section {
   margin-top: 1rem;
   width: 100%;
@@ -475,7 +282,6 @@ body {
   color: var(--color-accent);
 }
 
-/* ANIMATIONS */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -528,17 +334,14 @@ body {
     padding: 0.75rem 2rem;
   }
 
-  /* Show desktop nav links */
   .desktop-nav-links {
     display: flex;
   }
 
-  /* Keep hamburger visible but adjust layout */
   .nav-header {
     margin-right: auto; /* Push hamburger to left */
   }
 
-  /* Adjust drawer for desktop */
   .nav-menu-drawer {
     width: 350px;
     left: -350px;
@@ -555,103 +358,3 @@ body {
     padding: 1rem 3rem;
   }
 }
-
-/*TODO ALL MEDIA @media screen and (max-width: 480px) {
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-
-  .nav-menu-drawer {
-    width: 280px;
-    left: -280px;
-    padding: 3rem 1.5rem 1.5rem;
-  }
-
-  .hamburger-icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .developer-section,
-  .profile-links-section {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  
-  .navbar {
-    padding: 0.75rem 1rem;
-  }
-
-  .nav-header {
-    margin-left: auto;
-  }
-
-  .nav-menu-drawer {
-    position: fixed;
-    top: 0;
-    left: -75%;
-    width: 75%;
-    height: 100%;
-    
-    background: red;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15rem 2rem 2rem;
-    gap: 1.5rem;
-    list-style: none;
-    transition: left 0.75s ease;
-    z-index: 1100;
-    border-right: 1px solid rgba(249, 211, 66, 0.3);
-    overflow-y: auto; 
-  }
-
-  .nav-menu-drawer li button {
-    background: none;
-    border: none;
-    color: whitesmoke;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    margin: 0;
-    padding: 0.5rem 0;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .nav-menu-drawer li button:hover {
-    color: #ffe28a;
-    background-color: transparent;
-    transform: translateX(4px);
-  }
-
-  .nav-menu-drawer {
-    position: static;
-    flex-direction: row;
-    height: auto;
-    width: auto;
-    background: none;
-    padding: 0;
-    gap: 1rem;
-    transition: none;
-  }
-
-  .nav-menu-drawer.open {
-    left: auto;
-  }
-
-  .backdrop {
-    display: none;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .navbar {
-    padding: 1rem 3rem;
-  }
-} */

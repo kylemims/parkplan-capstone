@@ -31,7 +31,7 @@ export const TripSummary = () => {
       getMonthlyWeatherAverages(park.latitude, park.longitude)
         .then((data) => {
           console.log("Weather data:", data);
-          setWeather(data); // Remove the other lines that overwrite this
+          setWeather(data);
         })
         .catch((err) => console.error("Failed to load weather", err));
     }

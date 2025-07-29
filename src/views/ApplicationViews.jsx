@@ -9,7 +9,6 @@ import { TripEditForm } from "../components/forms/TripEditForm.jsx";
 import { ParkDetails } from "../components/parks/ParkDetails";
 import { TripDetails } from "../components/trips/TripDetails.jsx";
 import { CampgroundSelector } from "../components/parks/CampgroundSelector.jsx";
-import { HomeTest } from "../components/parks/HomeTest.jsx";
 import { TripSummary } from "../components/trips/TripSummary.jsx";
 import { PreferencesForm } from "../components/onboarding/PreferencesForm.jsx";
 import { ParkResults } from "../components/parks/ParkResults.jsx";
@@ -18,12 +17,8 @@ import { BottomTabNav } from "../components/nav/BottomTabNav.jsx";
 export const ApplicationViews = () => {
   return (
     <div className="app-container">
-      {" "}
-      {/* NEW: Overall flex wrapper – like the plate holding your burger stack */}
-      <NavBar /> {/* Fixed top bun */}
+      <NavBar />
       <main className="main-content">
-        {" "}
-        {/* NEW: Scrollable middle – the stretchy patty that grows and slides */}
         <Routes>
           <Route
             path="/"
@@ -77,12 +72,11 @@ export const ApplicationViews = () => {
                 </Authorized>
               }
             />
-            <Route path="/hometest" element={<HomeTest />} />
             <Route path="/trips/:tripId/campgrounds" element={<CampgroundSelector />} />
           </Route>
         </Routes>
       </main>
-      <BottomTabNav /> {/* Fixed bottom bun */}
+      <BottomTabNav />
     </div>
   );
 };

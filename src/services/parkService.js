@@ -26,4 +26,3 @@ export const GetNPSCampgrounds = () => {
 
   return fetch(url).then((res) => res.json());
 };
-// const url = `${API_BASE}/thingstodo?parkCode=${parkCode}&limit=10&api_key=${API_KEY}`;

@@ -4,7 +4,7 @@
 }
 
 .tooltip-content {
-  position: fixed; /* Change from absolute to fixed */
+  position: fixed;
   bottom: auto;
   top: auto;
   left: auto;
@@ -20,7 +20,7 @@
   visibility: hidden;
   transition: all 0.2s ease;
   pointer-events: none;
-  z-index: 9999; /* Much higher z-index */
+  z-index: 9999;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(249, 211, 66, 0.3);
   min-width: 80px;
@@ -28,7 +28,6 @@
   backdrop-filter: blur(8px);
 }
 
-/* Arrow pointing down */
 .tooltip-content::after {
   content: "";
   position: absolute;
@@ -42,10 +41,9 @@
 .icon-tooltip-container:hover .tooltip-content {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(-4px); /* Slight lift on hover */
+  transform: translateX(-50%) translateY(-4px);
 }
 
-/* Add a hover delay to prevent rapid flickering */
 .icon-tooltip-container:hover .tooltip-content {
   transition-delay: 0.3s;
 }
