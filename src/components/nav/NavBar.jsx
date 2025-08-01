@@ -29,7 +29,7 @@ export const NavBar = () => {
     {
       icon: "/icons/portfolio.svg",
       label: "Portfolio",
-      href: "https://www.kylemims.com",
+      href: "https://www.kylemims.dev",
       ariaLabel: "View Kyle's portfolio website",
     },
   ];

@@ -108,7 +108,7 @@ export const CampgroundSelector = () => {
       loadData();
     }
   }, [tripId]);
-
+  console.log("campgrounds", campgrounds);
   if (loading) {
     return (
       <div className="campground-loading">

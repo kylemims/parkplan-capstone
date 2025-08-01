@@ -70,7 +70,7 @@ export const Login = () => {
           {showModal && (
             <div className="login-modal welcome-modal-wrapper">
               <Modal open={showModal} onClose={() => setShowModal(false)}>
-                <WelcomeModal />
+                <WelcomeModal onClose={() => setShowModal(false)} />
               </Modal>
             </div>
           )}

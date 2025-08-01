@@ -3,8 +3,9 @@ import "./WelcomeModal.css";
 export const WelcomeModal = ({ onClose }) => {
   return (
     <div className="welcome-modal-content">
-      <h2 className="welcome-title">Welcome to Pick A Park!</h2>
-      <p className="welcome-subtitle">Your National Park Adventure Starts Here</p>
+      <img src="/images/park-feature-hero.svg" alt="Pick A Park logo" className="modal-logo" />
+
+      <p className="welcome-subtitle">Your Adventure Starts Here</p>
 
       <div className="demo-instructions">
         <ol className="instruction-list">
@@ -14,7 +15,7 @@ export const WelcomeModal = ({ onClose }) => {
           <li>
             Make up <strong>any name</strong> (your choice!)
           </li>
-          <li>Start planning your dream park adventure!</li>
+          <li>Start planning your adventure!</li>
         </ol>
 
         <div className="email-example">
