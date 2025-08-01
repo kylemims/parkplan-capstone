@@ -1,14 +1,9 @@
-// itineraryService.js
+const BASE_URL = import.meta.env.VITE_API_BASE;
 
-const BASE_URL = "http://localhost:8088";
-
-// GET all itinerary items for a specific trip
 export const getTripItemsByTripId = (tripId) => {
   return fetch(`${BASE_URL}/tripItems?tripId=${tripId}`).then((res) => res.json());
 };
 
-// POST a new item to a trip itinerary
-// itemObj = { tripId, type, title, description, duration }
 export const createTripItem = (itemObj) => {
   return fetch(`${BASE_URL}/tripItems`, {
     method: "POST",

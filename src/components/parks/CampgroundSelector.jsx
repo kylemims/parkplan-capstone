@@ -16,6 +16,12 @@ export const CampgroundSelector = () => {
   const { tripId } = useParams();
   const navigate = useNavigate();
 
+  const reloadItinerary = () => {
+    getTripItemsByTripId(tripId)
+      .then((data) => setItinerary(data))
+      .catch((err) => console.error("Failed to load trip itinerary", err));
+  };
+
   const addToItinerary = (campground) => {
     const item = {
       tripId: parseInt(tripId),
@@ -34,7 +40,7 @@ export const CampgroundSelector = () => {
     if (!itinerary.some((i) => i.title === item.title)) {
       createTripItem(item)
         .then(() => {
-          loadItinerary();
+          reloadItinerary();
           // Show success feedback
           const button = document.querySelector(`[data-campground="${campground.id}"]`);
           if (button) {
@@ -48,12 +54,6 @@ export const CampgroundSelector = () => {
         })
         .catch((err) => console.error("Failed to add campground", err));
     }
-  };
-
-  const loadItinerary = () => {
-    getTripItemsByTripId(tripId)
-      .then((data) => setItinerary(data))
-      .catch((err) => console.error("Failed to load trip itinerary", err));
   };
 
   const truncateText = (text, maxLength) => {
@@ -76,19 +76,25 @@ export const CampgroundSelector = () => {
   };
 
   useEffect(() => {
+    const loadItinerary = () => {
+      return getTripItemsByTripId(tripId)
+        .then((data) => setItinerary(data))
+        .catch((err) => console.error("Failed to load trip itinerary", err));
+    };
+
     const loadData = async () => {
       try {
         setLoading(true);
 
-        // Load trip and park info
+        // Load trip and park info first
         const tripData = await getTripById(tripId);
         setTrip(tripData);
 
         const parkData = await getParkById(tripData.parkId);
         setPark(parkData);
 
-        // Load campgrounds and itinerary
-        const [campgroundsData] = await Promise.all([GetNPSCampgrounds(), loadItinerary()]);
+        // Load campgrounds using the park's code and itinerary
+        const [campgroundsData] = await Promise.all([GetNPSCampgrounds(parkData.code), loadItinerary()]);
 
         setCampgrounds(campgroundsData.data || []);
       } catch (error) {

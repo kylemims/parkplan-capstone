@@ -41,12 +41,11 @@ export const BottomTabNav = () => {
     {
       icon: "/icons/portfolio.svg",
       label: "Portfolio",
-      href: "https://www.kylemims.com", // Update when deployed
+      href: "https://www.kylemims.dev",
       external: true,
     },
   ];
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -82,7 +81,6 @@ export const BottomTabNav = () => {
     return false;
   };
 
-  // Hide on login/register pages
   if (location.pathname === "/login" || location.pathname === "/register") {
     return null;
   }

@@ -294,14 +294,12 @@
     display: none;
   }
 }
-/* Hide the bottom tab nav when phone device height is less than 700px */
 @media (max-width: 480px) and (max-height: 600px) {
   .bottom-tab-nav {
     display: none;
   }
 }
 
-/* iPad and larger tablets */
 @media (min-width: 768px) {
   .bottom-tab-nav {
     display: none;

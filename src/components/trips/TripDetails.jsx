@@ -56,7 +56,7 @@ export const TripDetails = () => {
   };
 
   const loadItinerary = () => {
-    getTripItemsByTripId(tripId)
+    return getTripItemsByTripId(tripId)
       .then((data) => setItinerary(data))
       .catch((err) => console.error("Failed to load itinerary", err));
   };
@@ -131,6 +131,12 @@ export const TripDetails = () => {
     });
 
   useEffect(() => {
+    const loadItinerary = () => {
+      return getTripItemsByTripId(tripId)
+        .then((data) => setItinerary(data))
+        .catch((err) => console.error("Failed to load itinerary", err));
+    };
+
     const loadData = async () => {
       try {
         setLoading(true);

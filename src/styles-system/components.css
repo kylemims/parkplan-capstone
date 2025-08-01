@@ -1,10 +1,3 @@
-/* components.css */
-/* 
-  Styles for common components: buttons, forms, cards, modals, etc.
-  Import as needed in your component files.
-*/
-
-/* Primary Button */
 .btn,
 .primary-btn {
   background-color: var(--color-primary);
@@ -24,7 +17,6 @@
   background-color: var(--color-primary-hover);
 }
 
-/* Form Container */
 .form-container {
   max-width: var(--container-max-width);
   width: 100%;
@@ -35,13 +27,11 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Form Group */
 .form-group {
   margin-bottom: 1.5rem;
   width: 100%;
 }
 
-/* Input & Select */
 .input,
 select,
 .form-control {
@@ -55,7 +45,6 @@ select,
   box-sizing: border-box;
 }
 
-/* Card */
 .card {
   background: #222;
   border-radius: var(--border-radius);
@@ -64,7 +53,6 @@ select,
   margin-bottom: 2rem;
 }
 
-/* Modal */
 .modal-overlay {
   background: rgba(47, 56, 53, 0.95);
   position: fixed;

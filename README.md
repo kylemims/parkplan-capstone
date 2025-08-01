@@ -22,7 +22,7 @@ This app walks the line between front-end elegance and back-end logic — all in
 
 ## 🌐 Live Demo
 
-- **Live App:** [pickapark.kylemims.com](https://pickapark.kylemims.com)
+- **Live App:** [pickapark.kylemims.dev](https://pickapark.kylemims.dev)
 - **Code Repo:** [github.com/kylemims/pick-a-park](https://github.com/kylemims/pick-a-park)
 
 ---

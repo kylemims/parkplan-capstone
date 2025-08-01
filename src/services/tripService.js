@@ -1,10 +1,20 @@
-export const getTripsByUserId = (userId) => {
-  return fetch(`http://localhost:8088/trips?userId=${userId}&_expand=park`).then((res) => res.json());
+import { getCurrentUserId } from "./userService";
+
+const LOCAL_API_BASE = import.meta.env.VITE_API_BASE;
+
+// ✅ Get all trips for the *currently logged-in user*
+export const getTripsForCurrentUser = () => {
+  const userId = getCurrentUserId();
+  return fetch(`${LOCAL_API_BASE}/trips?userId=${userId}&_expand=park`).then((res) => res.json());
 };
 
-// POST request to create a new trip -> tripObj = { name, parkId, userId, createdAt })
+// ✅ Still allow explicit access if needed
+export const getTripsByUserId = (userId) => {
+  return fetch(`${LOCAL_API_BASE}/trips?userId=${userId}&_expand=park`).then((res) => res.json());
+};
+
 export const createTrip = (tripObj) => {
-  return fetch("http://localhost:8088/trips", {
+  return fetch(`${LOCAL_API_BASE}/trips`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -19,17 +29,17 @@ export const createTrip = (tripObj) => {
 };
 
 export const deleteTrip = (id) => {
-  return fetch(`http://localhost:8088/trips/${id}`, {
+  return fetch(`${LOCAL_API_BASE}/trips/${id}`, {
     method: "DELETE",
   });
 };
 
 export const getTripById = (tripId) => {
-  return fetch(`http://localhost:8088/trips/${tripId}`).then((res) => res.json());
+  return fetch(`${LOCAL_API_BASE}/trips/${tripId}`).then((res) => res.json());
 };
 
 export const updateTrip = (tripId, updatedTripObj) => {
-  return fetch(`http://localhost:8088/trips/${tripId}`, {
+  return fetch(`${LOCAL_API_BASE}/trips/${tripId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

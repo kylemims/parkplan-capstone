@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>404 – Page Not Found | ParkPlan</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Color System matching your app */
+        --color-bg: #212122;
+        --color-accent: #ffe28a;
+        --color-primary: #c29059;
+        --color-text: #fff9e6;
+        --color-text-dark: #dcd9d9;
+        --color-neutral: #cec9c6;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .error-code {
+        font-family: "Staatliches", sans-serif;
+        font-size: 8rem;
+        color: var(--color-accent);
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        line-height: 1;
+      }
+
+      h1 {
+        font-family: "Staatliches", sans-serif;
+        font-size: 2.5rem;
+        color: var(--color-accent);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: var(--color-text-dark);
+        margin-bottom: 2rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .trail-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+      }
+
+      .home-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--color-primary);
+        color: white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        margin-top: 1rem;
+      }
+
+      .home-button:hover {
+        background-color: #a67c4a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(194, 144, 89, 0.3);
+      }
+
+      .suggestion {
+        margin-top: 3rem;
+        padding: 1.5rem;
+        background-color: rgba(255, 226, 138, 0.1);
+        border-radius: 8px;
+        border-left: 4px solid var(--color-accent);
+      }
+
+      .suggestion h3 {
+        color: var(--color-accent);
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .suggestion p {
+        color: var(--color-text-dark);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 768px) {
+        .error-code {
+          font-size: 6rem;
+        }
+        
+        h1 {
+          font-size: 2rem;
+        }
+        
+        .subtitle {
+          font-size: 1rem;
+        }
+        
+        .home-button {
+          font-size: 1rem;
+          padding: 0.8rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="trail-icon">🏔️</div>
+      <div class="error-code">404</div>
+      <h1>Trail Not Found</h1>
+      <p class="subtitle">
+        Looks like you've wandered off the beaten path! This page doesn't exist in our park system.
+      </p>
+      
+      <a href="/" class="home-button">
+        🏠 Return to Base Camp
+      </a>
+
+      <div class="suggestion">
+        <h3>Lost Explorer?</h3>
+        <p>
+          No worries! Head back to our main trail system where you can plan your next national park adventure.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

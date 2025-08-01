@@ -2,30 +2,24 @@ import { NewTripModal } from "./NewTripModal.jsx";
 import { getTripsByUserId } from "../../services/tripService.js";
 import { useState } from "react";
 
-
 export const NewTripButtonModal = () => {
+  const [openModal, setOpenModal] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [trips, setTrips] = useState([]);
 
-  const [openModal, setOpenModal] = useState(false)
-  const [trips, setTrips] = useState([])
+  const localUser = localStorage.getItem("parkplan_user");
+  const userObj = JSON.parse(localUser);
 
-  const localUser = localStorage.getItem("parkplan_user")
-  const userObj = JSON.parse(localUser)
+  const refreshTrips = () => {
+    getTripsByUserId(userObj.id).then(setTrips);
+  };
 
-const refreshTrips = () => {
-      getTripsByUserId(userObj.id).then(setTrips);
-    };
-
-    return (
-      <div className="add-new-dash">
-          <button className="trip-btn" onClick={() => setOpenModal(true)}>
-            + Add New Trip
-          </button>
-          <NewTripModal
-            open={openModal}
-            onClose={() => setOpenModal(false)}
-            onTripCreated={refreshTrips}
-          />
-        </div>
-    )
-
-}
+  return (
+    <div className="add-new-dash">
+      <button className="trip-btn" onClick={() => setOpenModal(true)}>
+        + Add New Trip
+      </button>
+      <NewTripModal open={openModal} onClose={() => setOpenModal(false)} onTripCreated={refreshTrips} />
+    </div>
+  );
+};
