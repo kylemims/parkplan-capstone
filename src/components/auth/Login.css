@@ -23,7 +23,7 @@
 
 .auth-landscape-layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 600px;
@@ -184,7 +184,7 @@ fieldset {
   .auth-landscape-layout {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .fade-in-block {
@@ -192,7 +192,7 @@ fieldset {
   }
 
   .login-block {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 1.5rem 1.5rem;
     width: 100%;
     max-width: 400px;
@@ -201,11 +201,11 @@ fieldset {
 
 @media (max-height: 700px) and (orientation: landscape) {
   .welcome-container {
-    padding: 2rem;
     margin: 0 auto;
   }
 
   .fade-in-block {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -213,8 +213,9 @@ fieldset {
   }
 
   .auth-landscape-layout {
+    display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin: 0 auto;
     gap: 0rem;
@@ -231,9 +232,9 @@ fieldset {
   /* Auth block takes right side */
   .login-block {
     flex: 0 auto;
-    margin-top: 0;
+    margin: 0 auto;
     min-width: 300px;
-    padding: 1.5rem 1.5rem;
+    padding: 2rem 2rem;
   }
   .form-input {
     padding: 0.75rem; /* Smaller inputs */
@@ -241,7 +242,7 @@ fieldset {
 
   .auth-link button {
     padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .subtitle {
