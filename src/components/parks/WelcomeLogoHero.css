@@ -25,9 +25,9 @@
 
 .login-logo {
   width: 100%;
-  max-width: 500px;
-  min-width: 280px;
-  height: auto;
+  max-width: 400px;
+  /* min-width: 280px; */
+  /* height: auto; */
   filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.5));
   transition: all 0.3s ease;
 }

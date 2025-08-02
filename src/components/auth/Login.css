@@ -23,7 +23,7 @@
 
 .auth-landscape-layout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   max-width: 600px;
@@ -180,32 +180,13 @@ fieldset {
   }
 }
 
-.login-modal .modal-container {
-  margin-top: 80px;
-  padding: 2rem;
-  border-radius: 16px;
-  min-width: 400px;
-  z-index: 9999;
-  background-color: rgb(5, 5, 5);
-}
-
-.login-modal .close-button {
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: var(--color-text);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.login-modal .modal-overlay {
-  background: var(--color-bg-dark);
-  backdrop-filter: blur(12px);
-}
-
 @media (max-width: 768px) {
+  .auth-landscape-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
   .fade-in-block {
     padding: 1.5rem 1rem;
   }
@@ -216,15 +197,11 @@ fieldset {
     width: 100%;
     max-width: 400px;
   }
-  .login-logo {
-    max-width: 3600px;
-    margin-bottom: 1rem;
-  }
 }
 
-@media (max-height: 600px) and (orientation: landscape) {
+@media (max-height: 700px) and (orientation: landscape) {
   .welcome-container {
-    padding: 100px;
+    padding: 2rem;
     margin: 0 auto;
   }
 
@@ -238,7 +215,9 @@ fieldset {
   .auth-landscape-layout {
     flex-direction: row;
     align-items: center;
-    gap: 3rem;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 0rem;
     max-width: 800px;
     width: 100%;
   }
@@ -251,10 +230,10 @@ fieldset {
 
   /* Auth block takes right side */
   .login-block {
-    flex: 1;
+    flex: 0 auto;
     margin-top: 0;
-    max-width: 350px;
-    padding: 2rem 1.5rem;
+    min-width: 300px;
+    padding: 1.5rem 1.5rem;
   }
   .form-input {
     padding: 0.75rem; /* Smaller inputs */
@@ -268,26 +247,6 @@ fieldset {
   .subtitle {
     font-size: 1rem;
     margin-bottom: 1rem;
-  }
-}
-
-@media (max-height: 500px) and (orientation: landscape) {
-  .auth-landscape-layout {
-    gap: 2rem;
-  }
-
-  .login-block {
-    padding: 1.5rem 1rem;
-  }
-
-  .welcome-logo-hero {
-    flex: 1;
-    max-width: 400px;
-  }
-
-  /* Maybe hide some decorative elements */
-  .welcome-logo-hero .tagline {
-    display: none;
   }
 }
 
