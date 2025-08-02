@@ -358,7 +358,7 @@
     padding: 1rem 3rem;
   }
 }
-@media (max-height: 880px) and (orientation: landscape) {
+@media (max-height: 400px) and (orientation: landscape) {
   .navbar {
     display: none;
   }
