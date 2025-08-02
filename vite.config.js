@@ -7,7 +7,7 @@ export default defineConfig({
     outDir: "dist",
   },
   server: {
-    port: 5173, // optional: customize your local dev port
+    port: 5173,
   },
-  base: "/", // ensures correct asset loading on Netlify
+  base: "/",
 });
