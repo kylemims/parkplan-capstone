@@ -6,7 +6,7 @@ import { getTripById } from "../../services/tripService.js";
 import { getParkById } from "../../services/parkService.js";
 import "./CampgroundSelector.css";
 
-export const CampgroundSelector = () => {
+const CampgroundSelector = () => {
   const [campgrounds, setCampgrounds] = useState([]);
   const [itinerary, setItinerary] = useState([]);
   const [trip, setTrip] = useState(null);
@@ -262,3 +262,5 @@ export const CampgroundSelector = () => {
     </section>
   );
 };
+
+export default CampgroundSelector;

@@ -4,7 +4,12 @@ export const WelcomeModal = ({ onClose }) => {
   return (
     <div className="wm-layout">
       <section className="wm-logo-adventure-block">
-        <img src="/images/park-feature-hero.svg" alt="Pick A Park logo" className="modal-logo" />
+        <img
+          src="/images/park-feature-hero.svg"
+          alt="Pick A Park logo"
+          className="modal-logo"
+          loading="lazy"
+        />
         {/* <p className="wm-subtitle">Your Adventure Starts Here</p> */}
       </section>
 

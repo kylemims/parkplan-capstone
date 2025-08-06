@@ -3,7 +3,7 @@ import { HomeHero } from "./HomeHero.jsx";
 import { WelcomeLogoHero } from "./WelcomeLogoHero.jsx";
 import "./HomePage.css";
 
-export const HomePage = () => {
+const HomePage = () => {
   const navigate = useNavigate();
 
   return (
@@ -43,3 +43,5 @@ export const HomePage = () => {
     </main>
   );
 };
+
+export default HomePage;

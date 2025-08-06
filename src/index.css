@@ -37,6 +37,12 @@ a:hover {
   color: var(--color-accent);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body,
 #root {
@@ -48,6 +54,10 @@ body,
   padding-top: 20px;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -88,6 +98,39 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+.animated-element {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button,
+[role="button"] {
+  transition: all 0.2s ease;
+}
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -100,9 +143,21 @@ button:focus-visible {
   overflow-y: auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   body {
     padding-top: 0px;
     padding-bottom: 80px;
+  }
+  /* Optimize transforms for mobile */
+  .transform-element {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -4,7 +4,7 @@ import { getAllParks } from "../../services/parkService";
 import { getImagesByParkId } from "../../services/parkService";
 import "./ParkResults.css";
 
-export const ParkResults = () => {
+const ParkResults = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const preferences = location.state?.preferences;
@@ -129,7 +129,7 @@ export const ParkResults = () => {
         <div className="result-grid">
           {filteredParks.map((park) => (
             <div className="park-card" key={park.id}>
-              <img src={parkImages[park.id] || "/images/default-park.jpg"} alt={park.name} />
+              <img src={parkImages[park.id] || "/images/default-park.jpg"} alt={park.name} loading="lazy" />
               <div className="park-info">
                 <h2>{park.name}</h2>
                 <span className="park-location-name">{park.location}</span>
@@ -157,3 +157,5 @@ export const ParkResults = () => {
     </section>
   );
 };
+
+export default ParkResults;

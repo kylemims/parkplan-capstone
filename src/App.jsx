@@ -1,6 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { ApplicationViews } from "./views/ApplicationViews";
-
+import { ApplicationViews } from "./views/ApplicationViews.jsx";
 function App() {
   return (
     <BrowserRouter>

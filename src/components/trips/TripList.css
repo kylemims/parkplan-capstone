@@ -270,8 +270,8 @@
 }
 
 .trip-card__side-tab .icon-button {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   padding: 0.5rem;
   background: transparent;
   border: none;
@@ -285,16 +285,16 @@
 }
 
 .trip-card__side-tab .icon-button img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   object-position: center;
 }
 
 .trip-card__side-tab .icon-button img[src*="camper"],
 .trip-card__side-tab .icon-button img[src*="add-activity"] {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
 }
 
 .trip-card__side-tab .icon-tooltip-container:nth-child(1) .icon-button:hover {
@@ -383,8 +383,8 @@
   }
 
   .trip-card__side-tab .icon-button {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   .icon-legend {

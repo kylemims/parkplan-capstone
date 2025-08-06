@@ -6,7 +6,7 @@ import { getTripById } from "../../services/tripService.js";
 import { getParkById } from "../../services/parkService.js";
 import "./TripDetails.css";
 
-export const TripDetails = () => {
+const TripDetails = () => {
   const { tripId, parkCode } = useParams();
   const navigate = useNavigate();
   const [activities, setActivities] = useState([]);
@@ -370,3 +370,5 @@ export const TripDetails = () => {
     </section>
   );
 };
+
+export default TripDetails;

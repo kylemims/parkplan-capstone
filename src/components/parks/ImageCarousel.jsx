@@ -23,6 +23,7 @@ export const ImageCarousel = ({ images, parkName }) => {
         src={images[currentImageIndex].url}
         alt={`${parkName} image ${currentImageIndex + 1}`}
         className="carousel-image"
+        loading="lazy"
       />
       <button onClick={nextImage} className="carousel-btn">
         ›

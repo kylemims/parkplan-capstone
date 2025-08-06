@@ -6,7 +6,7 @@ import { EditTripModal } from "./EditTripModal.jsx"; //
 import "./TripList.css";
 import { useNavigate } from "react-router-dom";
 
-export const TripDashboard = () => {
+const TripDashboard = () => {
   const [trips, setTrips] = useState([]);
   const [openModal, setOpenModal] = useState(false);
 
@@ -94,3 +94,5 @@ export const TripDashboard = () => {
     </section>
   );
 };
+
+export default TripDashboard;

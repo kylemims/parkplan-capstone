@@ -6,7 +6,7 @@ import { getImagesByParkId, getParkById } from "../../services/parkService";
 import { getMonthlyWeatherAverages } from "../../services/weatherService";
 import "./TripSummary.css";
 
-export const TripSummary = () => {
+const TripSummary = () => {
   const { tripId } = useParams();
   const [trip, setTrip] = useState(null);
   const [tripItems, setTripItems] = useState([]);
@@ -58,7 +58,7 @@ export const TripSummary = () => {
       <h1>{trip.name}</h1>
       <h2>{park.name}</h2>
       <p className="summary-date">Created: {new Date(trip.createdAt).toLocaleDateString()}</p>
-      {imageUrl && <img src={imageUrl} alt={park.name} className="summary-hero" />}{" "}
+      {imageUrl && <img src={imageUrl} alt={park.name} loading="lazy" className="summary-hero" />}{" "}
       <div className="summary-controls">
         <button className="summary-btn" onClick={() => window.print()}>
           🖨️ Print / Save PDF
@@ -131,3 +131,5 @@ export const TripSummary = () => {
     </section>
   );
 };
+
+export default TripSummary;

@@ -7,7 +7,7 @@ import { getMonthlyWeatherAverages } from "../../services/weatherService";
 import "./ParkDetails.css";
 import "../forms/Form.css";
 
-export const ParkDetails = () => {
+const ParkDetails = () => {
   const { parkId } = useParams();
   const [park, setPark] = useState(null);
   const [images, setImages] = useState([]);
@@ -33,7 +33,7 @@ export const ParkDetails = () => {
     <section className="park-details-container">
       <h1 className="park-deets-header">{park.name}</h1>
       <p className="park-location">{park.location}</p>
-      <ImageCarousel images={images} parkName={park.name} />
+      <ImageCarousel loading="lazy" images={images} parkName={park.name} />
       <p className="park-tagline">{park.description}</p>
 
       <section className="unparked-section">
@@ -111,3 +111,5 @@ export const ParkDetails = () => {
     </section>
   );
 };
+
+export default ParkDetails;
