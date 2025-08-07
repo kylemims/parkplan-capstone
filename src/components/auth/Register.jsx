@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUser, getUserByEmail } from "../../services/userService";
 import { HomeHero } from "../parks/HomeHero.jsx";
 import { WelcomeLogoHero } from "../parks/WelcomeLogoHero.jsx";
+import { WelcomeModal } from "./WelcomeModal.jsx";
+import { Modal } from "../forms/Modal.jsx";
+import "./WelcomeModal.css";
 import "./Login.css";
 
 export const Register = () => {
   const [user, setUser] = useState({ email: "", name: "" });
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowModal(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const registerNewUser = () => {
     createUser(user).then((createdUser) => {
@@ -54,7 +63,7 @@ export const Register = () => {
                 onChange={updateUser}
                 type="text"
                 id="name"
-                placeholder="Full Name"
+                placeholder="Make up any name you want"
                 required
                 autoFocus
               />
@@ -63,7 +72,7 @@ export const Register = () => {
                 onChange={updateUser}
                 type="email"
                 id="email"
-                placeholder="Email Address"
+                placeholder="sillyname@example.com"
                 required
               />
               <div className="auth-link">
@@ -75,6 +84,13 @@ export const Register = () => {
             </form>
           </fieldset>
         </section>
+        {showModal && (
+          <div className="login-modal welcome-modal-wrapper">
+            <Modal open={showModal} onClose={() => setShowModal(false)}>
+              <WelcomeModal onClose={() => setShowModal(false)} />
+            </Modal>
+          </div>
+        )}
       </div>
     </>
   );

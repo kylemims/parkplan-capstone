@@ -33,8 +33,8 @@ export const ApplicationViews = () => {
                   <Outlet />
                 </>
               }>
-              <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
               <Route
                 index
                 element={

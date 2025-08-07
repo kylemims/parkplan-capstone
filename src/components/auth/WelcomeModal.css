@@ -1,6 +1,6 @@
 .login-modal .modal-container {
-  top: 20%;
-  transform: translate(-50%, -20%);
+  top: 0;
+  transform: translate(-50%, 20%);
   max-width: 600px;
   padding: 2rem;
   z-index: 9999;
@@ -20,17 +20,20 @@
 
 .login-modal .modal-overlay {
   background: linear-gradient(to bottom, rgb(47, 47, 47, 0.6), rgb(192, 181, 174, 0.6), rgb(50, 63, 60, 0.6));
-  opacity: 0.95;
+  opacity: 0;
   backdrop-filter: blur(16px);
+  animation: fadeInOverlay 0.4s ease-out forwards;
 }
 
 .wm-layout {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUpScale 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   text-align: center;
   color: var(--color-text);
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
 }
 .wm-logo-adventure-block {
   display: flex;
@@ -38,6 +41,8 @@
   align-items: center;
   justify-content: center;
   padding-top: 0rem;
+  opacity: 0;
+  animation: fadeInContent 0.5s ease-out 0.2s forwards;
 }
 .modal-logo {
   min-width: 260px;
@@ -65,6 +70,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  opacity: 0;
+  animation: fadeInContent 0.5s ease-out 0.4s forwards;
 }
 .wm-instructions-block {
   max-width: 400px;
@@ -134,7 +141,12 @@
   margin-bottom: 10px;
   width: 300px;
 }
-
+.email-example-help {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
 .email-example-label {
   font-size: 0.8rem;
   color: var(--color-secondary);
@@ -184,12 +196,48 @@
   }
 }
 
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+@keyframes fadeInUpScale {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .login-modal .modal-container {
     margin-top: 60px;
     padding-top: 3rem;
     padding-bottom: 4rem;
     max-width: 90%;
+    transform: translate(-50%, 5%);
     /* width: 100%; */
   }
 

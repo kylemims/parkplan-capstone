@@ -17,10 +17,10 @@ export const WelcomeModal = ({ onClose }) => {
         <div className="wm-instructions-block">
           <div className="wm-instruction-list">
             <div className="wm-instructions-item">
-              Enter <strong>any email address</strong> you want
+              Make up <strong>ANY NAME</strong> you want
             </div>
             <div className="wm-instructions-item">
-              Make up <strong>any name</strong> (your choice!)
+              Make up <strong>ANY EMAIL</strong> (your choice!)
             </div>
             <div className="wm-instructions-item">
               Plan <strong>your dream</strong> adventure!
@@ -28,9 +28,10 @@ export const WelcomeModal = ({ onClose }) => {
           </div>
         </div>
 
+        <div className="email-example-help">Need help?</div>
         <div className="email-example-block">
-          <div className="email-example-label">Try this example email:</div>
-          <div className="email-example-text">ilovekyle@example.com</div>
+          <div className="email-example-label">Use your pet's name w/ @example.com</div>
+          <div className="email-example-text">pumpkin@example.com</div>
         </div>
 
         <button className="get-started-btn" onClick={onClose}>
