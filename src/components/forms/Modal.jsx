@@ -4,7 +4,7 @@ export const Modal = ({ open, onClose, title, description, children }) => {
   if (!open) return null;
 
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay" onClick={onClose}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         <button className="close-button" onClick={onClose}>
           X

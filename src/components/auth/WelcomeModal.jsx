@@ -23,11 +23,12 @@ export const WelcomeModal = ({ onClose }) => {
               Make up <strong>ANY EMAIL</strong> (your choice!)
             </div>
             <div className="wm-instructions-item">
-              Plan <strong>your dream</strong> adventure!
+              Plan <strong>YOUR DREAM</strong> adventure!
             </div>
           </div>
         </div>
-
+      </section>
+      <section className="bottom-half">
         <div className="email-example-help">Need help?</div>
         <div className="email-example-block">
           <div className="email-example-label">Use your pet's name w/ @example.com</div>

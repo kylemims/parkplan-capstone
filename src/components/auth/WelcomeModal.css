@@ -1,21 +1,33 @@
 .login-modal .modal-container {
   top: 0;
   transform: translate(-50%, 20%);
-  max-width: 600px;
-  padding: 2rem;
+  max-width: 400px;
   z-index: 9999;
   background-color: rgba(8, 8, 8, 1);
+  padding: 0px;
 }
 
 .login-modal .close-button {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 1rem;
   background: none;
   border: none;
   color: var(--color-text);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  z-index: 10000;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.login-modal .close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .login-modal .modal-overlay {
@@ -33,6 +45,7 @@
   text-align: center;
   color: var(--color-text);
   opacity: 0;
+  padding-top: 0.5rem;
   transform: translateY(30px) scale(0.9);
 }
 .wm-logo-adventure-block {
@@ -45,9 +58,11 @@
   animation: fadeInContent 0.5s ease-out 0.2s forwards;
 }
 .modal-logo {
-  min-width: 260px;
-  max-width: 300px;
-  margin-bottom: 2.5rem;
+  min-width: 160px;
+  max-width: 280px;
+  margin-bottom: 1.5rem;
+  /* padding-top: 1.5rem; */
+  margin-top: 2rem;
 }
 
 .wm-subtitle {
@@ -56,41 +71,32 @@
   margin-bottom: 1rem;
   font-weight: 500;
 }
-.wm-logo-adventure-block::after {
-  content: "";
-  display: block;
-  width: 200px;
-  height: 0.1px;
-  opacity: 0.3;
-  background-color: var(--color-accent);
-  border-radius: 1px;
-}
+
 .wm-rundown-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
   opacity: 0;
+  justify-content: center;
   animation: fadeInContent 0.5s ease-out 0.4s forwards;
 }
 .wm-instructions-block {
-  max-width: 400px;
-  width: 100%;
+  min-width: 200px;
   margin-bottom: 1rem;
 }
 
 .wm-instruction-list {
   margin: 0 auto;
-  max-width: 400px;
+  min-width: 200px;
   counter-reset: step-counter;
 }
 
 .wm-instructions-item {
   counter-increment: step-counter;
   position: relative;
-  padding-left: 2.5rem; /* Space for the number circle */
+  padding-left: 2rem;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   line-height: 1.4;
   font-weight: 500;
@@ -102,15 +108,15 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background: var(--color-accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: var(--color-bg);
 }
 
@@ -118,40 +124,31 @@
   color: var(--color-accent);
   font-weight: 600;
 }
-/* .instruction-list li {
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  color: white;
-  line-height: 1.3;
-  font-weight: 500;
-} */
-
-/* .instruction-list strong {
-  color: var(--color-accent);
-  font-weight: 600;
-  margin-left: 0.8px;
-  margin-right: 0.8px;
-} */
 
 .email-example-block {
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 12px;
   border-left: 4px solid var(--color-accent);
   margin-bottom: 10px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
+  /* min-width: 200px; */
 }
 .email-example-help {
   font-size: 0.9rem;
   color: var(--color-accent);
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 .email-example-label {
   font-size: 0.8rem;
   color: var(--color-secondary);
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  /* margin-bottom: 0.25rem; */
 }
 
 .email-example-text {
@@ -160,24 +157,26 @@
   border-radius: 6px;
   color: var(--color-primary);
   font-weight: bold;
-  font-size: 1rem;
-  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  /* margin-top: 0.25rem; */
   letter-spacing: 0.8px;
 }
 
 .get-started-btn {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #a67c4a 100%);
+  background-color: var(--color-primary);
   color: white;
-  padding: 0.9rem 1.9rem;
-  border: none;
+  padding: 0.75rem 1.5rem;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 800;
+  max-width: 300px;
+  width: 100%;
+
   cursor: pointer;
-  width: 300px;
+  /* width: 300px; */
   transition: all 0.3s ease;
   text-transform: uppercase;
-  box-shadow: 0 8px 25px rgba(194, 144, 89, 0.4);
+  /* box-shadow: 0 8px 25px rgba(194, 144, 89, 0.4); */
 }
 
 .get-started-btn:hover {
@@ -231,149 +230,34 @@
   }
 }
 
-@media (max-width: 768px) {
-  .login-modal .modal-container {
-    margin-top: 60px;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-    max-width: 90%;
-    transform: translate(-50%, 5%);
-    /* width: 100%; */
-  }
-
-  .modal-logo {
-    /* width: 100px; */
-    height: 180px;
-
-    /* margin: 0 auto 1rem; */
-  }
-  .wm-instructions-item {
-    counter-increment: step-counter;
-    position: relative;
-    padding-left: 2rem; /* Space for the number circle */
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: white;
-    line-height: 1.5;
-    font-weight: 500;
-    text-align: left;
-  }
-
-  .wm-instructions-item::before {
-    content: counter(step-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background: var(--color-accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.8rem;
-    color: var(--color-bg);
-  }
-
-  .email-example-block {
-    padding: 0.5rem;
-    font-size: 0.7rem;
-    width: 260px;
-  }
-  .email-example-text {
-    font-size: 0.9rem;
-  }
-  .email-example-label {
-    font-size: 0.7rem;
-    margin: 0px;
-  }
-  .get-started-btn {
-    margin-top: 0.25rem;
-    font-size: 0.95rem;
-    padding: 1rem 1.5rem;
-    width: 260px;
-  }
+.bottom-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeInContent 0.5s ease-out 0.6s forwards;
+  background-color: var(--accent-blend);
+  min-width: 400px;
+  max-width: 600px;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
-@media (max-height: 880px) and (orientation: landscape) {
-  .wm-layout {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
 
-  .wm-logo-adventure-block {
-    /* flex: 0 0 auto; */
-    padding: 0.5rem;
-  }
-  .wm-logo-adventure-block::after {
-    content: "";
-    display: none;
-    width: 0px;
-    height: 0px;
-    opacity: 0.2;
-    background-color: var(--color-accent);
-    border-radius: 1px;
-  }
-  .wm-rundown-block {
-    /* flex: 0 0 auto; */
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .wm-instructions-item::before {
-    content: counter(step-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 22px;
-    height: 22px;
-    background: var(--color-accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.7rem;
-    color: var(--color-bg);
-  }
-
-  .wm-instructions-item {
-    font-size: 0.9rem;
-  }
-
-  .login-modal .modal-container {
-    min-width: 700px;
-    /* max-width: 900px; */
-    padding: 1.5rem;
-  }
-
-  .modal-logo {
-    max-width: 280px;
-    margin: 0 auto;
-    padding: 0;
+@media (max-width: 768px) {
+  .bottom-half {
+    min-width: 350px;
+    /* max-width: 300px; */
+    width: 100%;
   }
 
   .email-example-block {
-    padding: 0.5rem;
-    font-size: 0.7rem;
-    width: 260px;
+    max-width: 300px;
+    width: 100%;
   }
-  .email-example-text {
-    font-size: 0.9rem;
-  }
-  .email-example-label {
-    font-size: 0.7rem;
-    margin: 0px;
-  }
-  .get-started-btn {
-    margin-top: 0.25rem;
-    font-size: 0.95rem;
-    padding: 1rem 1.5rem;
-    width: 260px;
+  .modal-logo {
+    height: 160px;
   }
 }
